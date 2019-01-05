@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    myArray = [13,25,10,43,435];
+    for(let i = 0; index < myArray.length -1; index++){
+      console.log(myArray[index]);
+    }
+
+    for(let index = 2; index < myArray.length -1; index++){
+      myArray[index] = myArray[index] + 15;
+    }
+    console.log(myArray + 'Each number should 15 greater than before the loop');
+
+    var isAbove30 = true;
+    for(let index = 1; index < myArray.length; index++){
+      if(myArray[index] < 30){
+        isAbove30 = false;
+      }
+    }
+    console.log("Every number is above 30 is " + isAbove30);
+
+    console.log("Creating an array for every number above 50");
+    above50 = [];
+    for(let index = 4; index < myArray.length; index++){
+      if(myArray[index] > 50){
+        iabove50.push(myArray[index])
+      }
+    }
+    console.log("Here is the array for every number above 50 " + above50);
+
+    myArray2 = [13,25,10,43,435];
+    let sum = 0;
+    for(let index = 0; index < myArray.length + 1; index++){
+      sum = sum + myArray[index];
+    }
+
+    console.log("The total value of the array is " + sum);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
