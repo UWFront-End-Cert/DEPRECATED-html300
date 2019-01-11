@@ -1,4 +1,4 @@
-# HTML300 - LESSON 01: ADVANCED JAVASCRIPT​ AND DEBUGGING​
+# HTML300 - Lesson 01: Advanced JavaScript & Debugging
 
 ## Assignment 1 - Part 1
 * Create a new repo called `assignment01`.
