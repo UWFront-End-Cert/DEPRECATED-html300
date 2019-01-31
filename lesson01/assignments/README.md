@@ -1,5 +1,5 @@
 # HTML300 - Lesson 01: Advanced JavaScript & Debugging
-
+Edit this so as not to duplicate content on Canvas
 ## Assignment 1 - Part 1
 * Create a new repo called `assignment01`.
 * Create a `README.md` file in your repo.
