@@ -1,4 +1,4 @@
-# Lesson 03 - Sass/Gulp/npm - Activity
+# Lesson 02 - Sass/Gulp/npm - Activity
 
 ### To get started:
 

@@ -1,4 +1,4 @@
-# Assignment 03 - Sass/Gulp/npm
+# Assignment 02 - Sass/Gulp/npm
 
 ### To get started:
 
