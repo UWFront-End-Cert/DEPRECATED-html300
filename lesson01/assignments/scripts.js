@@ -18,7 +18,7 @@ $(function () {
             const sum = data.reduce((acc, curr) => acc + curr);
             // Add our new total to the page
             resultSum.text(sum);
-            // Reset the input value to nothing
+            // Reset the input value to an empty string
             input.val('');
         }
     });
