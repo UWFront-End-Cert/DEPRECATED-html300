@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function () {
+      let myArray = [3, 4, 5, 6, 7],
+        input = $('.input'),
+        submit = $('.submit'),
+        firstSum = $('.first');
+      submit.on('click', function(){
+          const val = input.val();
+          const num = parseInt(val);
+          myArray.push(num);
+          console.log(myArray);
+          let first = myArray.map(x => x * 4);
+          firstSum.text(first);
+          });
+    });
+    $(function () {
+      let secondArray = [4, 6, 8, 10],
+      // added a separate function and classes for each of the four
+        inputTwo = $('.input_two'),
+        submitTwo = $('.submit_two'),
+        secondSum = $('.second');
+      submitTwo.on('click', function(){
+        const val = inputTwo.val();
+        const num = parseInt(val);
+        secondArray.push(num);
+        // console log as a visual indicator that it worked properly
+        console.log(secondArray);
+        let second = secondArray.filter(x => x > 8);
+        secondSum.text(second);
+        });
+    });
+    $(function () {
+      let thirdArray = [9, 1, 33],
+        inputThree = $('.input_three'),
+        submitThree = $('.submit_three'),
+        thirdSum = $('.third');
+      submitThree.on('click', function(){
+        const val = inputThree.val();
+        const num = parseInt(val);
+        thirdArray.push(num);
+        console.log(thirdArray);
+        let third = thirdArray.includes(9);
+        // console logged here because otherwise it wouldn't call the true/false results
+        console.log(third);
+        thirdSum.text(third);
+        });
+    });
+    $(function () {
+      let fourthArray = [9, 1, 33],
+        inputFour = $('.input_four'),
+        submitFour = $('.submit_four'),
+        fourthSum = $('.fourth');
+      submitFour.on('click', function(){
+        const val = inputFour.val();
+        const num = parseInt(val);
+        fourthArray.push(num);
+        console.log(fourthArray);
+        let fourth = fourthArray.reduce((one, two) => one + two);
+        fourthSum.text(fourth);
+        });
+    });
+    </script>
+    <style>
+      main {padding: 2rem;}
+    </style>
+  </head>
+  <body>
+    <main>
+    <h1>ES6 and JQuery Practice</h1>
+    <section>
+      <input type="text" class="input"></input>
+          <!-- first array function uses map -->
+             <input class="submit" type="submit"></input>
+      <p>Multiplies each number in the array by 4: <span class="first"></span></p>
+    </section>
+    <section>
+      <input type="text" class="input_two"></input>
+             <!-- Second array function uses filter -->
+             <input class="submit_two" type="submit"></input>
+      <p>Shows all numbers over 8: <span class="second"></span></p>
+    </section>
+    <section>
+      <input type="text" class="input_three"></input>
+             <!-- third array function use includes -->
+             <input class="submit_three" type="submit"></input>
+      <p>If a number is over 9, shows True: <span class="third"></span></p>
+    </section>
+    <section>
+      <input type="text" class="input_four"></input>
+             <!-- fourth array function uses reduce -->
+             <input class="submit_four" type="submit"></input>
+      <p>Adds all numbers in the array together:  <span class="fourth"></span></p>
+    </section>
+    </main>
+  </body>
+</html>
