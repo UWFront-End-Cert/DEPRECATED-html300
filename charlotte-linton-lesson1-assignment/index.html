@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Assignment 1 - Part 2</title>
+        <!-- jQuery CDN -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <!-- Local Files -->
+        <script src="lesson1-assignment2.js"></script>
+        <link rel="stylesheet" href="lesson1-assignment2">
+    </head>
+    <body>
+        <main class="main">
+            <h1>Four ES6+ Methods</h1>
+            <section class="input-set">
+                <h2>MAP</h2>
+                <p>Add a number to the array to double it:</p>
+                <!-- Input -->
+                <input type="text" class="input">
+                <!-- Submit for Input -->
+                <input class="submit" type="submit">
+                <!-- Result markup with hook for answer -->
+                <p class="markup">My new array is: <span class="sum"></span></p>
+            </section>
+            <section class="input-set">
+                <h2>FILTER</h2>
+                <p>Add a number to the array and submit it to see all even numbers in the array:</p>
+                <!-- Input -->
+                <input type="text" class="input-filter">
+                <!-- Submit for Input -->
+                <input class="submit-filter" type="submit">
+                <!-- Result markup with hook for answer -->
+                <p class="markup">These numbers are even: <span class="sum-filter"></span></p>
+            </section>
+            <section class="input-set">
+                <h2>SORT</h2>
+                <p>Add a number to the array and submit it to sort all numbers into ascending order:</p>
+                <!-- Input -->
+                <input type="text" class="input-sort">
+                <!-- Submit for Input -->
+                <input class="submit-sort" type="submit">
+                <!-- Result markup with hook for answer -->
+                <p class="markup">Numbers from smallest to largest: <span class="sum-sort"></span></p>
+            </section>
+            <section class="input-set">
+                <h2>INCLUDES</h2>
+                <p>Enter the name of a character from Lord of the Rings (in lowercase) to see if they are a member of the original Fellowship of the Ring:</p>
+                <!-- Input -->
+                <input type="text" class="input">
+                <!-- Submit for Input -->
+                <input class="submit" type="submit">
+                <!-- Result markup with hook for answer -->
+                <p class="markup">This character is a member of the Fellowship of the Ring: <span class="member"></span></p>
+            </section>
+        </main>
+    </body>
+  </html>
