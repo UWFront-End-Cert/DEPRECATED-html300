@@ -1,19 +1,53 @@
 
+
 // Ready event runs code immediately
 $(document).ready(function() {
 // All other jQuery begins here
+  array = [10, 20, 50, 100, 1000];
 
-  //ES6+ Method 1: Strings
-  $(function(){
-    const input = $('#input1'),
-      submit = $('#submit1');
-
-    // Click event on the submit input
-    submit.on('click', function() {
-      let message = 'You entered:'
-      console.log('${message} ${input1}');
+  //Method 1 - filter
+  $('#submit1').click(function() {
+    // Assign a variable to the user input
+    let input = $('#input1');
+    // Not sure why this is needed, but it works -- jQuery val() method returns the value attribute
+    let val = input.val();
+    // Use filter with user input
+    let results = array.filter(function(numbers){
+      return numbers > val;
     });
+    console.log(results);
+    $('#container1').html('<span>Result: </span>' + results);
   });
+
+  //Method 2 - find
+  $('#submit2').click(function() {
+    // Assign a variable to the user input
+    let input = $('#input2');
+    // Not sure why this is needed, but it works -- jQuery val() method returns the value attribute
+    let val = input.val();
+    // Use find with user input
+    let results = array.find(function(numbers){
+      return numbers > val;
+    });
+    console.log(results);
+    $('#container2').html('<span>Result: </span>' + results);
+  });
+  //Method 3 - map
+  $('#submit3').click(function() {
+    // Assign a variable to the user input
+    let input = $('#input3');
+    // Not sure why this is needed, but it works -- jQuery val() method returns the value attribute
+    let val = input.val();
+    // Use map with user input
+    let results = array.some(function(numbers){
+      let division = numbers/val;
+      let val = division.val()
+      return (val);
+    });
+    console.log(results);
+    $('#container3').html('<span>Result: </span>' + results);
+  });
+
 
   //Homework example
   $(function() {
