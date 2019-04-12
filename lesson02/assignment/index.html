@@ -8,13 +8,28 @@
     </head>
     <body>
         <main class="main">
-            <h1>title</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti, eum. Expedita perferendis velit numquam deleniti
-                sapiente quasi nam illo quos quod quibusdam. Libero repellendus
-                eum modi aut ratione eaque consectetur?
-            </p>
+          <!-- Parent div contains all bio card info -->
+          <div class="bio-card">
+            <!-- Create 2 child divs for flexbox -->
+            <!-- div 1 -->
+            <div class="bio-card__main">
+              <img class="bio-card__img" src="./img/unsplash-headshot.jpg" alt="employee headshot">
+              <h3 class="bio-card__name">Steve Smith</h3>
+              <h4 class="bio-card__title">Project Manager</h4>
+            </div>
+            <!-- div 2 -->
+            <div class="bio-card__details">
+              <p><span>Company: </span>Front End Dev Co</p>
+              <p>Experience: 3 years</p>
+              <p>School: UW</p>
+              <p>Major: Marketing</p>
+              <p>Email: steve@fedc.com</p>
+              <div>
+                <img src="./img/linkedin.svg" alt="linkedin logo">
+                <p>steve.linkedinprofile.com</p>
+              </div>
+            </div>
+          </div>
         </main>
     </body>
 </html>

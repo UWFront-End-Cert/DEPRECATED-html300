@@ -4,3 +4,30 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.bio-card {
+  background-color: $white;
+  display: flex;
+  flex-wrap: wrap;
+  &__main {
+    background-color: $white;
+  }
+  &__img {
+    max-width: 150px;
+  }
+  &__name {
+    color: $gray-text;
+  }
+  &__title {
+    color: $gray-text;
+  }
+  &__details {
+    background-color: $gray-background;
+  }
+  &__details p {
+    color: $gray-text;
+  }
+  &__details span {
+    color: $gray-text;
+    font-weight: bold;
+  }
+}
