@@ -5,14 +5,20 @@
 @import 'components.content';
 
 .bio-card {
-  background-color: $white;
+  // Flex used to make card responsive
   display: flex;
   flex-wrap: wrap;
+  background-color: $white;
+  padding: 30px;
+  // Bio card has 2 <divs>
+  // Main <div> includes bio photo, name and title
   &__main {
     background-color: $white;
+    margin-right: 30px;
   }
   &__img {
     max-width: 150px;
+    border-radius: 50%;
   }
   &__name {
     color: $gray-text;
@@ -20,7 +26,9 @@
   &__title {
     color: $gray-text;
   }
+  // Details <div> includes company, experience, school, etc
   &__details {
+    padding: 20px;
     background-color: $gray-background;
   }
   &__details p {
@@ -29,5 +37,12 @@
   &__details span {
     color: $gray-text;
     font-weight: bold;
+  }
+  &__details img {
+    position: relative;
+    top: 7px;
+    height: 25px;
+    display: inline-block;
+    padding-right: 10px;
   }
 }
