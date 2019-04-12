@@ -13,5 +13,13 @@ html {
 }
 
 h1 {
-    color: $red;  
+    color: $red;
+}
+
+
+.main {
+  &__img{
+    display: block;
+    border-radius: 50%;
+  }
 }
