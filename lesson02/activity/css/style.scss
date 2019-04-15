@@ -4,3 +4,35 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.static-block {
+h1 {
+    color: $red;
+    font-family: $font;
+}
+.static-block__title {
+  margin: 4rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+&__copy {
+  margin-bottom: 1rem;
+  color: $purple;
+
+}
+&__img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+&__content {
+  border-bottom: 1px solid #f5f5f5;
+  margin: 2rem auto;
+}
+
+&:only-of-type &__content {
+	border: none;
+}
+&:last-of-type &__content {
+	border: none;
+}
+}
