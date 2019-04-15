@@ -1,3 +1,7 @@
+body{
+  color: $font-color
+}
+
 html {
     box-sizing: border-box;
 }
@@ -16,10 +20,42 @@ h1 {
     color: $red;
 }
 
+h3{
+  font-style: italic;
+  font-weight: lighter;
+}
+
+p{
+  font-size: 1.2rem;
+}
 
 .main {
-  &__img{
-    display: block;
-    border-radius: 50%;
+  padding: 2rem 2rem 2rem .3rem;
+  height: 500px;
+  border: 3rem solid $border;
+  display: flex;
+  flex-direction: row;
+  &__title-tile{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__img{
+      display: block;
+      border-radius: 50%;
+      height: 240px;
+    }
   }
+  &__info-tile{
+    width: 700px;
+    background-color:  $gray;
+    padding: 25px;
+  }
+
+}
+
+i{
+  color: $linkenid;
+  font-size: 2rem;
 }
