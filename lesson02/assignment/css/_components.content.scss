@@ -1,5 +1,5 @@
 //Defining Flex Box styling using mixin so we don't have to retype flexbox settings each time
-@import '_components.mixins.scss';
+
 
 
 body{
@@ -41,8 +41,8 @@ p{
     &__img{
       display: block;
       border-radius: 50%;
-      width: 90%;
-      height: 90%;
+      width: 240px;
+
 
     }
   }

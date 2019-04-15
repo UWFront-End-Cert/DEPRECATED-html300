@@ -1,6 +1,6 @@
 //Defining Flex Box styling using mixin so we don't have to retype flexbox settings each time
 
-
+//mixin to use for flexbox column where text elements need to align to the left
 @mixin flexCol{
   display: flex;
   flex-direction: column;
@@ -10,6 +10,7 @@
   flex-shrink: 1;
 }
 
+//mixin to use for flexbox column where text elements are centered
 @mixin flexColCenter{
   display: flex;
   flex-direction: column;
@@ -17,7 +18,7 @@
 
 
 }
-
+//mixin for main container, allow for responsive design
 @mixin flexRow{
   display: flex;
   flex-direction: row;
