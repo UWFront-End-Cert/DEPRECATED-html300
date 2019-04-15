@@ -1,0 +1,25 @@
+//Defining Flex Box styling using mixin so we don't have to retype flexbox settings each time
+
+
+@mixin flexCol{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-shrink: 1;
+}
+
+@mixin flexColCenter{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+
+
+}
+
+@mixin flexRow{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

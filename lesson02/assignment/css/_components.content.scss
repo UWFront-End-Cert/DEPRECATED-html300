@@ -1,3 +1,7 @@
+//Defining Flex Box styling using mixin so we don't have to retype flexbox settings each time
+@import '_components.mixins.scss';
+
+
 body{
   color: $font-color
 }
@@ -16,9 +20,6 @@ html {
     padding: 2rem;
 }
 
-h1 {
-    color: $red;
-}
 
 h3{
   font-style: italic;
@@ -30,25 +31,24 @@ p{
 }
 
 .main {
-  padding: 2rem 2rem 2rem .3rem;
+  padding: 2rem 2rem 2rem 2rem;
   height: 500px;
-  border: 3rem solid $border;
-  display: flex;
-  flex-direction: row;
+  @include flexRow
   &__title-tile{
+    padding: 25px 25px 25px 0px;
     width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColCenter;
     &__img{
       display: block;
       border-radius: 50%;
-      height: 240px;
+      width: 90%;
+      height: 90%;
+
     }
   }
   &__info-tile{
-    width: 700px;
+    @include flexCol;
+    width: 400px;
     background-color:  $gray;
     padding: 25px;
   }
