@@ -1,7 +1,7 @@
 //Defining Flex Box styling using mixin so we don't have to retype flexbox settings each time
 
 
-
+//made the font color greyish to match rendering
 body{
   color: $font-color
 }
@@ -16,24 +16,27 @@ html {
     box-sizing: inherit;
 }
 
+//added padding to the entire main section to match rendering.
 .main {
     padding: 2rem;
 }
 
-
+//made the title match the rendering with italic font that's lighter than the main text.
 h3{
   font-style: italic;
   font-weight: lighter;
 }
-
+//up the size of the font in the __info-tile to match the rendering.
 p{
   font-size: 1.2rem;
 }
 
+//main container is the one that houses the title tile and the info tile. this is set with a flewbox so that it can be responsive to shrinking windows or mobile devices.
 .main {
   padding: 2rem 2rem 2rem 2rem;
   height: 500px;
   @include flexRow
+  //title tile includes picture, name, and title
   &__title-tile{
     padding: 25px 25px 25px 0px;
     width: 300px;
@@ -42,19 +45,18 @@ p{
       display: block;
       border-radius: 50%;
       width: 240px;
-
-
     }
   }
+  //info tile contains info about the person.
   &__info-tile{
     @include flexCol;
     width: 400px;
     background-color:  $gray;
     padding: 25px;
   }
-
 }
 
+//i is used for the little linkedin icon from front-awesome. this is black by defaust so changing the font color to linkedin blue matches the rendering.
 i{
   color: $linkenid;
   font-size: 2rem;
