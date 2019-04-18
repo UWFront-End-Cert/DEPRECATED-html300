@@ -2,14 +2,14 @@
 	&__title {
 	  margin: 4rem 0 0;
 	  font-size: 1.5rem;
-	  font-family: arial, helvetica, sans-serif;
+	  font-family: $font-fam;
 	  font-weight: 400;
 	  color: $purple;
 	}
 	&__copy {
-	    margin-bottom: 1rem;
+	  margin-bottom: 1rem;
 		font-size: 1rem;
-		font-family: arial, helvetica, sans-serif;
+		font-family: $font-fam;
 		color: $blue;
 	}
 	&__img {
@@ -24,12 +24,12 @@
 	}
 	&:only-of-type {
 	  .static-block__content {
-		border: none;
+			border: none;
 	  }
 	}
 	&:last-of-type {
 	  .static-block__content {
-		border: none;
+			border: none;
 	  }
 	}
-  }
+}

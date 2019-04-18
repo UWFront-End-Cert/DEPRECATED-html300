@@ -1,4 +1,4 @@
-# tester
+# Lesson08 Activity
 
 > A Vue.js project
 
