@@ -1,0 +1,10 @@
+[{
+  name: "Steve Smith",
+  jobTitle: "Project Manage",
+  Company: "Front End Dev Co",
+  Experience: "3 years",
+  School: "UW",
+  Major: "Marketing",
+  Email: "steve@fedc.com"
+  LinkedInUrl: "steve.linkedinprofile.com"
+}]
