@@ -1,15 +1,39 @@
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Fun with Constructors!</title>
-	<script src="index.js"></script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="css/style.css" />
+	<title>Assignment 3</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="index.js" charset="utf-8"></script>
 </head>
+
 <body>
+	<main class="main">
+		<!-- Parent div contains all bio card info -->
+		<div class="bio-card">
+			<!-- Create 2 child divs for flexbox -->
+			<!-- div 1 -->
+			<div class="bio-card__main">
+				<img class="bio-card__img" src="./img/unsplash-headshot.jpg" alt="employee headshot">
+				<h3 class="bio-card__name">Steve Smith</h3>
+				<h4 class="bio-card__title">Project Manager</h4>
+			</div>
+			<!-- div 2 -->
+			<div class="bio-card__details">
+				<p><span>Company: </span>Front End Dev Co</p>
+				<p><span>Experience: </span>3 years</p>
+				<p><span>School: </span>UW</p>
+				<p><span>Major: </span>Marketing</p>
+				<p><span>Email: </span>steve@fedc.com</p>
+				<p><img src="./img/linkedin.svg" alt="linkedin logo">steve.linkedinprofile.com</p>
+			</div>
+		</div>
+	</main>
 	<h1>Assignment 3</h1>
-	<section class="template-hook">
-		Fill this section with the templated components
-	</section>
+	<section class="template-hook"></section>
 </body>
+
 </html>
