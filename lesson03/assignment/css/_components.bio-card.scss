@@ -1,0 +1,72 @@
+//Style the biography cards
+
+.bio-card {
+  // Flex used to make card responsive
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 2rem auto;
+  background-color: $white;
+  padding: 30px;
+  // Bio card has 2 <divs>
+  // Main <div> includes bio photo, name and title
+  &__main {
+    background-color: $white;
+    padding-right: 0px;
+  }
+  &__img {
+    max-width: 180px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  &__name {
+    margin: 20px 0 0;
+    text-align: center;
+    color: $gray-text;
+  }
+  &__title {
+    margin: 5px 0 0;
+    text-align: center;
+    font-weight: lighter;
+    font-style: italic;
+    color: $gray-text;
+  }
+  // Details <div> includes company, experience, school, etc
+  &__details {
+    width: 67%;
+    padding: 25px;
+    background-color: $gray-background;
+  }
+  &__details p {
+    margin: 0 0 15px;
+    color: $gray-text;
+  }
+  &__details p:nth-of-type(6) {
+    margin: 0;
+    color: $gray-text;
+  }
+  &__details span {
+    color: $gray-text;
+    font-weight: bold;
+  }
+  &__details img {
+    position: relative;
+    top: 7px;
+    height: 25px;
+    display: inline-block;
+    padding-right: 10px;
+  }
+  
+// Responsive design -- use mixin
+
+  @include media-query(mobile){
+    display: block;
+    width: 100%;
+    &__details {
+      margin: 30px auto 0;
+      width: 100%;
+    }
+  }
+}

@@ -2,6 +2,8 @@
 $(document).ready(function() {
 
   // All other JS begins here
+
+  // Create const for JSON data
   const peopleList = [
     {
      "name": "Steve Smith",
@@ -45,6 +47,7 @@ $(document).ready(function() {
     }
   ];
 
+  // Create template for bio card that uses JSON data
   let bioCardHTML = peopleList.map(function(el){
     return bioCard = `
     <div class="bio-card">
@@ -65,47 +68,6 @@ $(document).ready(function() {
     `;
   });
 
+  // Output templated data to main page
   $(".template-hook").append(bioCardHTML);
 });
-
-
-
-
-// const bioCard = {
-//   name: 'Steve Smith',
-//   jobTitle: 'Project Manager',
-//   company: 'Front End Dev Co',
-//   experience: '3 years',
-//   school: 'UW',
-//   major: 'Marketing',
-//   email: 'steve@fedc.com',
-//   linkedInUrl: 'steve.linkedinprofile.com',
-//
-//   greeting(){
-//     console.log(`hello I am ${this.name}`);
-//   }
-// };
-//
-// console.log(Object.keys(bioCard));
-//
-// for (const apple in bioCard) {
-//   console.log(`${bioCard[apple]}`);
-// }
-//
-// console.log(Object.values(bioCard));
-//
-// console.log(Object.entries(bioCard));
-
-
-// console.log(bioCard.jobTitle);
-// bioCard.greeting();
-
-
-// constructors
-// function bioCard(name, jobTitle){
-//   this.name = name;
-//   this.jobTitle = jobTitle;
-// }
-//
-// const steve = new bioCard('Steve Smith', 'Project Manager');
-// console.log(steve.jobTitle);
