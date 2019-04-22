@@ -31,14 +31,14 @@
     @if $breakpoint-found == false{
         @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
     }
-
 }
 
 // Add breakpoints
 $breakpoints: (
     "xl"            "screen and (min-width: 1300px)",
-    "desk"          "screen and (min-width: 1024px)",
-    "lg"            "screen and (min-width: 920px)",
+    "desk-large"    "screen and (min-width: 1024px)",
+    "desk-small"    "screen and (max-width: 1100px)",
+    "lg"            "screen and (max-width: 920px)",
     "tab"           "screen and (min-width: 768px)",
     "mobile"        "screen and (max-width: 767px)",
     "infograph"     "screen and (min-width: 540px)",
