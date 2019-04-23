@@ -1,13 +1,116 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Fun with Constructors!</title>
-	<script src="index.js"></script>
-</head>
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="X-UA-Compatible" content="ie=edge">
+			<title>document</title>
+			<script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+			<script
+  					src="https://code.jquery.com/jquery-3.4.0.js"
+  					integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  					crossorigin="anonymous"></script>
+			<script type="text/javascript">
+				//const person ={
+				//	name :"Anjali",
+				//	job : "HTML Developer"
+
+				/*const person ={
+					name :"Anjali",
+					job : "HTML Developer",
+					pet : "dog",
+					greeting: function(){
+						return `Hello ${this.name}`;
+					},
+					Hello: function(x){
+							return `Hello ${x}`;
+					}
+				}
+				console.log(person);
+				console.log(person["name"]);
+				console.log(person["job"]);
+				console.log(person.pet);
+				console.log(person.greeting());
+
+				person.name = "Jim";
+				console.log(person["name"]);
+				person.city = "seattle";
+				console.log(person["city"]);
+				console.log(person.hello("Ronak"));*/
+
+				/*class Car {
+					  constructor(color,make,model,year){
+						this.color = color;
+						this.make = make;
+						this.model = model;
+						this.year = year;
+					}
+
+					carAge(){
+						let age = newDate().getFullYear();
+						return age - this.year;
+					}
+				}
+
+					const myCar = new Car("Black","Chevy","Cruze","2010");
+					console.log(myCar.carAge());
+					const newCar = new Car();
+					newCar.color = "Blue";
+					newCar.transmition = "standard";
+					console.log(newCar);
+				*/
+
+				/*class dogs {
+					  constructor(fullname,age,breed,barkLevel,energyLevel){
+						this.fullname = fullname;
+						this.age = age;
+						this.breed = breed;
+						this.barkLevel = barkLevel;
+						this.energyLevel = energyLevel;
+					}
+					pat(){
+						this.barkLevel = this.barkLevel + 1 ;
+						this.energyLevel = this.energyLevel + 1;
+						console.log(`${this.fullname} bark level is ${this.barkLevel} and energy Level is ${this.energyLevel}`);
+					}
+				}
+
+				const mydog = new dogs("Alice","2","English Sheep Dog",2,3);
+				mydog.pat();
+				*/
+				/*const mac = { screenLarge : "Desktop", screenMedium: "Laptop", screenSmall : "Tablet", screenExtraSmall: " Mobile"};
+				for( const screen in mac){
+					console.log(mac[screen]);
+				}
+				console.log(Object.keys(mac));
+				console.log(Object.values(mac));
+				console.log(Object.entries(mac));
+				console.log(mac);*/
+			$(function(){
+				const cars = [
+					{"make" : "Ford", "model" : "Mustang" , "year" : 2010 , "color" : "Black" },
+					{"make" : "Chevy", "model" : "Corvette" , "year" : 1984 , "color" : "Red" },
+					{"make" : "Jeep", "model" : "Wrangler" , "year" : 1999 , "color" : "Silver" },
+				]
+
+				let carsHTML = cars.map(function(x){
+					return car = `<article class = "car">
+						<ul>
+							<li class = "car_make">${x.make} </li>
+							<li class = "car_model">${x.model} </li>
+							<li class = "car_details">color : ${x.color} </li>
+							<li class = "car_details">Year : ${x.year} </li>
+						</ul>
+					</article>`
+				});
+				$(".cars").append(carsHTML);
+			});
+			</script>
+		</head>
 <body>
-	<h1>Hey!</h1>
-	<p>Check the console for the output!</p>
+	<section class="cars">
+		code ends up here
+
+	</section>
 </body>
 </html>
