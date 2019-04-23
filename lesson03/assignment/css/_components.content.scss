@@ -8,96 +8,10 @@ html {
     box-sizing: inherit;
 }
 
-
-.template-hook{
-  width: 55%;
-  padding: 0.5%;
-  margin: 2% auto;
-  background-color: $gray;
-  border : 1px solid $grey-border;
-
-  //use of @mixin for mobile responsive
-  @include media-query('mobile'){
-    width :100%
-  }
+.main {
+    padding: 2rem;
 }
 
-.container{
-    padding: 2% 1%;
-    margin: 5% auto;
-    width: 90%;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    background-color: $white;
-    //use of @mixin for mobile responsive
-    @include media-query('mobile'){
-      grid-template-columns: 100%;
-    }
-}
-
-.pic-side{
-      /*padding: 5%;*/
-      margin: 2.5%;
-      color:  $lg-font-gray;
-      //Use of SASS Nesting features
-      img {
-        border-radius: 50%;
-        width: 80%;
-        display: block;
-        margin : auto;
-        filter: drop-shadow(8px 8px 8px gray); /// CSS Function - drop-shadow()
-        transition: filter 2s cubic-bezier(.63,.05,.43,1.7); // CSS Function - cubic-bezier()
-      }
-      img:hover{
-        filter : grayscale(100%);  /// CSS Function - grayscale()
-      }
-      h2 {
-          margin: 15px 0 0 0;
-          padding: 0;
-          text-align: center;
-          font-weight: bold;
-          font-size: $lg-fonts-size;
-          font-family: $lg-font-style;
-          }
-      h3 {
-          margin:0;
-          padding: 0;
-          text-align: center;
-          font-size: $md-fonts-size;
-          font-family: $md-font-style;
-          }
-  }
-
-.details-side {
-    background-color: $gray;
-    padding: 5% 7% 5% 12%;
-    margin: 5%;
-    color: $lg-font-gray;
-    font-size: $sm-fonts-size;
-    .content-fonts{
-        padding: 3% 5%;
-        margin: 0;
-        font-family: $sm-font-style;
-        .label-fonts{
-              font-weight: bold;
-              font-family: $lg-font-style;
-            }
-      }
-    img{
-      float : left;
-      width: 10%;
-      margin: 2% 5%;
-    }
-    //use of @mixin for mobile responsive
-    @include media-query('mobile') {
-         p{
-           font-size: 1em;
-         }
-     }
-
-  }
-@include media-query('desk-small') {
-  .template-hook{
-    width: 90%;
-  }
+h1 {
+    color: $red;  
 }
