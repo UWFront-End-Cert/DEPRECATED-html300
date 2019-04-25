@@ -1,3 +1,4 @@
+
 [{
   name: "Steve Smith",
   jobTitle: "Project Manage",
@@ -36,4 +37,4 @@
   Email: "mJordan@bulls.com"
   LinkedInUrl: "mJordas.linkedinprofile.com"
 },
-]
+ ]
