@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,23 @@
   <style></style>
   <title>Document</title>
 </head>
+
 <body>
-  <div id="one">
-    <div id="two">
-
-    </div>
+  <div class="container">
+    <h1>Pulse</h1>
+    <!-- Create 3 SVG circles
+    viewBox: points seen in drawing area (min X, min Y, width, height)
+    circle: defines a circle
+    cx: x axis of circle center
+    cy: y axis of circle center
+    r: radius
+    notes -->
+    <svg class="pulse" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <circle id="Oval" cx="512" cy="512" r="512"></circle>
+      <circle id="Oval" cx="512" cy="512" r="512"></circle>
+      <circle id="Oval" cx="512" cy="512" r="512"></circle>
+    </svg>
   </div>
-
 </body>
+
 </html>

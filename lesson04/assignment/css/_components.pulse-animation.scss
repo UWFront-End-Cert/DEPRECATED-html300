@@ -1,0 +1,79 @@
+// Pulse animation
+
+h1 {
+  font-size: 5rem;
+// shadow gives subtle texture to text
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+  color: #343434;
+}
+
+body {
+  background-color: #ededed;
+}
+
+.container {
+  // background-color: #ededed;
+  position: relative;
+  z-index: 0;
+  // Use flex to center the text and circles
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // 100vh = 100% the height of the viewport
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.pulse {
+  // circles start in center of page
+  z-index: -1;
+  position: absolute;
+  // position circles at bottom right of screen
+  top: 50%;
+  left: 50%;
+  // translate moves circles back to center
+  transform: translate(-50%, -50%);
+  // set circle diameter
+  max-width: 30rem;
+
+  //style the circles
+  circle {
+    // set circle color
+    fill: #ff5154;
+    // scale size of circle to zero, effectively hiding it
+    transform: scale(0);
+    opacity: 0;
+    // change the position of transformed elements
+    transform-origin: 50% 50%;
+    // animate circles
+    // animation: (name duration delay timing-function)
+    // first circle
+    animation: pulse 2s cubic-bezier(.5,.5,0,1);
+
+    // second circle animation (delayed .75s)
+    &:nth-child(2) {
+      fill: #7fc6a4;
+      animation: pulse 2s 0.75s cubic-bezier(.5,.5,0,1);
+    }
+
+    // third circle animation (delayed 1.5s)
+    &:nth-child(3) {
+      fill: #e5f77d;
+			animation: pulse 2s 1.5s cubic-bezier(.5,.5,0,1);
+    }
+
+  }
+}
+
+// animate circles by changing opacity and scale
+// specify when change occurs using % (e.g., opacity changes at 25% mark of duration)
+@keyframes pulse {
+
+  25% {
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
