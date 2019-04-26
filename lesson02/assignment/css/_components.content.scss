@@ -1,5 +1,11 @@
+// for outer border
 html {
     box-sizing: border-box;
+    border: $border;
+    margin: $margin;
+    padding: $padding;
+    width: $width;
+    height: $height;
 }
 
 *,
@@ -7,11 +13,58 @@ html {
 *:before {
     box-sizing: inherit;
 }
-
-.main {
-    padding: 2rem;
+// The flex mixin manages it at the top level instead of throughout
+@mixin flexbox {
+  display: flex;
 }
 
-h1 {
-    color: $red;  
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+.main {
+  @include flexbox;
+  width: 100%;
+  height: 100%;
+  margin: .5rem;
+  padding: 1rem;
+  color: $gray;
+}
+
+.left {
+  @include flex-wrap;
+  // Included variables for the borders of the two boxes, since they're the same
+  padding: $box-padding;
+  margin: $box-margin;
+  width: 40%;
+  height: $box-height;
+    & img {
+      border-radius: 50%;
+      width: 75%
+    }
+    & h1 {
+      font-size: 20px;
+      margin-left: 3.5rem;
+    }
+    & p {
+      font-style: italic;
+      margin-left: 3.5rem;
+      line-height: 5%;
+    }
+}
+
+.right {
+  @include flex-wrap;
+  margin: $box-margin;
+  padding: $box-padding;
+  background-color: $ltgray;
+  width: 50%;
+  height: $box-height;
+    & .fa-linkedin {
+      color: $blue;
+      vertical-align: middle;
+    }
+    & .wrap {
+      display: inline-block;
+    }
 }
