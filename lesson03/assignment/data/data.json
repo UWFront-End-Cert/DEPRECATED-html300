@@ -1,5 +1,4 @@
-
-[{
+ [{
   "name": "Steve Smith",
   "jobTitle": "Project Manage",
   "Company": "Front End Dev Co",
@@ -35,6 +34,6 @@
   "School": "UNC",
   "Major": "Trash Talking",
   "Email": "mJordan@bulls.com",
-  "LinkedInUrl": "mJordas.linkedinprofile.com"
-},
- ]
+  "LinkedInUrl": "mJordan.linkedinprofile.com"
+}
+]
