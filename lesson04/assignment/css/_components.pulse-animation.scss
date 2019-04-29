@@ -2,14 +2,15 @@
 // source: https://codepen.io/matchboxhero/pen/pWLOQb?editors=1100
 
 .container {
-
-  background-image: url(../small-dog.jpg);
+  // Set page background image
+  background-image: url(../seattle-map.png);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.3;
+  opacity: 0.8;
 
+  // Set up container for pulse animation
   position: relative;
   z-index: 0;
   // Use flex to center the text and circles
@@ -36,7 +37,7 @@
   //style the circles
   circle {
     // set circle color
-    fill: #ff5154;
+    fill: black;
     // scale size of circle to zero, effectively hiding it
     transform: scale(0);
     opacity: 0;
@@ -49,13 +50,13 @@
 
     // second circle animation (delayed .75s)
     &:nth-child(2) {
-      fill: #7fc6a4;
+      fill: black;
       animation: pulse 2s 0.75s cubic-bezier(.5,.5,0,1);
     }
 
     // third circle animation (delayed 1.5s)
     &:nth-child(3) {
-      fill: #e5f77d;
+      fill: black;
 			animation: pulse 2s 1.5s cubic-bezier(.5,.5,0,1);
     }
 
