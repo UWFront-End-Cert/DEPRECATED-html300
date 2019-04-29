@@ -1,0 +1,41 @@
+.wrapper{
+      margin: 100px auto;
+      max-width: 960px;
+
+      .stage{
+        list-style: none;
+        padding: 0;
+        .scene{
+          margin:30px;
+          float:left;
+          perspective: 1000px
+        }
+        .poster{
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-image: url("../img/poster02.jpg");
+          }
+      }
+    }
+
+
+
+  .poster, .info{
+    width:260px;
+    height:400px;
+  }
+  .info{
+    transform : rotateY(90deg) translateZ(130px);
+    border:1px solid #b8b5b5;
+    font-size : 0.75em;
+    background-color:white;
+  }
+  .movie{
+    width:260px;
+    height: 400px;
+    transform-style: preserve-3d
+    transition : transform 350ms;
+    &:hover {
+      transform : rotateY(-78deg) translatez(20px);
+    }
+  }
