@@ -5,15 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/css/style.css">
-  <style></style>
+  <style>
+
+  </style>
   <title>Document</title>
 </head>
-<body>
-  <div id="one">
-    <div id="two">
-
+<body >
+  <main class = "wrapper">
+    <header>
+        <h1 class="webTitle">
+          Welcome to The World of Recipes..!
+        </h1>
+        <!-- Used BEM for Naming Elements -->
+        <nav class="navigation">
+          <div class="navigation--block">
+            <img class = "navigation__img" src="./images/contactus.png" alt="Contact Us Icon">
+            <span class = "navigation__text"><a href="#"> Contact Us </a></span>
+          </div>
+          <div class="navigation--block">
+            <img class = "navigation__img" src="./images/blog.png" alt="Blog Icon">
+            <span class = "navigation__text"><a href="#"> Blog </a> </span>
+          </div>
+          <div class="navigation--block">
+            <img class = "navigation__img" src="./images/recipe.png" alt="Recipe Icon">
+            <span class = "navigation__text"> <a href="#"> Recipes </a></span>
+          </div>
+          <div class="navigation--block">
+            <img class = "navigation__img" src="./images/aboutus.png" alt="About us Icon">
+            <span class = "navigation__text"><a href="#"> About Us </a></span>
+          </div>
+        </nav>
+    </header>
+    <div class = "intro">
+        <div class="intro--Content">
+          <p class="intro__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </div>
+        <div class="intro--largeImg">
+        </div>
+        <div class="intro--smallImg">
+        </div>
     </div>
-  </div>
+    </main>
+    <footer>
+      <h3>Latest Recipes</h3>
+      <div class="recipeBox">
+        <img class= "recipeBox--img" src="./images/recipe1.jpg" alt="Recipe Picture">
+        <h3 class= "recipeBox--text"> Recipe One </h3>
+      </div>
+      <div class="recipeBox">
+        <img class= "recipeBox--img" src="./images/recipe2.jpg" alt="Recipe Picture">
+        <h3 class= "recipeBox--text"> Recipe Two </h3>
+       </div>
+      <div class="recipeBox">
+        <img class= "recipeBox--img" src="./images/recipe3.jpg" alt="Recipe Picture">
+        <h3 class= "recipeBox--text"> Recipe Three </h3>
+      </div>
+      <div class="recipeBox">
+        <img class= "recipeBox--img" src="./images/recipe4.jpg" alt="Recipe Picture">
+        <h3 class= "recipeBox--text"> Recipe Four </h3>
+      </div>
+    </footer>
 
 </body>
 </html>

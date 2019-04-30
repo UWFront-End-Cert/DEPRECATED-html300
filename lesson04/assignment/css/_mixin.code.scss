@@ -1,0 +1,19 @@
+//Mixin drawing circle of different Size
+@mixin round ($size){
+  border-radius : 50%;
+  height : $size;
+  width : $size;
+}
+
+//Mixin for curved Border
+@mixin round-curve ($size){
+    border-radius : $size;
+}
+
+//Mixin for updating values of background image
+@mixin background {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+}

@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+main{
+  width: 100%;
+}
+
+//main wrapper for page
+.wrapper{
+  margin: 20px auto ;
+  width :100%;
+  height: 1000px;
+  padding: 20px;
+  background-image: url("../images/background2.jpg");
+  @include background;
+}
+
+// code for navigation Bar
+.navigation{
+    margin: 50px 10px;
+    .navigation--block {
+        float: right;
+        @include round(70px);
+        margin: 20px;
+        background-color: $black;
+        transition: all 1s;
+        text-align: center;
+        .navigation__img{
+          width : 70%;
+          height: auto;
+          position: relative;
+          top : 10px;
+        }
+        .navigation__text{
+          display: blog;
+          position: relative;
+          top : 18px;
+          font-size: $sm-fonts-size;
+          a{
+           text-decoration: none;
+           color: $black;
+          }
+          }
+        &:hover{
+          cursor: pointer;
+          transform: scale(1.5);
+        }
+    }
+}
+
+
+// Animation for Introduction
+.intro--smallImg{
+    float: right;
+    @include round(300px);
+    background-image: url("../images/spices.jpg");
+    @include background;
+    transform: rotate(0);
+    transition: transform 5s ease;
+    position: absolute;
+    top : 200px;
+    left : 150px;
+    &:hover {
+      cursor: pointer;
+      transform: rotate(360deg);
+    }
+}
+.intro--largeImg{
+    @include round(400px);
+    margin : 20px;
+    background-color: $black;
+    transition: all 1.4s linear;
+    position: absolute;
+    top : 350px;
+    left : 300px;
+    background-image: url("../images/food.jpg");
+    @include background;
+    &:hover{
+      cursor: pointer;
+      transform: translatex(1100px);
+    }
+}
+.intro--Content{
+    @include round(400px);
+    margin : 20px;
+    background-color: $black;
+    cursor: pointer;
+    transition: all 1s;
+    position: absolute;
+    top : 350px;
+    left : 300px;
+    color : white;
+    .intro__text {
+      display: table-cell;
+      @include round(400px);
+      text-align: center;
+      vertical-align: middle;
+      font-size: $md-fonts-size;
+    }
+}
+
+
+//Recipes Box
+footer{
+width : 95%;
+padding: 25px;
+}
+
+.recipeBox{
+  width : 22%;
+  height : 300px;
+  float: left;
+  margin: 25px;
+  position: relative;
+  .recipeBox--img{
+   width : 100%;
+   height : 100%;
+   border-radius: 10px;
+   transition: .5s;
+  }
+  .recipeBox--text{
+   position: absolute;
+   top : 30%;
+   width : 100%;
+   text-align: center;
+   color: $white;
+   font-size: $lg-fonts-size;
+   opacity: 0;
+   transition: .3s;
+  }
+  &:hover {
+    cursor: pointer;
+    img {
+     filter:blur(2px) brightness(60%);
+    }
+    h3{
+      opacity: 1;
+    }
+  }
+}
