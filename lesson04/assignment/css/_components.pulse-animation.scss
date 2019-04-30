@@ -75,3 +75,27 @@
     transform: scale(1);
   }
 }
+
+
+// animate hamburger menu
+i {
+  color: dodgerblue;
+  opacity: 1;
+  animation: menu 3s 0s cubic-bezier(.5,.5,0,1);
+}
+
+@keyframes menu {
+
+0% {
+  opacity: 0;
+}
+
+50% {
+  opacity: 0;
+}
+
+100% {
+  opacity: 1;
+}
+
+}
