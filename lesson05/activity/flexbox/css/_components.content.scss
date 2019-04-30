@@ -1,0 +1,64 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.main {
+    padding: 2rem;
+}
+
+.nav {
+    background: $teal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    &-wrap {
+        max-width: 1920px;
+    }
+    &__logo,
+    &__login {
+        font-size: 28px;
+        color: $white;
+        font-family: $font-fam;
+        text-decoration: none;
+        margin: 0 auto 2rem;
+        width: 100%;
+        text-align: center;
+        @include media-query(tab) {
+            margin: 0;
+            width: auto;
+        }
+    }
+    &__login {
+        margin: 2rem auto 0;
+        @include media-query(tab) {
+            margin: 0;
+        }
+    }
+    &__list {
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+        text-align: center;
+    }
+    &__item {
+        display: inline-block;
+        font-size: 20px;
+        font-family: $font-fam;
+        margin-right: 2rem;
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    &__link {
+        color: $white;
+    }
+}
