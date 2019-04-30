@@ -1,11 +1,53 @@
-#one{
-  height: 400px;
-  width: 400px;
-  background-color: blue;
+// variables
+$primary-color: red;
+$secondary-color: yellow;
+$background-color: white;
 
-  #two{
-    height: 200px;
-    width: 200px;
-    background-color: red;
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+// body font and background setting
+body{
+  font-family: 'Montserrat', sans-serif;
+  background: $background-color;
+}
+
+// container containing content set to center
+.container{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  span {
+  text-transform: uppercase;
+  display: block;
   }
+}
+
+.intro {
+  color: $primary-color;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: text 3s 1;
+
+  // text expand when hover over
+  &:hover {
+    transform: scale(2);
+  }
+}
+
+// keyframes dectate kerning of typefaces
+@keyframes text {
+  0%{color: black;}
+  30%{letter-spacing: 20px;}
+  85%{letter-spacing: 2px;}
+  // 100%{transform: translateY(-50%);}
 }
