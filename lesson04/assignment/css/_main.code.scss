@@ -18,20 +18,20 @@ main{
 // code for navigation Bar
 .navigation{
     margin: 50px 10px;
-    .navigation--block {
+    .navigation__block {
         float: right;
         @include round(70px);
         margin: 20px;
         background-color: $black;
         transition: all 1s;
         text-align: center;
-        .navigation__img{
+        .navigation--img{
           width : 70%;
           height: auto;
           position: relative;
           top : 10px;
         }
-        .navigation__text{
+        .navigation--text{
           display: blog;
           position: relative;
           top : 18px;
@@ -50,7 +50,7 @@ main{
 
 
 // Animation for Introduction
-.intro--smallImg{
+.intro__smallImg{
     float: right;
     @include round(300px);
     background-image: url("../images/spices.jpg");
@@ -65,7 +65,7 @@ main{
       transform: rotate(360deg);
     }
 }
-.intro--largeImg{
+.intro__largeImg{
     @include round(400px);
     margin : 20px;
     background-color: $black;
@@ -80,7 +80,7 @@ main{
       transform: translatex(1100px);
     }
 }
-.intro--Content{
+.intro__Content{
     @include round(400px);
     margin : 20px;
     background-color: $black;
@@ -90,7 +90,7 @@ main{
     top : 350px;
     left : 300px;
     color : white;
-    .intro__text {
+    .intro--text {
       display: table-cell;
       @include round(400px);
       text-align: center;
@@ -112,13 +112,13 @@ padding: 25px;
   float: left;
   margin: 25px;
   position: relative;
-  .recipeBox--img{
+  .recipeBox__img{
    width : 100%;
    height : 100%;
    border-radius: 10px;
    transition: .5s;
   }
-  .recipeBox--text{
+  .recipeBox__text{
    position: absolute;
    top : 30%;
    width : 100%;
