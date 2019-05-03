@@ -9,5 +9,66 @@ html {
 }
 
 .main {
+    padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+header, nav, section, aside, footer {
+  color: white;
+}
+
+header {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  background-color: $red;
+  padding: 3rem;
+}
+
+nav {
+  grid-column: 1 / span 2;
+  background-color: $green;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-around;
+  width: 60%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+aside, section {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+  grid-column: 1 / 2;
+  grid-row: 3/4;
+  background-color: $purple;
+}
+
+section {
+  grid-column: 2 / 3;
+  background-color: $orange;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / span 2;
+  background-color: $blue;
+  padding: 3rem;
 }
