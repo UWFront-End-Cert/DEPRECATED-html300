@@ -1,0 +1,34 @@
+
+.container {
+  position: relative;
+
+  .image {
+  position: absolute;
+  left: 0;
+  width: 1000px;
+  height: 700px;
+  }
+}
+
+// @keyframes imageFadeInOut {
+//   0% {
+//   opacity:1;
+// }
+// 45% {
+// opacity:1;
+// }
+// 55% {
+// opacity:0;
+// }
+// 100% {
+// opacity:0;
+// }
+// }\
+
+// #cf3 img.top {
+// animation-name: imageFadeInOut;
+// animation-timing-function: ease-in-out;
+// animation-iteration-count: infinite;
+// animation-duration: 10s;
+// animation-direction: alternate;
+// }

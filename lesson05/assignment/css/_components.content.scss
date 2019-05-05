@@ -1,0 +1,88 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+// setting up flex and the flex setting used on multiple divs
+@mixin flexbox {
+  display: flex;
+}
+
+@mixin flex-set {
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  padding: 2rem;
+}
+
+// grid containers gie the approximate size of each section in proportion to one another
+.container {
+  color: white;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 400px 600px;
+  grid-template-rows: 200px 100px 400px 200px;
+}
+
+
+.header {
+  @include flexbox;
+  background-color: red;
+  padding: 1rem;
+  align-items: center;
+  grid-column: 1/3;
+  justify-content: space-around;
+}
+
+// nesting some stuff under this main nav-box div
+.nav-box {
+  grid-column: 1/3;
+
+ & .nav {
+    background-color: $green;
+    color: $white;
+    padding: 2rem;
+  }
+
+  & .list {
+    @include flexbox;
+    list-style-type: none;
+    justify-content: space-around;
+  }
+
+  & a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+ .main-content, .sidebar {
+   @include flexbox;
+   @include flex-set;
+   grid-row: 3;
+ }
+
+// setting main and sidebar next to each on row 3
+.main-content {
+  background-color: $orange;
+  grid-column: 2;
+}
+
+.sidebar {
+  background-color: $purple;
+  grid-column: 1;
+}
+
+.footer {
+  @include flexbox;
+  @include flex-set;
+  background-color: $navy;
+  grid-column: 1/3;
+}

@@ -1,0 +1,49 @@
+h1 {
+  color: #ce1126;
+  padding: 1rem;
+}
+
+.container  {
+  position: relative;
+  overflow: hidden;
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+// putting the images on top of each other
+.container img {
+    position: absolute;
+    left: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+// on hover, make img2 disappear
+.container img.img2:hover {
+  opacity: 0;
+  }
+
+
+
+
+// This is what I would have preferred to use because it allowed me to more
+// seamlessly switch between images using background-image
+
+
+// animation: imageFadeInOut;
+// animation-timing-function: ease-in-out;
+// animation-iteration-count: infinite;
+// animation-direction: normal;
+
+// adding the keyframe to fade in different background images
+// @keyframes imageFadeInOut {
+//   0% {
+//       background-image: url("../images/oaxaca6.jpg");
+//   }
+//   40% {
+//       background-image: url("../images/oaxaca7.jpg");
+//   }
+//   75% {
+//       background-image: url("../images/oaxaca4.jpg");
+//   }
+// }

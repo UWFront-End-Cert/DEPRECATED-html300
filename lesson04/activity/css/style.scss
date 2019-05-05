@@ -1,0 +1,59 @@
+.wrapper {
+  margin:  100px auto;
+  max-width: 960px;
+
+.stage {
+  list-style: none;
+  padding: 0;
+  }
+}
+
+.scene {
+    margin: 30px;
+}
+
+.poster {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/poster02.jpg");
+}
+
+.poster,
+.info {
+  width:  260px;
+  height: 400px;
+}
+
+.info {
+  transform: rotateY(90deg) translateZ(130px);
+  border: 1px solid #B8B5B5;
+  font-size: 0.75em;
+  background-color: white;
+  position: absolute;
+  top: bottom 0;
+}
+
+.movie {
+  width: 260px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transform: translateZ(-130px);
+  transition: transform 350ms;
+
+&:hover  {
+  transform: rotateY(-78deg) translateZ(20px);
+   }
+ }
+
+ .img {
+   background-image: url("../img/still02.jpg");
+   height: 200px;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   }
+
+ .header {
+   position: absolute;
+   bottom: 0;
+ }
