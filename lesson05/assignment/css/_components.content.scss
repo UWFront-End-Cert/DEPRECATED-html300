@@ -12,15 +12,18 @@ html {
     padding: 0;
 }
 
+// Set up a two column grid
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
 
+// Make text white
 header, nav, section, aside, footer {
   color: white;
 }
 
+// Position each element on the grid (w/ grid-column); use flex to position content
 header {
   grid-column: 1 / span 2;
   display: flex;
