@@ -1,18 +1,15 @@
-# Lesson08 Activity
+# Vue Components Activity
+### Setup
+* Run `npm install -g @vue/cli` to make sure the Vue CLI is installed globally if not already
+* Create a new project by running `vue init webpack-simple component-activity`
+* Answer the prompts
+* `cd` into `component-activity` and run `npm install`
+* Run `npm run dev` to launch the local server 
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Using Vue CLI, build a blog listing page given the following requirements
+* Have a parent component with data in the form of an array of post objects (provided in data.js)
+* Create a `<post>` component (in its own file) with props for `title`, `excerpt`, `likes`, and `category`. (make sure to import the component to `App.vue`)
+* List 4 blog posts as `<post>` components on the page using `v-for` and `v-bind` 
+* Use `v-bind` to pull the data for the template
+* Give the `<post>` component a button and tie it to an `addLike` method, increasing the `likes` value by one on click
+* Using data set on the parent, pass down the props to template out the data
