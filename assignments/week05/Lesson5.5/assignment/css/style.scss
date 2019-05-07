@@ -1,0 +1,182 @@
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+// variables 
+$header-color: #f1342b;
+$navitem-color: #7acb00;
+$sidebar: #6e26c5;
+$manincontent: #ff6600;
+$footer: #140e96;
+$text: #fff;
+
+
+// coded using css-grid and flexbox
+
+// //body of html
+// body {
+//     margin: auto;
+// }
+
+// // main container holding contents 
+// #main {
+//     display: grid;
+//     grid-template-columns: 20% 80%;
+// }
+
+// //header section 
+// header {
+//     grid-column-start: 1;
+//     grid-column-end: 3;
+//     color: $text;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     height: 100px;
+//     background: $header-color;
+// }
+
+// // navigation tabs
+// nav {
+//     background: $navitem-color;
+//     grid-column-start: 1;
+//     grid-column-end: 3;
+
+
+//     // unorder list
+//     ul {
+//         display: flex;
+//         padding: 20px;
+//         justify-content: space-around;
+//         list-style: none;
+//     }
+
+//     // navigation link items 
+//     a {
+//         text-decoration: none;
+//         color: $text;
+//     }
+// }
+
+// //side bar navigation 
+// aside {
+//     height: 100vh;
+//     grid-column-start: 1;
+//     grid-column-end: 2;
+//     background: $sidebar;
+//     color: $text;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+// }
+
+// // main contnet hodler
+// main {
+//     height: 100vh;
+//     grid-column-start: 2;
+//     grid-column-end: 4;
+//     background: $manincontent;
+//     color: $text;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+// }
+
+// // footer section 
+// footer {
+//     display: flex;
+//     grid-column-start: 1;
+//     grid-column-end: 3;
+//     background: $footer;
+//     height: 100px;
+//     color: $text;
+//     align-items: center;
+//     justify-content: center;
+//     height: 300px;
+//     text-align: center;
+// }
+
+
+// code using flexbox only
+
+body {
+    margin: auto;
+    color: $text;
+}
+
+//main container holding all content
+#main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+//header section
+header {
+    background: $header-color;
+    flex: 5;
+    padding: 60px;
+    text-align: center;
+}
+
+nav {
+        background: $navitem-color;
+
+        // unorder list
+        ul {
+            display: flex;
+            padding: 20px;
+            justify-content: space-around;
+            list-style: none;
+        }
+    
+        // navigation link items 
+        a {
+            text-decoration: none;
+            color: $text;
+        }
+    }
+
+
+.main-content {
+    display: flex;
+
+
+// sidebar section
+    aside {
+        display: flex;
+        height: 600px;
+        background: $sidebar;
+        width: 20%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    //main content holder section
+    main {
+        display: flex;
+        height: 600px;
+        background: $manincontent;
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+//footer section
+footer {
+    display: flex;
+    background: $footer;
+    height: 200px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
