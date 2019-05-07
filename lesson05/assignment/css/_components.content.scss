@@ -1,5 +1,8 @@
+// Setting values for whole document
 html {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 *,
@@ -8,6 +11,114 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+//Attributes of Block elements
+
+body{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // Use of Repeat
+  grid-template-rows: 2.5fr 1fr 10fr 1.5fr;
+  grid-template-areas:
+  "header header header header"
+  "nav nav nav nav"
+  "aside main main main"
+  "footer footer footer footer";
+}
+
+header{
+  width: 100%;
+  background-color: $red;
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav{
+  background-color: $green;
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .nav-bar{        //nav-bar block;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-content: center;
+    &__tab{      //nav-bar Element
+        list-style-type: none;
+        a {
+          text-decoration: none;
+          color: $white;
+          font-size: $sm-font-size;
+        }
+    }
+  }
+    .icon{
+        visibility:hidden;
+
+      }
+}
+
+main{
+  background-color: $orange;
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside{
+  background-color: $purple;
+  grid-area: aside;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer{
+  background-color: $blue;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-size: $lg-font-size;
+  color: $white;
+}
+
+// Created Responsive Web-page using @mixin
+
+@include media-query('mobile') {
+    body {
+        grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "main main main main"
+        "footer footer footer footer";
+    }
+    .nav-bar {   //Block
+      width : 0;
+      &__tab {   //Element of nav-bar
+        display: none;
+      }
+    }
+    .icon a {
+      visibility: visible;
+      font-size: 2em;
+      display:flex;
+      justify-content: flex-end;
+      align-self: center;
+      padding-right: 50px;
+    }
+    aside {
+      display: none;
+      width: 0;
+      height: 0;
+    }
 }

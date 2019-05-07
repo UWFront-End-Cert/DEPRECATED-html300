@@ -3,15 +3,50 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
+        <!--<link rel="stylesheet" href="css/style.css" /> -->
         <title>Flexbox Activity - Lesson 03</title>
+        <style media="screen">
+          .main{
+            width : 100%;
+            background: grey;
+            margin : 50px 5px;
+          }
+          .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            }
+
+          .box {
+            flex-basis: 120px;
+            text-align: center;
+            height: 50px;
+          }
+
+
+          .temp{
+            flex-grow: 0.9;
+            flex-shrink: 0
+          }
+          a{
+            text-decoration: none;;
+            color: black ;
+            font-size: 2rem;
+
+          }
+        </style>
     </head>
     <body>
         <main class="main">
             <div class="nav-wrap">
                 <nav class="nav">
+                    <div class="box">
                     <a href="#" class="nav__logo">MySiteCo</a>
-                    <ul class="nav__list">
+                    </div>
+
+                <!--    <ul class="nav__list">
                         <li class="nav__item">
                             <a href="#" class="nav__link">Contact</a>
                         </li>
@@ -24,8 +59,19 @@
                         <li class="nav__item">
                             <a href="#" class="nav__link">Store</a>
                         </li>
-                    </ul>
+                    </ul>-->
+                    <div class="box"> <a href="#" class="nav__link">Contact</a>  </div>
+                    <div class="box"> <a href="#" class="nav__link">About</a> </div>
+                    <div class="box"> <a href="#" class="nav__link">Team</a> </div>
+                    <div class="box"> <a href="#" class="nav__link">Store</a> </div>
+
+                    <div class="box">
                     <a href="#" class="nav__login">Log In</a>
+                    </div>
+                    <div class="temp">
+
+                    </div>
+
                 </nav>
             </div>
         </main>
