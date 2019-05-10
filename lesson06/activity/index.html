@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Class 06 Activity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+  <!-- Buttons -->
+  <div class="row m-5">
+    <div class="form-group">
+      <button id="target" type="button" class="btn btn-primary btn-block mb-3">Click Me</button>
+      <span id="tooltip" class="d-inline-block" tabindex="0" data-toggle="tooltip" data-placement="bottom" title="Click Above">
+        <button id="submit" class="btn btn-primary btn-block" style="pointer-events: none;" type="submit" disabled>Submit</button>
+      </span>
+    </div>
+  </div>
+
+  <!-- JS for Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- JQuery -->
+  <script>
+    $(document).ready(function() {
+
+      // Button tooltip enabled
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+
+      // Click event
+      $("#target").click(function() {
+        $("#submit").removeAttr("disabled")
+        $('[data-toggle="tooltip"]').tooltip('disable')
+      });
+    });
+  </script>
+
+</body>
+
+</html>
