@@ -1,3 +1,19 @@
 .container {
   background-color: coral;
 }
+
+.row {
+  min-height: 5rem;
+}
+
+.row > div {
+  border: 1px solid black;
+}
+
+.row > div:nth-child(2n+1) {
+  background-color: lightblue;
+}
+
+.row > div:nth-child(2n) {
+  background-color: dodgerblue;
+}
