@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/boot0strap.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron text-center" id = "pagebanner">
+            <h1>Food Recipies</h1>
+            <p>for food lovers!</p>
+      </div>
+
+  <!---Nav Bar --->
+      <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="recipe.html"> Recepies </a>
+                          <ul class="dropdown-menu">
+                            <li><a href="recipe.html">Appitizer</a></li>
+                            <li><a href="recipe.html">Main Course</a></li>
+                            <li><a href="recipe.html">Salads</a></li>
+                            <li><a href="recipe.html">Deserts</a></li>
+                          </ul>
+                    </li>
+                    <li><a href="blog.html">Cooking Blog</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> User Profile</a></li>
+                    <li><a href="contactus.html"><span class="	glyphicon glyphicon-envelope"></span> Contact Us</a></li>
+                  </ul>
+                </div>
+          </div>
+      </nav>
+    </header>
+    <main class="container-fluid" >
+      <div class="row" id = "mainslide" >
+        <div class="col-sm-8 " >
+              <div id="firstCarousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#firstCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#firstCarousel" data-slide-to="1"></li>
+                        <li data-target="#firstCarousel" data-slide-to="2"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="./images/bkground3.jpg" alt="egg picture"  id = "mainslideimg">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./images/bkground6.jpg" alt="Vegetable" id = "mainslideimg">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./images/bkground2.jpg" alt="Bread Item" id = "mainslideimg">
+                        </div>
+                      </div>
+              </div>
+
+        </div>
+        <div class="col-sm-4"  id = "mainaside">
+            <img src="./images/chef1.jpg" alt="Chef Photo">
+            <h4>Chef of the Week</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+      <div class="jumbotron text-center" id = "maintitle">
+            <h3>Top Recepies of the Week</h3>
+      </div>
+      <div class="card-deck">
+          <div class="card bg-warning text-white" id = "mainCard">
+              <img class="card-img-top" src="./images/recipe-1.jpg" alt="Card image">
+              <div class="card-body text-center" id="mainCardText">
+                  <h4 class="card-title">PROSCIUTTO ROLLS</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <a href="#" class="btn">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+              </div>
+          </div>
+          <div class="card bg-warning text-white" id = "mainCard">
+              <img class="card-img-top" src="./images/recipe-2.jpg" alt="Card image">
+              <div class="card-body text-center" id="mainCardText">
+                <h4 class="card-title">DUCK FAT FRIES</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="#" class="btn">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+              </div>
+          </div>
+          <div class="card bg-warning text-white" id = "mainCard">
+              <img class="card-img-top" src="./images/recipe-3.jpg" alt="Card image" >
+              <div class="card-body text-center" id="mainCardText">
+                <h4 class="card-title">ZESTY CHEESY RITZ DIP</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="#" class="btn" >Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+              </div>
+          </div>
+          <div class="card bg-warning text-white" id = "mainCard">
+              <img class="card-img-top" src="./images/recipe-4.jpg" alt="Card image">
+              <div class="card-body text-center" id="mainCardText">
+                <h4 class="card-title">MEDITERRANEAN NACHOS</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="#" class="btn">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+              </div>
+          </div>
+        </div>
+
+    </main>
+    <footer class = "container-fluid" >
+      <div class="row text-center">
+            <form class="form-inline" >
+              <div class="form-group">
+                <label for = "formmail">Subscribe to get new Recepies everyweek</label>
+                <input type="email" class="form-control form-control-sm" id="formMail" placeholder="@mail">
+              </div>
+                <button type="button" class = "btn btn-md btn-primary" name="button">Subscribe</button>
+              </div>
+            </form>
+
+      </div>
+      <div class = "text-center" id = "footericons" >
+          <img src="https://img.icons8.com/material-rounded/50/000000/twitter.png">
+          <img src="https://img.icons8.com/material/52/000000/facebook.png">
+          <img src="https://img.icons8.com/material/52/000000/linkedin.png">
+          <img src="https://img.icons8.com/ios/50/000000/pinterest-filled.png">
+      </div>
+    </footer>
+
+  </body>
+</html>

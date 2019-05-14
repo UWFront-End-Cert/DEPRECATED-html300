@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/boot0strap.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron text-center" id = "pagebanner">
+            <h1>Food Recipies</h1>
+            <p>for food lovers!</p>
+      </div>
+
+  <!---Nav Bar --->
+      <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="recipe.html"> Recepies </a>
+                          <ul class="dropdown-menu">
+                            <li><a href="recipe.html">Appitizer</a></li>
+                            <li><a href="recipe.html">Main Course</a></li>
+                            <li><a href="recipe.html">Salads</a></li>
+                            <li><a href="recipe.html">Deserts</a></li>
+                          </ul>
+                    </li>
+                    <li><a href="blog.html">Cooking Blog</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> User Profile</a></li>
+                    <li><a href="contactus.html"><span class="	glyphicon glyphicon-envelope"></span> Contact Us</a></li>
+                  </ul>
+                </div>
+          </div>
+      </nav>
+    </header>
+    <main class="row" >
+      <div class="col-sm-5" >
+        <h2 id="contacttitle">Contact Details</h2>
+        <form id = "contactform">
+            <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" class="form-control" id="firstname">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" class="form-control" id="lastname">
+            </div>
+            <div class="form-group">
+                <label for="emailid">Email:</label>
+                <input type="email" class="form-control" id="emailid">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <<textarea class="form-control" id="message" rows="8" cols="80"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="col-sm-5" id = "contactadd">
+        <img src="./images/map.png" class="locationmap" alt="location Map" id = "contactmap">
+        <p>231 Pittstown Rd, Pittstown, NJ, 08867 </p>
+        <p>********@gmail.com</p>
+        <p>(000) 000 - 1234</p>
+      </div>
+      <div class="row">
+
+
+      </div>
+    </main>
+    <footer class = "container-fluid" style = "background-color : lightgrey; height : 200px" >
+      <div class="row text-center">
+            <form class="form-inline" >
+              <div class="form-group">
+                <label for = "formmail">Subscribe to get new Recepies everyweek</label>
+                <input type="email" class="form-control form-control-sm" id="formMail" placeholder="@mail">
+              </div>
+                <button type="button" class = "btn btn-md btn-primary" name="button">Subscribe</button>
+              </div>
+            </form>
+
+      </div>
+      <div class = "text-center" id = "footericons" >
+          <img src="https://img.icons8.com/material-rounded/50/000000/twitter.png">
+          <img src="https://img.icons8.com/material/52/000000/facebook.png">
+          <img src="https://img.icons8.com/material/52/000000/linkedin.png">
+          <img src="https://img.icons8.com/ios/50/000000/pinterest-filled.png">
+      </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,119 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/**********Website Banner & footer**************/
+
+#pagebanner{
+  background-color: black;
+  margin-bottom : 0;
+  color: white;
+}
+header{
+  margin : 0 30px;
+}
+.form-inline{
+  padding : 40px;
+}
+.form-group > label{
+  margin : 0 10px;
+}
+.form-group > input{
+  margin : 0 10px;
+}
+.form-inline > button{
+  margin : 0 10px;
+  padding: 5px;
+}
+#footericons{
+  margin: 5px 10px;
+}
+footer{
+  background-color : lightgrey;
+  height : 200px;
+
+}
+
+
+/*************Main Page *************/
+#maintitle{
+  margin-bottom : 0;
+}
+#mainaside{
+  height : 600px;
+    background: yellow;
+}
+
+#mainaside > img{
+  width : 250px;
+  height : 300px;
+  margin: 10px 150px;
+}
+#mainaside > h4{
+   margin: 0 190px 20px 190px;
+}
+.firstCarousel{
+  height: 600px;
+  width : 100%;
+}
+.card-deck{
+  margin-bottom: 10px;
+}
+#mainCard > img{
+  height : 400px;
+  width : 100%;
+}
+#mainCardText > h4{
+  padding:10px;
+}
+
+#mainCardText > a{
+  color : white;
+}
+#mainslide{
+  margin: 10px 20px;
+}
+#mainslideimg {
+   width: 100%;
+   height: 600px;
+ }
+
+
+/******Blog Page ******/
+#blogArticle{
+  margin: 20px;
+}
+#blogimg{
+  height : 400px;
+}
+/**************recipe Page************/
+#recipeimg {
+  height : 400px;
+  width : 100%;
+}
+#recepieTitle{
+  padding: 10px;
+}
+
+/**********event page*********/
+#eventtable{
+  margin: 40px 20px;
+  width: 95%;
+}
+/********contact Us *******/
+#contactform{
+  margin : 40px;
+}
+#contacttitle{
+  margin : 30px;
+}
+#contactmap{
+  width: 500px;
+  height : 300px;
+  margin: 30px;
+}
+#contactadd > p{
+  margin: 30px;
+}

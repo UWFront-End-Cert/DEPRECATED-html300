@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Bootstrap</title>
+    <script>
+      $(document).ready(function(){
+        $('#test').prop('disabled', true);
+        $('#test').css('opacity', .2);
+        $('#test2').click(function(){
+              $('#test').prop('disabled', false);
+              $('#test').css('opacity', 1);
+
+        });
+      });
+
+
+    </script>
+  </head>
+  <body>
+        <div class="form-group" >
+            <button type="submit" id="test" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tooltip on top"> Submit </button>
+            <button id="test2" class="btn btn-primary">click Here</button>
+        </div>
+
+</body>
+</html>
