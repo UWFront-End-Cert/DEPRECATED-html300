@@ -1,0 +1,28 @@
+// Main Sass File
+
+$footer-text: #DFDFDF;
+
+#grid {
+    .col-sm-3 {
+        margin-top: 20px;
+        height: 200px;
+    }
+
+    .col-sm-12 {
+        height: 200px;
+    }
+
+    .col-sm-6 {
+        height: 200px;
+    }
+
+    .col-sm-1 {
+        height: 200px;
+    }
+
+}
+
+
+footer {
+    color: $footer-text;
+}
