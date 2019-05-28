@@ -7,10 +7,13 @@
           <b-card-group deck  >
             <div v-for="(info,index) in recdata" style = "width :475px ">
               <b-card>
-                <img v-if = "index === 0" :src="require('../assets/recipe1.jpg')" alt=""   height = "350" width = "425">
-                <img v-if = "index === 1" :src="require('../assets/recipe-2.jpg')" alt=""  height = "350" width = "425">
+                <p>{{info.image}}</p>
+                  <img v-bind:src="info.image"    height = "350" width = "425" >
+                <!-- <img v-if = "index === 0" :src="require('../assets/recipe1.jpg')" alt=""   height = "350" width = "425">
+                <b-img :scr:"require("info.image")" alt=""   height = "350" width = "425" >
+                <!-- <img v-if = "index === 1" :src="require('../assets/recipe-2.jpg')" alt=""  height = "350" width = "425">
                 <img v-if = "index === 2" :src="require('../assets/recipe-3.jpg')" alt=""  height = "350" width = "425">
-                <img v-if = "index === 3" :src="require('../assets/recipe-4.jpg')" alt=""  height = "350" width = "425">
+                <img v-if = "index === 3" :src="require('../assets/recipe-4.jpg')" alt=""  height = "350" width = "425">  -->
                 <b-card-title>
                   {{info.rectitle}}
                 </b-card-title>
