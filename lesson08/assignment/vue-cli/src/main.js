@@ -5,7 +5,13 @@ import Images from './images.vue'
 
 Vue.component('app-header', Header)
 
-Vue.component('app-images', Images)
+// Vue.component('app-images', Images)
+
+Vue.component('app-images', {
+  props: ['img-path'],
+  template: '<img :src="img-path" class="img-fluid" alt="Responsive image" data-toggle="tooltip" data-placement="bottom" title="Details about the photo">'
+})
+
 
 Vue.component('button-counter', {
   data: function () {

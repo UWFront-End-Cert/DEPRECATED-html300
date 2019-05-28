@@ -2,14 +2,8 @@
   <div id="app">
 
     <!-- Creat app-header component to serve as universal header for site -->
+    <!-- App-header contains routers to all other page apps -->
     <app-header></app-header>
-
-    <!-- Router links to other apps or "pages" -->
-    <router-link to="/">Home</router-link>
-    <router-link to="/images">Images</router-link>
-    <router-link to="/accordion">Accordion</router-link>
-    <router-link to="/grid">Grid</router-link>
-    <router-view></router-view>
 
   </div>
 </template>
@@ -26,7 +20,7 @@ export default {
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,5 +46,5 @@ li {
 
 a {
   color: #42b983;
-}
+} */
 </style>
