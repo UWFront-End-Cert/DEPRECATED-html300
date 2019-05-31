@@ -1,32 +1,57 @@
 <template>
 <div id="app">
-  <!-- navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" v-bind:href="linkHome">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" v-bind:href="linkImage">Image</a>
-        <a class="nav-item nav-link" v-bind:href="linkAccordion">Accordion</a>
-        <a class="nav-item nav-link" v-bind:href="linkGrid">Grid</a>
+  <!-- Header and navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" v-bind:href="linkHome">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" v-bind:href="linkImage">Image</a>
+          <a class="nav-item nav-link" v-bind:href="linkAccordion">Accordion</a>
+          <a class="nav-item nav-link" v-bind:href="linkGrid">Grid</a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
+
+  <page-header></page-header>
+
+  <router-view></router-view>
+  <router-link to="/other">other</router-link>
+  <router-link to="/next">next</router-link>
+  <router-link to="/">home</router-link>
+
+
 
   <!-- home page jumbotron -->
-  <div class="jumbotron jumbotron-fluid"></div>
+  <!-- <div class="jumbotron jumbotron-fluid"></div> -->
 
-  <h1>Homepage Heading</h1>
+  <!-- In class 5/23 -->
+  <blog-post post-title="This is a blog post"></blog-post>
+  <blog-post post-title="This is another heading"></blog-post>
+  <blog-post post-title="One more!"></blog-post>
+
+  <div>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+  </div>
+
+  <app-header></app-header>
+
+
+  <!-- <h1>Homepage Heading</h1>
   <button v-on:click="show = !show" type="button" name="button">Click to show</button>
-  <p v-if="show">Show this</p>
+  <p v-if="show">Show this</p> -->
 
   <!-- Grid for photos -->
-  <h2>Images</h2>
-  <img v-for="photo in photos" :src="photo.url" :alt="photo.alt" class="img-fluid" data-toggle="tooltip" data-placement="bottom" title="Details about the photo">
+  <!-- <h2>Images</h2> -->
+  <!-- <img v-for="photo in photos" :src="photo.url" :alt="photo.alt" class="img-fluid" data-toggle="tooltip" data-placement="bottom" title="Details about the photo"> -->
 
-
+  <!-- Grid for photos w/Bootstrap that doesn't work -->
   <!-- <div class="container">
     <div class="row">
       <div class="col-md">
@@ -111,7 +136,17 @@
       </div>
     </div>
   </div>
-  <p>end page</p>
+
+  <!-- Footer created for in-class activity 5/23 -->
+  <footer>
+    <h3>This is the footer</h3>
+    <ul>
+      <li>Text here</li>
+      <li>Text here</li>
+      <li>Text here</li>
+      <li>Text here</li>
+    </ul>
+  </footer>
 
 </div>
 </template>
@@ -201,5 +236,11 @@ li {
 
 a {
   color: #42b983;
+}
+
+footer {
+  height: 20vh;
+  background-color: lightblue;
+  margin-top: 40px;
 }
 </style>
