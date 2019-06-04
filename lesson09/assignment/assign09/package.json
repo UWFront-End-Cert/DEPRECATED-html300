@@ -1,0 +1,25 @@
+{
+  "name": "assign09",
+  "version": "1.0.0",
+  "description": "My super-excellent Nuxt.js project",
+  "author": "sanjali83",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.5.3",
+    "bootstrap": "4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.4.0",
+    "react-router-dom": "^5.0.0",
+    "vue-router": "^3.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
