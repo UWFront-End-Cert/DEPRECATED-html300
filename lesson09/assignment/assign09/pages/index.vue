@@ -1,11 +1,5 @@
 <template>
-  <section id="app"  class="container-fluid">
-      <div class="jumbotron">
-        <h1 class="display-4">Food Recipes</h1>
-        <p class="lead"> For Food Lovers </p>
-      </div>
-      <page-header pagetitle ="Food Recipes"  pagelead = "For Food Lovers"></page-header>
-      <navbar />
+  <section class="container-fluid">
       <imageslides />
       <foodtiles />
 
@@ -14,6 +8,7 @@
 
 <script>
 import navbar from '~/components/navbar.vue'
+import pageheader from '../components/pageheader.vue'
 import foodtiles from '~/components/foodtiles.vue'
 import imageslides from '~/components/image-slides.vue'
 export default {
@@ -21,7 +16,7 @@ export default {
     navbar,
     foodtiles,
     imageslides,
-
+    pageheader
   }
 }
 </script>

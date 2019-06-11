@@ -2,7 +2,7 @@
   <b-container fluid class="p-4">
       <b-row>
           <b-col lg = 6 sm = 10 offset = 1>
-              <b-carousel :="mainProps"
+              <b-carousel 
                   id="carousel-fade"
                   style="text-shadow: 0px 0px 2px #000"
                   fade
