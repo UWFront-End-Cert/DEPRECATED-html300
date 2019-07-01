@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Do Stuff!</title>
+</head>
+
+<body>
+  <section class="magic">
+    <h1>Guess the Magic Number!</h1>
+    <label>Enter a number:
+      <input type="text" class="magicNum">
+    </label>
+    <button onclick="magicNumber"type="button" name="number">Click to see if you WIN!</button>
+  </section>
+
+  <section class="sent">
+    <h1>Make Your Own Sentence!</h1>
+    <label>Enter a NOUN:
+      <input type="text" name="noun">
+    </label>
+
+    <label>Enter a VERB:
+      <input type="text" name="verb">
+    </label>
+
+    <label>Enter a NAME:
+      <input type="text" name="name">
+    </label>
+
+    <label>Enter an ADJECTIVE:
+      <input type="text" name="adjective">
+    </label>
+
+    <button type="button" name="sentence">Get your sentence!</button>
+  </section>
+
+  <section class="menu">
+    <h1>Choose your menu and get a price!</h1>
+    <legend>Choose your menu items:</legend>
+    <label>Steak
+      <input type="checkbox" name="foodSteak" value="steak">
+    </label>
+
+    <label>Potato
+      <input type="checkbox" name="footPotato" value="potato">
+    </label>
+
+    <label>Salad
+      <input type="checkbox" name="foodSalad" value="salad">
+      <span class="checkmark"></span>
+    </label>
+
+    <label>Apple pie
+      <input type="checkbox" name="foodPie" value="pie">
+      <span class="checkmark"></span>
+    </label>
+
+    <button type="button" name="menuOrder">Get your total cost!</button>
+  </section>
+
+  <section class="valPi">
+    <h1>Do you know the value of Pi?</h1>
+    <label>What is the value of pi?
+      <input type="text" name="pi">
+    </label>
+
+    <button onclick="pi()" type="button" name="valuePi">Check your answer!</button>
+  </section>
+
+</body>
+
+</html>
