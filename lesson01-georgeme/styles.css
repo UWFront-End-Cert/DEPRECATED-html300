@@ -1,0 +1,35 @@
+.everyNum {
+  border: 0.5rem solid #006600;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #006600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.someNum {
+  border: 0.5rem solid #b36b00;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #b36b00;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.filterNum {
+  border: 0.5rem solid #6600cc;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #6600cc;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.mapNum {
+  border: 0.5rem solid #0066cc;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0066cc;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}

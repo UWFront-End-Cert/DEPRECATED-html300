@@ -6,27 +6,46 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="scripts.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Do Stuff</title>
 </head>
 
 <body>
-  <section>
-    <h1>Enter a value to see the new "reduced" total!</h1>
-<!-- Allows user to input any number as a string -->
-    <input type="text" class="reduceInput">
-    <input class="reduceSubmit" type="submit"></input>
-<!-- Adding verbiage to the page to help user understand where the new value comes from -->
-    <p class="markup">The new total value is created from some "behind the scenes" values added to your number. The new total is: <span class="sum"></span></p>
-  </section>
 
-  <section>
+  <section class="everyNum">
     <h1>Enter a value and find out if "every" number is over 62!</h1>
 <!-- Allows user to input any number as a string -->
     <input type="text" class="everyInput">
     <input class="everySubmit" type="submit"></input>
 <!-- Adding verbiage to the page to help user understand where the new value comes from -->
     <p class="markup">There are some "behind the scenes" values already listed. Including your number, are all the numbers over 62?: <span class="every"></span></p>
+  </section>
+
+  <section class="someNum">
+    <h1>Enter a value and find out if "some" of the numbers are over 100!</h1>
+<!-- Allows user to input any number as a string -->
+    <input type="text" class="someInput">
+    <input class="someSubmit" type="submit"></input>
+<!-- Adding verbiage to the page to help user understand where the new value comes from -->
+    <p class="markup">There are some "behind the scenes" values already listed. Including your number, are some of the numbers over 100?: <span class="some"></span></p>
+  </section>
+
+  <section class="filterNum">
+    <h1>Enter a value and find (filter) all the numbers less than 98!</h1>
+<!-- Allows user to input any number as a string -->
+    <input type="text" class="filterInput">
+    <input class="filterSubmit" type="submit"></input>
+<!-- Adding verbiage to the page to help user understand where the new value comes from -->
+    <p class="markup">There are some "behind the scenes" values already listed. Including your number, here are all the numbers less than 98: <span class="filter"></span></p>
+  </section>
+
+  <section class="mapNum">
+    <h1>Enter a value and see it add it to the array AND add 10 to all the numbers!</h1>
+<!-- Allows user to input any number as a string -->
+    <input type="text" class="mapInput">
+    <input class="mapSubmit" type="submit"></input>
+<!-- Adding verbiage to the page to help user understand where the new value comes from -->
+    <p class="markup">There are some "behind the scenes" values already listed. Including your number, here are all the numbers plus 10: <span class="map"></span></p>
   </section>
 
 </body>
