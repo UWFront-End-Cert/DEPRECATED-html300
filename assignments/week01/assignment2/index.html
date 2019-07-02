@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 1 - Part 2</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script src="./scripts.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section>
+        <h1>ES6 Functions!</h1>
+        <div>
+            <h2>Map-</h2>
+            <!-- description -->
+            <p>Enter a number and hit submit. We'll add this number to the original
+                array, along with generate a new array containing the original
+                array plus 5</p>
+            <div>
+                <!-- get user input -->
+                <button id="buttonOne">Submit</button>
+                <input type="text">
+            </div>
+            <!-- display result -->
+            <p>Original Array: <span class="resultOriginal"></span></p>
+            <p>New Array: <span id="resultOne"></span></p>
+        </div>
+        <h2>Every-</h2>
+        <div>
+            <!-- description -->
+            <p>Enter a number and hit submit. We'll check that
+                number against the original array to see if it is less than every number in the array.</p>
+            <div>
+                <!-- get user input -->
+                <button id="buttonTwo">Submit</button>
+                <input type="text">
+            </div>
+            <!-- display result -->
+            <p>Original Array: <span class="resultOriginal"></span></p>
+            <p>Are all values less than <span id="inputTwo"></span>? <span id="resultTwo"></span></p>
+        </div>
+
+
+        <h2>Some-</h2>
+        <div>
+            <!-- description -->
+            <p>Enter a number and hit submit. We'll check that number against
+                the array to find and return the first value greater than it.</p>
+            <div>
+                <!-- get user input -->
+                <button id="buttonThree">Submit</button>
+                <input type="text">
+            </div>
+            <!-- display result -->
+            <p>Original Array: <span class="resultOriginal"></span></p>
+            <p>First value greater than <span id="inputThree"></span>: <span id="resultThree"></span></p>
+        </div>
+
+        <h2>Filter-</h2>
+        <div>
+            <!-- description -->
+            <p>Enter a number, once you hit submit we'll check that
+                number against the original array to see if it is less than
+                every number in the array.</p>
+            <div>
+                <!-- get user input -->
+                <button id="buttonFour">Button 2</button>
+                <input type="text">
+            </div>
+            <!-- display result -->
+            <p>Original Array: <span class="resultOriginal"></span></p>
+            <p>Filtered Array: <span id="resultFour"></span></p>
+        </div>
+    </section>
+
+</body>
+
+</html>
