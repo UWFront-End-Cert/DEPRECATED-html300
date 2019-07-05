@@ -1,0 +1,86 @@
+// main content
+main {
+    font-family: $sans-serif;
+    color: $drkgray;
+
+    & .main-back1 {
+        padding: 2em;
+        background-color: $ltblue;
+    }
+
+    & .main-back2 {
+        padding: 2em;
+        background-color: $white;
+    }
+
+}
+
+// establish grid columns and widths
+.grid-container {
+    display: grid;
+    grid-template-areas: "col1 col2";
+    grid-template-columns: 34% 66%;
+}
+
+// grid coloumn 1 content
+.col1-container {
+    grid-area: col1;
+    padding-right: 2em;
+    text-align: center;
+
+    & h3 {
+        font-size: $title-size;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    & p {
+        font-size: $title-size;
+        padding-top: 0;
+        margin-top: .25em;
+        margin-bottom: 0;
+    }
+}
+
+// card image, coloumn 1
+#headshot {
+    width: 100%;
+    border-radius: 50%;
+}
+
+// grid coloumn 2
+.col2-container {
+    grid-area: col2;
+    background-color: $ltblue;
+    padding-left: 1em;
+    line-height: 1.25;
+    font-size: $text-size;
+}
+
+// inline image and text
+.linkedin {
+    display: inline-flex;
+
+    & img {
+        padding-right: .5em;
+    }
+
+    & p {
+        font-size: $text-size;
+        align-content: center;
+    }
+}
+
+//media queries
+@media only screen and (max-width: 50em) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "col1"
+            "col2";
+        grid-template-columns: 100%;
+    }
+    & .col1-container p {
+        margin-bottom: 1em;
+    }
+}
