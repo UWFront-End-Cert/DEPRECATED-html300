@@ -1,16 +1,24 @@
 // main content
+* {
+    box-sizing: border-box;
+}
+
 main {
-    font-family: $sans-serif;
+    font-family: $main-font;
     color: $drkgray;
-
+// first background
     & .main-back1 {
-        padding: 2em;
+        padding: 44px 50px 47px 54px;
         background-color: $ltblue;
+        width: 951px;
+        height: 474px;
     }
-
+// second background
     & .main-back2 {
-        padding: 2em;
+        padding: 36px 41px 38px 41px;
         background-color: $white;
+        width: 847px;
+        height: 383px;
     }
 
 }
@@ -19,23 +27,28 @@ main {
 .grid-container {
     display: grid;
     grid-template-areas: "col1 col2";
-    grid-template-columns: 34% 66%;
+    grid-template-columns: 260px 500px;
+    grid-template-rows: 309px;
 }
 
 // grid coloumn 1 content
 .col1-container {
     grid-area: col1;
-    padding-right: 2em;
+    padding-right: 44px;
     text-align: center;
-
+}
+// name and title, below image
+.name-title {
+    display: block;
+// name
     & h3 {
         font-size: $title-size;
         padding-bottom: 0;
         margin-bottom: 0;
     }
-
+// title
     & p {
-        font-size: $title-size;
+        font-size: $text-size;
         padding-top: 0;
         margin-top: .25em;
         margin-bottom: 0;
@@ -44,7 +57,7 @@ main {
 
 // card image, coloumn 1
 #headshot {
-    width: 100%;
+    width: 225px;
     border-radius: 50%;
 }
 
@@ -52,8 +65,7 @@ main {
 .col2-container {
     grid-area: col2;
     background-color: $ltblue;
-    padding-left: 1em;
-    line-height: 1.25;
+    padding-left: 32px;
     font-size: $text-size;
 }
 
@@ -79,6 +91,7 @@ main {
             "col1"
             "col2";
         grid-template-columns: 100%;
+        grid-template-rows: 100%;
     }
     & .col1-container p {
         margin-bottom: 1em;
