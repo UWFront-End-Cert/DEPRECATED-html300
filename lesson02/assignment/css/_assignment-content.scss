@@ -20,9 +20,7 @@ main {
         width: 847px;
         height: 383px;
     }
-
 }
-
 // establish grid columns and widths
 .grid-container {
     display: grid;
@@ -54,13 +52,11 @@ main {
         margin-bottom: 0;
     }
 }
-
 // card image, coloumn 1
 #headshot {
     width: 225px;
     border-radius: 50%;
 }
-
 // grid coloumn 2
 .col2-container {
     grid-area: col2;
@@ -68,7 +64,6 @@ main {
     padding-left: 32px;
     font-size: $text-size;
 }
-
 // inline image and text
 .linkedin {
     display: inline-flex;
@@ -82,7 +77,6 @@ main {
         align-content: center;
     }
 }
-
 //media queries
 @media only screen and (max-width: 50em) {
     .grid-container {
