@@ -13,9 +13,7 @@ html {
     max-width: 75%;
 }
 
-.card {
-      background-color: $outer;
-}
+// attempt at using variable - not working, scss disconnect >> .card { background-color: $outer; }
 
 .main {
     display: grid;
@@ -24,31 +22,33 @@ html {
     padding: 4% 0% 0% 16%;
 }
 
+// nesting divs
 .headshot {
   text-align: center;
   padding-right: 10%;
-}
+  &.caption {
+      color: $dark;
+      text-align: center;
+    &.title {
+        font-style: italic;
+      }
+    }
+  }
 
-.caption {
-  color: $dark;
-  text-align: center;
-}
-
-.title {
-  font-style: italic;
-}
-
+// nesting personal details within div/ Gray box - created after scss disconnect, not tested
 .details {
     background-color: $base-color;
     padding: .5% 16% 0% 2%;
-}
+    &.label{
+        color: $dark;
+        font-weight: bolder;
+        &.info {
+            color: $dark;
+            font-weight: lighter;
+        }
+      }
+    }
 
-.info {
-    color: $dark;
-    font-weight: lighter;
-}
-
-.label{
-    color: $dark;
-    font-weight: bolder;
+.linkedin {
+    margin-right: 3%;
 }
