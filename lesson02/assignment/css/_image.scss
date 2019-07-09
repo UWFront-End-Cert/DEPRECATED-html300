@@ -1,0 +1,21 @@
+//stylesheet for the left side of the card
+.left-image {
+    text-align: center;
+    //name
+    h1 {
+        font-weight: 700;
+        font-size: x-large;
+    }
+    //position
+    h2 {
+        font-style: italic;
+        font-size: large;
+        font-weight: 300;
+    }
+    //headshot
+    img {
+        width: 225px;
+        height: auto;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,28 @@
+//font weights as defined by W3C, 700 is bold and 400 is normal
+$bold-text-weight: 700;
+$normal-text-weight: 300;
+
+.right-text {
+    background-color: whitesmoke;
+    font-size: 20px;
+    width: 500px;
+    height: 300px;
+    //Define text style
+    p {
+        //normal text
+        font-weight: $normal-text-weight;
+        padding-left: 31px;
+
+        //bold text
+        b {
+            font-weight: $bold-text-weight;
+        }
+
+        //links, returning to normal style
+        a {
+            color: #708090;
+            text-decoration: none;
+        }
+    }
+}
+
