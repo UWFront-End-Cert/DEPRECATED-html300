@@ -27,7 +27,18 @@ h2 {
 }
 
 p {
-  lighten( $gray, 10% );
+  color: lighten( $gray, 10% );
+}
+
+figure {
+  img {
+    text-align: center;
+  }
+
+  figcaption {
+    color: lighten( $gray, 10% );
+    text-align: center;
+  }
 }
 
 article {
