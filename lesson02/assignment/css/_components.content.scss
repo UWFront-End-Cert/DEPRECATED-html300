@@ -8,10 +8,47 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+.profile-pic {
+    border-radius: 50%;
+    max-width: 75%;
 }
 
-h1 {
-    color: $red;  
+.card {
+      background-color: $outer;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    justify-content: center;
+    padding: 4% 0% 0% 16%;
+}
+
+.headshot {
+  text-align: center;
+  padding-right: 10%;
+}
+
+.caption {
+  color: $dark;
+  text-align: center;
+}
+
+.title {
+  font-style: italic;
+}
+
+.details {
+    background-color: $base-color;
+    padding: .5% 16% 0% 2%;
+}
+
+.info {
+    color: $dark;
+    font-weight: lighter;
+}
+
+.label{
+    color: $dark;
+    font-weight: bolder;
 }
