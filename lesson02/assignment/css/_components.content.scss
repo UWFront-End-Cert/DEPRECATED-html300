@@ -8,10 +8,46 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+.card-one {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  justify-content: center;
+  padding: 4% 0% 0% 16%;
 }
 
 h1 {
-    color: $red;  
+    color: $red;
+}
+
+
+//Info about employee: Nesting
+article {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .box-text {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-weight: lighter;
+  }
+}
+
+//Figure: Nesting
+figure {
+  img {
+    text-align: center;
+  }
+
+  figcaption {
+    text-align: center;
+  }
 }

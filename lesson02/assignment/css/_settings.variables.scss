@@ -10,3 +10,22 @@ $yellow: #ffb617;
 $robins: #01c1d6;
 $purple: #6e27c5;
 $blue: #150f96;
+
+
+//Using variables
+
+h2 {
+  $gray: #f6f5f6;
+}
+
+p {
+  color: lighten( $gray, 10% );
+}
+
+figcaption {
+  color: darken( $gray, 10% );
+}
+
+article {
+  background-color: lighten( $gray, 20% );
+}
