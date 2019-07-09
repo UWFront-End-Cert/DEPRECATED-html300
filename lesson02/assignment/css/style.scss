@@ -4,3 +4,46 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  justify-content: center;
+  padding: 4% 0% 0% 16%;
+}
+
+img {
+  text-align: center;
+  padding-right: 10%;
+}
+
+h2 {
+  $gray: #f6f5f6;
+}
+
+p {
+  lighten( $gray, 10% );
+}
+
+article {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .box-text {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
