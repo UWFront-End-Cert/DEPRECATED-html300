@@ -1,0 +1,60 @@
+html {
+    background-color: whitesmoke;
+    width: 900px;
+}
+
+body {
+    background-color: white;
+    width: 850px;
+    height: 350px;
+    padding: 5.6%;
+    margin: 4.2%;
+    color: #708090;
+}
+body .left-image{
+    width: 50%;
+    float: left;
+}
+body .right-text{
+    width: 50%;
+    float: right;
+}
+.right-text{
+    background-color: whitesmoke;
+    font-size: 20px;
+    width: 500px;
+    height: 300px;
+}
+.right-text p {
+    font-weight: 300;
+    padding-left: 31px;
+}
+.right-text p b {
+    font-weight: 700;
+}
+.right-text p a {
+    color: #708090;
+    text-decoration: none;
+}
+
+.left-image{
+    text-align: center;
+}
+
+.left-image h1{
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.left-image h2 {
+    font-style: italic;
+    font-size: large;
+    font-weight: 300;
+}
+
+.left-image img {
+    width: 225px;
+    height: auto;
+    border-radius: 50%;
+}
+

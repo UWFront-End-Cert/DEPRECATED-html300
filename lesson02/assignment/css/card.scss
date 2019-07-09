@@ -1,0 +1,29 @@
+//import stylesheets for sides of card
+@import '_image.scss';
+@import '_textblock';
+
+$text-color: #708090;
+//global styles
+html {
+    background-color: whitesmoke;
+    width: 900px;
+}
+//styles form body of card
+body {
+    background-color: white;
+    width: 850px;
+    height: 350px;
+    padding: 5.6%;
+    margin: 4.2%;
+    color: $text-color;
+    //left side, where the image is
+    .left-image {
+        width: 50%;
+        float: left;
+    }
+    //right side, where the text is
+    .right-text {
+        width: 50%;
+        float: right;
+    }
+}
