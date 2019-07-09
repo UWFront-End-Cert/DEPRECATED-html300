@@ -13,5 +13,23 @@ html {
 }
 
 h1 {
-    color: $red;  
+    color: $yellow;  
+}
+
+.photo {
+    border-radius: 50%;
+    margin-left: 5px; 
+}
+
+.steve {
+    margin-left: 5px;
+    p {
+        margin-left: 200px;
+        font-weight: bolder;
+    }
+}
+
+.info {
+    margin-left: 70%;
+    margin-top: -400px;
 }
