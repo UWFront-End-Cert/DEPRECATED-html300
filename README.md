@@ -66,7 +66,7 @@ Follow these steps to get your initial setup started
 - Each week there will be a quiz available to take, please flag up any issues if questions aren't being assessed correctly
 
 ### Resources
-<!-- - [Git Resources](https://try.github.io/)
+- [Git Resources](https://try.github.io/)
 - [Learn Branching](https://learngitbranching.js.org/?locale=en_US)
 - [Exploring ES6](https://exploringjs.com/es6/)
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
@@ -77,4 +77,4 @@ Follow these steps to get your initial setup started
 - [Flexbox Froggy](https://flexboxfroggy.com/)
 - [Grid Garden](https://codepip.com/games/grid-garden/)
 - [Syntax FM Podcast](https://syntax.fm/)
-- [ShopTalk Show Podcast](https://shoptalkshow.com/) -->
+- [ShopTalk Show Podcast](https://shoptalkshow.com/)
