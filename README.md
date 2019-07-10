@@ -1,16 +1,36 @@
 # UW Front End Certificate - HTML300
-This repository contains the activities and assignments required to complete the final course of the Front End Certificate program. All assignment submissions and quizes/discussions will be done through [Canvas](https://canvas.uw.edu/).
+This repository contains the activities and assignments required to complete the final course of the Front End Certificate program. All assignment submissions and quizzes/discussions will be done through [Canvas](https://canvas.uw.edu/).
 
-### Course Final Setup
+## Course Setup
+Follow these steps to get your initial setup started
+
+### Recommended Tools
+- [Visual Studio Code](https://code.visualstudio.com/) - Editor/IDE
+- [Hyper Terminal](https://hyper.is/) - Modern Terminal
+- [Oh My Zsh](https://ohmyz.sh/) - Zsh framework
+- [Adobe XD](https://www.adobe.com/products/xd.html) - Design Tool
+
+### Required Tools (by end of course)
+- [NodeJS/npm](https://nodejs.org/en/)
+- [Gulp](https://gulpjs.com/)
+- [Sass](https://sass-lang.com/documentation)
+- [Bootstrap 4](https://getbootstrap.com/)
+- [Vue](https://vuejs.org/)
+- [Vue Devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
+- [Yarn](https://yarnpkg.com/lang/en/docs/install/)
+- [Nuxt](https://nuxtjs.org/)
+
+
+### Course Final Project Setup
 - Create a new repository that will hold your final course project, name it whatever you'd like
-- In this repo, click on the `Settings` tab at the top right, then the 'Collaborators' tab on the left. Search for `brycebenson` and `ClovisI` to add as collaborators
+- In this repo, click on the `Settings` tab at the top right, then the `Collaborators` tab on the left. Search for `brycebenson` and `ClovisI` to add as collaborators
 - For assignment 01 you will create a `documents` folder in the root with a `.txt` or `.md` file within, containing the course proposal
 - As the course progresses, work for the course final will be done/migrated here
 
-### Course Repo Fork
+### Course Repo Fork Setup
 - Within this html300 repo, click the `fork` button the the top right to fork a copy to your personal GitHub
 - You will be taken to your forked repo, it should say 'forked from...' under the title
-- In your newly created fork, click on the `Settings` tab at the top right, then the 'Collaborators' tab on the left. Search for `brycebenson` and `ClovisI` to add as collaborators
+- In your newly created fork, click on the `Settings` tab at the top right, then the `Collaborators` tab on the left. Search for `brycebenson` and `ClovisI` to add as collaborators
 - Clone the fork to your local machine
 
 ### Adding the Upstream to your Fork
@@ -26,7 +46,7 @@ This repository contains the activities and assignments required to complete the
 - Now merge the upstream version of master with your fork's by running `git merge upstream/master`
 - You shouldn't run into conflicts, but if you get errors or conflicts, run `git status` to see which files need to be updated, and using `git add --all` after resolved to add them to be staged
 
-### Weekly Workflow
+## Weekly Workflow
 - Start by checking out your local master branch and fetching/merging upstream at the beginning of each module so you know you're up to date
 - Create a branch for your week's assignment. You can create and checkout a new branch with `git checkout -b branch-name`
 - Each lesson will usually have two folders, `activity` and `assignment`. Feel free to work on the activity within your assignment branch
@@ -38,8 +58,23 @@ This repository contains the activities and assignments required to complete the
 - Copy the direct link to the pull request page, and paste that into the submission box in Canvas
 
 ### Assignments
-- Check the README.md files found in the root of each `assignment` folder for instructions, links for tools, and any required information. Consult the rubric within Canvas for the grading scale breakdown
+- Check the `README.md` files found in the root of each `assignment` folder for instructions, links for tools, and any required information. Consult the rubric within Canvas for the grading scale breakdown
+- When you open a pull request, you may keep pushing commits to that assignment's branch as they will automatically update the PR -- no need to close and re-open a new one
 - Please use the Canvas discussion boards if coming across issues or problems with assignments so all folks have visibility
 
-### Quizes
+### Quizzes
 - Each week there will be a quiz available to take, please flag up any issues if questions aren't being assessed correctly
+
+### Resources
+- [Git Resources](https://try.github.io/)
+- [Learn Branching](https://learngitbranching.js.org/?locale=en_US)
+- [Exploring ES6](https://exploringjs.com/es6/)
+- [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
+- [Array Explorer](https://sdras.github.io/array-explorer/)
+- [Object Explorer](https://sdras.github.io/object-explorer/)
+- [Sass Guide](https://sass-lang.com/guide)
+- [CSS Tricks](https://css-tricks.com/)
+- [Flexbox Froggy](https://flexboxfroggy.com/)
+- [Grid Garden](https://codepip.com/games/grid-garden/)
+- [Syntax FM Podcast](https://syntax.fm/)
+- [ShopTalk Show Podcast](https://shoptalkshow.com/)
