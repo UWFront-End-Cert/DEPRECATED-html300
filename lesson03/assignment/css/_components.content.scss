@@ -9,9 +9,70 @@ html {
 }
 
 .main {
-    padding: 2rem;
+    color: $darkgray;
 }
 
-h1 {
-    color: $red;  
+.card {
+    max-width: 45rem; //prevents card from unlimited growth with large screen sizes
+    margin: 1rem auto;
+    border: 1.5rem solid $gray;
+    padding: 1rem;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    @include media-query(desk) {
+        // mobile first- media query for desktop site
+        flex-direction: row;
+        margin: 1rem auto;
+        padding: 1.5rem;
+
+        .title {
+            margin: 0 1.5rem 0 0;
+        }
+
+        .personal-info {
+            display: flex;
+            flex-direction: column; //flexed for even spacing vertically
+        }
+    }
+
+}
+
+.title {
+    flex: 1; //will be on the left side of container, 1st item
+    display: flex;
+    flex-direction: column; // stacks image and title
+    flex-grow: 0; //prevents image from growing
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    img {
+        border-radius: 50%; // rounds borders to present circular image
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    h2 {
+        margin: 1.5rem 0 .5rem;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.personal-info {
+    flex: 2; //will be on right side of container, 2nd item
+    background-color: $gray2;
+    padding: 0 1rem;
+
+    img {
+        vertical-align: middle; //vertically aligns linkedin image with text
+    }
 }
