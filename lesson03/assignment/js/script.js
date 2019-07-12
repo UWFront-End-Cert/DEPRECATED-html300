@@ -1,3 +1,4 @@
+//creates array
 const data = [
   {
     "name": "Steve Smith",
@@ -56,13 +57,11 @@ const data = [
     ]
   }
 ]
-
-data.map((person) => {
-  const card =
-    `<div class="card">
+// render template, returns array via data.map so later Jquery only has to be called once
+const myTemplate = data.map((person, index) =>
+  `<div class="card" id="person-${index}">
       <div class="title">
-       <img src=../img/${person.img}
-                    alt="Headshot of ${person.name}"> 
+       <img src=../img/${person.img} alt="Headshot of ${person.name}"> 
         <h2 class="person__name"><strong>${person.name}</strong></h2>
         <p class="person__jobTitle"><em>${person.jobTitle}</em></p>
       </div>
@@ -70,12 +69,26 @@ data.map((person) => {
         <p class="person__company"><strong>Company: </strong>${person.company}</p>
         <p class="person__experience"><strong>Experience: </strong>${person.experience}</p>
         <p class="person__school"><strong>School: </strong>${person.school}</p>
-        <p class="person__majore"><strong>Major: </strong>${person.major}</p>
+        <p class="person__major"><strong>Major: </strong>${person.major}</p>
         <p class="person__email"><strong>Email: </strong>${person.email}</p>
         <p class="person__linkedInUrl"><img src="../img/linkedin.svg" alt="linkedin icon"> ${person.linkedInUrl}</p>
-      </div>
-    </div>`;
+        <div class="sidebar" >
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav('person-${index}')">×</a>
+          ${person.codeLanguages.map(language => `<p class="person__codeLanguages">${language} </p>`).join('')}
+        </div>
+        <div class="main">
+          <button class="openbtn" onclick="openNav('person-${index}')">Languages ☰</button>
+        </div>
+      </div>   
+      </div>`);
+// calls Jquery once for the whole template instead of each person in array (efficient!)
+$('.hook').append(myTemplate);
 
-  const hook = $('.hook');
-  hook.append(card);
-});
+//toggles the language tab for each individual button (open)
+function openNav(elementId) {
+  $(`#${elementId} .sidebar`).css('width', '7rem')
+}
+//toggles the language tab for each individual button (close)
+function closeNav(elementId) {
+  $(`#${elementId} .sidebar`).css('width', '0');
+}

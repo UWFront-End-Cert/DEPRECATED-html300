@@ -8,12 +8,12 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    color: $darkgray;
+h1 {
+    text-align: center;
 }
 
 .card {
-    max-width: 45rem; //prevents card from unlimited growth with large screen sizes
+    max-width: 50rem; //prevents card from unlimited growth with large screen sizes
     margin: 1rem auto;
     border: 1.5rem solid $gray;
     padding: 1rem;
@@ -36,9 +36,14 @@ html {
         .personal-info {
             display: flex;
             flex-direction: column; //flexed for even spacing vertically
+
         }
     }
 
+}
+
+img {
+    box-shadow: $box-shadow;
 }
 
 .title {
@@ -71,8 +76,57 @@ html {
     flex: 2; //will be on right side of container, 2nd item
     background-color: $gray2;
     padding: 0 1rem;
+    position: relative;
 
     img {
         vertical-align: middle; //vertically aligns linkedin image with text
+        width: 1.5rem;
     }
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: absolute; // positions sidebar around .personal-info which is relative
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden; // hides everything past the hight of the div (scrolls)
+    background-color: $darkgray;
+    box-shadow: $box-shadow;
+    border-radius: 50% 0 0 50%;
+    padding-top: 2rem;
+    text-align: right;
+    transition: 0.5s;
+
+
+    p {
+        padding: 1rem;
+        margin: 0;
+        color: $white;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: .25rem;
+        font-weight: bold;
+        color: $black;
+    }
+}
+
+.openbtn {
+    cursor: pointer;
+    background-color: $darkgray;
+    color: $white;
+    padding: .25rem;
+    margin: 1rem auto;
+    border: none;
+    border-radius: .25rem;
+    box-shadow: $box-shadow;
+
+    &:hover {
+        background-color: #444;
+    }
+
 }
