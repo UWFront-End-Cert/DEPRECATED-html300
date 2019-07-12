@@ -9,6 +9,9 @@ const employees = [
   "Major": "Marketing",
   "Email": "steve@fedc.com",
   "LinkedInUrl": "steve.linkedinprofile.com",
+   "codeLanguages": [
+        "HTML", "CSS", "JavaScript", ".NET", "C#"
+        ]
 }, 
 {
   "picture": "img/aaron-katz.jpg",
@@ -20,6 +23,9 @@ const employees = [
   "Major": "Computer Science",
   "Email": "aaronNotMyEmail@uw.com",
   "LinkedInUrl": "aaron.linkedinprofile.com",
+   "codeLanguages": [
+        "HTML", "CSS", "JavaScript", "PHP", "Twig"
+    ] 
 }, 
 {
   "picture": "img/Kyle Hendricks.jpg",
@@ -31,6 +37,9 @@ const employees = [
   "Major": "Pitching",
   "Email": "kyleH@cubs.com",
   "LinkedInUrl": "kyle.linkedinprofile.com",
+   "codeLanguages": [
+        "HTML", "CSS", "JavaScript", "Ruby", "Rails"
+    ]
 },
 {
   "picture": "img/michael-jordan.jpg",
@@ -42,11 +51,15 @@ const employees = [
   "Major": "Trash Talking",
   "Email": "mJordan@bulls.com",
   "LinkedInUrl": "mJordas.linkedinprofile.com",
+   "codeLanguages": [
+       "HTML", "CSS", "JavaScript", "Java", "Spring"
+    ]
 },
 ];
 
 const employeesHTML = employees.map(function(el){
   let employee = `
+  <div class="employee_card">
         <h1>Employee Card</h1>
       <div class="box">
         <div class="box_card">
@@ -65,12 +78,15 @@ const employeesHTML = employees.map(function(el){
               <li class="employee_School"><span class="box_card_text_bold">School: </span>${el.School}</li>
               <li class="employee_Major"><span class="box_card_text_bold">Major: </span>${el.Major}</li>
               <li class="employee_Email"><span class="box_card_text_bold">Email: </span>${el.Email}</li>
+              <li class="employee_codeLanguages"><span class="box_card_text_bold">Code Languages: </span>${el.codeLanguages.join(', ')}</li>
               <li class="employee_LinedInUrl"><img src="img/linkedin.svg" alt="linkedIn logo">${el.LinkedInUrl}</li>
             </ul>
           </div>
+        </div>
   `;
+  return employee;
 });
-$(".template-hook").append(employeesHTML);
-// jQuery(document).ready(function(){
-//   jQuery('.template-hook').append(employeesHTML);
-// });
+// $(".template-hook").append(employeesHTML);
+jQuery(document).ready(function(){
+  jQuery('.template-hook').append(employeesHTML);
+});
