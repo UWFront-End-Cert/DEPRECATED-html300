@@ -86,7 +86,7 @@ function addTitles() {
 function addImages() {
     let imgarr = ['benjamin-parker-OhKElOkQ3RE-unsplash-cropped.jpg', 'MV5BMjAzNjYwNzkxMl5BMl5BanBnXkFtZTgwMTU1OTk4MDE@._V1_UY317_CR16,0,214,317_AL_.jpg', 'fdsdb.jpg', 'vsd.jpg'];
     $('img').each(function (index) {
-        $(this).attr("src", "images/" + imgarr[index]);
+        $(this).attr("src", "img/" + imgarr[index]);
         $(this).attr("width", "225px");
         $(this).attr("height", "225px");
     });
@@ -96,7 +96,7 @@ function addImages() {
 function addRightValues() {
     //alert("addRightValues");
     $('p').each(function (index) {
-        $(this).append("<b>Company:</b> " + arr[index].company + " <br/> <b>Experience: </b> " + arr[index].exp + " <br /><b>School: </b>" + arr[index].school + "<br/><b>Major:</b> " + arr[index].major + " <br /><b>Email:</b> "+ arr[index].email + "<br /><b>LinkedIn URL: </b><a><img src='thYWNRJ9SD.jpg' alt='linkedin widget logo' width='30' height='30' />" + arr[index].url + "</a>");
+        $(this).append("<b>Company:</b> " + arr[index].company + " <br/> <b>Experience: </b> " + arr[index].exp + " <br /><b>School: </b>" + arr[index].school + "<br/><b>Major:</b> " + arr[index].major + " <br /><b>Email:</b> "+ arr[index].email + "<br /><b>LinkedIn URL: </b><a><img src='img/linkedin.svg' alt='linkedin widget logo' width='30' height='30' />" + arr[index].url + "</a>");
     });
     $('a').each(function (index) {
         $(this).attr("href", arr[index].url);
