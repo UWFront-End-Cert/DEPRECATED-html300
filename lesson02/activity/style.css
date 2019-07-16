@@ -23,7 +23,7 @@
 }
 
 .static-block:only-of-type .static-block__content {
-	border: none;  
+	border: none;
 }
 .static-block:last-of-type .static-block__content {
 	border: none;

@@ -1,17 +1,91 @@
+
+// all font styles and colors appear to be the same, so it is safe to declare globally
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #707070;
 }
 
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
+// 'body' wrapper for formatting
 .main {
-    padding: 2rem;
+  padding: 2rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+  background-color: $grayBG;
+  height: 100%;
 }
 
-h1 {
-    color: $red;  
+// wrapper element with all the content on it
+.card {
+  background-color: $white;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+// right side of card with most of the text. Nesting for readibility
+.content {
+  background-color: $grayBG;
+  margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+  width: 70%;
+  padding: 1rem;
+  ul {
+    padding: 1rem;
+    margin: 0;
+  }
+  li {
+    list-style-type: none;
+    padding-bottom: 1rem;
+  }
+  .linkedin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    li {
+      padding-bottom: 0;
+    }
+    img {
+      margin-right: 1rem;
+      width: 1.7rem;
+    }
+  }
+}
+
+// left side of card with photo and name
+.photoSide {
+  margin: 1.5rem 0px 1.5rem 1.5rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+// Getting the image to a circular crop
+.image-cropper {
+  width: 200px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+//Wrapper for name and title
+.name-title {
+  text-align: center;
+  h4 {
+    font-size: 145%;
+    margin-bottom: 0;
+  }
+  p {
+    font-style: italic;
+    margin-top: .2rem;
+  }
 }

@@ -1,15 +1,41 @@
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Fun with Constructors!</title>
-	<script src="index.js"></script>
-</head>
-<body>
-	<h1>Assignment 3</h1>
-	<section class="template-hook">
-		Fill this section with the templated components
-	</section>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- importing roboto font which seems to be a similar font to the one displayed -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <title>A2</title>
+    </head>
+    <body>
+       <main class="main">
+            <div class="card">
+              <!-- left side of the card with photo, name, and title -->
+              <div class="photoSide">
+                <img src="https://raw.githubusercontent.com/DScheid/html300/master/lesson02/assignment/img/unsplash-headshot.jpg" alt="" class="image-cropper">
+                <div class="name-title">
+                  <h4>Steve Smith</h4>
+                  <p>Project Manager</p>
+                </div>
+              </div>
+              <!-- right side of the card with credentials and linkedin -->
+              <div class="content">
+                <!-- ul for screen readibility and prebaked formatting -->
+                <ul>
+                  <li><strong>Company:</strong> Front End Dev Co</li>
+                  <li><strong>Experience:</strong> 3 Years</li>
+                  <li><strong>School:</strong> UW</li>
+                  <li><strong>Major:</strong> Marketing</li>
+                  <li><strong>Email:</strong> steve@fedc.com</li>
+                  <!-- Wrapping into a div for styling purposes -->
+                  <div class="linkedin">
+                      <img src="/img/linkedin.svg" alt="linked-in logo" id="lilogo">
+                      <li>steve.linkedinprofile.com</li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+        </main>
+    </body>
 </html>
