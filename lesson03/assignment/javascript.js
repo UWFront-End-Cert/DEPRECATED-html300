@@ -52,7 +52,8 @@ const person = [
 // maps personal details from array above
  let personHTML = person.map(function(el) {
 // creates div for card and personal details
-   let details = `<div class="id">
+   let details = `<div class="main">
+     <div class="id">
        <img src="{el.pic}" class="id__image" alt="headshot">
        <div class="id__caption">
          <h1 class="id__name">{el.name}</h1>
@@ -67,9 +68,11 @@ const person = [
          <img src="img/linkedin.svg" class="linkedin" alt="linkedin icon">
              <span class="details__info">${el.LinkedInUrl}</span>
        </div>
+       </div>
      </div>`;
  });
 
- $(".id").append(details);
+// uses jquery's append() to add code to '.id' div
+ $(".main").append(personHTML);
 
 });
