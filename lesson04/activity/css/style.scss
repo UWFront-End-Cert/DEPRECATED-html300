@@ -1,0 +1,63 @@
+// // Structure
+
+nav {
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background: #ddd;
+    border-radius: 5px;
+
+    li {
+      width: 260px;
+      height: 65px;
+      line-height: 65px;
+      position: relative;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+
+      .menu-1 {
+       
+        li {
+          display: none;
+          height: 100%;
+          background: #666;
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+  }
+}
+
+li:hover > .menu-1 > li {
+  display: block;
+  opacity: 0;
+  // animation: menu1 300ms;
+  @for $i from 1 through 2 {
+    &:nth-child(#{$i}) {
+      animation-name: menu1;
+      animation-duration: 500ms;
+      animation-delay: (300ms * $i) - 300;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    @keyframes menu1 {
+      0% {
+        opacity: 0;
+        transform: rotateY(90deg) translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: rotateY(0deg) translateY(0px);
+      }
+    }
+  }
+}
