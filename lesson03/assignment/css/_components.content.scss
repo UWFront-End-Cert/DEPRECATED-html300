@@ -9,7 +9,7 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.main__image {
+.id__image {
     border-radius: 50%;
     max-width: 75%;
 }
@@ -29,13 +29,13 @@ html {
 }
 
 // nesting divs
-.headshot {
+.id {
   text-align: center;
   padding-right: 10%;
-  .headshot__caption {
+  .id__caption {
       color: $dark;
       text-align: center;
-    .headshot__title {
+    .id__title {
         font-style: italic;
       }
     }

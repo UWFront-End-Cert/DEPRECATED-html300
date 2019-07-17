@@ -1,12 +1,12 @@
 // Confirms page loads before executing js
-$(document).ready(function()
+$(document).ready(function() {
 
 // Adds personal details from json file for custom cards
-let person = [
+const person = [
   {
     "name": "Steve Smith",
     "jobTitle": "Project Manager",
-    "profile-pic": "img/unsplash-headshot.jpg";
+    "pic": "img/unsplash-headshot.jpg",
     "company": "Front End Dev Co",
     "experience": "3 years",
     "school": "UW",
@@ -17,7 +17,7 @@ let person = [
   {
     "name": "Aaron Katz",
     "jobTitle": "Full Stack Developer",
-    "profile-pic": "img/unsplash-headshot.jpg";
+    "pic": "img/unsplash-headshot.jpg",
     "company": "Web Sites and More",
     "experience": "5 years",
     "school": "SU",
@@ -28,7 +28,7 @@ let person = [
   {
     "name": "Kyle Hendricks",
     "jobTitle": "Starting Pitcher",
-    "profile-pic": "img/unsplash-headshot.jpg";
+    "pic": "img/unsplash-headshot.jpg",
     "company": "Chicago Cubs",
     "experience": "12 years",
     "school": "USC",
@@ -39,7 +39,7 @@ let person = [
   {
     "name": "Michael Jordan",
     "jobTitle": "Point Guard",
-    "pic": "img/unsplash-headshot.jpg";
+    "pic": "img/unsplash-headshot.jpg",
     "company": "Chicago Buls",
     "experience": "20 years",
     "school": "UNC",
@@ -50,22 +50,26 @@ let person = [
  ];
 
 // maps personal details from array above
- let personHTML = person.map(function(el)) {
+ let personHTML = person.map(function(el) {
 // creates div for card and personal details
-   let details =
-   '<div class="main">
-     <div class="headshot">
-       <img src="{el.pic}" class="main__image" alt="headshot">
-       <div class="headshot__caption">
-         <h1>{el.name}</h1>
-         <p class="headshot__title">{el.jobTitle}</p>
+   let details = `<div class="id">
+       <img src="{el.pic}" class="id__image" alt="headshot">
+       <div class="id__caption">
+         <h1 class="id__name">{el.name}</h1>
+         <p class="id__title">{el.jobTitle}</p>
        </div>
-     </div>
-
-   </div>
-   ';
+       <div class="details">
+         <p class="details__label">Company: <span class="details__info">${el.Company}</span></p>
+         <p class="details__label">Experience: <span class="details__info">${el.Experience}</span></p>
+         <p class="details__label">School: <span class="details__info">${el.School}</span></p>
+         <p class="details__label">Major: <span class="details__info">${el.Major}</span></p>
+         <p class="details__label">Email: <span class="details__info">${el.Email}</span></p>
+         <img src="img/linkedin.svg" class="linkedin" alt="linkedin icon">
+             <span class="details__info">${el.LinkedInUrl}</span>
+       </div>
+     </div>`;
  });
 
- (".person").append(personHTML);
+ $(".id").append(details);
 
- });
+});
