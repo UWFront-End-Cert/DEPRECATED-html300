@@ -6,12 +6,55 @@ html {
 *:after,
 *:before {
     box-sizing: inherit;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.main {
-    padding: 2rem;
+.id__image {
+    border-radius: 50%;
+    max-width: 75%;
 }
 
-h1 {
-    color: $red;  
+.card {
+  background-color: $white;
+  max-width: 86%;
+  padding-left: 14%;
+}
+
+.template-hook {
+    display: grid;
+    grid-template-columns: 36% 64%;
+    justify-content: center;
+    padding: 4% 10% 4% 10%;
+    border: 3rem solid $outer;
+}
+
+// nesting divs
+.id {
+  text-align: center;
+  padding-right: 10%;
+  .id__caption {
+      color: $dark;
+      text-align: center;
+    .id__title {
+        font-style: italic;
+      }
+    }
+  }
+
+// nesting personal details within div/ Gray box
+.details {
+    background-color: $base-color;
+    padding: 4%;
+    .details__label {
+        color: $dark;
+        font-weight: bolder;
+        .details__info {
+            color: $dark;
+            font-weight: lighter;
+        }
+      }
+    }
+
+.linkedin {
+    margin-right: 3%;
 }
