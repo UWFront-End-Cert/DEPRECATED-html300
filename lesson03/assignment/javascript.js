@@ -53,12 +53,15 @@ const person = [
  let personHTML = person.map(function(el) {
 // creates section for card and personal details
    let detail = `
-   <div class="id">
+  <section class="card">
+   <div class="main">
+    <div class="id">
       <img src="${el.pic}" class="id__image" alt="headshot">
        <div class="id__caption">
          <h1 class="id__name">${el.name}</h1>
          <p class="id__title">${el.jobTitle}</p>
        </div>
+      </div>
        <div class="details">
          <p class="details__label">Company: <span class="details__info">${el.Company}</span></p>
          <p class="details__label">Experience: <span class="details__info">${el.Experience}</span></p>
@@ -68,7 +71,8 @@ const person = [
          <img src="img/linkedin.svg" class="linkedin" alt="linkedin icon">
              <span class="details__info">${el.LinkedInUrl}</span>
        </div>
-    </div>`;
+    </div>
+  </section>`;
 // uses jquery's append() to add code to '.id' div
  $(".template-hook").append(detail);
 
