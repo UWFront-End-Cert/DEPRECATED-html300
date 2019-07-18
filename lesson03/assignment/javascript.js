@@ -39,7 +39,7 @@ const person = [
   {
     "name": "Michael Jordan",
     "jobTitle": "Point Guard",
-    "pic": "img/unsplash-headshot.jpg",
+    "pic": "img/michael-jordan.jpg",
     "company": "Chicago Buls",
     "experience": "20 years",
     "school": "UNC",
@@ -63,13 +63,13 @@ const person = [
        </div>
       </div>
        <div class="details">
-         <p class="details__label">Company: <span class="details__info">${el.Company}</span></p>
-         <p class="details__label">Experience: <span class="details__info">${el.Experience}</span></p>
-         <p class="details__label">School: <span class="details__info">${el.School}</span></p>
-         <p class="details__label">Major: <span class="details__info">${el.Major}</span></p>
-         <p class="details__label">Email: <span class="details__info">${el.Email}</span></p>
+         <p class="details__label">Company: <span class="details__info">${el.company}</span></p>
+         <p class="details__label">Experience: <span class="details__info">${el.experience}</span></p>
+         <p class="details__label">School: <span class="details__info">${el.school}</span></p>
+         <p class="details__label">Major: <span class="details__info">${el.major}</span></p>
+         <p class="details__label">Email: <span class="details__info">${el.email}</span></p>
          <img src="img/linkedin.svg" class="linkedin" alt="linkedin icon">
-             <span class="details__info">${el.LinkedInUrl}</span>
+             <span class="details__info">${el.linkedInUrl}</span>
        </div>
     </div>
   </section>`;
