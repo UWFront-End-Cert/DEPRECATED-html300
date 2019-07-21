@@ -1,0 +1,23 @@
+{
+  "name": "lesson03",
+  "version": "1.0.0",
+  "description": "lesson-03",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "local-dev": "file:assignment"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "olivia spokoiny",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "lesson-03"
+  },
+  "keywords": [
+    "lesson-03"
+  ]
+}

@@ -51,6 +51,7 @@ const person = [
 
 // maps personal details from array above
  let personHTML = person.map(function(el) {
+
 // creates section for card and personal details
    let detail = `
   <section class="card">
@@ -77,4 +78,5 @@ const person = [
  $(".template-hook").append(detail);
 
  });
+
 });
