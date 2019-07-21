@@ -8,10 +8,125 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+h1 {
+    text-align: center;
 }
 
-h1 {
-    color: $red;  
+.card {
+    max-width: 50rem; //prevents card from unlimited growth with large screen sizes
+    margin: 1rem auto;
+    border: 1.5rem solid $gray;
+    padding: 1rem;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    @include media-query(desk) {
+        // mobile first- media query for desktop site
+        flex-direction: row;
+        margin: 1rem auto;
+        padding: 1.5rem;
+
+        .title {
+            margin: 0 1.5rem 0 0;
+        }
+
+        .personal-info {
+            display: flex;
+            flex-direction: column; //flexed for even spacing vertically
+
+        }
+    }
+
+}
+
+img {
+    box-shadow: $box-shadow;
+}
+
+.title {
+    flex: 1; //will be on the left side of container, 1st item
+    display: flex;
+    flex-direction: column; // stacks image and title
+    flex-grow: 0; //prevents image from growing
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    img {
+        border-radius: 50%; // rounds borders to present circular image
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    h2 {
+        margin: 1.5rem 0 .5rem;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.personal-info {
+    flex: 2; //will be on right side of container, 2nd item
+    background-color: $gray2;
+    padding: 0 1rem;
+    position: relative;
+
+    img {
+        vertical-align: middle; //vertically aligns linkedin image with text
+        width: 1.5rem;
+    }
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: absolute; // positions sidebar around .personal-info which is relative
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden; // hides everything past the hight of the div (scrolls)
+    background-color: $darkgray;
+    box-shadow: $box-shadow;
+    border-radius: 50% 0 0 50%;
+    padding-top: 2rem;
+    text-align: right;
+    transition: 0.5s;
+
+
+    p {
+        padding: 1rem;
+        margin: 0;
+        color: $white;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: .25rem;
+        font-weight: bold;
+        color: $black;
+    }
+}
+
+.openbtn {
+    cursor: pointer;
+    background-color: $darkgray;
+    color: $white;
+    padding: .25rem;
+    margin: 1rem auto;
+    border: none;
+    border-radius: .25rem;
+    box-shadow: $box-shadow;
+
+    &:hover {
+        background-color: #444;
+    }
+
 }
