@@ -1,0 +1,11 @@
+@mixin initial_hamburger() {
+    position: absolute;
+    top: 25%;
+    right: 75%;
+    width: 30px;
+    height: 2px;
+    background: $robins;
+    display: block;
+    transform-origin: center;
+    transition: .5s ease-in-out;
+}
