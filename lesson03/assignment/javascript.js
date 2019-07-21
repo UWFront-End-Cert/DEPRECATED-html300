@@ -39,7 +39,7 @@ const person = [
   {
     "name": "Michael Jordan",
     "jobTitle": "Point Guard",
-    "pic": "img/unsplash-headshot.jpg",
+    "pic": "img/michael-jordan.jpg",
     "company": "Chicago Buls",
     "experience": "20 years",
     "school": "UNC",
@@ -51,28 +51,32 @@ const person = [
 
 // maps personal details from array above
  let personHTML = person.map(function(el) {
-// creates div for card and personal details
-   let details = `<div class="main">
-     <div class="id">
-       <img src="{el.pic}" class="id__image" alt="headshot">
-       <div class="id__caption">
-         <h1 class="id__name">{el.name}</h1>
-         <p class="id__title">{el.jobTitle}</p>
-       </div>
-       <div class="details">
-         <p class="details__label">Company: <span class="details__info">${el.Company}</span></p>
-         <p class="details__label">Experience: <span class="details__info">${el.Experience}</span></p>
-         <p class="details__label">School: <span class="details__info">${el.School}</span></p>
-         <p class="details__label">Major: <span class="details__info">${el.Major}</span></p>
-         <p class="details__label">Email: <span class="details__info">${el.Email}</span></p>
-         <img src="img/linkedin.svg" class="linkedin" alt="linkedin icon">
-             <span class="details__info">${el.LinkedInUrl}</span>
-       </div>
-       </div>
-     </div>`;
- });
 
+// creates section for card and personal details
+   let detail = `
+  <section class="card">
+   <div class="main">
+    <div class="id">
+      <img src="${el.pic}" class="id__image" alt="headshot">
+       <div class="id__caption">
+         <h1 class="id__name">${el.name}</h1>
+         <p class="id__title">${el.jobTitle}</p>
+       </div>
+      </div>
+       <div class="details">
+         <p class="details__label">Company: <span class="details__info">${el.company}</span></p>
+         <p class="details__label">Experience: <span class="details__info">${el.experience}</span></p>
+         <p class="details__label">School: <span class="details__info">${el.school}</span></p>
+         <p class="details__label">Major: <span class="details__info">${el.major}</span></p>
+         <p class="details__label">Email: <span class="details__info">${el.email}</span></p>
+         <img src="img/linkedin.svg" class="linkedin" alt="linkedin icon">
+             <span class="details__info">${el.linkedInUrl}</span>
+       </div>
+    </div>
+  </section>`;
 // uses jquery's append() to add code to '.id' div
- $(".main").append(personHTML);
+ $(".template-hook").append(detail);
+
+ });
 
 });
