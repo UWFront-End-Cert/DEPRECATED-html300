@@ -103,10 +103,23 @@ function addRightValues() {
     });
 }
 
+function addText2() {
+    let imgarr = ['benjamin-parker-OhKElOkQ3RE-unsplash-cropped.jpg', 'MV5BMjAzNjYwNzkxMl5BMl5BanBnXkFtZTgwMTU1OTk4MDE@._V1_UY317_CR16,0,214,317_AL_.jpg', 'fdsdb.jpg', 'vsd.jpg'];
+    for (i = 0; i < arr.length; i++) {
+        $(".template-hook").append("<div class='card'></div>");
+    }
+    $('.card').each(function (index) {
+        $(this).attr("id", index);
+        $(this).append(`<div class='left-image'><img width='225' height='225' src='${imgarr[index]}'><h1>${arr[index].name}</h1><h2>${arr[index].jobtitle}</h2></img></div><div class='right-text'><p><b>Company:</b > ${arr[index].company} <br> <b>Experience: </b>${arr[index].exp} <br> <b>School: </b>${arr[index].school} <br> <b>Major: </b>${arr[index].major} <br> <b>Email: </b>${arr[index].email} <br> <b>LinkedIn URL: </b> <a><img src='linkedin.png' alt='linkedin widget logo' width='20' height='20' />  ${arr[index].url}</a></p></div>`);
+    });
+
+}
 
 // Adds HTML to the page from a JSON file
 $(document).ready(function () {
     alert("1");
     buildData();
-    setTimeout(addText, 3000);
+    //setTimeout(addText, 3000);
+    setTimeout(addText2, 3000);
 });
+
