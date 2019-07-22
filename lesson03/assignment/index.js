@@ -96,7 +96,7 @@ function addImages() {
 function addRightValues() {
     //alert("addRightValues");
     $('p').each(function (index) {
-        $(this).append("<b>Company:</b> " + arr[index].company + " <br/> <b>Experience: </b> " + arr[index].exp + " <br /><b>School: </b>" + arr[index].school + "<br/><b>Major:</b> " + arr[index].major + " <br /><b>Email:</b> "+ arr[index].email + "<br /><b>LinkedIn URL: </b><a><img src='img/linkedin.svg' alt='linkedin widget logo' width='30' height='30' />" + arr[index].url + "</a>");
+        $(this).append("<b>Company:</b> ${arr[index].company} + <br/> <b>Experience: </b> ${arr[index].exp} <br /><b>School: </b> ${arr[index].school}<br/><b>Major:</b>${arr[index].major}<br /><b>Email:</b>${arr[index].email}<br /><b>LinkedIn URL: </b><a><img src='img/linkedin.svg' alt='linkedin widget logo' width='30' height='30' />${arr[index].url}</a>");
     });
     $('a').each(function (index) {
         $(this).attr("href", arr[index].url);
