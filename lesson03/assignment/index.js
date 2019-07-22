@@ -6,7 +6,7 @@ var arr = []
  */
 function buildData() {
     //alert("buildData");
-    d3.json("data.json", function (error, data) {
+    d3.json("data/data.json", function (error, data) {
         if (error)
             throw error;
         $.each(data, function (i) {
