@@ -86,7 +86,7 @@ function addTitles() {
 function addImages() {
     let imgarr = ['benjamin-parker-OhKElOkQ3RE-unsplash-cropped.jpg', 'MV5BMjAzNjYwNzkxMl5BMl5BanBnXkFtZTgwMTU1OTk4MDE@._V1_UY317_CR16,0,214,317_AL_.jpg', 'fdsdb.jpg', 'vsd.jpg'];
     $('img').each(function (index) {
-        $(this).attr("src", "img/" + imgarr[index]);
+        $(this).attr("src", "img/${imgarr[index]}");
         $(this).attr("width", "225px");
         $(this).attr("height", "225px");
     });
