@@ -60,36 +60,37 @@ const linkedin = [
 let contacts = linkedin.map(function(el){
        let con=`<article>
             
-                <a class= "contact__name">${el.name}</a>
-                <a class= "contact__jobTitle">${el.jobTitle}</a>
+               
+  <!-- entire contact card-->
+	  <section class = "card">
+		  <!--left portion with headshoot-->
+		  <div class = "headshot">
+			  <img class= "head_pic" src="img/unsplash-headshot.jpg" alt="Head Shot">
+			  <p class = "text__name" id="name">${el.name}</p>
+			  <p class= "text__title" id="title">${el.jobTitle}</p>
+		  </div>
+		  <!-- right portion with details-->
+		  <div class = "inlay">
+			  <a class = "text__bold">Company:</a><a class = "text__normal" id="company">${el.company}</a>
+			    <br>
+			  <a class = "text__bold">Experience:</a><a class = "text__normal">${el.experience}</a>
+			    <br>
+			  <a class = "text__bold">School:</a><a class = "text__normal">${el.school}</a>
+			    <br>
+			  <a class = "text__bold">Major:</a><a class = "text__normal">${el.major}</a>
+			    <br>
+			  <a class = "text__bold">Email:</a><a class = "text__normal">${el.email}</a>
+			    <br>
+			  <img  class= "logo-pic" src="img/linkedin.svg" alt="LinkedIn Icon"><a class = "text__normal">${el.linkedInUrl}</a>
+		  </div>
+	  </section>
             
 
        </article>`;
        return con
     });
     
-$("#name").append(contacts);
-
-
-
-
-let details = linkedin.map(function(el){
-    let con=`<article>
-         
-             
-             <a class= "details__company">${el.company}</a>
-             <a class= "details__experience">${el.experience}</a>
-             <a class= "details__school">${el.school}</a>
-             <a class= "details__major">${el.major}</a>
-             <a class= "details__email">${el.email}</a>
-             <a class= "details__linkedInUrl">${el.linkedInUrl}</a>
-         
-
-    </article>`;
-    return con
- });
- 
-$("#company").append(details);
+$(".template-hook").append(contacts);
 
 
 
