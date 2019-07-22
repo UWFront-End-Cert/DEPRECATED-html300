@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-
+//setting data for importing to cards//
 const linkedin = [
     {
       "name": "Steve Smith",
@@ -56,6 +56,7 @@ const linkedin = [
     }
    ]
 
+//creating component extracting data from above//
 
 let contacts = linkedin.map(function(el){
        let con=`<article>
