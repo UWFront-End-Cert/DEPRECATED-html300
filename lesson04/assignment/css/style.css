@@ -52,7 +52,7 @@ label .menu {
   z-index: 100;
   width: 10rem;
   height: 15rem;
-  background: #ffb617;
+  background: #a7a1a7;
   border-radius: 10% 10% 10% 10%;
   transition: .5s ease-in-out;
   box-shadow: 0 0 0 0 #000000, 0 0 0 0 #000000;
@@ -70,7 +70,7 @@ label ul {
 label a {
   margin-bottom: 1em;
   display: block;
-  color: #7acb00;
+  color: #385c02;
   text-decoration: none; }
 
 li {

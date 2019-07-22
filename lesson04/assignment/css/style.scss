@@ -40,16 +40,16 @@ label input:checked + .menu {
 //changing from lines to x//
   
 label input:checked + .menu .hamburger {
-    transform: rotate(45deg);
+    @include transform_icon();
   }
   
 label input:checked + .menu .hamburger:after {
-    transform: rotate(90deg);
+    @include transform_icon_90();
     bottom: 0;
   }
   
 label input:checked + .menu .hamburger:before {
-    transform: rotate(90deg);
+    @include transform_icon_90();
     top: 0;
   }
 
@@ -65,7 +65,7 @@ label input:checked + .menu + ul { opacity: 1; }
     z-index: 100;
     width: 10rem;
     height: 15rem;
-    background:$yellow;
+    background:$gray;
     border-radius: 10% 10% 10% 10%;
     transition: .5s ease-in-out;
     box-shadow: 0 0 0 0 $black, 0 0 0 0 $black;

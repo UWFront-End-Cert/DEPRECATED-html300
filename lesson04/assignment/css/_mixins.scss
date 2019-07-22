@@ -9,3 +9,11 @@
     transform-origin: center;
     transition: .5s ease-in-out;
 }
+
+@mixin transform_icon() {
+    transform: rotate(45deg);
+}
+
+@mixin transform_icon_90() {
+    transform: rotate(90deg);
+}
