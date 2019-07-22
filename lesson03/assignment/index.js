@@ -117,7 +117,6 @@ function addText2() {
 
 // Adds HTML to the page from a JSON file
 $(document).ready(function () {
-    alert("1");
     buildData();
     //setTimeout(addText, 3000);
     setTimeout(addText2, 3000);
