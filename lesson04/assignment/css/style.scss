@@ -1,5 +1,16 @@
-﻿body {
-    background-color: whitesmoke;
+$bg: whitesmoke;
+@mixin b_default{
+    opacity: 0.4;
+    height: 20px;
+    font-size: 10px;
+}
+@mixin b_hover{
+    opacity: 1.0;
+    height: 40px;
+    font-size: 20px;   
+}
+body {
+    background-color: bg;
 }
 
 .scroll_menu {
@@ -7,18 +18,13 @@
     text-align: center;
 
     button {
+        @include b_default;
         transition-property: opacity, height, font-size;
-        opacity: 0.4;
-        height: 20px;
         transition-duration: 0.25s;
-        font-size: 10px;
         top: 50%;
         transform: translate(0%, -250px);
-
         &:hover {
-            opacity: 1.0;
-            height: 40px;
-            font-size: 20px;
+            @include b_hover;
         }
     }
 }
