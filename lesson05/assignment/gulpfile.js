@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     plumber = require('gulp-plumber'),
     gutil = require('gulp-util'),
-    minifycss = require('gulp-minify-css'),
     browserSync = require('browser-sync').create();
 
 gulp.task('sass', function() {
@@ -16,7 +15,6 @@ gulp.task('sass', function() {
                 browsers: ['> .5%'],
             })
         )
-        .pipe(minifycss({ compatibility: 'ie8' }))
         .pipe(gulp.dest('css/'))
         .pipe(browserSync.stream());
 });
