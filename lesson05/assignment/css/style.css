@@ -1,0 +1,159 @@
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 45% 60% 15%;
+    grid-template-columns: 100%;
+}
+#navbar, nav, button{
+    background-color: midnightblue;
+    border: none;
+}
+
+#navbar {
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+@media screen and (max-width: 600px) {
+    nav {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        align-content: center;
+        height: 6em;
+    }
+    #middle #sidebar {
+        display:none;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    nav {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        align-content: center;
+        height: 6em;
+    }
+
+    #middle {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    #middle #sidebar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    nav {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        align-content: center;
+        height: 6em;
+    }
+    #middle {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    #middle #sidebar {
+        background-color: royalblue;
+        padding: 10%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1223px){
+    nav {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        align-content: center;
+        height: 6em;
+    }
+    #middle {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    #middle #sidebar {
+        background-color: royalblue;
+        padding: 10%;
+    }
+}
+
+@media screen and (min-width: 1224px) {
+    nav {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        align-content: center;
+        height: 6em;
+    }
+    #middle {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    #middle #sidebar {
+        background-color: royalblue;
+        padding: 10%;
+    }
+}
+
+button:hover {
+    background-color: dodgerblue;
+
+}
+button {
+    width: 10em;
+    height: 3em;
+    padding: 2%;
+    border-radius: 15px;
+    font-size: 100%;
+    color: white;
+}
+
+
+
+
+
+#middle #main {
+    background-color: whitesmoke;
+    padding: 10%;
+}
+#bottom {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: darkblue;
+    display: inline-block;
+}
+
+#top{
+    display: grid;
+    grid-template-rows: 70% 30%;
+    background-color: red;
+    margin: 0;
+    background-image: url("jetty_island_banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+header h2{
+    transform: translateX(30%);
+    font-size: 200%;
+}
+#city_logo{
+    position: relative;
+    top: 15%;
+    left: 10%;
+    width: 25%;
+}
+
+header{
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+}
