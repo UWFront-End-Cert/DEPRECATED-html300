@@ -21,7 +21,7 @@ html {
 
 .grid > * {
     border: 2px solid $purple;
-    background-color: $blue;
+    background-color: $blue-green;
     border-radius: 5px;
 }
 
@@ -39,6 +39,7 @@ header, footer {
       width: 100%;
       text-align: center;
       margin: 0 auto;
+      font-size: 2rem;
   }
 
   .header__text, .footer__text {
@@ -58,6 +59,15 @@ nav ul {
     list-style: none;
 }
 
+.sidebar__text, .main__text {
+    padding: 0% 8% 1% 8%;
+    margin-left: 2%;
+    
+}
+
+.grid__headers {
+    margin-left: 10%;
+}
 
 .grid > * {
     grid-column: col-start / span 12;

@@ -370,8 +370,8 @@ html {
   box-sizing: inherit; }
 
 .grid > * {
-  border: 2px solid #bf4aa8;
-  background-color: #51d0de;
+  border: 2px solid #9068be;
+  background-color: #6ed3cf;
   border-radius: 5px; }
 
 .grid {
@@ -386,7 +386,8 @@ header, footer {
   padding: 5%;
   width: 100%;
   text-align: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-size: 2rem; }
 
 .header__text, .footer__text {
   justify-content: center;
@@ -401,6 +402,13 @@ nav ul {
 
 .nav__links {
   list-style: none; }
+
+.sidebar__text, .main__text {
+  padding: 0% 8% 1% 8%;
+  margin-left: 2%; }
+
+.grid__headers {
+  margin-left: 10%; }
 
 .grid > * {
   grid-column: col-start / span 12; }
