@@ -1,5 +1,5 @@
 // array storing paths to images
-var images = ["img/vsd.jpg", "img/fdsdb.jpg", "img/MV5BMjAzNjYwNzkxMl5BMl5BanBnXkFtZTgwMTU1OTk4MDE@._V1_UY317_CR16,0,214,317_AL_.jpg", "img/benjamin-parker-OhKElOkQ3R-unsplash-cropped.jpg"];
+var images = ["img/vsd.jpg", "img/fdsdb.jpg", "img/asf_.jpg", "img/benjamin-parker-OhKElOkQ3R-unsplash-cropped.jpg"];
 // index of the array for image to be displayed
 var i = 0;
 $(document).ready(function () {
