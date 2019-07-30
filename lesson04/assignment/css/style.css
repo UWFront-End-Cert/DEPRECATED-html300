@@ -1,1 +1,1 @@
-#one{height:400px;width:400px;background-color:#00f}#one #two{height:200px;width:200px;background-color:red}
+body{margin:0;padding:0;list-style:none;display:flex;flex-direction:row}h1{margin-left:3rem}#one{height:100vw;width:5vw;transition:.5s;background-color:gray}#one:hover{transform:scaleX(10);background-color:#33d6ff}
