@@ -24,6 +24,7 @@ body {
     grid-row-start: 2;
     grid-row-end: 3;
 }
+/*Mobile*/
 @media screen and (max-width: 600px) {
     nav {
         display: grid;
@@ -35,6 +36,7 @@ body {
         display:none;
     }
 }
+/*Small Tablet*/
 @media screen and (min-width: 600px) and (max-width: 767px) {
     nav {
         display: grid;
@@ -52,7 +54,7 @@ body {
         display: none;
     }
 }
-
+/*Large Tablet*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
     nav {
         display: grid;
@@ -70,6 +72,7 @@ body {
         padding: 10%;
     }
 }
+/*Small Desktop*/
 @media screen and (min-width: 992px) and (max-width: 1223px){
     nav {
         display: grid;
@@ -86,7 +89,7 @@ body {
         padding: 10%;
     }
 }
-
+/*Large Desktop*/
 @media screen and (min-width: 1224px) {
     nav {
         display: grid;
@@ -103,7 +106,7 @@ body {
         padding: 10%;
     }
 }
-
+/*Highlight button to a different color when hovering*/
 button:hover {
     background-color: dodgerblue;
 
