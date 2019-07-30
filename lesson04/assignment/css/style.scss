@@ -1,9 +1,10 @@
+//Putting my site standard colors into variables
 $blue_1: #33d6ff;
 
+//Making a mixin because I will likely use this later
 @mixin nogap {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 body {
@@ -12,10 +13,12 @@ body {
   flex-direction: row;
 }
 
+//Title of the site, unaffected / covered by menu
 h1 {
   margin-left: 3rem;
 }
 
+//side menu which appears when hovered and changes color
 #one {
   height: 100vw;
   width: 5vw;
