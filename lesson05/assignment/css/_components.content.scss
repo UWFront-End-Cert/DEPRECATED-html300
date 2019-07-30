@@ -8,6 +8,74 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+
+html {
+    box-sizing: border-box;
 }
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.grid > * {
+    border: 2px solid $purple;
+    background-color: $blue;
+    border-radius: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+header, footer {
+      height: 100%;
+      padding: 5%;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+  }
+
+  .header__text, .footer__text {
+      justify-content: center;
+      margin: 0 auto;
+  }
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+
+.grid > * {
+    grid-column: col-start / span 12;
+  }
+  @media (min-width: 500px) {
+  
+    .sidebar {
+      grid-column: col-start / span 3;
+      grid-row: 3;
+    }
+
+    .main, footer {
+      grid-column: col-start 4 / span 9;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
