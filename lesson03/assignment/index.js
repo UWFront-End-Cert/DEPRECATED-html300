@@ -6,22 +6,22 @@ var arr = []
  */
 function buildData() {
     //alert("buildData");
-        d3.json("data/data.json", function (error, data) {
-            if (error)
-                throw error;
-            $.each(data, function (i) {
+    d3.json("data/data.json", function (error, data) {
+        if (error)
+            throw error;
+        $.each(data, function (i) {
 
-                arr.push(makePerson(data[i].name, data[i].jobTitle, data[i].Company, data[i].Experience, data[i].School, data[i].Major, data[i].Email, data[i].LinkedInUrl));
-            });
+            arr.push(makePerson(data[i].name, data[i].jobTitle, data[i].Company, data[i].Experience, data[i].School, data[i].Major, data[i].Email, data[i].LinkedInUrl));
         });
+    });
 }
 
 /*
  *  Makes a Person object 
  * 
  */
-function makePerson(name, jobtitle, company, exp, school, major, email, url){
-    return{
+function makePerson(name, jobtitle, company, exp, school, major, email, url) {
+    return {
         name,
         jobtitle,
         exp,
@@ -36,14 +36,14 @@ function makePerson(name, jobtitle, company, exp, school, major, email, url){
 /*
  * Adds text to the HTML page
  * 
- */ 
+ */
 function addText() {
     //alert("addText");
     for (i = 0; i < arr.length; i++) {
         $(".template-hook").append("<div class='card'></div>");
     }
     $('.card').each(function (index) {
-        $(this).attr("id", index);        
+        $(this).attr("id", index);
     });
     $('.card').append("<div class='left-image'></div>");
     //adds the left half of the card
@@ -69,7 +69,7 @@ function addText() {
 function addNames() {
     //alert("addNames");
     $('h1').each(function (index) {
-        //$(this).append(arr[index].name);
+        $(this).append(arr[index].name);
     });
 }
 
@@ -86,7 +86,7 @@ function addTitles() {
 function addImages() {
     let imgarr = ['benjamin-parker-OhKElOkQ3RE-unsplash-cropped.jpg', 'MV5BMjAzNjYwNzkxMl5BMl5BanBnXkFtZTgwMTU1OTk4MDE@._V1_UY317_CR16,0,214,317_AL_.jpg', 'fdsdb.jpg', 'vsd.jpg'];
     $('img').each(function (index) {
-        $(this).attr("src", "img/${imgarr[index]}");
+        $(this).attr("src", imgarr[index]);
         $(this).attr("width", "225px");
         $(this).attr("height", "225px");
     });
@@ -96,16 +96,29 @@ function addImages() {
 function addRightValues() {
     //alert("addRightValues");
     $('p').each(function (index) {
-        $(this).append("<b>Company:</b> ${arr[index].company} + <br/> <b>Experience: </b> ${arr[index].exp} <br /><b>School: </b> ${arr[index].school}<br/><b>Major:</b>${arr[index].major}<br /><b>Email:</b>${arr[index].email}<br /><b>LinkedIn URL: </b><a><img src='img/linkedin.svg' alt='linkedin widget logo' width='30' height='30' />${arr[index].url}</a>");
+        $(this).append("<b>Company:</b>${arr[index].company}<br/> <b>Experience: </b>${arr[index].exp}<br /><b>School: </b>${arr[index].school}<br/><b>Major:</b>${arr[index].major}<br /><b>Email:</b>${arr[index].email }<br /><b>LinkedIn URL: </b><a><img src='linkedin.png' alt='linkedin widget logo' width='20' height='20' />${arr[index].url}</a>");
     });
     $('a').each(function (index) {
         $(this).attr("href", arr[index].url);
     });
 }
 
+function addText2() {
+    let imgarr = ['benjamin-parker-OhKElOkQ3RE-unsplash-cropped.jpg', 'MV5BMjAzNjYwNzkxMl5BMl5BanBnXkFtZTgwMTU1OTk4MDE@._V1_UY317_CR16,0,214,317_AL_.jpg', 'fdsdb.jpg', 'vsd.jpg'];
+    for (i = 0; i < arr.length; i++) {
+        $(".template-hook").append("<div class='card'></div>");
+    }
+    $('.card').each(function (index) {
+        $(this).attr("id", index);
+        $(this).append(`<div class='left-image'><img width='225' height='225' src='${imgarr[index]}'><h1>${arr[index].name}</h1><h2>${arr[index].jobtitle}</h2></img></div><div class='right-text'><p><b>Company:</b > ${arr[index].company} <br> <b>Experience: </b>${arr[index].exp} <br> <b>School: </b>${arr[index].school} <br> <b>Major: </b>${arr[index].major} <br> <b>Email: </b>${arr[index].email} <br> <b>LinkedIn URL: </b> <a><img src='linkedin.png' alt='linkedin widget logo' width='20' height='20' />  ${arr[index].url}</a></p></div>`);
+    });
+
+}
 
 // Adds HTML to the page from a JSON file
 $(document).ready(function () {
     buildData();
-    setTimeout(addText, 3000);
+    //setTimeout(addText, 3000);
+    setTimeout(addText2, 3000);
 });
+

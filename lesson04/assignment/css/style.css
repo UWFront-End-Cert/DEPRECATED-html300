@@ -1,1 +1,24 @@
-#one{height:400px;width:400px;background-color:#00f}#one #two{height:200px;width:200px;background-color:red}
+body {
+	background-color: whitesmoke;
+}
+
+.scroll_menu {
+	width: 600px;
+	text-align: center;
+}
+
+.scroll_menu button {
+	opacity: 0.4;
+	height: 20px;
+	font-size: 10px;
+	transition-property: opacity, height, font-size;
+	transition-duration: 0.25s;
+	top: 50%;
+	transform: translate(0%, -250px);
+}
+
+.scroll_menu button:hover {
+	opacity: 1.0;
+	height: 40px;
+	font-size: 20px;
+}

@@ -1,11 +1,30 @@
-#one{
-  height: 400px;
-  width: 400px;
-  background-color: blue;
+$bg: whitesmoke;
+@mixin b_default{
+    opacity: 0.4;
+    height: 20px;
+    font-size: 10px;
+}
+@mixin b_hover{
+    opacity: 1.0;
+    height: 40px;
+    font-size: 20px;   
+}
+body {
+    background-color: $bg;
+}
 
-  #two{
-    height: 200px;
-    width: 200px;
-    background-color: red;
-  }
+.scroll_menu {
+    width: 600px;
+    text-align: center;
+
+    button {
+        @include b_default;
+        transition-property: opacity, height, font-size;
+        transition-duration: 0.25s;
+        top: 50%;
+        transform: translate(0%, -250px);
+        &:hover {
+            @include b_hover;
+        }
+    }
 }
