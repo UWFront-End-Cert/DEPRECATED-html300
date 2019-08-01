@@ -1,3 +1,4 @@
+//setting some employees parameters 
 const employees = [
 {
   "picture": "img/Smith-Stephen.jpg",
@@ -56,7 +57,7 @@ const employees = [
     ]
 },
 ];
-
+//making employee card template with a picture and the rest of parameters.
 const employeesHTML = employees.map(function(el){
   let employee = `
   <div class="employee_card">
@@ -84,6 +85,7 @@ const employeesHTML = employees.map(function(el){
           </div>
         </div>
   `;
+  //something that can make you suffer for 2-5 hours to figure out why your code isn't working
   return employee;
 });
 // $(".template-hook").append(employeesHTML);
