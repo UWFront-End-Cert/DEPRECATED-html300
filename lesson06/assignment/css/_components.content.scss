@@ -8,6 +8,7 @@ html {
     box-sizing: inherit;
 }
 
+// making jumbotron look smaller and cleaner
 .jumbotron{
 	text-align: center;
 	margin: 0;
@@ -37,6 +38,7 @@ html {
 		list-style:none;
 	}
 }}
+// Editing accordion styles
 #accordion{
 	display: inline-block;
 	display: flex;
@@ -50,6 +52,7 @@ html {
 	.card-body{
 		padding: 0;
 	}
+	// Styling modal button
 	h3{
 		padding: 2% 0;
 		font-weight: bold;
@@ -68,6 +71,7 @@ html {
 	font-size:3em;
 	padding: 5% 10%;
 }
+// making message for you comfortable to read:)
 .bryce{
 	text-align: center;
 }
