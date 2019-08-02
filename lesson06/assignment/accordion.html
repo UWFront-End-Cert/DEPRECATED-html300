@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Assignment 06 | Accordion</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+                <div class="container">
+                    <button class="navbar-toggler" data-toggle="collapse"
+                    data-target="#navbarNav"
+                    ><span class="navbar-toggler-icon"></span></button>
+                    <div id="navbarNav" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Landing Home Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="images.html">Images</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="grid.html">Grid System</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="accordion.html">Accordion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="main_accordion">
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header">
+                        <a href="#one" data-parent="#accordion"
+                            data-toggle="collapse">
+                            <img src="img/anime-1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div id="one" class="collapse">
+                        <div class="card-body">
+                            <h3 class="display-4" data-toggle="modal" data-target=".bd-example-modal-lg">Your Name</h3>
+                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        A teenage boy and girl embark on a quest to meet each other for the<br> first time after they magically swap bodies.<br>
+                                        Release date: April 7, 2017 (USA)<br>
+                                        Director: Makoto Shinkai<br>
+                                        Japanese: 君の名は。<br>
+                                        Featured song: Zenzenzense<br>
+                                        Did you know: "Your Name" is the second-highest-grossing anime film of <br>all time worldwide ($361,024,012). wikipedia.org<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a href="#two"
+                            data-parent="#accordion" data-toggle="collapse">
+                            <img src="img/anime-2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div id="two" class="collapse">
+                        <div class="card-body">
+                            <h3 class="display-4" data-toggle="modal" data-target=".bd-example-modal-lg">Weathering with You</h3>
+                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        Weathering with You is a Japanese animated film written and directed by <br>Makoto Shinkai and produced by CoMix Wave Films, following the 2016 <br>film Your Name. It was released in Japan on July 19, 2019, starring <br>Kotaro Daigo and Nana Mori. Wikipedia<br>
+                                        Initial release: July 19, 2019 (Japan)<br>
+                                        Director: Makoto Shinkai<br>
+                                        Japanese: 天気の子<br>
+                                        Story by: Makoto Shinkai<br>
+                                        Screenplay: Makoto Shinkai<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a href="#three"
+                            data-parent="#accordion" data-toggle="collapse">
+                            <img src="img/anime-3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div id="three" class="collapse">
+                        <div class="card-body">
+                            <h3 class="display-4" data-toggle="modal" data-target=".bd-example-modal-lg">My Neighbor Totoro</h3>
+                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        This acclaimed animated tale by director Hayao Miyazaki follows schoolgirl<br>Satsuke and her younger sister, Mei, as they settle into an old country house<br> with their father and wait for their mother to recover from an illness in an area hospital.<br>
+                                        Release date: May 7, 1993 (USA)<br>
+                                        Director: Hayao Miyazaki<br>
+                                        Featured song: My Neighbor Totoro<br>
+                                        Japanese: となりのトトロ<br>
+                                        Cast: Shigesato Itoi, Chika Sakamoto, Sumi Shimamoto..<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="display2 bryce">Bryce please help me to get rid of secondary 2 boxes showing up when clicking on the main one -.-"</h2>
+            </div>
+        </section>
+    </body>
+</html>
