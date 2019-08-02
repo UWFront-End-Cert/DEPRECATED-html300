@@ -16,7 +16,7 @@ gulp.task('sass', function() {
                 browsers: ['> .5%'],
             })
         )
-        .pipe(minifycss({ compatibility: 'ie8' }))
+        // .pipe(minifycss({ compatibility: 'ie8' }))
         .pipe(gulp.dest('css/'))
         .pipe(browserSync.stream());
 });
