@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grid</title>
+</head>
+<body>
+    <!--Simple Navigation Bar-->
+    <div class="navbar">
+        <a href="index.html" class="btn btn-outline-primary">Index</a>
+        <a href="grid.html" class="btn btn-outline-primary">Grid</a>
+        <a href="accordion.html" class="btn btn-outline-primary">Accordion</a>
+        <a href="images.html" class="btn btn-outline-primary">Images</a>
+    </div>
+    <!--Uses automatic column widths, scales to screen size. Equivalent to "grid-column: 25% 25% 25% 25%"-->
+    <div class="row">
+        <div class="col" style="background-color: red">red auto</div>
+        <div class="col" style="background-color: blue">blue auto</div>
+        <div class="col" style="background-color: green">green auto</div>
+        <div class="col" style="background-color: yellow">yellow auto</div>
+    </div>
+    <!-- Uses Bootstrap automatic medium columns. Will stack to rows once screen reaches 750 px. Otherwise equivalent to "grid-column: 33.3%, 16.6%, 8.8%, 25%, 16.6%"-->
+    <div class="row">
+        <div class="col-md-4" style="background-color: purple">purple manual 4</div>
+        <div class="col-md-2" style="background-color: black">black manual 2</div>
+        <div class="col-md-1" style="background-color: grey">grey manual 1</div>
+        <div class="col-md-3" style="background-color: pink">pink manual 3</div>
+        <div class="col-md-2" style="background-color: orange">orange manual 2</div>
+    </div>
+
+    <div class="row">
+        <div class="col-3" style="background-color: red">red manual 3</div>
+        <div class="col-4" style="background-color: blue">blue manual 4</div>
+        <div class="col-2" style="background-color: green">green manual 2</div>
+        <div class="col-3" style="background-color: yellow">yellow manual 3</div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4" style="background-color: purple">purple manual 4</div>
+        <div class="col-xl-2" style="background-color: black">black manual 2</div>
+        <div class="col-xl-1" style="background-color: grey">grey manual 1</div>
+        <div class="col-xl-3" style="background-color: pink">pink manual 3</div>
+        <div class="col-xl-2" style="background-color: orange">orange manual 2</div>
+    </div>
+</body>
+</html>

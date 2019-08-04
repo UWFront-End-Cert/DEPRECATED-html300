@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accordion</title>
+</head>
+<body>
+    <!--Simple Navigation Bat-->
+    <div class="navbar">
+        <a href="index.html" class="btn btn-outline-primary">Index</a>
+        <a href="grid.html" class="btn btn-outline-primary">Grid</a>
+        <a href="accordion.html" class="btn btn-outline-primary">Accordion</a>
+        <a href="images.html" class="btn btn-outline-primary">Images</a>
+    </div>
+    <div id="accordion">
+
+        <div class="card" style="background-color: lightblue; border-radius: 0">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseOne">
+                    Category 1
+                </a>
+            </div>
+            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                <div class="card-body" style="background-color: whitesmoke">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, viverra a suscipit quis, bibendum ut ex. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="background-color: lightblue; border-radius: 0">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                    Category 2
+                </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                <div class="card-body" style="background-color: whitesmoke">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, viverra a suscipit quis, bibendum ut ex. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="background-color: lightblue; border-radius: 0">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                    Category 3
+                </a>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body" style="background-color: whitesmoke">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, viverra a suscipit quis, bibendum ut ex. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
