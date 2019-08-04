@@ -11,3 +11,24 @@ html {
 .main {
     padding: 2rem;
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+nav {
+    display: flex;
+    flex-flow: wrap;
+    align-items: stretch;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
