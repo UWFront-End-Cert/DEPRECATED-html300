@@ -17,7 +17,7 @@ body {
     border: none;
 }
 
-#navbar {
+#nav_bar {
     padding: 0.65%;
     height: 100%;
     grid-row-start: 2;
