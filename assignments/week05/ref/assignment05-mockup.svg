@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1201" height="1031" viewBox="0 0 1201 1031">
+  <g id="Group_1" data-name="Group 1" transform="translate(-360 -7)">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="1200" height="149" transform="translate(361 7)" fill="#f1352b"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="1200" height="81" transform="translate(361 156)" fill="#7acb00"/>
+    <text id="Header" transform="translate(908 93)" fill="#fff" font-size="32" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Header</tspan></text>
+    <text id="Nav_Item" data-name="Nav Item" transform="translate(427 208)" fill="#fff" font-size="32" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Nav Item</tspan></text>
+    <text id="Nav_Item-2" data-name="Nav Item" transform="translate(662 208)" fill="#fff" font-size="32" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Nav Item</tspan></text>
+    <text id="Nav_Item-3" data-name="Nav Item" transform="translate(897 208)" fill="#fff" font-size="32" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Nav Item</tspan></text>
+    <text id="Nav_Item-4" data-name="Nav Item" transform="translate(1132 208)" fill="#fff" font-size="32" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Nav Item</tspan></text>
+    <text id="Nav_Item-5" data-name="Nav Item" transform="translate(1367 208)" fill="#fff" font-size="32" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Nav Item</tspan></text>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="374" height="649" transform="translate(361 237)" fill="#6e27c5"/>
+    <text id="Sidebar" transform="translate(503 563)" fill="#fff" font-size="32" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Sidebar</tspan></text>
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="826" height="649" transform="translate(735 237)" fill="#f60"/>
+    <text id="Main_Content" data-name="Main Content" transform="translate(1052 563)" fill="#fff" font-size="32" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Main Content</tspan></text>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="1200" height="152" transform="translate(360 886)" fill="#150f96"/>
+    <text id="Footer" transform="translate(904 980)" fill="#fff" font-size="32" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Footer</tspan></text>
+  </g>
+</svg>

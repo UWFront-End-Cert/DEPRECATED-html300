@@ -1,0 +1,21 @@
+{
+    "name": "local-dev",
+    "version": "1.0.0",
+    "description": "Gulp workflow for local static HTML/CSS",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Bryce Benson",
+    "license": "ISC",
+    "devDependencies": {
+        "browser-sync": "^2.26.5",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^6.1.0",
+        "gulp-minify-css": "^1.2.4",
+        "gulp-plumber": "^1.2.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-util": "^3.0.8",
+        "gulp-watch": "^5.0.0"
+    }
+}
