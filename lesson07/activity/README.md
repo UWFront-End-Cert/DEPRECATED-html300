@@ -52,7 +52,7 @@ We will converting the previous jQuery form to a Vue one using Vue CLI.
 			Vue.use(BootstrapVue)
 			```
 		-	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app router
-	-	To run the project, `cd` into your project and run `npm run serve` or `yarn serve` to launch the server
+	-	To run the project, `cd` into your project and run `npm run dev` or `yarn dev` to launch the server
 
 -	To create your project using Vue CLI v3, 
 	-	run `vue create my-title`
@@ -81,7 +81,7 @@ We will converting the previous jQuery form to a Vue one using Vue CLI.
 			Vue.use(BootstrapVue)
 			```
 		-	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app router
-	-	To run the project, `cd` into your project and run `npm run dev` or `yarn dev` to launch the server
+	-	To run the project, `cd` into your project and run `npm run serve` or `yarn serve` to launch the server
 - 	Convert the previous form to use Vue features as much as possible
 -	You'll need to add bootstrap for the tooltips
 -	Use Vue for all interactions of the form as much as possible

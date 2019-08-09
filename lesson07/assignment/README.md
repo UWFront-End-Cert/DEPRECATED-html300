@@ -46,7 +46,7 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 			Vue.use(BootstrapVue)
 			```
 		-	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app router
-	-	To run the project, `cd` into your project and run `npm run serve` or `yarn serve` to launch the server
+	-	To run the project, `cd` into your project and run `npm run dev` or `yarn dev` to launch the server
 
 -	To create your project using Vue CLI v3, 
 	-	run `vue create my-title`
@@ -78,9 +78,8 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 			Vue.use(BootstrapVue)
 			```
 		-	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app router
-	-	To run the project, `cd` into your project and run `npm run dev` or `yarn dev` to launch the server
+	-	To run the project, `cd` into your project and run `npm run serve` or `yarn serve` to launch the server
 	
-- 	Once done, `cd` into the project and run `sudo npm install`, then `npm run dev` to launch the dev server.
 - 	Now, convert the 4 pages (as components, then set paths in your router to those imported components) from lesson06 with the following requirements:
 	-	All repeated content must be from variables in the `<script>` part of the `.vue` page (the `v-for` stuff)
 		- 	This means the content should not be hardcoded, but set in the script and populated on the page with Vue methods
