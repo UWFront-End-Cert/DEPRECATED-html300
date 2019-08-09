@@ -1,0 +1,138 @@
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 40% 60% 10%;
+    grid-template-columns: 100%;
+}
+#navbar,  button{
+    background-color: midnightblue;
+    border: none;
+}
+
+#nav_bar {
+    padding: 0.65%;
+    height: 100%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: row;
+}
+@media screen and (max-width: 600px) {
+    #middle aside {
+        display:none;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+
+    #middle {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    #middle aside {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    #middle {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    #middle aside {
+        background-color: royalblue;
+        padding: 10%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1223px){
+
+    #middle {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    #middle aside {
+        background-color: royalblue;
+        padding: 10%;
+    }
+}
+
+@media screen and (min-width: 1224px) {
+
+    #middle {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    #middle aside {
+        background-color: royalblue;
+        padding: 10%;
+    }
+}
+
+button:hover {
+    background-color: dodgerblue;
+
+}
+button {
+    height: 3em;
+    border-radius: 15px;
+    font-size: 100%;
+    color: white;
+    flex-grow: 1;
+}
+
+#middle {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+
+
+#middle main {
+    background-color: whitesmoke;
+    padding: 10%;
+}
+footer {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: darkblue;
+    display: inline-block;
+}
+
+#top{
+    display: grid;
+    grid-template-rows: 70% 30%;
+    height: 18em;
+    background-color: red;
+    margin: 0;
+    background-image: url("jetty_island_banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+header h2{
+    transform: translateX(30%);
+    font-size: 200%;
+}
+#city_logo{
+    position: relative;
+    top: 15%;
+    left: 10%;
+    width: 25%;
+}
+
+header{
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+}

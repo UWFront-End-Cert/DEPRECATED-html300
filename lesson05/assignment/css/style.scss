@@ -1,6 +1,123 @@
-// Import partials here
-@import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
-
+html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow-x: hidden;
+}
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow-x: hidden;
+	display: grid;
+	grid-template-rows: 40% 60% 10%;
+	grid-template-columns: 100%;
+}
+#nav_bar {
+	background-color: midnightblue;
+	border: none;
+	padding: 0.65%;
+	height: 100%;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	display: flex;
+	flex-direction: row;
+}
+button {
+	background-color: midnightblue;
+	border: none;
+	height: 3em;
+	border-radius: 15px;
+	font-size: 100%;
+	color: white;
+	flex-grow: 1;
+	&:hover {
+		background-color: dodgerblue;
+	}
+}
+#middle {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	main {
+		background-color: whitesmoke;
+		padding: 10%;
+	}
+}
+footer {
+	grid-row-start: 3;
+	grid-row-end: 4;
+	background-color: darkblue;
+	display: inline-block;
+}
+#top {
+	display: grid;
+	grid-template-rows: 70% 30%;
+	height: 18em;
+	background-color: red;
+	margin: 0;
+	background-image: url("jetty_island_banner.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+header {
+	h2 {
+		transform: translateX(30%);
+		font-size: 200%;
+	}
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+#city_logo {
+	position: relative;
+	top: 15%;
+	left: 10%;
+	width: 25%;
+}
+@media screen and (max-width: 600px) {
+	#middle {
+		aside {
+			display: none;
+		}
+	}
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+	#middle {
+		display: grid;
+		grid-template-columns: 100%;
+		aside {
+			display: none;
+		}
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	#middle {
+		display: grid;
+		grid-template-columns: 30% 70%;
+		aside {
+			background-color: royalblue;
+			padding: 10%;
+		}
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1223px) {
+	#middle {
+		display: grid;
+		grid-template-columns: 30% 70%;
+		aside {
+			background-color: royalblue;
+			padding: 10%;
+		}
+	}
+}
+@media screen and (min-width: 1224px) {
+	#middle {
+		display: grid;
+		grid-template-columns: 30% 70%;
+		aside {
+			background-color: royalblue;
+			padding: 10%;
+		}
+	}
+}
