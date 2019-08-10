@@ -24,11 +24,11 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 		-	Select npm or yarn (your choice, but yarn would need to be installed first)
 	-	Once done, `cd` into your project
 	- 	Installing scss (in your project directory)
-		-	npm: run `npm install -D sass-loader sass`
-		-	yarn: run `yarn add sass-loader sass`
+		-	npm command: run `npm install -D sass-loader sass`
+		-	yarn command: run `yarn add sass-loader sass`
 	-	Installing Bootstrap (in your project directory)
-		-	npm: run `npm install bootstrap-vue bootstrap`
-		-	yarn: run `yarn add bootstrap-vue bootstrap`	
+		-	npm command: run `npm install bootstrap-vue bootstrap jquery popper.js`
+		-	yarn command: run `yarn add bootstrap-vue bootstrap jquery popper.js`	
 	-	Adding bootstrap/scss to the project
 		-	In your `src` folder, create a `main.scss` file
 		-	In that new file, add the following:
@@ -56,11 +56,11 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 		-	Select `Y` for history
 		-	You'll see the router files were generated for you
 	- 	Installing scss (in your project directory)
-		-	npm: run `npm install -D sass-loader sass`
-		-	yarn: run `yarn add sass-loader sass`
+		-	npm command: run `npm install -D sass-loader sass`
+		-	yarn command: run `yarn add sass-loader sass`
 	-	Installing Bootstrap (in your project directory)
-		-	npm: run `npm install bootstrap-vue bootstrap`
-		-	yarn: run `yarn add bootstrap-vue bootstrap`	
+		-	npm command: run `npm install bootstrap-vue bootstrap jquery popper.js`
+		-	yarn command: run `yarn add bootstrap-vue bootstrap jquery popper.js`	
 	-	Adding bootstrap/scss to the project
 		-	In your `src` folder, create a `main.scss` file
 		-	In that new file, add the following:
