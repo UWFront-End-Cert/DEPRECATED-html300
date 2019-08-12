@@ -2,7 +2,7 @@
 
 We will build out a Post component to loop through some data and print out Posts filled with dynamic data.
 
-### Bootstrap/Vue References
+### Vue References
 - [Vue Docs](https://vuejs.org/v2/guide/)
 - [Vue CLI](https://cli.vuejs.org/)
 - [Vue DevTools - Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
