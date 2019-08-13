@@ -1,10 +1,12 @@
 <template>
   <div>
     <Nav />
-    <router-view></router-view>
+    <!-- router renders page -->
+    <router-view />>
   </div>
 </template>
 <script>
+// imports nav only once
 import Nav from "@/components/Nav.vue";
 export default {
   name: "app",
