@@ -1,0 +1,66 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    background: linear-gradient(to bottom right, $blue, $black, $blue);
+    font-family: $font-family-body;
+    color: $white;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1 {
+    font-family: $font-family-headers;
+}
+
+.carousel-item__img {
+    max-height: 20em;
+    object-fit: cover;
+
+    @include media-query(tab) {
+        max-height: 40em;
+    }
+}
+
+.carousel-caption {
+
+    a {
+        text-decoration: none;
+        color: $white;
+
+        &:visited {
+            color: $white;
+        }
+    }
+}
+
+.jumbotron {
+    background: transparent;
+
+}
+
+.btn-link {
+    color: $blue;
+}
+
+.card-body {
+    color: $black;
+}
+
+.food__image,
+.drink__image {
+    border: 2px solid $white;
+}
+
+#dark-theme {
+    color: $black;
+}

@@ -1,2 +1,7 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
+// Import partials here
+@import './styles/base.normalize';
+@import './styles/settings.variables';
+@import './styles/settings.responsive';
+@import './styles/components.content';
