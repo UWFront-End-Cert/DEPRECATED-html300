@@ -9,7 +9,7 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 - [Adding Bootstrap to Vue CLI](https://travishorn.com/adding-bootstrap-to-a-vue-cli-project-98c2a30e0ed0)
 - [Bootstrap Vue](https://bootstrap-vue.js.org/docs/)
 
-### To get started:
+<!-- ### To get started:
 - 	Fetch from the upstream master and merge with your local master as we start each lesson
 -	In your forked repo, create a new branch called `lesson-07` or something like that for the week
 -   Navigate to the root folder of this assignment within terminal in your fork, `lesson07/assignment`
@@ -46,7 +46,7 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 			Vue.use(BootstrapVue)
 			```
 		-	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app router
-	-	To run the project, `cd` into your project and run `npm run dev` or `yarn dev` to launch the server
+	-	To run the project, `cd` into your project and run `npm run dev` or `yarn dev` to launch the server -->
 
 -	To create your project using Vue CLI v3, 
 	-	run `vue create my-title`
