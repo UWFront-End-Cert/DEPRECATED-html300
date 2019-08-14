@@ -19,7 +19,7 @@
 </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped >
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -29,7 +29,7 @@
   color: #2c3e50;
 }
 
-#nav, footer{
+#nav{
   background: skyblue;
   padding: 2% 30% 0.5%;
   display: -webkit-flex;
@@ -43,10 +43,10 @@
 color: white;
 font-weight: bold;
 text-decoration: none;
-}
-.nav_link:hover{
+
+ &:hover{
   color:gold;
-}
+}}
 .noselect {
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */

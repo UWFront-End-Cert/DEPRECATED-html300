@@ -19,15 +19,16 @@
             </section>
   </div>
 </template>
-<style scoped>
-        .image_template{
+<style lang="scss" scoped>
+
+.image_template{
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
-}
-img{
+    img{
         width: 30%;
         margin-bottom: 1%;
         object-fit: cover; 
     }
+}
 </style>

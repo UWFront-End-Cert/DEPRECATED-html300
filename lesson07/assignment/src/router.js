@@ -1,41 +1,48 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Images from './views/Images.vue'
+import Grid from './views/Grid.vue'
+import Accordion from './views/Accordion.vue'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: '/',
   routes: [
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        title: 'Home Page - Vue App'
+      }
     },
     {
       path: '/images',
       name: 'images',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/images.vue')
+      component: Images,
+      meta: {
+        title: 'Images Page - Vue App'
+      }
     },
-     {
+        {
       path: '/grid',
       name: 'grid',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/grid.vue')
+      component: Grid,
+      meta: {
+        title: 'Grid Page - Vue App'
+      }
     },
-     {
+        {
       path: '/accordion',
       name: 'accordion',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/accordion.vue')
+      component: Accordion,
+      meta: {
+        title: 'Accordion Page - Vue App'
+      }
     }
   ]
-})
+});
+

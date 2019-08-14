@@ -85,40 +85,42 @@
   </div>
 </template>
 
-<style scoped>
-    #accordion{
+<style lang="scss" scoped>
+
+#accordion{
     display: inline-block;
     display: flex;
     justify-content:space-around;
     padding: 2% 0;
     align-items:    baseline; 
+    img{
+        width: 400px;
+        height: 550px;
+        object-fit: cover;  
     }
-img{
-    width: 400px;
-    height: 550px;
-    object-fit: cover;  
-}
     .card-body{
         padding: 0;
     }
-    
-h3{
-    padding: 2% 0;
-    font-weight: bold;
-    margin: 0;
-    cursor: pointer;
-    text-align: center;
-    font-size: 2.3em;
-    transition: 0.5s;
-}
-h3:hover{
-    background:lightblue;
-    color: white;
+    // Styling modal button
+    h3{
+        padding: 2% 0;
+        font-weight: bold;
+        margin: 0;
+        cursor: pointer;
+        text-align: center;
+        font-size: 2.3em;
+        transition: 0.5s;
+        &:hover{
+            background:lightblue;
+            color: white;
+        }
+    }
 }
 .modal-content{
     font-size: 2em;
     padding: 5% 10%;
 }
+// making message comfortable for you to read
 .bryce{
     text-align: center;
 }

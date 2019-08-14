@@ -63,24 +63,26 @@ export default {
 }
 </script>
 
-<style scoped>
-	.jumbotron{
-	text-align: center;
-	margin: 0;
+<style lang="scss" scoped>
+// making jumbotron look smaller and cleaner
+.jumbotron{
+    text-align: center;
+    margin: 0;
 }
 .slider{
-	padding: 2% 20%;
+    padding: 2% 20%;
 }
+  /* Make the image fully responsive */
   .carousel-inner img {
     width: 100%;
     height: 100%;
   }
-  .row
-	h1{
-	text-align: center;
-}
-	.row ul{
-		list-style:none;
-	}
+  .row{
+    h1{
+    text-align: center;
+    ul{
+        list-style:none;
+    }
+}}
 
 </style>
