@@ -8,7 +8,7 @@
   </header>
   <router-view/>
   <!-- Footer -->
-  <footer class="page-footer font-small bg-info">
+  <footer id="footer" class="page-footer font-small bg-info">
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2018 Copyright:
       <a href="https://ymmy1.github.io/portfolio/" class="text-secondary">Ymmy</a>
@@ -27,6 +27,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  position: relative;
+
 }
 
 #nav{
@@ -54,13 +56,8 @@ text-decoration: none;
   user-select: none;          /* Likely future */      
 }
 
+
 </style>
 <script>
-  import images from './views/images.vue';
-
-  export  default{
-    components:{
-      'images': images
-    }
-  }
+  
 </script>
