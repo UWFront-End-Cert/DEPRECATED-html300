@@ -28,59 +28,14 @@
                         </div>
                     </div>
                 </div>
-<!--                 <div class="card">
-                    <div class="card-header">
-                        <a href="#two"
-                            data-parent="#accordion" data-toggle="collapse">
-                            <img src="../assets/anime-2.jpg" alt="">
-                        </a>
-                    </div>
-                    <div id="two" class="collapse">
-                        <div class="card-body">
-                            <h3 class="display-4" data-toggle="modal" data-target=".bd-example-modal-lg_2">Weathering with You</h3>
-                            <div class="modal fade bd-example-modal-lg_2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        Weathering with You is a Japanese animated film written and directed by <br>Makoto Shinkai and produced by CoMix Wave Films, following the 2016 <br>film Your Name. It was released in Japan on July 19, 2019, starring <br>Kotaro Daigo and Nana Mori. Wikipedia<br>
-                                        Initial release: July 19, 2019 (Japan)<br>
-                                        Director: Makoto Shinkai<br>
-                                        Japanese: 天気の子<br>
-                                        Story by: Makoto Shinkai<br>
-                                        Screenplay: Makoto Shinkai<br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a href="#three"
-                            data-parent="#accordion" data-toggle="collapse">
-                            <img src="../assets/anime-3.jpg" alt="">
-                        </a>
-                    </div>
-                    <div id="three" class="collapse">
-                        <div class="card-body">
-                            <h3 class="display-4" data-toggle="modal" data-target=".bd-example-modal-lg_3">My Neighbor Totoro</h3>
-                            <div class="modal fade bd-example-modal-lg_3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        This acclaimed animated tale by director Hayao Miyazaki follows schoolgirl<br>Satsuke and her younger sister, Mei, as they settle into an old country house<br> with their father and wait for their mother to recover from an illness in an area hospital.<br>
-                                        Release date: May 7, 1993 (USA)<br>
-                                        Director: Hayao Miyazaki<br>
-                                        Featured song: My Neighbor Totoro<br>
-                                        Japanese: となりのトトロ<br>
-                                        Cast: Shigesato Itoi, Chika Sakamoto, Sumi Shimamoto..<br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
-            <div>
-                <h2 class="display2 bryce">It doesn't go back now when you click. Although I copy pasted the whole code :c</h2>
+            <div class="display2 comments" alt="To add a comment refresh the page">
+                <p v-if="show" ><span>{{nickname}}: </span> {{comment_text}}</p>
+                <div v-else="show"class="comment_form">
+                    <input type="text" v-model="nickname"  placeholder='Type your nickname'>
+                    <textarea type="text" v-model="comment_text"  placeholder='Type your comment' > </textarea>
+                    <button v-on:click="show = !show"> Add test comment</button>
+                </div>
             </div>
         </section>
   </div>
@@ -121,9 +76,22 @@
     font-size: 2em;
     padding: 5% 10%;
 }
-// making message comfortable for you to read
-.bryce{
-    text-align: center;
+.comments{
+
+    p{
+        span{
+            font-weight: bold;
+        }
+    }
+    .comment_form{
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        margin: 0 auto;
+        input, textarea{
+            text-align: center;
+        }
+    }
 }
 </style>
 
@@ -132,6 +100,7 @@
         name: 'accordion',
         data() {
             return{
+                show: false,
                 posters: [
                 {
                 img_link : require('../assets/anime-1.jpg'),
