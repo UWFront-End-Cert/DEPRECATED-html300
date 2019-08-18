@@ -1,45 +1,39 @@
 <template>
   <div>
-    <b-carousel   id="carousel-1"   v-model="slide"  :interval="4000"   controls
+    <h1> {{ title | toUpper }} {{imgData.id}}</h1>
+    <b-carousel   id="carousel-1"    :interval="4000"   controls
       indicators   background="#ababab"  
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <h2> Images </h2>
+      <h2> {{imgData.img}} </h2>
       <!-- Slides image -->
-      <b-carousel-slide 
-        class="d-block img-fluid w-100 MyCustomClass"  v-for="i in imgList" :key="i.id" 
-          :img-src= "i.imgSrc"  alt="i.img" >
-    </b-carousel-slide>
+      <b-carousel-slide  class="MyCustomClass"  :img-src= "imgData.imgSrc"  alt="imgDate.img" >
+      </b-carousel-slide>
   </b-carousel>
 
-    <p class="mt-4">
-      Slide #: {{ slide }}<br>
-      Sliding: {{ sliding }}
-    </p>
   </div>
 
 </template>
 
 <script>
   export default {
+    name: 'food',
+    props: ['imgData','title'],
     data() {
       return {
         slide: 0,
         sliding: null,
-        message: "carousel slider",
-        imgList: [  {id:0, img: "food 1", imgSrc: "http://lorempixel.com/output/food-q-c-640-480-1.jpg"},
-                    {id:1, img: "food 2", imgSrc: "http://lorempixel.com/output/food-q-c-640-480-2.jpg"},
-                    {id:2, img: "food 3", imgSrc: "http://lorempixel.com/output/food-q-c-640-480-3.jpg"}
-                ]
       };
     },
-    onSlideStart(){
-      this.slide = true
-    },
-    onSlideEnd() {
-      this.slide = false
+    methods:{
+      onSlideStart(){
+        this.slide = true;
+      },
+      onSlideEnd() {
+        this.slide = false;
+      }
     }
 }
 </script>
@@ -47,8 +41,14 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
    .MyCustomClass {
+     border: 5px solid black;
       min-height: 100vh;
       width: 100%;    
       object-fit: cover; 
+      top:0;
+      bottom: 0;
+      left:0;
+      right: 0;
+      margin: auto;
     }
 </style>
