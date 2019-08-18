@@ -1,0 +1,20 @@
+@import 'variables';
+@import 'cardLeft';
+@import 'cardRight';
+
+//
+@mixin border-radius($r) {
+	-webkit-border-radius: $r;
+	-moz-border-radius: $r;
+	-ms-border-radius: $r;
+	border-radius: $r;
+}
+
+// For Mobile
+@media (max-width: $breakpoint-small) {
+	  .pic , .desc {width:100%;}
+	  .desc { margin-top:0; }
+}
+
+
+
