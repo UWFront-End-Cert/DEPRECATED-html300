@@ -2,7 +2,7 @@
 
 We will be using Nuxt and Axios to pull from an API and populate a page with Card components using dynamic data.
 
-### Vue References\
+### Vue References
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/)
 - [Nuxt](https://nuxtjs.org/guide/installation)
 - [Vue Docs](https://vuejs.org/v2/guide/)
