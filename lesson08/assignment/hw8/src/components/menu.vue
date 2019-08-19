@@ -11,7 +11,7 @@
             <div class="entrees" id="e3">
                <div v-for = "food in rice" :key="food.id">
                  {{ food.item }} - ${{ food.price}} <br>
-                    <button v-on:click ="order">Order </button>
+                    <button v-on:click ="order += 1">Order </button>
                </div>
             </div>
          </b-col>
@@ -21,7 +21,7 @@
             <div class="entrees" id="e4">
                <div v-for = "food in beef" :key="food.id">
                  {{ food.item }} - ${{ food.price}} <br>
-                    <button v-on:click ="order">Order </button>
+                    <button v-on:click ="order += 1">Order </button>
                </div>
             </div>
          </b-col>
@@ -30,7 +30,7 @@
             <h4>Checken</h4>
                <div v-for = "food in chicken" :key="food.id">
                  {{ food.item }} - ${{ food.price}}   <br>
-                    <button v-on:click ="order">Order </button>
+                    <button v-on:click ="order += 1">Order </button>
                </div>
          </b-col>
            <!-- 4th column -->
@@ -39,7 +39,7 @@
             <div class="entrees" id="e2">
                <div v-for = "food in pork" :key="food.id"> 
                  {{ food.item }} - ${{ food.price}}  <br>
-                    <button v-on:click ="order">Order </button>
+                    <button v-on:click ="order += 1">Order </button>
                </div>
             </div>
          </b-col>

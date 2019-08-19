@@ -26,8 +26,7 @@
 </template>
 
 <script>
-  // import HelloWorld from './components/HelloWorld.vue'
-//import header then export it
+  //import header then export it
 import Header from './components/header.vue';
 import Quote from './components/Quote.vue';
 import Home from './components/home.vue';
@@ -50,12 +49,6 @@ export default {
                 {id:3, img: "Pork Dumpling", imgSrc: "http://lorempixel.com/output/food-q-c-640-480-3.jpg"}
       ],
       filterFood:''
-    }
-  },
-  // local filter, global filter is defined in main.js
-  filters:{
-    ttoLoweroUpper(v){
-      return v.toLowerCase();
     }
   },
   computed:{

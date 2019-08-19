@@ -1,6 +1,5 @@
-@import 'variables';
-@import 'cardLeft';
-@import 'cardRight';
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
 
 //
 @mixin border-radius($r) {
@@ -17,4 +16,7 @@
 }
 
 
+@mixin border-size($s){
+	border-width: $s;
+}
 

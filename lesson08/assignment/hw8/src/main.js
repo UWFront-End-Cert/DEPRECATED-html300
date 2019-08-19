@@ -24,10 +24,19 @@ const router = new VueRouter({
    mode:'history'  //remove the hash from the url
 })
 
+Vue.filter('toCap',function(v){
+  if(!v) return '';
+  v=v.toString();
+  return v.charAt(0).toUpperCase() + v.slice(1);
+});
 
 Vue.filter('toUpper',function(v){
   return v.toUpperCase();
 });
+Vue.filter('toLower',function(v){
+  return v.toLowerCase();
+});
+
 new Vue({
   router: router,
   render: h => h(App),
