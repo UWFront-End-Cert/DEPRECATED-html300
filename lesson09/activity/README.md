@@ -8,7 +8,6 @@ We will be using Nuxt and Axios to pull from an API and populate a page with Car
 - [Axios](https://github.com/axios/axios)
 - [Axios & Vue](https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html)
 - [Vue Docs](https://vuejs.org/v2/guide/)
-- [Vue CLI](https://cli.vuejs.org/)
 - [Vue DevTools - Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
 - [Vue DevTools - Firefox](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
 
