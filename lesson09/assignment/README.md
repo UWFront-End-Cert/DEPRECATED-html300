@@ -5,10 +5,11 @@ We'll spend our final couple weeks working on the final project, so this will ac
 ### Vue References
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/)
 - [Nuxt](https://nuxtjs.org/guide/installation)
+- [Axios](https://github.com/axios/axios)
+- [Axios & Vue](https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html)
 - [Vue Docs](https://vuejs.org/v2/guide/)
 - [Vue DevTools - Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
 - [Vue DevTools - Firefox](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-- [Adding Bootstrap to Vue CLI](https://travishorn.com/adding-bootstrap-to-a-vue-cli-project-98c2a30e0ed0)
 - [Bootstrap Vue](https://bootstrap-vue.js.org/docs/)
 
 ### To get migrated:
