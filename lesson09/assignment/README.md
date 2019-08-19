@@ -25,6 +25,9 @@ We'll spend our final couple weeks working on the final project, so this will ac
 	-	Choose `none` for testing
 	-	Choose Universal
 	-	The install will begin
+	-	`cd` into your newly created project directory
+	- 	Run `yarn add node-sass sass-loader` to add sass
+		-	Use scss by adding `lang="scss"` to your template `<style>` tags as well as globally with the `main.scss` process we used for bootstrap in the CLI
 	-	Run `yarn dev` to start the local server
 -	With your newly created Nuxt app, start migrating over your Vue template files and assets from the Vue CLI project to their respective spots. Basically any content in the 'App.vue' file now goes in the `layouts/default.vue`, The `<nuxt />` tag acts like the `<router-view />`.
 -	For internal links, now use `<nuxt-link>` components.
