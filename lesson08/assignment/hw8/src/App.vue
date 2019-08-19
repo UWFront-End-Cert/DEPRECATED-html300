@@ -75,5 +75,4 @@ export default {
 .menu {
   text-align: left;
 }
-
 </style>

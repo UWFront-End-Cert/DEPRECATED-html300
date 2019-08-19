@@ -16,11 +16,11 @@
 </template>
 
 <script>
-//  import { changeBorder } from './hw8Mixin';
+//  import { changeBorder } from './hw8Mixin';  --don't know why i got an error importing it
   export default {
     name: 'food',
     size: 1,
-    // mixins: [changeBorder],
+    // mixins: [changeBorder], -- don't know why i got an error 
     props: ['imgData','title'],
     data() {
       return {

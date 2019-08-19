@@ -33,6 +33,7 @@ Vue.filter('toCap',function(v){
 Vue.filter('toUpper',function(v){
   return v.toUpperCase();
 });
+
 Vue.filter('toLower',function(v){
   return v.toLowerCase();
 });

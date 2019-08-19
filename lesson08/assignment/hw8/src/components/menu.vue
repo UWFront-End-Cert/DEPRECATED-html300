@@ -90,7 +90,7 @@
             };
       },
       methods: {
-         order: function(){ this.counter++; } ,
+         order: function(){ this.counter++; } 
       }
             
    }

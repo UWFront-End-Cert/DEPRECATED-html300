@@ -1,5 +1,5 @@
 // toggle the border size between 0 and 1 
-
+//not working
 export const  changeBorder = {
     data(){
         return{
