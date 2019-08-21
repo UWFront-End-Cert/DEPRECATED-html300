@@ -1,7 +1,7 @@
 <template>
 	<div class="image_template">
 		<div class="poster" v-for="link in album" v-bind:key='link.id'>
-		<img v-bind:src='link.src' v-bind:alt='link.alt' class="img-fluid img-thumbnail">
+		<img v-bind:src='link.src' v-bind:alt='link.alt' class="img-fluid ">
 		<p>{{link.title}}</p>
 		<p>{{link.info}}</p>
 	</div>
@@ -12,6 +12,9 @@
 
 <style lang="scss" scoped>
 
+.img-thumbnail{
+	
+}
 .poster{
 	display: flex;
 	flex-direction: column;
@@ -40,6 +43,7 @@
         
 		name: "AppImages",
 		data () {
+			
             return{
                 album: [{ id: 1, title:'Beautiful Waterfall', info:'(Click on the Image to change the border)', alt:'Beautiful Waterfall', src: require('../src/assets/img-1.jpg')}, 
                         { id: 2, title:'Deep in the Forest', info:'(Click on the Image to change the border)', alt:'Deep in the Forest', src: require('../src/assets/img-2.jpg')},
@@ -52,5 +56,5 @@
 
             }
 		}
-	}
+}
 </script>
