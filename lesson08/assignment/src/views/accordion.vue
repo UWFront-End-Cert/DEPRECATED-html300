@@ -2,7 +2,7 @@
   <div class="accordion">
        <section class="main_accordion">
             <div id="accordion">
-                <div v-for="poster in posters" class="card">
+                <div v-for="(poster, index) in posters" :key="index" class="card">
                     <div class="card-header">
                         <a v-bind:href="'#' + poster.div_id" data-parent="#accordion"
                             data-toggle="collapse">
@@ -29,9 +29,9 @@
                     </div>
                 </div>
             </div>
-            <div class="display2 comments" alt="To add a comment refresh the page">
+            <div class="display2 comments" title="To add a comment refresh the page">
                 <p v-if="show" ><span>{{nickname}}: </span> {{comment_text}}</p>
-                <div v-else="show"class="comment_form">
+                <div v-else class="comment_form">
                     <input type="text" v-model="nickname"  placeholder='Type your nickname'>
                     <textarea type="text" v-model="comment_text"  placeholder='Type your comment' > </textarea>
                     <button v-on:click="show = !show"> Add test comment</button>
