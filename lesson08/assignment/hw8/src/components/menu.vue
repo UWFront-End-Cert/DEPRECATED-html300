@@ -7,11 +7,11 @@
       <b-row>
            <!-- 1st column -->
          <b-col md  id="e1" > 
-            <h4>Beef</h4>
+            <h4>Rice</h4>
             <div class="entrees" id="e3">
                <div v-for = "food in rice" :key="food.id">
-                 {{ food.item }} - ${{ food.price}} <br>
-                    <button v-on:click ="order += 1">Order </button>
+                 {{ food.item | toUpper}} - ${{ food.price}} <br>
+                    <button @click ="counter++">Order {{ counter }} </button>
                </div>
             </div>
          </b-col>
@@ -21,7 +21,7 @@
             <div class="entrees" id="e4">
                <div v-for = "food in beef" :key="food.id">
                  {{ food.item }} - ${{ food.price}} <br>
-                    <button v-on:click ="order += 1">Order </button>
+                    <button @click ="counter++">Order: {{ counter }} </button>
                </div>
             </div>
          </b-col>
@@ -30,7 +30,7 @@
             <h4>Checken</h4>
                <div v-for = "food in chicken" :key="food.id">
                  {{ food.item }} - ${{ food.price}}   <br>
-                    <button v-on:click ="order += 1">Order </button>
+                    <button @click ="counter++">Order {{ counter }} </button>
                </div>
          </b-col>
            <!-- 4th column -->
@@ -39,7 +39,7 @@
             <div class="entrees" id="e2">
                <div v-for = "food in pork" :key="food.id"> 
                  {{ food.item }} - ${{ food.price}}  <br>
-                    <button v-on:click ="order += 1">Order </button>
+                    <button @click ="counter++">Order {{ counter }} </button>
                </div>
             </div>
          </b-col>
@@ -59,10 +59,12 @@
 </template>
 
 <script>
+// import { Script } from 'vm';
    export default {
       name: 'menu',
       data() {
          return {
+            order:0,
             counter:0,
             message: " BootstrapVue Grid",
             link: './contact',
@@ -88,10 +90,10 @@
                      {id:2, item: "Pot Potsticker", price: "8.99"}
                      ]
             };
-      },
-      methods: {
-         order: function(){ this.counter++; } 
       }
+      // ,methods: {
+      //    order: function(){ this.counter++; } 
+      // }
             
    }
 </script>

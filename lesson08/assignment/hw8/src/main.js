@@ -24,6 +24,13 @@ const router = new VueRouter({
    mode:'history'  //remove the hash from the url
 })
 
+Vue.component('click-order',{
+  template: '<button @click="count++">{{count}}</button>',
+  data(){
+    return { count: 0}
+  }
+});
+
 Vue.filter('toCap',function(v){
   if(!v) return '';
   v=v.toString();
@@ -42,3 +49,4 @@ new Vue({
   router: router,
   render: h => h(App),
 }).$mount('#app')
+

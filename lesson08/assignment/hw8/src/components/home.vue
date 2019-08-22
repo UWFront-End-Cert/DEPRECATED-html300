@@ -21,7 +21,7 @@
     name: 'food',
     size: 1,
     // mixins: [changeBorder], -- don't know why i got an error 
-    props: ['imgData:object','title:string'],
+    props: ['imgData:Object','title:String'],
     data() {
       return {
         slide: 0,
