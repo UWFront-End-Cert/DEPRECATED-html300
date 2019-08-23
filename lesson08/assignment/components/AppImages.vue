@@ -1,4 +1,7 @@
 <template>
+<!-- <div> -->
+		<!-- <slot></slot> -->
+<!-- </div> -->
 	<div class="image_template">
 		<div class="poster" v-for="(link, index) in album" :key='index'>
 		<img  :src='link.src' :alt='link.alt' :class="{'img-thumbnail' : link.isActive}" class="img-fluid " @click="link.isActive = !link.isActive">
@@ -7,8 +10,8 @@
 	</div>
 	</div>
 	
-
 </template>
+
 
 <script>
 	

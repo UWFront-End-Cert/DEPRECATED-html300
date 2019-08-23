@@ -1,7 +1,9 @@
 <template>
   <div id="images">
     <section class=" text-center">
-      <h1 class="display-4">Nature Images</h1>        
+      <my-header>
+        <h1 class="display-4">Nature Images</h1> 
+      </my-header>       
 
       <AppImages :album="album" />
       
@@ -13,6 +15,7 @@
 
 <script>
     import AppImages from '../../components/AppImages.vue';
+    import myHeader from '../../components/MyHeader.vue';
     export default {
         name: 'images',
         data(){
