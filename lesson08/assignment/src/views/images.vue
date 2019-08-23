@@ -2,7 +2,8 @@
   <div id="images">
     <section class=" text-center">
       <my-header>
-        <h1 class="display-4">Nature Images</h1> 
+        <h1 class="display-4">{{ msg | capitalize}}</h1> 
+        <p>Images of our planet</p>
       </my-header>       
 
       <AppImages :album="album" />
@@ -21,6 +22,7 @@
         data(){
           
           return{
+            msg: 'Nature Images',
 
             album: 
             [{ title:'Beautiful Waterfall', info:'(Click on the Image to change the border)', alt:'Beautiful Waterfall', src: require('../../src/assets/img-1.jpg'), isActive: false}, 
@@ -36,6 +38,20 @@
           },
           components:{
             AppImages
-        }
+        },
+        filters: {
+          capitalize: function (value) {
+            value = value.toString()
+            return value.toUpperCase()
+  }
+}
     }
 </script>
+<style scoped>
+ h1{
+  margin-top: 2%;
+  } p{
+    font-style:italic;
+    color: grey;
+  }
+</style>

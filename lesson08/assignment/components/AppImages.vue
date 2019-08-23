@@ -36,6 +36,7 @@
 	.poster{
 		width: 30%;
 		margin-bottom: 1%;
+		cursor: pointer;
 		img{
 		object-fit: cover; 
 		}
