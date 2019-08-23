@@ -1,7 +1,7 @@
 <template>
 	<div class="image_template">
 		<div class="poster" v-for="(link, index) in album" :key='index'>
-		<img  :src='link.src' :alt='link.alt' :class="{'img-thumbnail' : link.isActive}" class="img-fluid " @click="addBorder">
+		<img  :src='link.src' :alt='link.alt' :class="{'img-thumbnail' : link.isActive}" class="img-fluid " @click="link.isActive = !link.isActive">
 		<p>{{link.title}}</p>
 		<p>{{link.info}}</p>
 	</div>
@@ -14,15 +14,6 @@
 	
 	export default{
 		props:['album'],
-		// methods:{
-		// 	addBorder(index){
-		// 		this.$emit('add-border', index);
-		// 	}
-		// }
-		// data(){
-		// 	return{
-				
-		// }
 	}
 </script>
 
