@@ -11,7 +11,7 @@
             <div class="entrees" id="e3">
                <div v-for = "food in rice" :key="food.id">
                  {{ food.item | toUpper}} - ${{ food.price}} <br>
-                    <button @click ="counter++">Order {{ counter }} </button>
+                    <button @click ="food.counter++">Order {{ food.counter }} </button>
                </div>
             </div>
          </b-col>
@@ -21,7 +21,7 @@
             <div class="entrees" id="e4">
                <div v-for = "food in beef" :key="food.id">
                  {{ food.item }} - ${{ food.price}} <br>
-                    <button @click ="counter++">Order: {{ counter }} </button>
+                    <button @click =" c1++">Order: {{ c1 }} </button>
                </div>
             </div>
          </b-col>
@@ -30,7 +30,7 @@
             <h4>Checken</h4>
                <div v-for = "food in chicken" :key="food.id">
                  {{ food.item }} - ${{ food.price}}   <br>
-                    <button @click ="counter++">Order {{ counter }} </button>
+                    <button @click ="c2++">Order {{ c1 }} </button>
                </div>
          </b-col>
            <!-- 4th column -->
@@ -64,15 +64,15 @@
       name: 'menu',
       data() {
          return {
-            order:0,
-            counter:0,
+            order:0, 
+          counter:0,
             message: " BootstrapVue Grid",
             link: './contact',
             rice : [
-                     {id:0, item: "Stream Rice", price: "1.95"},
-                     {id:1, item: "Chickeen Fried Rice", price: "6.77"},
-                     {id:2, item: "Beef Fired Rice", price: "9.99"},
-                     {id:3, item: "Pork Fired Rice", price: "8.99"}
+                     {id:0, counter:0,  item: "Stream Rice", price: "1.95"},
+                     {id:1, counter:0, item: "Chickeen Fried Rice", price: "6.77"},
+                     {id:2, counter:0, item: "Beef Fired Rice", price: "9.99"},
+                     {id:3, counter:0, item: "Pork Fired Rice", price: "8.99"}
                   ],
             beef : [
                      {id:0, item: "Beef Noodle Soup", price: "9.95"},
