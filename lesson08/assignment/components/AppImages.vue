@@ -1,7 +1,5 @@
 <template>
-<!-- <div> -->
-		<!-- <slot></slot> -->
-<!-- </div> -->
+	<!-- Main logic of images and titles -->
 	<div class="image_template">
 		<div class="poster" v-for="(link, index) in album" :key='index'>
 		<img  :src='link.src' :alt='link.alt' :class="{'img-thumbnail' : link.isActive}" class="img-fluid " @click="link.isActive = !link.isActive">
@@ -14,17 +12,14 @@
 
 
 <script>
-	
+	// props, can't explain well what they are for yet, but know where to use them
 	export default{
 		props:['album'],
 	}
 </script>
 
 <style lang="scss" scoped>
-
-.img-thumbnail{
-	
-}
+// some styles to look better
 .poster{
 	display: flex;
 	flex-direction: column;

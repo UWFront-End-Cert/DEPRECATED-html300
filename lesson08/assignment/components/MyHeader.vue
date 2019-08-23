@@ -1,4 +1,5 @@
 <template>
+	<!-- Our slot component -->
 <div>
 		<slot></slot>
 </div>

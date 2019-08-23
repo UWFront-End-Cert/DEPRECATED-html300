@@ -15,12 +15,13 @@
 
 
 <script>
+  // Importing components
     import AppImages from '../../components/AppImages.vue';
     import myHeader from '../../components/MyHeader.vue';
     export default {
         name: 'images',
         data(){
-          
+          // returning data
           return{
             msg: 'Nature Images',
 
@@ -36,9 +37,12 @@
 
             }
           },
+          //Naming components
           components:{
-            AppImages
+            AppImages,
+            myHeader
         },
+        // Adding filter to capitalise header
         filters: {
           capitalize: function (value) {
             value = value.toString()
@@ -48,6 +52,7 @@
     }
 </script>
 <style scoped>
+/* Some styles to look better*/
  h1{
   margin-top: 2%;
   } p{
