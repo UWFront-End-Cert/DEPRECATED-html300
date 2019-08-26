@@ -1,10 +1,10 @@
 <template>
   <div id="images">
     <section class=" text-center">
-      <my-header>
+      <header slot="header">
         <h1 class="display-4">{{ msg | capitalize}}</h1> 
         <p>Images of our planet</p>
-      </my-header>       
+      </header>       
 
       <AppImages :album="album" />
       
@@ -17,7 +17,6 @@
 <script>
   // Importing components
     import AppImages from '../../components/AppImages.vue';
-    import myHeader from '../../components/MyHeader.vue';
     export default {
         name: 'images',
         data(){
@@ -39,8 +38,7 @@
           },
           //Naming components
           components:{
-            AppImages,
-            myHeader
+            AppImages
         },
         // Adding filter to capitalise header
         filters: {

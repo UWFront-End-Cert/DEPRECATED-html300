@@ -1,7 +1,7 @@
 <template>
 	<!-- Our slot component -->
 <div>
-		<slot></slot>
+		<slot name="header"></slot>
 </div>
 	
 </template>
