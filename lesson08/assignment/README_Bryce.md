@@ -19,8 +19,11 @@ In the last assignment in lesson07, you converted your site to use Vue CLI scaff
 	- 	For the image page, convert the image markup into a separate component in its own file, be sure to import it into the corresponding 'page' component
 	- The image component should have props for at least the image src, alt, & title attributes. Also use prop validation.
 	- 	Create a mixin for the image component that should toggle on/off a border around the image on click, apply the mixin to the image component.
+
 	-	Create a header component that uses a named slot, give a default value.
+
 	-	Create and use a filter that changes the a component's title/heading to uppercase.
+	
 	- 	Don't forget to add comments to your code explaining Bootstrap 4 classes you added and your VUE code.		
 - 	**Bonus:**  Use other components for existing content.    
 - 	**Extra Bonus:**  Use custom directives or a modifier.   
