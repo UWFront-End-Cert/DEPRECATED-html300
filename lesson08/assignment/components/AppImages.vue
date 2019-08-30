@@ -2,7 +2,7 @@
 	<!-- Main logic of images and titles -->
 	<div class="image_template">
 		<div class="poster" v-for="(link, index) in album" :key='index'>
-		<img  :src='link.src' :alt='link.alt' :class="{'img-thumbnail' : link.isActive}" class="img-fluid " @click="link.isActive = !link.isActive">
+		<img  :src='link.src' :alt='link.alt' :class="{'img-thumbnail' : link.isActive}" class="img-fluid " @click="toggle">
 		<p>{{link.title}}</p>
 		<p>{{link.info}}</p>
 	</div>
@@ -12,10 +12,11 @@
 
 
 <script>
-	// props, can't explain well what they are for yet, but know where to use them
+import ListMixin from '../src/listMixin.js'
+
 	export default{
-		props:['album'],
-	}
+		mixins:[ListMixin]
+}
 </script>
 
 <style lang="scss" scoped>

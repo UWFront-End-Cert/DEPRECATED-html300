@@ -42,6 +42,7 @@
             AppImages,
             myHeader
         },
+        
         // Adding filter to capitalise header
         filters: {
           capitalize: function (value) {
