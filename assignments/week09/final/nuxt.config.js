@@ -1,5 +1,10 @@
 
 export default {
+
+  router: {
+    base: '/html300/'
+  },
+
   mode: 'universal',
   /*
   ** Headers of the page
