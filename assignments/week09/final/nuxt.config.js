@@ -2,7 +2,7 @@
 export default {
 
   router: {
-    base: '/html300/'
+    base: '/HTML300-Week9/'
   },
 
   mode: 'universal',
