@@ -22,38 +22,42 @@ Follow these steps to get your initial setup started
 
 
 ### Course Final Project Setup
-- Create a new repository that will hold your final course project, name it whatever you'd like
-- In this repo, click on the `Settings` tab at the top right, then the `Collaborators` tab on the left. Search for `brycebenson` and `ClovisI` to add as collaborators
+- Create a new repository that will hold your final course project, name it something appropriate for what it will do (e.g. "WeatherTracker", "MovieGuide", etc)
+- Viewing that new repo on Github, click on the `Settings` tab at the top right, then the `Collaborators` tab on the left. Add `cherimarie` (https://github.com/cherimarie)  as a collaborator.
 - For assignment 01 you will create a `documents` folder in the root with a `.txt` or `.md` file within, containing the course proposal
-- As the course progresses, work for the course final will be done/migrated here
+- As the course progresses, work for the course final project will be done in the new repo
 
-### Course Repo Fork Setup
-- Within this html300 repo, click the `fork` button the the top right to fork a copy to your personal GitHub
-- You will be taken to your forked repo, it should say 'forked from...' under the title
-- In your newly created fork, click on the `Settings` tab at the top right, then the `Collaborators` tab on the left. Search for `brycebenson` and `ClovisI` to add as collaborators
+*The rest of these instructions are for working with this html300 repo* 
+
+### html300 Course Repo Setup
+- Within *this* html300 repo, click the `fork` button the the top right to fork a copy to your personal GitHub account
+- You will be taken to your forked repo, it should say 'forked fromn UWFront-End-Cert/html300' under the title
+- In your newly created fork, click on the `Settings` tab at the top right, then the `Collaborators` tab on the left. Add `cherimarie` (https://github.com/cherimarie) as a collaborator.
 - Clone the fork to your local machine
 
 ### Adding the Upstream to your Fork
 - Navigate to your fork's root folder in terminal (e.g. `cd ~/Sites/uw/html300`) 
 - Make sure you are on your master branch, `git checkout master`
-- Run `git remote add upstream git@github.com:UWFront-End-Cert/html300.git`
+- Add the upstream repository as a remote connection `git remote add upstream git@github.com:UWFront-End-Cert/html300.git`
 - Verify with `git remote -v`, should have both `origin` and `upstream`
+- REMINDER: you will only ever push to `origin`, as that's your fork. Only fetching and pulling will work with `upstream`.
 
 ### Fetching and Merging Upstream
-- To keep your fork in sync with any changes to the original, we'll use upstream to fetch and merge with our forks
+- To keep your fork in sync with any changes to the original, we can use upstream to fetch and merge with our forks
+- THIS ONLY NEEDS TO BE DONE ONCE A WEEK OR WHEN YOUR INSTRUCTOR SUGGESTS TO
 - Run `git fetch upstream` to get the latest code from all branches
 - Now make sure you're on master with `git checkout master`
 - Now merge the upstream version of master with your fork's by running `git merge upstream/master`
-- You shouldn't run into conflicts, but if you get errors or conflicts, run `git status` to see which files need to be updated, and using `git add --all` after resolved to add them to be staged
+- You shouldn't run into conflicts, but if you get errors or conflicts, you can work this guide to resolve or talk to your instructor for help https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line
 
-## Weekly Workflow
+## Per Lesson Workflow
 - Start by checking out your local master branch and fetching/merging upstream at the beginning of each module so you know you're up to date
-- Create a branch for your week's assignment. You can create and checkout a new branch with `git checkout -b branch-name`
-- Each lesson will usually have two folders, `activity` and `assignment`. Feel free to work on the activity within your assignment branch
+- Create a branch for the lesson's assignment. Keep these branches all named consistently, like "lesson1", "lesson2", etc. You can create and checkout a new branch with `git checkout -b branch-name`
+- Each lesson will usually have two folders, `activity` and `assignment`. Feel free to work on the activity  and assignment on the same "lessonX" branch
 - The `activity` will often have `starter` and `solution` folders, this is to help illustrate the starting/ending point for each
 - The `assignment` folder will have the starter files and instructions required to complete
-- Once completed, open a new Pull Request. Within the PR, set the base to be YOUR forked master branch, and the compare branch is whatever that week's assignment branch is
-- In the Reviewer's section, click into the box and add `brycebenson` and `ClovisI` as reviewers - note you will have needed to invite us as collaborators to your fork first
+- Once completed, open a new Pull Request. Within the PR, set the base to be YOUR forked master branch, and the compare branch is  that lesson's assignment branch
+- In the Reviewer's section, click into the box and add `cherimarie` as reviewer - note you will have needed to invite us as collaborators to your fork first
 - Now, do NOT merge or close the Pull Request -- just add us as reviewers 
 - Copy the direct link to the pull request page, and paste that into the submission box in Canvas
 
