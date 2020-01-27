@@ -52,7 +52,15 @@ Follow these steps to get your initial setup started
 
 ## Per Lesson Workflow
 - Start by checking out your local master branch and fetching/merging upstream at the beginning of each module so you know you're up to date
-- Create a branch for the lesson's assignment. Keep these branches all named consistently, like "lesson1", "lesson2", etc. You can create and checkout a new branch with `git checkout -b branch-name`
+- From the master branch, create a branch for the lesson's assignment. Keep these branches all named consistently, like "lesson1", "lesson2", etc. 
+```
+# Fetch and merge upstream master to your local master branch
+$ git checkout master
+$ git fetch upstream
+$ git merge upstream/master
+# From the master branch, create the branch for the lesson's assignment
+$ git checkout -b lesson3
+```
 - Each lesson will usually have two folders, `activity` and `assignment`. Feel free to work on the activity  and assignment on the same "lessonX" branch
 - The `activity` will often have `starter` and `solution` folders, this is to help illustrate the starting/ending point for each
 - The `assignment` folder will have the starter files and instructions required to complete
