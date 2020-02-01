@@ -1,3 +1,27 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #444;
+}
+.result {
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #ddd;
+}
+.math {
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #ddd;
+}
+.math2 {
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #ddd;
+}
+.math3 {
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #ddd;
+}
 .main {
     padding: 2rem
 }
