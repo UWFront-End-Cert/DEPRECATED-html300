@@ -8,18 +8,17 @@ html {
     box-sizing: inherit;
 }
 
+// Typography
 * {
   font-family: $font-fam;
   color: $dark-gray;
 }
-
 a {
   text-decoration: none;
   &:hover {
     color: $linkedin-blue;
   }
 }
-
 h2 {
   font-size: 1.25rem;
   line-height: .5rem;
@@ -27,9 +26,7 @@ h2 {
   font-style: italic;
 }
 
-
 // Style outer gray container
-
 .main {
   border: 1px solid $med-gray;
   background-color: $light-gray;
@@ -48,7 +45,6 @@ h2 {
 }
 
 //Style inner container
-
 .card {
   display: inline-grid;
   grid-template-columns: 250px auto;
@@ -64,14 +60,12 @@ h2 {
   }
 }
 
-// Puts all images in circle
-
+// Puts all project images in circle
 img {
   border-radius: 50%;
 }
 
 // Style for photo box
-
 .item1 {
   padding: 1rem;
   text-align: center;
@@ -87,10 +81,8 @@ img {
       width: 50%;
     }
   }
-}
 
 // Style for info box
-
 .item2 {
   padding: 2rem;
   background-color: $light-gray;
