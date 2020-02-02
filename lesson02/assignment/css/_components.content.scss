@@ -8,10 +8,97 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+* {
+  font-family: $font-fam;
+  color: $dark-gray;
 }
 
-h1 {
-    color: $red;  
+a {
+  text-decoration: none;
+  &:hover {
+    color: $linkedin-blue;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: .5rem;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+
+// Style outer gray container
+
+.main {
+  border: 1px solid $med-gray;
+  background-color: $light-gray;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 5rem auto 0;
+  width: 951px;
+  height: 474px;
+// Mobile style
+  @include for-phone-only {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    margin: 0;
+  }
+}
+
+//Style inner container
+
+.card {
+  display: inline-grid;
+  grid-template-columns: 250px auto;
+  grid-gap: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  padding: 2rem;
+  border-radius: 10px;
+  // Mobile style
+  @include for-phone-only {
+    display: block;
+  }
+}
+
+// Puts all images in circle
+
+img {
+  border-radius: 50%;
+}
+
+// Style for photo box
+
+.item1 {
+  padding: 1rem;
+  text-align: center;
+  margin: 0 auto;
+// Style profile pics *nesting example*
+  img {
+    width: 100%;
+  }
+  // Mobile style
+  @include for-phone-only {
+    margin: 0;
+    img {
+      width: 50%;
+    }
+  }
+}
+
+// Style for info box
+
+.item2 {
+  padding: 2rem;
+  background-color: $light-gray;
+// Style linkedin logo *nesting example*
+  img {
+    width: 20px;
+  }
+  @include for-phone-only {
+    margin: 0;
+  }
 }
