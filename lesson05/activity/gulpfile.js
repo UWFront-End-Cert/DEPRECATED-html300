@@ -1,13 +1,12 @@
-var gulp = require('gulp'),
+const {dest, series, src, watch} = require('gulp'),
     sass = require('gulp-sass'),
     autoprefix = require('gulp-autoprefixer'),
-    watch = require('gulp-watch'),
     plumber = require('gulp-plumber'),
     gutil = require('gulp-util'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create()
 
-gulp.task('sass', function() {
-    gulp.src('css/*.scss')
+function compileSass() {
+    return src('css/*.scss')
         .pipe(plumber())
         .pipe(sass())
         .pipe(
@@ -15,22 +14,19 @@ gulp.task('sass', function() {
                 browsers: ['> .5%'],
             })
         )
-        .pipe(gulp.dest('css/'))
+        .pipe(dest('css/'))
         .pipe(browserSync.stream());
-});
+}
 
-gulp.task('watch', function() {
-    gulp.watch('css/*.scss', ['sass']);
-    gulp.watch('*.html').on('change', browserSync.reload);
-});
-
-gulp.task('browser-sync', function() {
+function browserSyncs() {
     browserSync.init({
         notify: false,
         server: {
             baseDir: './',
         },
-    });
-});
+    })
+    watch(['css/*.scss']).on('change', compileSass)
+    watch(['*.html']).on('change', browserSync.reload)
+}
 
-gulp.task('default', ['watch', 'browser-sync']);
+exports.default = browserSyncs
