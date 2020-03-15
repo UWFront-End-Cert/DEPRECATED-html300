@@ -1,5 +1,40 @@
-// Import partials here
 @import 'base.normalize';
+/* define primary colors */
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+/* Mixins */
+@import "./main";
+@import "./col";
+@import "./card";
+/* Define mixin with two arguments */
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+/* use the variables */
+.section-1{
+  background-color: $primary-color;
+  @include bordered($primary-color, 1px); //Call mixin with two values
+  text-align: center;
+}
+img{
+  border-radius: 50%;
+  width:50%;
+  padding: 0.5em;
+  @include bordered($text-color,0.5px);//Call mixin with two values
+}
+/* use the variables */
+h3,p{
+  font-weight: bold;
+  color: $text-color;
+}
+
+span{
+  font: 100% $font-stack;
+  color: $sub-text-color;
+}
+.section-2{
+  background-color: $primary-color;
+  text-align: initial;
+}
