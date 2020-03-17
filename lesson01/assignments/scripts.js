@@ -1,26 +1,37 @@
 // jQuery Doc Ready
 $(function () {
     // Set up some data and variables
-    const data = [1, 2, 3, 4],
-        input = $('.input'),
-        submit = $('.submit'),
-        resultSum = $('.sum');
+    let data = [5, 10, 15, 20],
+        submit = $('.submit');
     // Click event on the submit input
     submit.on('click', function () {
         // Grab the input value and parse it into a number
-        const val = input.val();
+        const val = $(this).prev().val();
         const num = parseInt(val);
+        let tempText;
         // Verify the user gave us a real number
         if (!isNaN(num)) {
-            // Add our new number to the data array
-            data.push(num);
-            // Use reduce to convert our array of numbers into a single value - the sum of all of the numbers
-            const sum = data.reduce((acc, curr) => acc + curr);
+            // user used the map box
+            if ($(this).attr("id") === "map") {
+                // multiplay each value of the array by the user's value
+                const tempArray = data.map(arrVal => arrVal * num);
+                tempText = $(this).next().text().substring(0, 43) + tempArray;
+            } else if ($(this).attr("id") === "filter") {
+                // multiplay each value of the array by the user's value
+                const tempArray = data.filter(arrVal => arrVal % num === 0);
+                tempText = $(this).next().text().substring(0, 48) + tempArray;
+            } else if ($(this).attr("id") === "every") {
+                // return true if all values of the array are less than the user's value
+                const tempBool = data.every(arrVal => arrVal < num);
+                tempText = $(this).next().text().substring(0, 41) + tempBool;
+            } else { // must be some case
+                const tempBool = data.some(arrVal => arrVal === num);
+                tempText = $(this).next().text().substring(0, 29) + tempBool;
+            }
             // Add our new total to the page
-            resultSum.text(sum);
+            $(this).next().text(tempText);
             // Reset the input value to an empty string
-            input.val('');
+            $(this).prev().val('');
         }
     });
 });
-
