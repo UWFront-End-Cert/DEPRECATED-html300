@@ -75,8 +75,7 @@ const cards = bios.map(bios =>
 					<p>Email: ${bios.email}</p>
 					<p>Languages: ${bios.codeLanguages}</p>
 					<p>
-					<img class="link" src="img/linkedin.svg" alt="linkedIn logo">
-					${bios.linkedInUrl}</p>
+					<img class="link" src="img/linkedin.svg" alt="linkedIn logo">${bios.linkedInUrl}</p>
 				</div>
 
 			</div>
