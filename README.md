@@ -36,7 +36,6 @@ If you're interested, visit [Gulp's documentation](https://gulpjs.com) to learn 
 ### Course Final Project Setup
 
 - Create a new repository that will hold your final course project, name it something appropriate for what it will do (e.g. "WeatherTracker", "MovieGuide", etc)
-- Viewing that new repo on Github, click on the `Settings` tab at the top right, then the `Collaborators` tab on the left. Add `cherimarie` (https://github.com/cherimarie) and `madeste` (https://github.com/madeste) as collaborators.
 - For assignment 01 you will create a `documents` folder in the root with a `.txt` or `.md` file within, containing the course proposal
 - As the course progresses, work for the course final project will be done in the new repo
 
@@ -45,7 +44,6 @@ If you're interested, visit [Gulp's documentation](https://gulpjs.com) to learn 
 ### html300 Course Repo Setup
 - Within *this* html300 repo, click the `fork` button the the top right to fork a copy to your personal GitHub account
 - You will be taken to your forked repo, it should say 'forked fromn UWFront-End-Cert/html300' under the title
-- In your newly created fork, click on the `Settings` tab at the top right, then the `Collaborators` tab on the left. Add `cherimarie` (https://github.com/cherimarie) and `madeste` (https://github.com/madeste) as collaborators.
 - Clone the fork to your local machine
 
 ### Adding the Upstream to your Fork
@@ -78,8 +76,6 @@ $ git checkout -b lesson3
 - The `activity` will often have `starter` and `solution` folders, this is to help illustrate the starting/ending point for each
 - The `assignment` folder will have the starter files and instructions required to complete
 - Once completed, open a new Pull Request. Within the PR, set the base to be YOUR forked master branch, and the compare branch is  that lesson's assignment branch
-- In the Reviewer's section, click into the box and add `cherimarie` and `madeste` as reviewers - note you will have needed to invite us as collaborators to your fork first
-- Now, do NOT merge or close the Pull Request -- just add us as reviewers
 - Copy the direct link to the pull request page, and paste that into the submission box in Canvas
 
 ### Assignments
