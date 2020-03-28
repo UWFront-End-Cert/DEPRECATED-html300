@@ -3,6 +3,9 @@ $(function () {
     // Set up some data and variables
     let data = [5, 10, 15, 20],
         submit = $('.submit');
+        values = $('h3');
+    // Print original array    
+    values.text(values.text() + data);
     // Click event on the submit input
     submit.on('click', function () {
         // Grab the input value and parse it into a number
