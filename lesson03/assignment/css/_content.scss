@@ -1,0 +1,141 @@
+/* Sets the correct width of elements based on 4 conditions
+This is helpful because it stardardizes the widths of elements easily. */
+@mixin size($occupy: 0) {
+  @if $occupy == 0 {
+      width: 70%;
+  } @else if $occupy == 1 {
+      width: 35%;
+  } @else if $occupy == 2 {
+      width: 50%;
+  } @else if $occupy == 3 {
+      width: 100%;
+  }
+}
+
+/* Formats images so that they are either square or circular. */
+@mixin format-img($rounded: false) {
+  @if $rounded {
+      img {
+          border-radius: 50%;
+      }
+  }
+}
+
+// Defines the font for the whole card. Size changes (see media query).
+html {
+  font-family: $text;
+  color: $font-color;
+}
+
+// Standard body, removes misleading white HTML border.
+body {
+  margin: 0;
+}
+
+/* Creates the outside gray border around the whole card. Size depends on
+device (see media query). */
+article {
+  display: flex;
+  justify-content: center;
+  background-color: $box-color;
+  padding: 1.5rem;
+}
+
+/*
+  Prim holds the two main parts of the card (.pic and .info) in place,
+  Along with providing a white background. Depending on the device, prim
+  either displays side by side or on top (see media query).
+*/
+div.prim {
+  display: flex;
+  background-color: white;
+  padding: 1rem;
+  .pic {
+      /*
+          Pic holds the "left" side of the card. It's size differs depending
+          on the device (see media query).
+      */
+      @include format-img(true);
+      text-align: center;
+      flex-direction: column;
+      padding: 1rem;
+      img {
+          // Correctly sizes and centers the image of Steve.
+          max-width: 100%;
+          height: auto;
+          display: block;
+      }
+  }
+  .info {
+      /*
+          Info holds the "right" side of the card. It's size differs depending
+          on the device (see media query).
+      */
+      @include format-img();
+      background-color: $box-color;
+      flex-direction: column;
+      padding: 1rem;
+      /*
+          Defines how to space text and which text to bold on the "right side
+          of the card.
+      */
+      p {
+          padding-top: 1rem;
+          span {
+              font-weight: bold;
+          }
+      }
+  }
+}
+
+// Reduces spacing on the header (Steve's name).
+h1 {
+  margin-block-end: 0.3em;
+  margin-block-start: 0.3em;
+}
+
+// Media query for landscape tablets and computers.
+@media screen and (min-width: 992px), screen and (min-width: 768px) and (orientation: landscape) {
+  article {
+      @include size();
+  }
+
+  div.prim {
+      @include size(3);
+      flex-direction: row;
+      justify-content: space-between;
+      .pic {
+          @include size(1);
+      }
+      .info {
+          @include size(2);
+      }
+  }
+
+  html {
+      font-size: 1.5rem;
+  }
+}
+
+// Media query for portrait tablets and phones.
+@media screen and (min-width: 768px) and (orientation: portrait), screen and (max-width: 768px) {
+  article {
+      @include size(3);
+  }
+
+  div.prim {
+          @include size(3);
+          flex-direction: column;
+          align-items: center;
+      .pic {
+          @include size();
+      }
+      .info {
+          @include size();
+      }
+  }
+
+  html {
+      font-size: 1rem;
+  }
+}

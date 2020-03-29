@@ -1,7 +1,7 @@
 [
   {
     "name": "Steve Smith",
-    "jobTitle": "Project Manage",
+    "jobTitle": "Project Manager",
     "company": "Front End Dev Co",
     "experience": "3 years",
     "school": "UW",
@@ -41,7 +41,7 @@
   {
     "name": "Michael Jordan",
     "jobTitle": "Point Guard",
-    "company": "Chicago Buls",
+    "company": "Chicago Bulls",
     "experience": "20 years",
     "school": "UNC",
     "major": "Trash Talking",
