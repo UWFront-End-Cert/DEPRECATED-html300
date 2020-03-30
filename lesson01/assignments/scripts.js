@@ -4,15 +4,15 @@ $(function () {
 	const data = [18, 2, 3, 4],
 		input = $('.input'),
 		submit = $('.submit'),
-		resultSum = $('.sum'),//reduce example
-		result1 = $('.power'),//map
-		result2 = $('.power2'),//foreach
-		result3 = $('.smallmore3'),//find sort
-		result4 = $('.even'),//filter
-	    result5 = $('.multiply'),//reduce
-	    result6 = $('.lessthan3'),//filter length
-		result7 = $('.fib'); 
-	
+		resultSum = $('.sum'), //reduce example
+		result1 = $('.power'), //map
+		result2 = $('.power2'), //foreach
+		result3 = $('.smallmore3'), //find sort
+		result4 = $('.even'), //filter
+		result5 = $('.multiply'), //reduce
+		result6 = $('.lessthan3'), //filter length
+		result7 = $('.fib');
+
 
 	// Click event on the submit input
 	submit.on('click', function () {
@@ -26,19 +26,19 @@ $(function () {
 			// Use reduce to convert our array of numbers into a single value - the sum of all of the numbers
 			if ($(this).parents().hasClass("uw")) {
 				const sum = data.reduce((acc, curr) => acc + curr);
-                // Add our new total to the page
-                resultSum.text(sum);
+				// Add our new total to the page
+				resultSum.text(sum);
 				console.log(data);
 			}
 			// Use map to return array of squared numbers
 			if ($(this).parents().hasClass("b1")) {
 				const power = data.map((val) => {
 					return val * val;
-                });
-                // Add our new values to the page
-                //result1.text(power);
-                result1.text(`(using map) The squared values of each element in the new array is: ${power}`);
-                
+				});
+				// Add our new values to the page
+				//result1.text(power);
+				result1.text(`(using map) The squared values of each element in the new array is: ${power}`);
+
 				console.log(data);
 			}
 			// Use for each to return array of squared numbers
@@ -47,11 +47,11 @@ $(function () {
 				data.forEach(function (item) {
 					power2.push(item * item);
 				});
-                // Add our new values to the page
-                result2.text(`(using foreach) The squared values of each element in the new array is: ${power2}`);
-                console.log(data);
-            }
-            
+				// Add our new values to the page
+				result2.text(`(using foreach) The squared values of each element in the new array is: ${power2}`);
+				console.log(data);
+			}
+
 			// use sort and find to find first value (smallest value) in array that is larger than 3
 			if ($(this).parents().hasClass("b3")) {
 				function smallesmorethan3(array, what) {
@@ -61,17 +61,18 @@ $(function () {
 					return array2.find(item => item > what);
 				}
 				const smallmore3 = smallesmorethan3(data.sort(), 3);
-                // Add our new total to the page
-                result3.text(`The smallest number in the new array that is larger than 3 is:  ${smallmore3}`);
+				// Add our new total to the page
+				result3.text(`The smallest number in the new array that is larger than 3 is:  ${smallmore3}`);
 				console.log(data);
 			}
 
 			// Use filter to get all the even numbers in the array then use length to return the count of even numbers
 			if ($(this).parents().hasClass("b4")) {
 				const even = data.filter(val => {
-					return val % 2 === 0; });
-                // Add our new total to the page
-                result4.text(`The number of values that are even in the new array is:   ${even.length}`);
+					return val % 2 === 0;
+				});
+				// Add our new total to the page
+				result4.text(`The number of values that are even in the new array is:   ${even.length}`);
 				console.log(data);
 			};
 
@@ -79,18 +80,18 @@ $(function () {
 			if ($(this).parents().hasClass("b5")) {
 				const multiply = data.reduce((acc, curr) => acc * curr);
 				// Add our new total to the page
-                result5.text(`The product of the new array is:  ${multiply}`);
+				result5.text(`The product of the new array is:  ${multiply}`);
 				console.log(data);
-            }
-            
-            // Use filter and length to count how many values are less than 3 in the new array
+			}
+
+			// Use filter and length to count how many values are less than 3 in the new array
 			if ($(this).parents().hasClass("b6")) {
 				function countInArray(array, what) {
 					return array.filter(item => item < what).length;
 				}
-                const lessthan3 = countInArray(data, 3);
-                // Add our new total to the page
-                result6.text(`The number of values less than 3 in the new array is: ${lessthan3}`);
+				const lessthan3 = countInArray(data, 3);
+				// Add our new total to the page
+				result6.text(`The number of values less than 3 in the new array is: ${lessthan3}`);
 				console.log(data);
 			}
 
@@ -110,8 +111,8 @@ $(function () {
 				};
 
 				const fib = fibonacci_series(num)[num];
-                result7.text(`The fibonnacci value for the given index (0 indexed) is:  ${fib}`);
-				data.pop();//dont add fib. index to the array
+				result7.text(`The fibonnacci value for the given index (0 indexed) is:  ${fib}`);
+				data.pop(); //dont add fib. index to the array
 				console.log(data);
 
 			}
