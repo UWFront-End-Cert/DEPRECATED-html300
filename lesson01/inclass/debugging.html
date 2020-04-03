@@ -13,35 +13,46 @@
     myArray.forEach(element => console.log(element));
     
 
-    for(let index = 0; index < myArray.length -1; index++){
-      myArray[index] = myArray[index] + 15;
-    }
-    console.log(myArray + 'Each number should 15 greater than before the loop');
-    
-    var isAbove30 = true;
-    for(let index = 0; index < myArray.length; index++){
-      if(myArray[index] < 30){
-        isAbove30 = false;
-      }
-    }
-    console.log("Every number is above 30 is " + isAbove30);
+    // for(let index = 0; index < myArray.length -1; index++){
+    //   myArray[index] = myArray[index] + 15;
+    // }
+    // console.log(myArray + 'Each number should 15 greater than before the loop');
+    const mapArray = myArray.map(element => element + 15);
+    console.log(`${mapArray} Each number should 15 greater`)
 
-    console.log("Creating an array for every number above 50");
-    above50 = [];
-    for(let index = 0; index < myArray.length; index++){
-      if(myArray[index] > 50){
-        above50.push(myArray[index])
-      }
-    }
-    console.log("Here is the array for every number above 50 " + above50);
+
+    // var isAbove30 = true;
+    // for(let index = 0; index < myArray.length; index++){
+    //   if(myArray[index] < 30){
+    //     isAbove30 = false;
+    //   }
+    // }
+    // console.log("Every number is above 30 is " + isAbove30);
+
+    const filterArrayTwo = myArray.every(element => element > 30);
+    console.log(`${filterArrayTwo} Every number is above 30`);
+
+    // console.log("Creating an array for every number above 50");
+    // above50 = [];
+    // for(let index = 0; index < myArray.length; index++){
+    //   if(myArray[index] > 50){
+    //     above50.push(myArray[index])
+    //   }
+    // }
+    // console.log("Here is the array for every number above 50 " + above50);
+
+    const filterArrayThree = myArray.filter(element => element > 50 );
+    console.log(`${filterArrayThree} is above 50`);
 
     myArray2 = [13,25,10,43,435];
-    let sum = 0;
-    for(let index = 0; index < myArray.length - 1; index++){
-      sum = sum + myArray[index];
-    }
+    // let sum = 0;
+    // for(let index = 0; index < myArray.length - 1; index++){
+    //   sum = sum + myArray[index];
+    // }
 
-    console.log("The total value of the array is " + sum);
+    // console.log("The total value of the array is " + sum);
+    let sum = myArray2.reduce((sum, element) => sum += element);
+    console.log(`The total value of the array is ${sum}`)
   </script>
 </head>
 <body>
