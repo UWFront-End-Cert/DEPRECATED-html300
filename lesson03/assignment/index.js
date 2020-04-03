@@ -54,7 +54,12 @@ const data = [
 ];
 
 let cardsHTML = data.map(function(el) {
-    let card = `
+    let languagesHTML = "";
+    el.codeLanguages.forEach(language => {
+        languagesHTML += language + " | "
+    });
+    languagesHTML = languagesHTML.substring(0, languagesHTML.length - 3);
+        return `
         <article>
             <!--article specifies the width of the card, sets the primary background color-->
             <div class="prim">
@@ -77,11 +82,12 @@ let cardsHTML = data.map(function(el) {
                         <img src="./img/linkedin.svg" alt="Linkedin logo">
                             ${el.linkedInUrl}
                     </p>
+                    <p><span>Coding Languages:</span> ${languagesHTML}</p>
                 </div>
             </div>
         </article>
+        <br>
     `;
 });
 
-console.log(cardsHTML);
 $(".template-hook").append(cardsHTML);
