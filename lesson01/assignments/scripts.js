@@ -1,25 +1,34 @@
-//Create object containing ids and labels to build HTML
+//Create object containing ids, descriptions, and labels to build the
+//set of input in HTML
 const inputSet = [
     {
         inputId : 'input-reduce',
+        inputDesc: `Enter a number. Your input will be added to the existing array
+        and all numbers within the array will be summed.`,
         inputLabel: 'Reduce',
         inputSubmit: 'submit-reduce',
         inputResult: 'result-reduce'
     },
     {
         inputId : 'input-map',
+        inputDesc: `Enter a number. Every number in the existing array will increase
+        by your input.`,
         inputLabel: 'Map',
         inputSubmit: 'submit-map',
         inputResult: 'result-map'
     },
     {
         inputId : 'input-some',
+        inputDesc: `Enter a number. This will determine if some of the numbers
+        in the existing array is greater than your input. This will return 
+        a boolean answer.`,
         inputLabel: 'Some',
         inputSubmit: 'submit-some',
         inputResult: 'result-some'
     },
     {
         inputId : 'input-find',
+        inputDesc: 'Enter a number. Find if your input exists in the existing array.',
         inputLabel: 'Find',
         inputSubmit: 'submit-find',
         inputResult: 'result-find'
@@ -32,6 +41,7 @@ $(document).ready(function(){
     inputSet.forEach(function(inputItem) {
         //add HTML elements with specific ids and labeling
         target.append(`<label for=${inputItem.inputId}>${inputItem.inputLabel}</label>`);
+        target.append(`<p>${inputItem.inputDesc}</p>`);
         target.append(`<input type="text" id=${inputItem.inputId}>`);
         target.append(`<input type="submit" id=${inputItem.inputSubmit}></input>`);
         target.append(`<p><span id=${inputItem.inputResult}></span></p>`);
