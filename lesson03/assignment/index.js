@@ -1,3 +1,4 @@
+// data.json as const data
 const data = [
     {
       "name": "Steve Smith",
@@ -53,12 +54,21 @@ const data = [
     }
 ];
 
+// cardsHTML represents the text string to be added to index.html.
+// we use map to iterate through the JSON file and generate an article element
+// for each of the people it represents.
 let cardsHTML = data.map(function(el) {
+    // languagesHTML converts values in the codeLanguages array into a string
+    // seperated by " | ".
     let languagesHTML = "";
     el.codeLanguages.forEach(language => {
         languagesHTML += language + " | "
     });
+    // We have to take care of the fencepost case with one extra " | "
     languagesHTML = languagesHTML.substring(0, languagesHTML.length - 3);
+        // We want the HTML to look like this for all cards. We can directly
+        // use values from the JSON as well as the laguagestHTML string from
+        // above.
         return `
         <article>
             <!--article specifies the width of the card, sets the primary background color-->
@@ -89,5 +99,5 @@ let cardsHTML = data.map(function(el) {
         <br>
     `;
 });
-
+// Using jquery to add the extra html we generated into index.html.
 $(".template-hook").append(cardsHTML);
