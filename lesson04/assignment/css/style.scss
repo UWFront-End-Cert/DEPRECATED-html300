@@ -1,0 +1,205 @@
+main{
+display: grid;
+grid-template-rows: 1/2fr 1/2fr 3fr 1/2fr;
+}
+/* footer button*/
+@mixin clearit{
+  &:before,&:after{
+    content:"";
+    display:table;
+  }
+  &:after{
+    clear:both;
+  }zoom:1;
+}
+.button{
+  /*button styles*/
+  @include clearit
+}
+h1{
+  margin:0;
+  transform: skewX(25deg,25deg);
+}
+a{
+  text-align: center;
+  margin:30px;
+  color:#334488;
+  @include transition(background-color 1s 2s,color 2s);
+  &:hover{
+    color:#000000;
+    transition:all ease-in-out .3s;
+    font-style: italic;
+  }
+}
+.animate{
+  display:block;
+  position :relative;
+  text-align:center;
+  .backwards{
+    animation: animateBackwards 1s ease-in-out forwards;
+  }
+  .forwards{
+    animation: animateForwards 1s ease-in-out forwards;
+  }
+  @keyframes forwards {
+  from { top: 0; transform: rotate(0deg); }
+  to { top: .9em; transform: rotate(-15deg); }
+  }
+  @keyframes backwards {
+  from { top: 0; transform: rotate(0deg); }
+  to { top: 1em; transform: rotate(25deg); }
+  }
+}
+// Mixins and Variables
+@mixin opacity($opacity){
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+.example{
+  display:grid;
+  grid-template-columns: 10% 90%;
+  grid-gap:2px;
+  background-color:#EEE;
+  padding:10px;
+  transition: background-color .2s ease-in;
+  &:hover{
+    transform: scaled3d(2,1,3);
+    background-color: #af0ddd;
+  }
+}
+.circle{
+  border-radius:50%;
+  height:30px;
+  width:30px;
+  margin:10px;
+  .example:hover &{
+    transform:translateX(1500px);
+  }
+}
+.circle0{
+  @extend .circle;
+  background:PaleTurquoise;
+  transition: all 1.5s linear;
+}
+.circle1{
+  @extend .circle;
+  background:salmon;
+  transition: all 1.5s ease;
+}
+.circle2{
+  @extend .circle;
+  background: lightskyblue;
+  transition: all 1.5s ease-in;
+}
+.circle3{
+  @extend .circle;
+  background:khaki;
+  transition:all 1.5s ease-out;
+}
+.element{
+  display:inline-block;
+  background-color: #0074d9;
+  width: 100px;
+  color:yellow;
+  text-align: center;
+  opacity:.7;
+  font-family: Verdana,sans-serif;
+  border: 3px solid rgba(0,0,0,0.3);
+  margin-bottom: 30px;
+}
+.one{
+  transform: rotateX(50deg);
+  animation: one 3s infinite;
+  animation-direction:alternate;
+}
+.two{
+  transform:rotateY(100deg);
+  animation:two 5s infinite;
+  animation-direction: alternate;
+  background-color: #831a4a;
+}
+.three{
+  transform:rotateZ(70deg);
+  animation: three 5s infinite;
+  animation-direction: alternate;
+  background-color:#439772;
+}
+@keyframes one{
+  0%{
+    transform:rotateX(0);
+  }
+  100%{
+    transform:rotateX(100deg);
+  }
+}
+@keyframes two{
+  0%{
+    transform:rotateY(0);
+  }
+  100%{
+    transform:rotateY(170deg);
+  }
+}
+@keyframes three{
+  0%{
+    transform: rotateZ(0);
+  }
+  100%{
+    transform: rotateZ(200deg);
+  }
+}
+.container{
+  background-size:cover;
+  display:grid;
+  grid-template-rows: auto auto auto;
+  grid-gap: 1px;
+  width:100%;
+  height:400px;
+  padding:0px 15px 100px 15px;
+}
+.row{
+display: grid;
+grid-gap: 1px;
+grid-template-columns: auto auto auto;
+height:200px;
+}
+.col{
+position:relative;
+}
+.col img{
+  height: 125px;
+  box-shadow:2px 2px 2px rgba(0,0,0,.4);
+  transition:transform .3s ease-in-out;
+  &:hover{
+    box-shadow:6px 6px 6px rgba(0,0,0,.3);
+  }
+}
+.first,.second,.third,.fourth{
+  position:absolute;
+  top:0;
+  left:0;
+  margin:40px;
+}
+.first{
+  opacity:.3;
+}
+.second{
+  transform:rotate(-15deg);
+  &:hover{
+    transform: scale(1) rotate(5deg);
+  }
+}
+.third{
+  transform:scale(0.75);
+  &hover{
+    transform:scale(1) rotate(-7deg);
+  }
+}
+.fourth{
+  transform: rotate(20deg);
+  transform-origin:right bottom;
+  &:hover{
+    transform:rotate(3deg);
+  }
+}
