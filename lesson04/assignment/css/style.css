@@ -1,3 +1,17 @@
+main {
+  display: grid;
+  grid-template-rows: 1/2fr 1/2fr 3fr 1/2fr; }
+
+/* footer button*/
+.button {
+  /*button styles*/
+  zoom: 1; }
+  .button:before, .button:after {
+    content: "";
+    display: table; }
+  .button:after {
+    clear: both; }
+
 h1 {
   margin: 0;
   transform: skewX(25deg, 25deg); }
@@ -5,7 +19,8 @@ h1 {
 a {
   text-align: center;
   margin: 30px;
-  color: #334488; }
+  color: #334488;
+  transition: background-color 1s 2s, color 2s; }
   a:hover {
     color: #000000;
     transition: all ease-in-out .3s;
@@ -18,8 +33,6 @@ a {
   .animate .backwards {
     animation: animateBackwards 1s ease-in-out forwards; }
   .animate .forwards {
-    animation: animateForwards 1s ease-in-out forwards; }
-  .animate .mixed {
     animation: animateForwards 1s ease-in-out forwards; }
 
 @keyframes forwards {
@@ -38,9 +51,6 @@ a {
     top: 1em;
     transform: rotate(25deg); } }
 
-div {
-  animation: bounceIn 2s; }
-
 .example {
   display: grid;
   grid-template-columns: 10% 90%;
@@ -52,12 +62,12 @@ div {
     transform: scaled3d(2, 1, 3);
     background-color: #af0ddd; }
 
-.circle, .circle0, .circle1, .circle2, .circle3, .circle4, .circle5 {
+.circle, .circle0, .circle1, .circle2, .circle3 {
   border-radius: 50%;
   height: 30px;
   width: 30px;
   margin: 10px; }
-  .example:hover .circle, .example:hover .circle0, .example:hover .circle1, .example:hover .circle2, .example:hover .circle3, .example:hover .circle4, .example:hover .circle5 {
+  .example:hover .circle, .example:hover .circle0, .example:hover .circle1, .example:hover .circle2, .example:hover .circle3 {
     transform: translateX(1500px); }
 
 .circle0 {
@@ -75,14 +85,6 @@ div {
 .circle3 {
   background: khaki;
   transition: all 1.5s ease-out; }
-
-.circle4 {
-  background: mediumturquoise;
-  transition: all 1.5s ease-in-out; }
-
-.circle5 {
-  background: thistle;
-  transition: all 1.5s cubic-bezier(0, 1, 0.98, 0); }
 
 .element {
   display: inline-block;
