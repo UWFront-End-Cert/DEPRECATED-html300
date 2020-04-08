@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--Assignment 2 html page-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BigBox LilBox</title>
+  <!--JQuery stuff-->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"> </script>
+  <!--my JS file starzScript -->
+  <script src="starzScript.js"></script>
+  <link rel="stylesheet" type="text/css" href="starzStyles.css">
+</head>
+
+<body>
+  <h1>Welcome to your brand new fortune-telling device, the Starz5000</h1>
+
+  <!--button number 1 introduction-->
+  <h2>What's your sign?</h2>
+  <input type="text" id="star-sign-input">
+  <button id="star-sign-button">Press Your Luck</button>
+  <!--the response text should be: welcome (star-sign) your fate will now be determined-->
+
+  <!--Here's some fun with checkboxes-->
+  <h2>Click here to rid yourself of your negative energy</h2>
+  <p><input type="checkbox">Anger</p>
+  <p><input type="checkbox">Sadness</p>
+  <p><input type="checkbox">Vanity</p>
+
+  <label>Choose your favorite mantras and repeat:</label><br>
+  <label><input type="checkbox" name="mantra" value="strong">I am strong</label><br>
+  <label><input type="checkbox" name="mantra" value="valuable">I am valuable</label><br>
+  <label><input type="checkbox" name="mantra" value="good">I am good enough</label><br>
+  <label><input type="checkbox" name="mantra" value="beautiful">I am beautiful</label><br>
+  <label><input type="checkbox" name="mantra" value="light">I am filled with positive light</label><br>
+  <label><input type="checkbox" name="mantra" value="opinions">The opinions of others is none of my business</label><br>
+  <button id="mantra-button">Press Your Luck</button>
+
+  <!--button number 2 colors-->
+  <h2>Enter Your Favorite Chakra Color</h2>
+  <h3>type in your favorite color to determine your spirit.</h3>
+  <input type="text" id="color-input">
+  <button id="color-button">Press Your Luck</button>
+  <ul></ul>
+  <!--the response text should be: (color) shows you are a very spiritual person-->
+
+  <!--button number 3 prediction-->
+  <h2>What can Starz tell you? Make your prediction!</h2>
+  <div class="belief">
+    <div class="future">
+      <label>Some day I will:</label>
+      <input type="text" name="fate" id="prediction-input">
+    </div>
+    <div class="buttons">
+      <button class="prediction-button">Press Your Luck</button>
+    </div>
+  </div>
+  <!--the reponse text should be: we predict that (prediction) is fated to happen-->
+
+  <!--button number 4 wishes-->
+  <h2>Now, what can the Stars do for you? Make your wish!</h2>
+  <h3>I want a</h3>
+  <input type="text" id="wish-input">
+  <button id="wish-button" class="button-style">Press Your Luck</button>
+  <!--the response text should be: congratulations! (wish) is sure to come true!-->
+
+</body>
+
+</html>
