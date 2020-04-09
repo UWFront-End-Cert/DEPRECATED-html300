@@ -1,0 +1,31 @@
+
+
+.container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-content: space-around;
+}
+
+.box {
+border: 1px black solid;
+width: 200px;
+height: 250px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+}
+
+h2 {
+  color: black;
+  size: 1rem;
+}
+
+input, p {
+  height: 25px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
