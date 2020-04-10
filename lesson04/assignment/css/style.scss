@@ -1,0 +1,68 @@
+// source: https://www.w3schools.com/howto/howto_css_zoom_hover.asp
+
+.car-box {
+    background: url(../images/2020-tesla-roadster-at-2018-grand-basel-show--image-via-bluewin_100669019_l.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column-reverse;
+    animation-duration: 1s;
+    animation-name: reverse-hover-expand-box;
+    .info {
+        display: flex;
+        flex-direction: column-reverse;
+        opacity: 0;
+    }
+}
+
+// do the repetitve stuff with a mixin
+
+.car-box:hover {
+    animation-name: hover-expand-box;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    .info {
+        animation-name: hover-expand-info;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes reverse-hover-expand-box {
+    from {
+        width: 1000px;
+        height: 800px;
+    }
+    to {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@keyframes hover-expand-box {
+    from {
+        width: 300px;
+        height: 200px;
+    }
+    to {
+        width: 1000px;
+        height: 800px;
+    }
+}
+@keyframes hover-expand-info {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
