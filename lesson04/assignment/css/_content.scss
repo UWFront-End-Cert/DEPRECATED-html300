@@ -1,0 +1,85 @@
+// source: https://www.w3schools.com/howto/howto_css_zoom_hover.asp
+// Only the idea, none of the source code at this point.
+
+// Specifies all of the animation parts expcept for animation-name, for
+// consistant animations and timing.
+@mixin carAnimation {
+    animation-duration: $anim-duration;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+// The parent class for the the whole car/information box. The picture
+// of the car is the background image. Defines the width, height, and
+// border for the whole box.
+.car-box {
+    background: url(../images/2020-tesla-roadster-at-2018-grand-basel-show--image-via-bluewin_100669019_l.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: $tile-width;
+    height: $tile-height;
+    border-style: solid;
+    display: flex;
+    flex-direction: column-reverse;
+    // animation-name added later by JavaScript dynamically.
+    @include carAnimation();
+    // Sub class of car-box, car info controls the appearance and 
+    // arrangement of the text elements, aka the title an information.
+    // Initially, it is invisible, and becomes visible through animation.
+    .car-box__info {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+        opacity: 0;
+        @include carAnimation();
+    }
+}
+
+// Animation for expanding the car-box.
+@keyframes hover-expand-box {
+    0% {
+        width: $tile-width;
+        height: $tile-height;
+    }
+    100% {
+        width: $expanded-width;
+        height: $expanded-height;
+    }
+}
+// Animation for contracting the car-box.
+@keyframes reverse-hover-expand-box {
+    0% {
+        width: $expanded-width;
+        height: $expanded-height;
+    }
+    100% {
+        width: $tile-width;
+        height: $tile-height;
+    }
+}
+// Animation for making the information visible, works alongsde
+// hover-expand-box.
+@keyframes hover-expand-info {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+// Animation for making the information invisible again,
+// works alongsde reverse-hover-expand-box.
+@keyframes reverse-hover-expand-info {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
