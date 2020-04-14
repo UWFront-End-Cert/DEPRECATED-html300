@@ -1,39 +1,18 @@
-// Colors
-$gray: #f6f5f6;
-$white: #ffffff;
-$black: #000000;
-$green: #7acb00;
-$pink: #ff0097;
-$red: #F1352B;
-$orange: #ff6600;
-$yellow: #ffb617;
-$robins: #01c1d6;
-$purple: #6e27c5;
-$blue: #150f96;
-//This is the Open Sans font
-$font: @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 /*the style sheet for lesson 2 assignment - employee linkedin card */
-
-//@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 .main {
   display: flex;
   flex-direction: row;
   width: 40%;
   border-style: solid;
-  border-color: $grey;
+  border-color: #e6e6ff;
   border-width: 30px;
-  &fonts {
-    font-family: $font;
-    font-size: 70%;
-    font-weight: normal;
-  }
 }
 
 /*want all the fonts to be the same*/
-//h1, h2 {
-//  font-family: sans-serif;
-//  }
+h1, h2 {
+  font-family: sans-serif;
+  }
 
   /*now I've got to make the different fonts different sizes - ack!*/
   h1 {
@@ -41,11 +20,11 @@ $font: @import url(https://fonts.googleapis.com/css?family=Open+Sans);
     font-weight: normal;
     }
 
-  /*  h2 {
+    h2 {
       font-size: 70%;
       font-weight: normal;
     }
-*/
+
 
 /* just want to style the profile pic NOT the logo*/
 .headshot {
@@ -74,24 +53,19 @@ want the background to be bluish and to be a box with the main box*/
   width: 60%;
   margin: 2%;
   padding: 1%;
-  background-color: saturate($grey, $50%);
-  &p:first-word {
-    font-weight: bold;
-    font-size: 70%;
-    font-weight: normal;
-  }
+  background-color: #e6e6ff;
 }
 
-//This is all the logo coding
+
 .logo {
   width: 65%;
-  &.logo-and-name {
-/* putting logo and profile url on same line */
-    display: flex;
-    flex-direction: row;
-  }
 }
 
+/* putting logo and profile url on same line */
+.logo-and-name {
+  display: flex;
+  flex-direction: row;
+}
 
 /*tablet size*/
 @media screen and (max-width: 768px) {
@@ -102,9 +76,10 @@ want the background to be bluish and to be a box with the main box*/
    width: 90%;
     height: 100%
     margin-top: 10%;
-    &h1, h2 {
-      font-size: 80%;
     }
+
+    h1, h2 {
+      font-size: 80%;
     }
 
   .left{
@@ -116,7 +91,6 @@ want the background to be bluish and to be a box with the main box*/
     width: 90%;
     margin: 5%;
       }
-}
 
 /*mobile size */
 @media screen and (max-width: 600px) {
@@ -124,12 +98,13 @@ want the background to be bluish and to be a box with the main box*/
   display: flex;
   flex-direction: column;
   width: 90%;
-  &h1, h2 {
-    font-size: 80%;
-  }
 }
 
 .left {
   width: 80%;
-    }
+}
+
+h1, h2 {
+  font-size: 80%;
+}
 }
