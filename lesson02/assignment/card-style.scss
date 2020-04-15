@@ -1,0 +1,173 @@
+/*the style sheet for lesson 2 assignment - employee linkedin card */
+//$gray: #f6f5f6;
+$blue: #e6e6ff;
+//This is the Open Sans font
+$font: sans-serif;
+$font-weight: normal;
+//@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/*
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  border-style: solid;
+  border-color: $gray;
+  border-width: 30px;
+  }
+*/
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+     -moz-box-flex: $values;
+      -webkit-flex: $values;
+  	  -ms-flex: $values;
+  	      flex: $values;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+     -moz-flex-direction: $direction;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+}
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+}
+
+.main {
+  border-style: solid;
+  border-color: $blue;
+  border-width: 30px;
+  &_row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+  //the width of our main container
+/*$holder: 800;
+
+  .main {
+    max-width: $holder * 1px;
+    margin: 0 auto;
+     &__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+*/
+
+p {
+  font-family: $font;
+  font-size: 70%;
+  font-weight: $font-weight;
+  &_special {
+    font-size: 80%;
+  }
+}
+/*want all the fonts to be the same*/
+//h1, h2 {
+//  font-family: sans-serif;
+//  }
+
+
+  /*  h2 {
+      font-size: 70%;
+      font-weight: normal;
+    }
+*/
+
+/* just want to style the profile pic NOT the logo*/
+.headshot {
+  width: 90%;
+  border-radius: 50%;
+}
+
+/* this is the profile pic and name
+on the left side of the desktop and PC version
+on top of the mobile and smaller sizes
+want to center this and style the pic*/
+.left {
+  width: 20%;
+  padding-top: 10px;
+  padding-left: 40px;
+  display: flex;
+  justify-content: center;
+    }
+
+/*this is the biographical detail
+on the right side of the desktop and PC version
+on the bottom of the mobile and smaller sizes
+want the background to be bluish and to be a box with the main box*/
+
+.right {
+  width: 60%;
+  margin: 2%;
+  padding: 1%;
+  background-color: $blue;
+  &:hover {
+    background-color: darken($blue 35%);
+  }
+    }
+
+  //This is all the logo coding
+.logo {
+  width: 4%;
+}
+
+/*tablet size*/
+@media screen and (max-width: 768px) {
+
+.main {
+  display: flex;
+  flex-direction: column;
+   width: 90%;
+    height: 100%
+    margin-top: 10%;
+    &h1, h2 {
+      font-size: 80%;
+    }
+    }
+
+  .left{
+    width: 100%;
+    margin: 5%;
+  }
+
+  .right {
+    width: 90%;
+    margin: 5%;
+      }
+}
+
+/*mobile size */
+@media screen and (max-width: 600px) {
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  &h1, h2 {
+    font-size: 80%;
+  }
+}
+
+.left {
+  width: 80%;
+    }
+}

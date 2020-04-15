@@ -56,7 +56,6 @@ want the background to be bluish and to be a box with the main box*/
   background-color: #e6e6ff;
 }
 
-
 .logo {
   width: 65%;
 }
@@ -90,6 +89,12 @@ want the background to be bluish and to be a box with the main box*/
   .right {
     width: 90%;
     margin: 5%;
+      }
+
+      p:first-word {
+        font-weight: bold;
+        font-size: 70%;
+        font-weight: normal;
       }
 
 /*mobile size */

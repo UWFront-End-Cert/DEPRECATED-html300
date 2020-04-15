@@ -11,7 +11,7 @@ $robins: #01c1d6;
 $purple: #6e27c5;
 $blue: #150f96;
 //This is the Open Sans font
-$font: @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+$font: sans-serif;
 /*the style sheet for lesson 2 assignment - employee linkedin card */
 
 //@import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -21,31 +21,25 @@ $font: @import url(https://fonts.googleapis.com/css?family=Open+Sans);
   flex-direction: row;
   width: 40%;
   border-style: solid;
-  border-color: $grey;
+  border-color: $gray;
   border-width: 30px;
-  &fonts {
-    font-family: $font;
-    font-size: 70%;
-    font-weight: normal;
-  }
 }
 
 /*want all the fonts to be the same*/
-//h1, h2 {
-//  font-family: sans-serif;
-//  }
+h1, h2 {
+  font-family: sans-serif;
+  font-weight: normal;
+ }
 
   /*now I've got to make the different fonts different sizes - ack!*/
   h1 {
     font-size: 80%;
-    font-weight: normal;
     }
 
-  /*  h2 {
+  h2 {
       font-size: 70%;
-      font-weight: normal;
-    }
-*/
+        }
+
 
 /* just want to style the profile pic NOT the logo*/
 .headshot {
@@ -75,17 +69,12 @@ want the background to be bluish and to be a box with the main box*/
   margin: 2%;
   padding: 1%;
   background-color: saturate($grey, $50%);
-  &p:first-word {
-    font-weight: bold;
-    font-size: 70%;
-    font-weight: normal;
-  }
 }
 
 //This is all the logo coding
 .logo {
   width: 65%;
-  &.logo-and-name {
+  & .logo-and-name {
 /* putting logo and profile url on same line */
     display: flex;
     flex-direction: row;
