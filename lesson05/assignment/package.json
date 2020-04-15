@@ -17,5 +17,8 @@
         "gulp-sass": "^4.0.2",
         "gulp-util": "^3.0.8",
         "gulp-watch": "^5.0.0"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.13.0"
     }
 }
