@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     minifycss = require('gulp-minify-css'),
     browserSync = require('browser-sync').create();
-
 gulp.task('sass', function() {
     gulp.src('css/*.scss')
         .pipe(plumber())
@@ -20,12 +19,10 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('css/'))
         .pipe(browserSync.stream());
 });
-
 gulp.task('watch', function() {
     gulp.watch('css/*.scss', ['sass']);
     gulp.watch('*.html').on('change', browserSync.reload);
 });
-
 gulp.task('browser-sync', function() {
     browserSync.init({
         notify: false,
@@ -34,5 +31,4 @@ gulp.task('browser-sync', function() {
         },
     });
 });
-
 gulp.task('default', ['watch', 'browser-sync']);
