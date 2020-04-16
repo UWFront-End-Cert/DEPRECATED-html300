@@ -1,5 +1,7 @@
 html {
     box-sizing: border-box;
+
+
 }
 
 *,
@@ -8,10 +10,58 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+html {
+  background-color: gray;
+
+  }
+
+
+
+//main container of profile image, title, and right box description
+// satisfies use of Mixins, 2 Variables (height and width, as well as variables within FlexBox Mixin), and 1st instance of Nesting
+.main-container {
+  @include flexbox ($wrap: wrap, $justify: flex-start, $spacing: center)
+  height: $main-box-height;
+  width: $main-box-width;
+  margin: 1rem;
+  border: 2px black solid;
+  background-color: white;
+    .left-container {
+      margin-left: 2rem;
+      width: $img-width;
+      font-size: 1rem;
+
+    }
 }
 
-h1 {
-    color: $red;  
+.profile-img {
+  display: flex;
+  flex-wrap: wrap;
+  width: $img-width;
+  height: $img-height;
+  margin-right: 1rem;
 }
+
+//satisfies second use of a mixin (Flexbox), and second instance of Nesting
+.right-container {
+  @include flexbox ($wrap: wrap, $justify: flex-start, $spacing: center)
+  padding: 1rem;
+  margin-left: 1rem;
+  height: $right-box-height;
+  width: $right-box-width;
+  background-color: $light-gray;
+      .card-content:first-child {
+        color: $gray;
+      }
+}
+
+//Mobie Media Query - when reaches breakpoint, image stacks on top of text and content justifies left
+@include media-query ("mobile") {
+      .main-container {
+        width: auto;
+        height: auto;
+        @include flexbox ($wrap: wrap, $justify: flex-start, $spacing: center)
+
+      }
+
+  }
