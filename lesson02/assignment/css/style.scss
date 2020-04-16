@@ -4,3 +4,24 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.main {
+  display: flex;
+  flex-direction: row;
+  background-color: $white;
+  width: 100%;
+}
+
+.Content {
+  width: 80%;
+  background-color: $gray;
+}
+
+#projectmanager {
+  font-style: italic;
+}
+
+ul{
+  list-style-type: none;
+  margin-left: 2rem;
+  padding: 2px;
+}
