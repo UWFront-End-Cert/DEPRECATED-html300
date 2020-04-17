@@ -6,17 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script type="text/javascript">
+
+//original program - 1st console.log is just to make certain that it's working
     myArray = [13,25,10,43,435];
-    console.log("test");
-    for(let i = 0; index < myArray.length -1; index++){
+    //console.log("test");
+    for(let index = 0; index < myArray.length -1; index++){
       console.log(myArray[index]);
     }
 
-    for(let index = 0; index < myArray.length -1; index++){
+
+//add 15 to each of the array numbers
+   for(let index = 0; index < myArray.length -1; index++){
       myArray[index] = myArray[index] + 15;
     }
-    console.log(myArray + 'Each number should 15 greater than before the loop');
+    console.log(myArray + ' ' + 'Each number should 15 greater than before the loop');
+    debugger
+/*
 
+//above30 stuff
     var isAbove30 = true;
     for(let index = 0; index < myArray.length; index++){
       if(myArray[index] < 30){
@@ -25,7 +32,12 @@
     }
     console.log("Every number is above 30 is " + isAbove30);
 
+
+
     console.log("Creating an array for every number above 50");
+
+
+//above50 stuff
     above50 = [];
     for(let index = 0; index < myArray.length; index++){
       if(myArray[index] > 50){
@@ -34,6 +46,8 @@
     }
     console.log("Here is the array for every number above 50 " + above50);
 
+
+//array 2
     myArray2 = [13,25,10,43,435];
     let sum = 0;
     for(let index = 0; index < myArray.length + 1; index++){
@@ -41,8 +55,8 @@
     }
 
     console.log("The total value of the array is " + sum);
+*/
 
-    debugger
   </script>
 </head>
 <body>
