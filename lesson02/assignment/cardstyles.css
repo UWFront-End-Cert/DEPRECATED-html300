@@ -1,0 +1,115 @@
+/*the style sheet for lesson 2 assignment - employee linkedin card */
+
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  border-style: solid;
+  border-color: #e6e6ff;
+  border-width: 30px;
+}
+
+/*want all the fonts to be the same*/
+h1, h2 {
+  font-family: sans-serif;
+  }
+
+  /*now I've got to make the different fonts different sizes - ack!*/
+  h1 {
+    font-size: 80%;
+    font-weight: normal;
+    }
+
+    h2 {
+      font-size: 70%;
+      font-weight: normal;
+    }
+
+
+/* just want to style the profile pic NOT the logo*/
+.headshot {
+  width: 90%;
+  border-radius: 50%;
+}
+
+/* this is the profile pic and name
+on the left side of the desktop and PC version
+on top of the mobile and smaller sizes
+want to center this and style the pic*/
+.left {
+  width: 20%;
+  padding-top: 10px;
+  padding-left: 40px;
+  display: flex;
+  justify-content: center;
+    }
+
+/*this is the biographical detail
+on the right side of the desktop and PC version
+on the bottom of the mobile and smaller sizes
+want the background to be bluish and to be a box with the main box*/
+
+.right {
+  width: 60%;
+  margin: 2%;
+  padding: 1%;
+  background-color: #e6e6ff;
+}
+
+.logo {
+  width: 6%;
+}
+
+/* putting logo and profile url on same line */
+.logo-and-name {
+  display: flex;
+  flex-direction: row;
+}
+
+/*tablet size*/
+@media screen and (max-width: 768px) {
+
+.main {
+  display: flex;
+  flex-direction: column;
+   width: 90%;
+    height: 100%
+    margin-top: 10%;
+    }
+
+    h1, h2 {
+      font-size: 80%;
+    }
+
+  .left{
+    width: 100%;
+    margin: 5%;
+  }
+
+  .right {
+    width: 90%;
+    margin: 5%;
+      }
+
+      p:first-word {
+        font-weight: bold;
+        font-size: 70%;
+        font-weight: normal;
+      }
+
+/*mobile size */
+@media screen and (max-width: 600px) {
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.left {
+  width: 80%;
+}
+
+h1, h2 {
+  font-size: 80%;
+}
+}
