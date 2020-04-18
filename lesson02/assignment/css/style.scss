@@ -11,7 +11,7 @@ $blue: #e6e6ff;
 //This is the Open Sans font
 $font: sans-serif;
 $font-weight: normal;
-//@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 /*
 .main {
@@ -23,6 +23,8 @@ $font-weight: normal;
   border-width: 30px;
   }
 */
+
+/*
 
 @mixin flexbox() {
   display: -webkit-box;
@@ -54,18 +56,16 @@ $font-weight: normal;
           justify-content: $justify;
             -ms-flex-pack: $justify;
 }
-
+*/
 
 .main {
+  width: 60%;
   border-style: solid;
   border-color: $blue;
   border-width: 30px;
-  &_row {
     display: flex;
     flex-direction: row;
-    width: 100%;
-  }
-}
+      }
 
   //the width of our main container
 /*$holder: 800;
@@ -112,7 +112,7 @@ on the left side of the desktop and PC version
 on top of the mobile and smaller sizes
 want to center this and style the pic*/
 .left {
-  width: 20%;
+  width: 30%;
   padding-top: 10px;
   padding-left: 40px;
   display: flex;
