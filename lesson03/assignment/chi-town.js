@@ -61,6 +61,7 @@ const chicago = [
 //This part is the temlate for the left box of each card
 const inputs1 = chicago.map(function(el) {
   let career = `<section class="career">
+  <img class="headshot" src="img/unsplash-headshot.jpg" alt="20-something smiling developer in his nice button down shirt">
       <p class="career_name">${el.name} </p>
       <p class="career_jobTitle">${el.jobTitle}</p>
 </section>`
