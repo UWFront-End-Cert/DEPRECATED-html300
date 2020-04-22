@@ -1,3 +1,4 @@
+
 html {
     box-sizing: border-box;
 }
@@ -8,10 +9,81 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+//variable
+body {
+  background-color: $bluemist;
 }
 
-h1 {
-    color: $red;  
+p {
+    font-size: 21px;
+}
+
+h3 {
+  font-size: 28px;
+  padding-bottom: .5rem;
+}
+
+//variable, nesting
+p, h3 {
+  margin: 0rem;
+  color: $gungray;
+  & h3, .category {
+    font-weight: bold;
+  }
+}
+
+.main-container {
+    background-color: white;
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    @include responsive(mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+//nesting
+.picture-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+    & p {
+      font-style: italic;
+    }
+    @include responsive(mobile) {
+      text-align: center;
+    }
+}
+
+.img-circle {
+    border-radius: 50%;
+    width: 75%;
+    padding-bottom: 1rem;
+}
+
+//variable, nesting
+.contact-container {
+  background-color: $bluemist;
+  margin: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  & .links {
+    text-decoration: none;
+    color: $gungray;
+    & img {
+      vertical-align: middle;
+    }
+  }
+  @include responsive(mobile) {
+    padding: .5rem;
+    margin: 1rem;
+    & .linked-in {
+      font-size: 15px;
+    }
+  }
 }

@@ -1,3 +1,4 @@
+
 [
   {
     "name": "Steve Smith",
@@ -11,7 +12,7 @@
     "codeLanguages": [
         "HTML", "CSS", "JavaScript", ".NET", "C#"
     ]
-  }, 
+  },
   {
     "name": "Aaron Katz",
     "jobTitle": "Full Stack Developer",
@@ -24,7 +25,7 @@
     "codeLanguages": [
         "HTML", "CSS", "JavaScript", "PHP", "Twig"
     ]
-  }, 
+  },
   {
     "name": "Kyle Hendricks",
     "jobTitle": "Starting Pitcher",
@@ -51,4 +52,4 @@
        "HTML", "CSS", "JavaScript", "Java", "Spring"
     ]
   }
- ]
+ ];
