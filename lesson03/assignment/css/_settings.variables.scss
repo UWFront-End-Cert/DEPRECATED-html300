@@ -1,5 +1,6 @@
 // Colors
-$gray: #f6f5f6;
+$gray: #808080;
+$light-gray: #F5F5F5;
 $white: #ffffff;
 $black: #000000;
 $green: #7acb00;
@@ -10,3 +11,32 @@ $yellow: #ffb617;
 $robins: #01c1d6;
 $purple: #6e27c5;
 $blue: #150f96;
+
+
+// Box Height & width
+
+$main-box-height: 25rem; // 400px
+$main-box-width: 37.5rem; //600px
+$right-box-height: 18rem; //250px
+$right-box-width: 18.75rem; //300px
+$img-width: 12.5rem; //200px
+$img-height: 12.5rem; //200px
+
+
+//
+
+@mixin flexbox($wrap: wrap, $justify: flex-start, $spacing: center) {
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $spacing;
+
+}
+
+
+
+//Font mixin
+
+@mixin fontSize() {
+  font-size: 1rem;
+}
