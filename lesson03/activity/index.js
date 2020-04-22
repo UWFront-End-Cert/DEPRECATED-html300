@@ -1,29 +1,29 @@
-// Create the Dog class constructor
-class Dog {
+// Create the Warrior class constructor
+class Warrior {
 	// Give it expected parameters
-	constructor(name, age, breed, color) {
+	constructor(name, age, weapon, armour) {
 		// Set those equal to the instance
 		this.name = name;
 		this.age = age;
-		this.breed = breed;
-		this.color = color;
-		this.energyLevel = 0;
-		this.barkLevel = 10;
+		this.weapon = weapon;
+		this.armour = armour;
+		this.health = 0;
+		this.attack = 10;
 	}
-	// pat method
-	pat() {
-		this.energyLevel++
-		this.barkLevel--;
-		console.log(`This dog's name is ${this.name}, age is ${this.age}, current energy level is ${this.energyLevel} and current bark level is ${this.barkLevel}.`);
+	// play method
+	play() {
+		this.health++
+		this.attack--;
+		console.log(`This warrior's name is ${this.name}, age is ${this.age}, current health is ${this.health} and current attack level is ${this.attack}.`);
 	}
 }
 
-// Create marty
-const marty = new Dog('Marty', 6, 'Mutt', 'Brown');
+// Create Ragnar
+const ragnar = new Warrior('Ragnar', 212, 'numchucks', 'chainmail');
 
 // Pat him 5 times
-marty.pat();
-marty.pat();
-marty.pat();
-marty.pat();
-marty.pat();
+ragnar.play();
+ragnar.play();
+ragnar.play();
+ragnar.play();
+ragnar.play();
