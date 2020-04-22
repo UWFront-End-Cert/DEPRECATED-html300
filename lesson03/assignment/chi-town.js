@@ -58,33 +58,29 @@ const chicago = [
  ]
 
 
-//This part is the temlate for the left box of each card
-const inputs1 = chicago.map(function(el) {
-  let career = `<section class="career">
+//This is the template for the box of each card
+const inputs = chicago.map(function(el) {
+    let career = `<div class="jobBox">
+    <section class="career1">
   <img class="headshot" src="img/unsplash-headshot.jpg" alt="20-something smiling developer in his nice button down shirt">
-      <p class="career_name">${el.name} </p>
-      <p class="career_jobTitle">${el.jobTitle}</p>
-</section>`
-  return career;
-})
+      <p class="career1_name">${el.name} </p>
+      <p class="career1_jobTitle">${el.jobTitle}</p>
+</section>
 
-$(".jobs1").append(inputs1);
-
-//This is the template for the right box of each card
-const inputs2 = chicago.map(function(el) {
-  let career = `<section class="career">
+  <section class="career2">
      <ul>
-       <li class="career_company"><b>Company:</b> ${el.company} </li>
-       <li class="career_experience"><b>Experience:</b> ${el.experience}</li>
-       <li class="career_school"><b>School:</b> ${el.school} </li>
-       <li class="career_major"><b>Major:</b> ${el.major} </li>
-       <li class="career_email"><b>Email:</b> ${el.email} </li>
-       <li class="career_linkedInUrl"><img class="logo" src="img/linkedin.svg" alt="linkdin logo">  ${el.linkedInUrl} </li>
-       <li class="career_codeLanguages">${el.codeLanguages} </li>
+       <li class="career2_company"><b>Company:</b> ${el.company} </li>
+       <li class="career2_experience"><b>Experience:</b> ${el.experience}</li>
+       <li class="career2_school"><b>School:</b> ${el.school} </li>
+       <li class="career2_major"><b>Major:</b> ${el.major} </li>
+       <li class="career2_email"><b>Email:</b> ${el.email} </li>
+       <li class="career2_linkedInUrl"><img class="logo" src="img/linkedin.svg" alt="linkdin logo">  ${el.linkedInUrl} </li>
+       <li class="career2_codeLanguages">${el.codeLanguages} </li>
      </ul>
-  </section>`;
+  </section>
+  </div>`;
   return career;
   })
 
 
-$(".jobs2").append(inputs2);
+$(".main").append(inputs);

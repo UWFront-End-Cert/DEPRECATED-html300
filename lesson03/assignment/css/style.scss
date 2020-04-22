@@ -59,14 +59,18 @@ $font-weight: normal;
 */
 
 .main {
-  width: 60%;
-  border-style: solid;
-  border-color: $blue;
-  border-width: 30px;
     display: flex;
     flex-direction: row;
       }
 
+.jobBox {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  border-style: solid;
+  border-color: $blue;
+  border-width: 30px;
+}
   //the width of our main container
 /*$holder: 800;
 
@@ -99,16 +103,7 @@ li {
     list-style-type: none;
   }
 }
-//h1, h2 {
-//  font-family: sans-serif;
-//  }
 
-
-  /*  h2 {
-      font-size: 70%;
-      font-weight: normal;
-    }
-*/
 
 /* just want to style the profile pic NOT the logo*/
 .headshot {
@@ -120,7 +115,7 @@ li {
 on the left side of the desktop and PC version
 on top of the mobile and smaller sizes
 want to center this and style the pic*/
-.jobs1 {
+.career1 {
   width: 30%;
   padding-top: 10px;
   padding-left: 40px;
@@ -133,7 +128,7 @@ on the right side of the desktop and PC version
 on the bottom of the mobile and smaller sizes
 want the background to be bluish and to be a box with the main box*/
 
-.jobs2 {
+.career2 {
   width: 60%;
   margin: 2%;
   padding: 1%;
@@ -157,18 +152,18 @@ want the background to be bluish and to be a box with the main box*/
    width: 90%;
     height: 100%;
     margin-top: 10%;
-    &  h1, li {
+    &  p, li {
           font-size: 80%;
         }
         }
 
 
-  .jobs1{
+  .career1{
     width: 100%;
     margin: 5%;
   }
 
-  .jobs2 {
+  .career2 {
     width: 90%;
     margin: 5%;
       }
@@ -180,12 +175,12 @@ want the background to be bluish and to be a box with the main box*/
   display: flex;
   flex-direction: column;
   width: 90%;
-  &h1, li {
+  &p, li {
     font-size: 80%;
   }
 }
 
-.jobs1 {
+.career1 {
   width: 80%;
     }
 }
