@@ -8,9 +8,9 @@
 /*the style sheet for lesson 3 assignment - employee linkedin cardsss */
 //$gray: #f6f5f6;
 $blue: #e6e6ff;
-//This is the Open Sans font
 $font: sans-serif;
 $font-weight: normal;
+//This is the Open Sans font
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 /*
@@ -120,7 +120,7 @@ li {
 on the left side of the desktop and PC version
 on top of the mobile and smaller sizes
 want to center this and style the pic*/
-.left {
+.jobs1 {
   width: 30%;
   padding-top: 10px;
   padding-left: 40px;
@@ -133,7 +133,7 @@ on the right side of the desktop and PC version
 on the bottom of the mobile and smaller sizes
 want the background to be bluish and to be a box with the main box*/
 
-.right {
+.jobs2 {
   width: 60%;
   margin: 2%;
   padding: 1%;
@@ -157,18 +157,18 @@ want the background to be bluish and to be a box with the main box*/
    width: 90%;
     height: 100%;
     margin-top: 10%;
-    &  h1, h2 {
+    &  h1, li {
           font-size: 80%;
         }
         }
 
 
-  .left{
+  .jobs1{
     width: 100%;
     margin: 5%;
   }
 
-  .right {
+  .jobs2 {
     width: 90%;
     margin: 5%;
       }
@@ -180,12 +180,12 @@ want the background to be bluish and to be a box with the main box*/
   display: flex;
   flex-direction: column;
   width: 90%;
-  &h1, h2 {
+  &h1, li {
     font-size: 80%;
   }
 }
 
-.left {
+.jobs1 {
   width: 80%;
     }
 }
