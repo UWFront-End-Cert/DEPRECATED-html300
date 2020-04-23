@@ -61,7 +61,7 @@ const chicago = [
 
 //This is the template for the box of each card
 const inputs = chicago.map(function(el) {
-				let career = `<div class="career">
+				let career = `<div class="jobBox">
 			<section class="career1">
 		<img class="headshot" src="img/unsplash-headshot.jpg" alt="20-something smiling developer in his nice button down shirt">
 				<p class="career1_name">${el.name} </p>
@@ -76,9 +76,12 @@ const inputs = chicago.map(function(el) {
 				 <li class="career2_major"><b>Major:</b> ${el.major} </li>
 				 <li class="career2_email"><b>Email:</b> ${el.email} </li>
 				 <li class="career2_linkedInUrl"><img class="logo" src="img/linkedin.svg" alt="linkdin logo">  ${el.linkedInUrl} </li>
-				 <li class="career2_codeLanguages">${el.codeLanguages} </li>
-			 </ul>
-		</section>
+			</ul>
+  	</section>
+    <div class="codez">
+    <h3>Code Languages Acquired: </h3>
+     <p class="career2_codeLanguages">${el.codeLanguages} </p>
+    </div>
 		</div>`;
 		return career;
 });

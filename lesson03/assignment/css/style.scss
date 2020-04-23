@@ -57,19 +57,24 @@ $font-weight: normal;
             -ms-flex-pack: $justify;
 }
 */
-
+//This is here to get the boxes to stack
 .main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
       }
-
-.career {
+//This is here to get the styling for the outside of the boxes
+.jobBox {
   display: flex;
   flex-direction: row;
   width: 60%;
   border-style: solid;
   border-color: $blue;
   border-width: 30px;
+}
+
+.career1 {
+  display: flex;
+  flex-direction: column;
 }
   //the width of our main container
 /*$holder: 800;
@@ -90,8 +95,9 @@ p {
   font-family: $font;
   font-size: 70%;
   font-weight: $font-weight;
-  &_special {
-    font-size: 80%;
+  &.career1_name {
+    font-size: 90%;
+    font-weight: bold;
   }
 }
 //stuff for the left side of the card
@@ -99,9 +105,7 @@ li {
   font-family: $font;
   font-size: 70%;
   font-weight: $font-weight;
-  &_special {
-    list-style-type: none;
-  }
+  list-style: none;
 }
 
 
@@ -138,9 +142,21 @@ want the background to be bluish and to be a box with the main box*/
   }
     }
 
+.codez {
+  width: 50%;
+  padding: 1%;
+  border-style: groove;
+  border-width: 10px;
+  background-color: #f2ccff;
+  }
+
+  h3 {
+    font-size: 80%;
+  }
+
   //This is all the logo coding
 .logo {
-  width: 10%;
+  width: 5%;
 }
 
 /*tablet size*/
