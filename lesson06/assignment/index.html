@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 06 - Bootstrap 4</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <!--struggled to make alpha link below work -->
+      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/style.css" />
+      <title>Assignment 06 - Bootstrap 4 </title>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link active" href="index.html" data-toggle="tooltip" title="Jumbotron and carousel">Home <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="page2-images.html" data-toggle="tooltip" title="Random fluid/responsive images">Travel Photos</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="page3-accordion.html" data-toggle="tooltip" title="Accordion">About Us</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="page4-grid.html" data-toggle="tooltip" title="Grid">Trips</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <main class="main">
+         <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+               <h1>Bootstrap Assignment</h1>
+               <p> This assignment is to showcase skills using some Bootstrap 4 features </p>
+            </div>
+         </div>
+         <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+               <li data-target="#myCarousel" data-slide-to="1"></li>
+               <li data-target="#myCarousel" data-slide-to="2"></li>
+               <li data-target="#myCarousel" data-slide-to="3"></li>
+               <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ul>
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                 <!--To show not using gulp take out leading '/' ... 'img/belize.jpg' ?-->
+                  <img class="img-fluid" src="/img/belize.jpg" alt="Belize">
+               </div>
+               <div class="carousel-item">
+                  <img class="img-fluid" src="/img/costarica.jpg" alt="Costa Rica">
+               </div>
+               <div class="carousel-item">
+                  <img  class="img-fluid" src="/img/croatia.jpg" alt="Croatia">
+               </div>
+               <div class="carousel-item">
+                  <img class="img-fluid" src="/img/italy.jpg" alt="Italy">
+               </div>
+               <div class="carousel-item">
+                  <img  class="img-fluid" src="/img/thaibeach.jpg" alt="Thailand">
+               </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            </a>
+         </div>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+   </body>
 </html>

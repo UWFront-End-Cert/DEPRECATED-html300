@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/style.css" />
+      <title>Assignment 06 - Bootstrap 4 </title>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link" href="index.html" data-toggle="tooltip" title="Jumbotron and carousel">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="page2-images.html" data-toggle="tooltip" title="Random fluid/responsive images">Travel Photos</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link active" href="page3-accordion.html" data-toggle="tooltip" title="Accordion">About Us <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="page4-grid.html" data-toggle="tooltip" title="Grid">Trips</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <main class="main">
+         <!--Accordion wrapper-->
+         <div class="accordion md-accordion" id="accordions" role="tablist" aria-multiselectable="true">
+            <!-- Accordion card -->
+            <div class="card">
+               <!-- Card header -->
+               <div class="card-header" role="tab" id="headingOne1">
+                  <a data-toggle="collapse" data-parent="#accordions" href="#collapseOne1" aria-expanded="true"
+                     aria-controls="collapseOne1">
+                     <h5 class="mb-0">
+                        Booking Conditions <i class="fas fa-angle-down rotate-icon"></i>
+                     </h5>
+                  </a>
+               </div>
+               <!-- Card body -->
+               <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                  data-parent="#accordions">
+                  <div class="card-body">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni mollitia modi quis,
+                     sequi minima voluptatum aliquid est veritatis, culpa voluptas dolores ea,
+                     itaque dolorem fugiat eius odio inventore quibusdam. Voluptatibus reiciendis
+                     magnam autem nam, quisquam eum cumque possimus. Perspiciatis, deleniti, illum
+                     alias cupiditate est, nihil atque, explicabo esse amet laudantium tempore?
+                     Placeat, optio tenetur. Facere laborum velit omnis ea veniam expedita,
+                     suscipit architecto consectetur itaque. Ipsum possimus, animi tenetur consequatur
+                     odio quasi illum deleniti amet itaque. Impedit ipsam cumque et, fuga. Sed
+                     distinctio laudantium, delectus aperiam obcaecati ex tenetur eius.
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <!-- Card header -->
+               <div class="card-header" role="tab" id="headingTwo2">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordions" href="#collapseTwo2"
+                     aria-expanded="false" aria-controls="collapseTwo2">
+                     <h5 class="mb-0">
+                        Travel Insurance <i class="fas fa-angle-down rotate-icon"></i>
+                     </h5>
+                  </a>
+               </div>
+               <!-- Card body -->
+               <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                  data-parent="#accordions">
+                  <div class="card-body">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     Odio iste distinctio dolores ab voluptatem, vel expedita nemo ducimus,
+                     porro dolor, molestiae? Enim quaerat ullam, labore quas perspiciatis
+                     veniam magnam suscipit quod optio eveniet corrupti in dolorem architecto
+                     fuga magni, laborum, atque! Tenetur mollitia, perferendis provident
+                     odit dolores, laboriosam necessitatibus veritatis neque eum magnam
+                     dicta corporis, nobis a. Tempora, delectus minus!
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <!-- Card header -->
+               <div class="card-header" role="tab" id="headingThree3">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordions" href="#collapseThree3"
+                     aria-expanded="false" aria-controls="collapseThree3">
+                     <h5 class="mb-0">
+                        FAQ <i class="fas fa-angle-down rotate-icon"></i>
+                     </h5>
+                  </a>
+               </div>
+               <!-- Card body -->
+               <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                  data-parent="#accordions">
+                  <div class="card-body">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam assumenda
+                     ullam corrupti provident, dolorum pariatur libero illum. Alias nam voluptate,
+                     iste tempore, distinctio possimus quo quibusdam velit mollitia rerum deleniti,
+                     nostrum repellendus reiciendis ducimus voluptatum culpa asperiores voluptas
+                     numquam totam officia doloribus fugiat itaque illum corrupti. Laudantium,
+                     reiciendis? Expedita itaque veritatis porro accusantium deserunt exercitationem,
+                     magnam cupiditate nemo sint tempora.
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <script src="https://kit.fontawesome.com/4c496fc4fb.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </body>
+</html>
