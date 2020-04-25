@@ -1,0 +1,35 @@
+$pink: #FF1493;
+
+// Colors
+$gray: #f6f5f6;
+
+$white: #ffffff;
+$red: #F1352B;
+
+$black: #000000;
+$lighten-black:    lighten( $black, 30% );
+
+$blue: #150f96;
+$darken-blue:     darken( $blue, 5% );
+$lighten-blue:    lighten( $blue, 40% );
+
+//pulating heart
+$a-heart: 2s pulsate infinite alternate ease-in-out;
+
+@keyframes pulsate {
+  0% { transform: scale(1); opacity: 2;}
+  50% { transform: scale(1.8); opacity: 5;}
+  100% { transform: scale(1); opacity: 8;}
+}
+
+//underline transformation on card flipping text
+$a-under: all 1s ease-in-out;
+
+$i: 0;
+//pictures load with browser sync - gulp, but not on just opening html file- try removing leading /
+$pictures: ('/img/belize.jpg',
+'/img/costarica.jpg',
+'/img/croatia.jpg',
+'/img/italy.jpg',
+'/img/thai.jpg',
+ '/img/thaibeach.jpg');
