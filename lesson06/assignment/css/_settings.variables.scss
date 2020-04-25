@@ -25,9 +25,9 @@ $a-under: all 1s ease-in-out;
 
 $i: 0;
 //pictures load with browser sync - gulp, but not on just opening html file- try removing leading /
-$pictures: ('/img/belize.jpg',
-'/img/costarica.jpg',
-'/img/croatia.jpg',
-'/img/italy.jpg',
-'/img/thai.jpg',
- '/img/thaibeach.jpg');
+$pictures: ('img/belize.jpg',
+'img/costarica.jpg',
+'img/croatia.jpg',
+'img/italy.jpg',
+'img/thai.jpg',
+ 'img/thaibeach.jpg');
