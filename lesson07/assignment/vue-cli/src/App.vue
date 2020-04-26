@@ -1,51 +1,43 @@
 <template>
-   <div id="app">
-      <div id="nav">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-               <ul class="navbar-nav">
-                  <li class="nav-item">
-                     <router-link to="/">Home</router-link>
-                  </li>
-                  <li class="nav-item">
-                     <router-link to="/about">About</router-link>
-                  </li>
-                  <li class="nav-item">
-                     <router-link to="/trips">Trips</router-link>
-                  </li>
-                  <li class="nav-item">
-                     <router-link to="/travel-photos">Travel Photos</router-link>
-                  </li>
-               </ul>
-            </div>
-         </nav>
-      </div>
-      <router-view/>
-   </div>
+<div id="app">
+ <div id="nav">
+    <b-navbar toggleable="lg" type="light" variant="light">
+       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+       <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav>
+             <b-nav-item  to="/" >Home</b-nav-item>
+             <b-nav-item  to="/about">About Us</b-nav-item>
+             <b-nav-item  to="/trips">Trips</b-nav-item>
+             <b-nav-item  to="/travel-photos">Travel Photos</b-nav-item>
+          </b-navbar-nav>
+       </b-collapse>
+    </b-navbar>
+ </div>
+ <router-view/>
+</div>
 </template>
 
 
+<style lang='scss'>
+@import './src/main.scss';
 
+#nav a {
+	color: $lighten-black;
+	display: block;
+	padding: .5em;
+	margin: .5em;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;}
 
+#nav a:hover,#nav a:focus  {
+		text-decoration: underline;
+    color: $darken-blue;
+	}
 
-
-
-
-
-
-
-<style lang="scss">
-@import '../src/main.scss';
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+#nav a.router-link-exact-active {
   color: $black;
+  font-weight:bold;
 }
 
 ul {
@@ -55,22 +47,28 @@ ul {
 	text-align: left;
 }
 
+ul[data-title]::before {
+	content: attr(data-title);
+	text-decoration: underline;
+	font-weight: bold;
+}
+
 li {
 	text-align: left;
 }
 
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
 #nav {
-  padding: 30px;
+  padding: 0px;
 }
 
-#nav a {
-  font-weight: bold;
-  //color: #0000CC;
-  color:$pink;
-}
-
-#nav a.router-link-exact-active {
-  color: #CCE6FF;
-}
 
 </style>
