@@ -1,18 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Jumbotron msg="Bootstrap/Vue Assignment"/>
+  <div>
+    <app-header></app-header>
+	<app-sidebar></app-sidebar>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Jumbotron from '@/components/Jumbotron.vue'
+  //import your components here
+  import Header from '@/components/Jumbotron.vue'
+  import SideBar from '@/components/Carousel.vue'
+  export default {
 
-export default {
-  name: 'Home',
-  components: {
-    Jumbotron
-  }
-}
+    components: {
+      'app-header': Header,
+      'app-sidebar' : SideBar
+    }
+
+ }
 </script>
