@@ -21,7 +21,6 @@ export default {
 <style scoped>
 
 .jumbo{
-padding: 2rem;
 text-align: left;
 }
 

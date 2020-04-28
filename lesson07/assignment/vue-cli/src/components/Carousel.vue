@@ -14,46 +14,56 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
+
+
       <b-carousel-slide
         v-for="item in carouselItems"
         :key="item.id"
-        :caption="item.caption"
         :img-alt="item.text"
         :img-src="item.image"
       ></b-carousel-slide>
+
+<!--https://forum.vuejs.org/t/simple-clarification-of-when-using-key-with-v-for-is-appropriate-and-why/28966/5 -->
+<!--https://www.vuemastery.com/courses/next-level-vue/mixins/-->
+
     </b-carousel>
   </div>
 </template>
 
 <script>
 
-
 export default {
   data() {
     return {
-      carouselItems: [
-        {
-          id: 1,
-          caption: "Memories",
-          image: require("@/assets/belize.png"),
-          text: "Picture of Belize"
-        },
-        {
-          id: 2,
-          caption: "Costa Rica - Manuel Antonio National Park",
-          image: require("@/assets/costarica.png"),
-          //"@/assets/costarica.jpg",
-          //"https://picsum.photos/1024/480/?image=54"
-          text: "Picture of Costa Rica"
-        },
-        {
-          id: 3,
-          caption: "Memories",
-          image: require("@/assets/croatia.png"),
-          //"@/assets/croatia.jpg",
-          text: "Picture of Croatia"
-        }
-      ],
+    carouselItems:
+     [
+      {
+        id: 1,
+        image: require("@/assets/belize.png"),
+        text: "Picture of Belize"
+      },
+      {
+        id: 2,
+        image: require("@/assets/costarica.png"),
+        text: "Costa Rica - Manuel Antonio National Park"
+      },
+      {
+        id: 3,
+        image: require("@/assets/croatia.png"),
+        text: "Picture of Croatia"
+      },
+      {
+        id: 4,
+        image: require("@/assets/italy.png"),
+        text: "Picture of Italy"
+      },
+      {
+        id: 5,
+        image: require("@/assets/thaibeach.png"),
+        text: "Picture of beach in Thailand"
+      }
+    ],
+
       slide: 0,
       sliding: null
     };
@@ -68,3 +78,19 @@ export default {
   }
 };
 </script>
+
+
+<style scoped lang='scss'>
+
+  .carousel {
+  width: 28rem;
+  overflow: hidden;
+  }
+  .carousel-item {
+  object-fit: cover;
+  height: 19rem;
+  width: 28rem;
+  }
+
+
+</style>
