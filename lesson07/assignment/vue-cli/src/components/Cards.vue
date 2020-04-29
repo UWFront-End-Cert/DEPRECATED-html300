@@ -1,35 +1,37 @@
 <template>
   <div class="cards">
   <h2 class='flipper'> Belize </h2>
-    <font-awesome-icon icon="heart" />
+
+<div id="root">
+<button @click="changeFav">
+<font-awesome-icon v-bind:class="[isFav ? 'fav' : 'notfav' ]" icon="heart" />
+</button></div>
 
   </div>
 </template>
 
-<!--https://books.google.com/books?id=ovNFDwAAQBAJ&pg=PA275&lpg=PA275&dq=fa-heart-o+vue&source=bl&ots=2aePImIGFS&sig=ACfU3U2CgGr_WXW5f8yz6jHFtlxyq8g2TQ&hl=en&sa=X&ved=2ahUKEwjWgO2HwIzpAhVPcq0KHTV9Ak0Q6AEwA3oECAkQAQ#v=onepage&q=fa-heart-o%20vue&f=false-->
-<!--https://github.com/kaluznyt/vuebnb/blob/master/ClientApp/components/ListingSave.vue-->
-<!--https://codepen.io/whoacowboy/pen/vXOwgO-->
-<!--https://codepen.io/chillco/pen/BaaXYBO-->
-<!--https://blog.logrocket.com/full-guide-to-using-font-awesome-icons-in-vue-js-apps-5574c74d9b2d/-->
 
 
+<!--ideas-->
+<!--https://codepen.io/AndrewThian/pen/QdeOVa-->
 
-
-<!--https://forum.vuejs.org/t/simple-clarification-of-when-using-key-with-v-for-is-appropriate-and-why/28966/5 -->
-<!--https://www.vuemastery.com/courses/next-level-vue/mixins/-->
-<!--https://stackoverflow.com/questions/56004640/cannot-display-images-in-vuejs -->
-<!--https://top10webjs.com/2019/05/07/vue-js-cannot-display-images-in-vuejs/ -->
 
 <script>
-
 export default {
-
-  name: 'Cards'}
-</script>
-
-
-
-
+    name:'root',
+    data(){
+        return {
+             isFav: false,
+        }
+    },
+    methods:{
+        changeFav(){
+            this.isFav = !this.isFav
+            console.log(this.isFav);
+        }
+    }
+};
+     </script>
 
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -60,12 +62,12 @@ export default {
 }
 
 
-svg > path{
+.notfav > path{
 
 color:$red;
 opacity:.5;
-padding: .5rem;
-margin: .5rem;
+//padding: .5rem;
+//margin: .5rem;
 animation: $a-heart;
 
 &:hover{
@@ -73,7 +75,21 @@ transform: scale(1.7);
 animation: NULL;
 cursor: pointer;
 opacity:1;
+}}
+
+.fav > path{
+transform: scale(1.7);
+animation: NULL;
+cursor: pointer;
+opacity:1;
 }
+
+button{
+border:0;
+margin-right:1.5rem;
+padding-right:1.5rem;
+padding-bottom:1rem;
+background-color:white;
 }
 
 </style>

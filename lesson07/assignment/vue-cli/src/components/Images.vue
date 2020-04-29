@@ -8,6 +8,7 @@
       :src="item.image"
     fluid></b-img>
 
+    <!--https://forum.vuejs.org/t/simple-clarification-of-when-using-key-with-v-for-is-appropriate-and-why/28966/5 -->
 
 
   </div>

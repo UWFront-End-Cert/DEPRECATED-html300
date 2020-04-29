@@ -17,6 +17,10 @@
  <router-view/>
  </div>
 </div>
+
+<!--https://www.vuemastery.com/courses/next-level-vue/mixins/-->
+
+
 </template>
 
 
