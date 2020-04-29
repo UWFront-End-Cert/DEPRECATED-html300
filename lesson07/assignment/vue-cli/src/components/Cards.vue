@@ -1,12 +1,14 @@
 <template>
   <div class="cards">
   <h2 class='flipper'> Belize </h2>
-    <p>
+    <!--<font-awesome-icon icon="coffee" />-->
+    <font-awesome-icon icon="heart" />
+
+     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
-
 
   </div>
 </template>
@@ -16,12 +18,10 @@
 
 
 <script>
+
 export default {
-  name: 'Cards',
-  props: {
-    msg: String
-  }
-}
+
+  name: 'Cards'}
 </script>
 
 
