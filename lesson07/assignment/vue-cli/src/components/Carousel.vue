@@ -1,6 +1,3 @@
-<!--https://stackoverflow.com/questions/56004640/cannot-display-images-in-vuejs -->
-<!--https://top10webjs.com/2019/05/07/vue-js-cannot-display-images-in-vuejs/ -->
-
 <template>
   <div>
     <b-carousel
@@ -22,9 +19,6 @@
         :img-alt="item.text"
         :img-src="item.image"
       ></b-carousel-slide>
-
-<!--https://forum.vuejs.org/t/simple-clarification-of-when-using-key-with-v-for-is-appropriate-and-why/28966/5 -->
-<!--https://www.vuemastery.com/courses/next-level-vue/mixins/-->
 
     </b-carousel>
   </div>

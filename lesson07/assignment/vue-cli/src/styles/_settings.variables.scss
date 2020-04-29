@@ -13,9 +13,9 @@ $lighten-blue:    lighten( $blue, 40% );
 
 $a-heart: 2s pulsate infinite alternate ease-in-out;
 @keyframes pulsate {
-  0% { transform: scale(.04);}
-  50% { transform: scale(.06);}
-  100% { transform: scale(.04);}
+  0% { transform: scale(1.2);}
+  50% { transform: scale(1.6);}
+  100% { transform: scale(1.2);}
 }
 
 $a-under: all 1s ease-in-out;
