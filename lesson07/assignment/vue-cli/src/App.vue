@@ -20,10 +20,9 @@
 </template>
 
 
+
 <style lang='scss'>
-
 @import './src/main.scss';
-
 #nav a {
 	color: $lighten-black;
 	display: block;
@@ -32,38 +31,31 @@
 	text-decoration: none;
 	text-align: center;
 	cursor: pointer;}
-
 #nav a:hover,#nav a:focus  {
 		text-decoration: underline;
     color: $darken-blue;
 	}
-
 #nav a.router-link-exact-active {
   color: $black;
   font-weight:bold;
 }
-
 ul {
 	display: inline-block;
 	list-style-type: none;
 	vertical-align: text-top;
 	text-align: left;
 }
-
 ul[data-title]::before {
 	content: attr(data-title);
 	text-decoration: underline;
 	font-weight: bold;
 }
-
 li {
 	text-align: left;
 }
-
 #nav {
   padding: 0px;
 }
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -71,9 +63,7 @@ li {
   text-align: center;
   color: #2c3e50;
 }
-
 #bod{
 padding:2rem;
 }
-
 </style>

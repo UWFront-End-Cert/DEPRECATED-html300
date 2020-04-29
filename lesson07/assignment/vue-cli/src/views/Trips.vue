@@ -1,20 +1,16 @@
-<!--https://codepen.io/AndrewThian/pen/QdeOVa-->
-
 <template>
-  <div class="trips">
-  <app-photos></app-photos>
+  <div class="Trips">
+    <app-trips></app-trips>
   </div>
 </template>
 
 <script>
   //import your components here
-  import Card from '@/components/Card.vue'
+  import Cards from '@/components/Cards.vue'
   export default {
-
+  name: 'Trips',
     components: {
-      'app-photos': Card
+      'app-trips': Cards
     }
-
  }
-
 </script>

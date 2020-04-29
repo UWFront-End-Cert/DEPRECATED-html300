@@ -31,7 +31,6 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -63,7 +62,6 @@ export default {
         text: "Picture of beach in Thailand"
       }
     ],
-
       slide: 0,
       sliding: null
     };
@@ -81,7 +79,6 @@ export default {
 
 
 <style scoped lang='scss'>
-
   .carousel {
   width: 28rem;
   overflow: hidden;
@@ -91,6 +88,4 @@ export default {
   height: 19rem;
   width: 28rem;
   }
-
-
 </style>

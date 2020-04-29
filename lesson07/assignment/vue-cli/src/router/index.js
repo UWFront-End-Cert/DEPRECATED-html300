@@ -13,22 +13,18 @@ Vue.use(VueRouter)
   {
     path: '/about',
     name: 'About',
-
     component: () => import('../views/About.vue')
   },
   {
     path: '/trips',
     name: 'Trips',
-
     component: () => import('../views/Trips.vue')
   },
   {
     path: '/travel-photos',
     name: 'TravelPhotos',
-
     component: () => import('../views/TravelPhotos.vue')
   }
-
 ]
 
 const router = new VueRouter({
