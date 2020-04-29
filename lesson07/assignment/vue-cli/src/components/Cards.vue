@@ -16,7 +16,7 @@ https://codesandbox.io/s/m354w1mmp9-->
 
 
 
-      <h2 class='flipper' @click="flipCard"> Belize </h2>
+      <h2 class='flipper'> Belize </h2>
 
       <div id="favorite">
          <font-awesome-icon @click="changeFav" v-bind:class="[isFav ? 'fav' : 'notfav' ]" icon="heart" />
@@ -56,9 +56,7 @@ https://codesandbox.io/s/m354w1mmp9-->
 
 export default {
 	name: 'cards',
-  //components: {
-  //  'vue-flip': VueFlip
-  //},
+
 	data() {
 		return {
 			isFav: false,
@@ -73,20 +71,6 @@ export default {
 	}
 };
 
-
-//$(".heart.fa").click(function() {
-//  $(this).toggleClass("fa-heart fa-heart-o");
-//});
-
-//$('.flipper').click(function(){
-//    const flip= $(this).attr('id');
-//    const cardid = document.querySelector('#card'+flip);
-//    console.log(cardid);
-//    cardid.classList.toggle('is-flipped');
-//});
-
-
-
 </script>
 
 
@@ -95,66 +79,6 @@ export default {
 
 <style scoped lang='scss'>
 @import './src/main.scss';
-
-
-//cards
-.card-flip {
-	perspective: 1000px;
-}
-
-.card-flip,
-.card__face--front,
-.card__face--back {
-	width: 100%;
-	height: 480px;
-}
-
-.card-flip.is-flipped .card__face {
-	transform: rotateY(180deg);
-}
-
-.card__face {
-	transition: transform 1s;
-	transition-timing-function: linear;
-	transform-style: preserve-3d;
-	position: relative;
-}
-
-.card__face--front,
-.card__face--back {
-	backface-visibility: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.card__face--front {
-	z-index: 2;
-	transform: rotateY(0deg);
-}
-
-.card__face--back {
-	transform: rotateY(180deg);
-}
-
-.card-block {
-	height: 15rem;
-	overflow: hidden;
-}
-
-
-@each $pics in $picturessmall {
-	$i: $i+1;
-	#picture-#{$i} {
-		background: url($pics);
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 15rem;
-		background-position: center;
-	}
-}
-
-
 
 
 //flipper
