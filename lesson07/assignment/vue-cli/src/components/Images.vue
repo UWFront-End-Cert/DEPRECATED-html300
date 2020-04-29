@@ -3,7 +3,7 @@
 <!--https://vuejs-examples.netlify.app/#!/v-for -->
 
     <b-img
-      v-for="item in imageItems"  v-bind:key="item"
+      v-for="(item, idx) in imageItems" :key="idx"
       :alt="item.text"
       :src="item.image"
     fluid></b-img>

@@ -5,8 +5,5 @@
 </template>
 
 export default {
-  name: 'About',
-  components: {
-    Cards
-  }
+  name: 'About'
 }
