@@ -1,0 +1,441 @@
+
+//style for flying birds page
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+h1 {
+	font-family: 'Arima Madurai', cursive;
+	color: black;
+	font-size: 4rem;
+	letter-spacing: -3px;
+	//text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
+	position: relative;
+	z-index: 3;
+}
+
+.container {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// min-height: 100vh;
+	min-height: 35rem;
+	background-image: url('https://images.unsplash.com/photo-1496450681664-3df85efbd29f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9');
+	background-size: cover;
+	background-position: center center;
+	padding: 2rem;
+}
+
+.bird {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+	background-size: auto 100%;
+	width: 88px;
+	height: 125px;
+	will-change: background-position;
+
+	animation-name: fly-cycle;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+
+	&--one {
+		animation-duration: 1s;
+		animation-delay: -0.5s;
+	}
+
+	&--two {
+		animation-duration: 0.9s;
+		animation-delay: -0.75s;
+	}
+
+	&--three {
+		animation-duration: 1.25s;
+		animation-delay: -0.25s;
+	}
+
+	&--four {
+		animation-duration: 1.1s;
+		animation-delay: -0.5s;
+	}
+
+}
+
+.bird-container {
+	position: absolute;
+	top: 20%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+
+	animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	&--one {
+		animation-duration: 15s;
+		animation-delay: 0;
+	}
+
+	&--two {
+		animation-duration: 16s;
+		animation-delay: 1s;
+	}
+
+	&--three {
+		animation-duration: 14.6s;
+		animation-delay: 9.5s;
+	}
+
+	&--four {
+		animation-duration: 16s;
+		animation-delay: 10.25s;
+	}
+
+}
+
+@keyframes fly-cycle {
+
+	100% {
+		background-position: -900px 0;
+	}
+
+}
+
+@keyframes fly-right-one {
+
+	0% {
+		transform: scale(0.3) translateX(-10vw);
+	}
+
+	10% {
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+
+	20% {
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+
+	30% {
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+
+	40% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+
+}
+
+@keyframes fly-right-two {
+
+	0% {
+		transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+	}
+
+	10% {
+		transform: translateY(0vh) translateX(10vw) scale(0.4);
+	}
+
+	20% {
+		transform: translateY(-4vh) translateX(30vw) scale(0.6);
+	}
+
+	30% {
+		transform: translateY(1vh) translateX(50vw) scale(0.45);
+	}
+
+	40% {
+		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+	}
+
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.45);
+	}
+
+	51% {
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+
+}
+
+//style for growing bubbles
+
+
+.wrap {
+  margin: 50px;
+}
+
+.container {
+  display: inline-block;
+  width: 150px;
+}
+
+h1 {
+  color: lightgray;
+  font-family: lato;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 20px;
+  text-align: center;
+}
+
+.box {
+  border-radius: 50%;
+  height: 40px;
+  margin: 50px auto;
+  width: 40px;
+
+  .wrap:hover & {
+    transform: scale(2);
+  }
+}
+
+.box1 {
+  background: #60D4C8;
+  transition: all 300ms;
+}
+
+.box2 {
+  background: #46BAAF;
+  transition: all 1s;
+}
+
+.box3 {
+  background: #3EA69B;
+  transition: all 3s;
+}
+
+//alternate styling for growing bubbles
+//This was my failed attempt at turning these into submit buttons that transfrom into animial faces upon hover
+//wanted a word bubble to pop out of their mouths upon hover that said, "click me to submit". Sigh! maybe later.
+.wrap {
+  margin: 50px;
+}
+
+.container {
+  display: inline-block;
+  width: 150px;
+}
+
+h1 {
+  color: lightgray;
+  font-family: lato;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 20px;
+  text-align: center;
+}
+
+.box {
+  border-radius: 50%;
+  height: 40px;
+  margin: 50px auto;
+  width: 40px;
+
+
+  .wrap:hover & {
+    //transform: scale(2);
+    background-color: pink;
+    //transform: url(https://image.shutterstock.com/image-vector/cute-cat-face-vector-illustration-600w-725405950.jpg);
+    transform: skew(20deg);
+    }
+}
+
+
+.box1 {
+  background: #60D4C8;
+  transition: all 300ms, background-color 1s ease-out;
+}
+
+.box2 {
+  background: #46BAAF;
+  transition: all 1s;
+  }
+
+.box3 {
+  background: #3EA69B;
+  transition: all 3s;
+}
+
+
+//transforming circle section -- will turn it into photo menu
+.circle {
+  background: url(https://d13yacurqjgara.cloudfront.net/users/212457/screenshots/2212523/yo.jpg) #000;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  transition: all .3s ease-in-out;
+}
+
+.circle:hover {
+  border-radius:0;
+  cursor: pointer;
+}
+
+.text {
+  color: #fff;
+  opacity: 0;
+  text-align: center;
+  padding-top: 0px;
+  transition: all .3s ease-in-out;
+}
+
+.circle:hover .text {
+  padding-top: 40px;
+  opacity: 1;
+}
+
+//transforming circle code turned into photo menu
+//Each circle will transform into something useful for the User to read
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.circleW {
+  background: url(https://d13yacurqjgara.cloudfront.net/users/212457/screenshots/2212523/yo.jpg) #000;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  transition: all .3s ease-in-out;
+}
+
+.circleW:hover {
+  border-radius:0;
+  cursor: pointer;
+  height: 500px;
+}
+
+.textW {
+  color: #fff;
+  opacity: 0;
+  text-align: center;
+  padding-top: 0px;
+  transition: all .3s ease-in-out;
+
+}
+
+.circleW:hover .textW {
+  padding-top: 40px;
+  opacity: 1;
+  }
+
+//this is the About Our School menu item
+.circular1 {
+  background: url("https://images.unsplash.com/photo-1538506935284-964deccb7bde?ixlib=rb-1.2.1&auto=format&fit=crop&w=378&q=80");
+  background-position: right 35% top 35%;
+  width: 200px;
+  height: 200px;
+  margin-left: 1%;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.circular1:hover {
+  border-radius:0;
+  height: 500px;
+  cursor: pointer;
+}
+
+.text1 {
+  color: black;
+  opacity: 0;
+  text-align: center;
+  padding-top: 0px;
+  transition: all .3s ease-in-out;
+   }
+
+	 .title {
+  border: 20px solid #B88846;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none'
+	stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51
+	8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59'
+	cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
+}
+
+p {
+    color: #ffa64d;
+  }
+
+.circular1:hover .text1 {
+  padding-top: 40px;
+  opacity: 1;
+}
+
+//this is the Bording Policies menu item
+.circular2 {
+  background: url("https://images.unsplash.com/photo-1521201348394-27c8270c8503?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+  background-position: center;
+  background-size: 70%;
+  width: 200px;
+  height: 200px;
+  margin-left: 1%;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+
+.menu-item2 {
+  margin-left: 1%; //centers image
+ }
+
+.circular2:hover {
+  border-radius:0;
+  height: 500px;
+  cursor: pointer;
+}
+
+.circular2:hover .text1 {
+  padding-top: 40px;
+  opacity: 1;
+}
+
+//this is the Student Success Stories menu item
+.circular3 {
+  background: url("https://images.unsplash.com/photo-1563395061046-18e4a0e2d938?ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80");
+  background-position: right 55% bottom 35%;
+  background-repeat: no-repeat;
+    //background: url("https://images.unsplash.com/photo-1573764395121-6fce3ee5e5e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80");
+  width: 200px;
+  height: 200px;
+  margin-left: 1%;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+
+.menu-item3 {
+  margin-left: 1%; //centers image
+ }
+
+.circular3:hover {
+  border-radius:0;
+  height: 500px;
+  cursor: pointer;
+}
+
+.circular3:hover .text1 {
+  padding-top: 40px;
+  opacity: 1;
+}
