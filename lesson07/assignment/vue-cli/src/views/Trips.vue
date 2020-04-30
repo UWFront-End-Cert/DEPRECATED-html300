@@ -1,16 +1,19 @@
 <template>
   <div class="Trips">
-    <app-trips></app-trips>
+    <app-favs></app-favs>
+    <app-card></app-card>
   </div>
 </template>
 
 <script>
   //import your components here
+  import Favorite from '@/components/Favorite.vue'
   import Cards from '@/components/Cards.vue'
   export default {
   name: 'Trips',
     components: {
-      'app-trips': Cards
+      'app-favs': Favorite,
+      'app-card': Cards
     }
  }
 </script>
