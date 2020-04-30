@@ -1,0 +1,57 @@
+
+body {
+  background: $white;
+}
+
+.wrapper {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  overflow: hidden;
+
+  @include responsive(mobile) {
+      width: 300px;
+      height: 300px;
+    }
+}
+
+.wave {
+  width: 1000px;
+  height: 1025px;
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -470px;
+  border-radius: 35%;
+  background: $sea;
+  animation: wave 15s infinite linear;
+  transition: margin-top 2s ease;
+
+  @include responsive(mobile) {
+      width: 600px;
+      height: 615px;
+      margin-left: -300px;
+      margin-top: -282px;
+    }
+}
+
+
+@keyframes wave {
+  from { transform: rotate(0deg);}
+  from { transform: rotate(360deg);}
+}
+//Here is where I added my twist to this transition/animation//
+//Hover makes the water fill to the top them come back down//
+.wrapper:hover .wave {
+  margin-top: -850px;
+
+  @include responsive(mobile) {
+    margin-top: -510px;
+    }
+}
