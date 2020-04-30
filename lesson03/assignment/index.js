@@ -1,5 +1,5 @@
 // Pulling data
-const Content = [
+const content = [
   {
     "name": "Steve Smith",
     "jobTitle": "Project Manage",
@@ -56,22 +56,33 @@ const Content = [
 ];
 
 // using map array method to generate articles for each object in my returned Data
-Content.map(function(el) {
-  let Content = `<div class="Content">
-         <ul>
-           <li class="Content_name">${el.name}</li>
-           <li class="jobTitle">${el.jopTitle}</li>
-           <li class="Content_company">${el.company}</li>
-           <li class="Content_experience">${el.experience}</li>
-           <li class="Content_school">${el.school}</li>
-           <li class="Content_major">${el.major}</li>
-           <li class="Content_email">${el.email}</li>
-           <li class="Content_linkedInUrl">${el.linkedInUrl}</li>
-           <li class="Content_codeLanguages">${el.codeLanguages}</li>
-         </ul>
-       </div>
-  `;
-});
+$(document).ready(function() {
 
-// using Jquery to append code to html
-$(".Content").append(ContentHTML);
+  const contentHTML = content.map(function(el) {
+      let content = `
+        <div class="main-container">
+          <div class="box-1">
+            <h1>${el.name}</h1>
+            <p>${el.jobTitle}</p>
+          </div>
+          <div class="box-2">
+             <ul>
+               <li class="content_company">${el.company}</li>
+               <li class="content_experience">${el.experience}</li>
+               <li class="content_school">${el.school}</li>
+               <li class="content_major">${el.major}</li>
+               <li class="content_email">${el.email}</li>
+               <li class="content_linkedInUrl">${el.linkedInUrl}</li>
+               <li class="content_codeLanguages">${el.codeLanguages}</li>
+             </ul>
+           </div>
+        </div>
+      `;
+      // adding a return statement
+      return (content);
+    });
+
+    // using Jquery to append code to html
+    $(".content").append(contentHTML);
+
+  });
