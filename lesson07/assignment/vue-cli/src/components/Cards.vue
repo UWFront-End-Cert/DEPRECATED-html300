@@ -2,19 +2,12 @@
   <div class="cards">
   <h2 class='flipper'> Belize </h2>
 
-<div id="root">
-<button @click="changeFav">
-<font-awesome-icon v-bind:class="[isFav ? 'fav' : 'notfav' ]" icon="heart" />
-</button></div>
+
+<font-awesome-icon id="root" @click="changeFav" v-bind:class="[isFav ? 'fav' : 'notfav' ]" icon="heart" />
+
 
   </div>
 </template>
-
-
-
-<!--ideas-->
-<!--https://codepen.io/AndrewThian/pen/QdeOVa-->
-
 
 <script>
 export default {
@@ -27,7 +20,6 @@ export default {
     methods:{
         changeFav(){
             this.isFav = !this.isFav
-            console.log(this.isFav);
         }
     }
 };
@@ -66,8 +58,6 @@ export default {
 
 color:$red;
 opacity:.5;
-//padding: .5rem;
-//margin: .5rem;
 animation: $a-heart;
 
 &:hover{
@@ -80,16 +70,9 @@ opacity:1;
 .fav > path{
 transform: scale(1.7);
 animation: NULL;
+color: $red;
 cursor: pointer;
 opacity:1;
-}
-
-button{
-border:0;
-margin-right:1.5rem;
-padding-right:1.5rem;
-padding-bottom:1rem;
-background-color:white;
 }
 
 </style>
