@@ -63,7 +63,7 @@ https://codesandbox.io/s/m354w1mmp9-->
 
 <script>
 
-var deck1 = [{'location': 'belize','front': 'some image', 'details': 'link link link'}];
+var deck1 = [{'location': 'belize','images':'../assets/belize.png','details': 'link link link'}];
 
 export default {
     name:'cards',
@@ -76,6 +76,7 @@ export default {
     methods:{
     flip: function(){
       this.flipped = !this.flipped;
+      console.log(this.flipped)
     }
     }
 };
@@ -83,19 +84,14 @@ export default {
 </script>
 
 
-
-
-
 <style scoped lang='scss'>
 @import './src/main.scss';
 
 .cards {
-
         width: 100%;
         height: auto;
         display: inline-block;
         cursor: pointer;
-
 
         .flipper {
 
@@ -103,7 +99,7 @@ export default {
         height: 100%;
         color: $lighten-black;
         vertical-align: top;
-        //position: relative;
+        position: relative;
         display: inline-block;
         &:before,
         &:after {
@@ -130,38 +126,33 @@ export default {
     .card__face--front, .card__face--back {
     backface-visibility: hidden;
     position: absolute;
-
-    //top: 0;
-    left: 43%;
+    width: auto;
+    display: inline-block;
     }
-
     .card__face--front {
-        z-index: 2;
-
-
+        z-index: 0;
+        backface-visibility: hidden;
         transform: rotateY(0deg);
-        background-color: blue;//yes
-      // background:url({{card.image}})
+        width:50%;
+left:10%;
+        height:50%;
+        color: red;
+        background: url('../assets/belize.png');
         &.reveal-answer {
             transform: rotateY(180deg);
         }
     }
 
     .card__face--back {
+    backface-visibility: hidden;
         transform: rotateY(180deg);
-        background-color: black;//yes
+        color:green;
+        background-color: grey;
         flex-direction: column;
-        //line-height: 1;
-        &.reveal-answer {
-            transform: rotateY(0deg);
-        }
+        z-index:1;
+        &.reveal-answer {transform: rotateY(0deg);}
     }
 
 }
-
-
-
-
-
 
 </style>
