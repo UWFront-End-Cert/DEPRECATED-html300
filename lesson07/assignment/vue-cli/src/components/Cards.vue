@@ -15,7 +15,7 @@ https://codesandbox.io/s/m354w1mmp9-->
    <div class="cards">
 
 
-
+ <h2 class='flipper'> Belize </h2>
 <font-awesome-icon id="root" @click="changeFav" v-bind:class="[isFav ? 'fav' : 'notfav' ]" icon="heart" />
 
 
@@ -99,11 +99,8 @@ cursor: pointer;
 opacity:1;
 }
 
-<<<<<<< HEAD
-=======
 #favorite{
 display:inline-block;
 }
 
->>>>>>> f53ab0dea91ae1dd8f965fe3c5cd1564d1387f94
 </style>
