@@ -1,0 +1,153 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.main {
+    padding: 2rem;
+}
+
+h1 {
+    color: $black;
+}
+
+.box-container {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-gap: 1em;
+}
+
+img {
+  object-fit: scale-down;
+  width: 100%;
+  height: 100%;
+
+    }
+
+//source code: https://thoughtbot.com/blog/transitions-and-transforms
+
+.box {
+  height: 400px;
+  width: 300px;
+  margin: 2rem;
+    :hover & {
+    transform: scale(1.09);
+  }
+
+}
+
+.box0 {
+  @extend .box;
+  background: $white;
+   transition: 1.3s;
+
+}
+
+.box1 {
+  @extend .box;
+  background: $white;
+    transition: 1.3s;
+
+
+}
+
+.box2 {
+  @extend .box;
+  background: $white;
+    transition: 1.3s;
+
+
+}
+
+.box3 {
+  @extend .box;
+  background: $white;
+    transition: all 1.3s;
+
+
+}
+
+.box4 {
+  @extend .box;
+  background: $white;
+    transition: 1.3s;
+
+
+}
+
+.box5 {
+  @extend .box;
+  background: $white;
+    transition: 1.3s;
+
+
+}
+
+
+
+.circle-container {
+  margin-top: 300px;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin: 20px;
+
+  .circle-container:hover & {
+    transform: translateX(500px);
+  }
+}
+
+.circle0 {
+  @extend .circle;
+  background: $circle0;
+  transition: all 1.5s linear;
+}
+
+.circle1 {
+  @extend .circle;
+  background: $circle1;
+  transition: all 1.5s ease;
+}
+
+.circle2 {
+   @extend .circle;
+  background: $circle2;
+  transition: all 1.5s ease-in;
+}
+
+.circle3 {
+  @extend .circle;
+  background: $circle3;
+  transition: all 1.5s ease-out;
+}
+
+.circle4 {
+  @extend .circle;
+  background: $circle4;
+  transition: all 1.5s ease-in-out;
+}
+
+.circle5 {
+  @extend .circle;
+  background: $circle5;
+  transition: all 1.5s cubic-bezier(0,1,.98,0);
+}
+
+//Mobie Media Query - when reaches breakpoint, image stacks on top of text and content justifies left
+@include media-query ("mobile") {
+      .box-container {
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+
+      }
+}
