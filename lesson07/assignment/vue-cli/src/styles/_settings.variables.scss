@@ -20,6 +20,16 @@ $a-heart: 2s pulsate infinite alternate ease-in-out;
 
 $a-under: all 1s ease-in-out;
 
+$i: 0;
+//pictures load with browser sync - gulp, but not on just opening html file- try removing leading /
+$picturessmall: ('../assets/belize.png',
+'../assets/costarica.png',
+'../assets/croatia.png',
+'../assets/italy.png',
+'../assets/thai.png',
+ '../assets/thaibeach.png');
+
+
 $pictures: (
   belize: (
     image: require("@/assets/belize.png"),

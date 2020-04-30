@@ -1,6 +1,19 @@
 <template>
-  <div class="cards">
-  <h2 class='flipper'> Belize </h2>
+<!--ideas-->
+<!--https://codepen.io/AndrewThian/pen/QdeOVa-->
+<!--https://github.com/kgrandemange/vue-flip-->
+<!--https://codepen.io/RuudBurger/pen/bwjry-->
+<!--https://codesandbox.io/s/vue-template-lmvtj?file=/src/App.vue
+
+
+
+https://forum.vuejs.org/t/flip-just-one-element-at-a-time/83173/2
+
+https://codesandbox.io/s/m354w1mmp9-->
+
+
+   <div class="cards">
+
 
 
 <font-awesome-icon id="root" @click="changeFav" v-bind:class="[isFav ? 'fav' : 'notfav' ]" icon="heart" />
@@ -10,6 +23,7 @@
 </template>
 
 <script>
+
 export default {
     name:'root',
     data(){
@@ -23,16 +37,25 @@ export default {
         }
     }
 };
-     </script>
+
+</script>
 
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
+
+
 <style scoped lang='scss'>
 @import './src/main.scss';
+
+
+//flipper
+
 .flipper {
   vertical-align: top;
 	position: relative;
 	display: inline-block;
+  //adding:1rem;
+  //margin:1rem;
 	&:before,
 	&:after {
 		@include underline-main;
@@ -53,7 +76,7 @@ export default {
 	}
 }
 
-
+//favorite
 .notfav > path{
 
 color:$red;
@@ -68,6 +91,7 @@ opacity:1;
 }}
 
 .fav > path{
+color:$red;
 transform: scale(1.7);
 animation: NULL;
 color: $red;
@@ -75,4 +99,11 @@ cursor: pointer;
 opacity:1;
 }
 
+<<<<<<< HEAD
+=======
+#favorite{
+display:inline-block;
+}
+
+>>>>>>> f53ab0dea91ae1dd8f965fe3c5cd1564d1387f94
 </style>
