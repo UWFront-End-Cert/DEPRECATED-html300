@@ -46,8 +46,4 @@ export default {
 	opacity: 1;
 }
 
-#favorite {
-	display: inline-block;
-}
-
 </style>

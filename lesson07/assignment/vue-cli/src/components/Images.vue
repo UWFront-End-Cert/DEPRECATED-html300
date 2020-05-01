@@ -4,6 +4,7 @@
 
     <b-img
       v-for="(item, idx) in imageItems" :key="idx"
+      :id="item.id"
       :alt="item.text"
       :src="item.image"
     fluid></b-img>
@@ -20,27 +21,27 @@ export default {
     return {
     imageItems:
      [
-      {
+      { id: 'belize',
         image: require("@/assets/belize.png"),
         text: "Picture of Belize"
       },
-      {
+      { id: 'costarica',
         image: require("@/assets/costarica.png"),
         text: "Costa Rica - Manuel Antonio National Park"
       },
-      {
+      { id: 'croatia',
         image: require("@/assets/croatia.png"),
         text: "Picture of Croatia"
       },
-      {
+      { id: 'italy',
         image: require("@/assets/italy.png"),
         text: "Picture of Italy"
       },
-      {
+      { id: 'thailand',
         image: require("@/assets/thaibeach.png"),
         text: "Picture of beach in Thailand"
       },
-      {
+      { id: 'extra',
         image: require("@/assets/thai.png"),
         text: "Picture of Thailand"
       }
