@@ -4,3 +4,26 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.main {
+  color: white;
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  list-style: none;
+}
+
+ul {
+    border: brown, solid, 2px;
+}
+
+li {
+  color: white;
+}
+/*
+.nav1 {
+  display: flex;
+  flex-grow: 1;
+}
+*/
