@@ -216,131 +216,66 @@
   flex-direction: row;
 }
 
-.circleW {
-  background: url(https://d13yacurqjgara.cloudfront.net/users/212457/screenshots/2212523/yo.jpg) #000;
-  border-radius: 50%;
-  height: 200px;
-  width: 200px;
-  transition: all .3s ease-in-out;
-}
 
-.circleW:hover {
-  border-radius:0;
-  cursor: pointer;
-  height: 500px;
-}
-
-.textW {
-  color: #fff;
-  opacity: 0;
-  text-align: center;
-  padding-top: 0px;
-  transition: all .3s ease-in-out;
-
-}
-
-.circleW:hover .textW {
-  padding-top: 40px;
-  opacity: 1;
-  }
-
-//this is the About Our School menu item
-.circular1 {
-  background: url("https://images.unsplash.com/photo-1538506935284-964deccb7bde?ixlib=rb-1.2.1&auto=format&fit=crop&w=378&q=80");
-  background-position: right 35% top 35%;
+//this is the full menu
+.circular {
   width: 200px;
   height: 200px;
   margin-left: 1%;
   border-radius: 50%;
-  transition: all .3s ease-in-out;
-}
+  transition: all 0.3s ease-in-out;
 
-.circular1:hover {
-  border-radius:0;
+  //Here is the welcome menu - hope to add a verticle nav bar
+  &.circleW {
+  background: url(https://d13yacurqjgara.cloudfront.net/users/212457/screenshots/2212523/yo.jpg)
+    #000;
+  }
+  //this is the About Our School menu item
+  &.one { background: url("https://images.unsplash.com/photo-1538506935284-964deccb7bde?ixlib=rb-1.2.1&auto=format&fit=crop&w=378&q=80");
+  background-position: right 35% top 35%;}
+  //this is the Bording Policies menu item
+  &.two {
+  background: url("https://images.unsplash.com/photo-1521201348394-27c8270c8503?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+  background-position: center;
+  background-size: 70%;
+   }
+  //this is the Student Success Stories menu item
+  &.three {
+  background: url("https://images.unsplash.com/photo-1563395061046-18e4a0e2d938?ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80");
+  background-position: right 55% bottom 35%;
+  background-repeat: no-repeat;
+      }
+  //All the hover effects - tada!
+  &.circular:hover {
+  border-radius: 0;
   height: 500px;
   cursor: pointer;
 }
+  &.circular:hover .text {
+  padding-top: 40px;
+  opacity: 1;
+}
+     }
 
-.text1 {
+
+.text {
   color: black;
   opacity: 0;
   text-align: center;
   padding-top: 0px;
-  transition: all .3s ease-in-out;
-   }
+  transition: all 0.3s ease-in-out;
+  &.W {
+  color: #fff;
+ }
+    }
 
-	 .title {
-  border: 20px solid #B88846;
-  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none'
-	stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51
-	8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59'
-	cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
+.title {
+  border: 20px solid #b88846;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E")25;
 }
 
 p {
-    color: #ffa64d;
-  }
-
-.circular1:hover .text1 {
-  padding-top: 40px;
-  opacity: 1;
-}
-
-//this is the Bording Policies menu item
-.circular2 {
-  background: url("https://images.unsplash.com/photo-1521201348394-27c8270c8503?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
-  background-position: center;
-  background-size: 70%;
-  width: 200px;
-  height: 200px;
-  margin-left: 1%;
-  border-radius: 50%;
-  transition: all .3s ease-in-out;
-}
-
-
-.menu-item2 {
-  margin-left: 1%; //centers image
- }
-
-.circular2:hover {
-  border-radius:0;
-  height: 500px;
-  cursor: pointer;
-}
-
-.circular2:hover .text1 {
-  padding-top: 40px;
-  opacity: 1;
-}
-
-//this is the Student Success Stories menu item
-.circular3 {
-  background: url("https://images.unsplash.com/photo-1563395061046-18e4a0e2d938?ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80");
-  background-position: right 55% bottom 35%;
-  background-repeat: no-repeat;
-    //background: url("https://images.unsplash.com/photo-1573764395121-6fce3ee5e5e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80");
-  width: 200px;
-  height: 200px;
-  margin-left: 1%;
-  border-radius: 50%;
-  transition: all .3s ease-in-out;
-}
-
-
-.menu-item3 {
-  margin-left: 1%; //centers image
- }
-
-.circular3:hover {
-  border-radius:0;
-  height: 500px;
-  cursor: pointer;
-}
-
-.circular3:hover .text1 {
-  padding-top: 40px;
-  opacity: 1;
+  color: #ffa64d;
 }
 
 //animated Sun menu for my Captain Kitty Site -- something fun and a little tacky
