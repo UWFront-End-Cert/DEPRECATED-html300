@@ -68,6 +68,6 @@ li {
   color: #2c3e50;
 }
 #bod{
-padding:2rem;
+padding:1rem;
 }
 </style>

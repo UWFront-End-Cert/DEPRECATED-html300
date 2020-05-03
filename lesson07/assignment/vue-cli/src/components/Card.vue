@@ -12,9 +12,8 @@ https://codesandbox.io/s/m354w1mmp9-->
 
 
 <div class='card-single'>
-   <b-container >
-      <b-row>
-         <b-col cols='4' v-for="(card, idx) in decks" :key="idx" :id="card.id">
+
+
             <app-favs></app-favs>
             <div class="flipper" @click="flip()" >
                <h2>{{card.location}}</h2>
@@ -26,8 +25,7 @@ https://codesandbox.io/s/m354w1mmp9-->
                   <div class="wrapper">
                   <div class="zoom-effect-container">
                     <div class="image-card">
-                    <img :src="getImgUrl(card.images)" />
-                        <!--<img src="../assets/belize.png"/>-->
+                    <b-img fluid :src="getImgUrl(card.images)"></b-img>
                     </div>
                   </div>
                   </div>
@@ -46,29 +44,28 @@ https://codesandbox.io/s/m354w1mmp9-->
                   </div>
                </div>
             </div>
-         </b-col>
-      </b-row>
-   </b-container>
+
 </div>
 
 </template>
 
 <script>
 import Favorite from '@/components/Favorite.vue'
-var deck1 = [{'id': 'belize',
-'location': 'Belize',
-'images':'belize.png',
-'imagelink': '/travel-photos#belize'}];
 
 
 export default {
     name:'card',
+    props: {
+    card: {
+    type: Object,
+    required:true
+    }
+  },
     components: {
       'app-favs': Favorite
     },
     data(){
         return {
-        decks: deck1,
         flipped:false
         }
     },
@@ -95,9 +92,6 @@ export default {
 }
 
 .zoom-effect-container {
-    //float: left;
-
-
     position: relative;
     width: auto;
     height: 100%;
@@ -107,15 +101,16 @@ export default {
 
 .image-card {
   position: absolute;
-  bottom:-50%;
+  //width:auto;
+  bottom:-20%;
   left: 0;
-
 }
 
 .image-card img {
   transition: 3s ease;
   object-fit: cover;
   width: 100%;
+  height: 480px;
 }
 
 .zoom-effect-container:hover .image-card img {
@@ -129,8 +124,8 @@ export default {
 .card-flip,
 .card__face--front,
 .card__face--back {
-	width: 100%;
-	height: 480px;
+  width: auto;
+	height: 30rem;
 }
 
 .card-flip.is-flipped .card__face {
@@ -177,6 +172,7 @@ a {
 
 .card-block {
 	height: 15rem;
+  width:auto;
 	overflow: hidden;
 }
 
