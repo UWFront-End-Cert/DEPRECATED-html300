@@ -25,7 +25,9 @@ https://codesandbox.io/s/m354w1mmp9-->
                   <div class="wrapper">
                   <div class="zoom-effect-container">
                     <div class="image-card">
-                    <b-img fluid :src="getImgUrl(card.images)"></b-img>
+                    <b-img v-b-tooltip.hover title="Click name above to see more!" fluid
+                    :src="getImgUrl(card.images)"
+                    :alt="card.text"></b-img>
                     </div>
                   </div>
                   </div>
@@ -125,7 +127,7 @@ export default {
 .card__face--front,
 .card__face--back {
   width: auto;
-	height: 30rem;
+	height: 15rem;
 }
 
 .card-flip.is-flipped .card__face {
@@ -144,13 +146,15 @@ export default {
 	position: absolute;
 	top: 0;
 	left: 0;
+  width: 100%;
 }
 
 .card__face--front {
 	width: 100%;
 	z-index: 2;
 	transform: rotateY(0deg);
-	height: 15rem;}
+	//height: 15rem;
+  }
 
 
 a {
@@ -177,13 +181,14 @@ a {
 }
 
 .flipper {
-  padding-left:1em;
+  margin-left:1em;
 	width: auto;
 	height: 8%;
 	color: $lighten-black;
 	vertical-align: top;
 	position: relative;
 	display: inline-block;
+  cursor:pointer;
 	&:before,
 	&:after {
 		@include underline-main;

@@ -24,23 +24,28 @@ var decks = [
 {'id': 'belize',
 'location': 'Belize',
 'images':'belize.png',
-'imagelink': '/travel-photos#belize'},
+'imagelink': '/travel-photos#belize', //this id section thing doesn't work correctly
+text: "Picture of Belize"},
 {'id': 'costarica',
 'location': 'Costa Rica',
 'images':'costarica.png',
-'imagelink': '/travel-photos#costarica'},
+'imagelink': '/travel-photos#costarica',
+text: "Costa Rica - Manuel Antonio National Park"},
 {'id': 'croatia',
 'location': 'Croatia',
 'images':'croatia.png',
-'imagelink': '/travel-photos#croatia'},
+'imagelink': '/travel-photos#croatia',
+text: "Picture of Croatia"},
 {'id': 'italy',
 'location': 'Italy',
 'images':'italy.png',
-'imagelink': '/travel-photos#italy'},
+'imagelink': '/travel-photos#italy',
+text: "Picture of Italy"},
 {'id': 'thailand',
 'location': 'Thailand',
 'images':'thaibeach.png',
-'imagelink': '/travel-photos#thailand'}
+'imagelink': '/travel-photos#thailand',
+text: "Picture of beach in Thailand"}
 ];
 
 

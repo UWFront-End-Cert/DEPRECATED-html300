@@ -16,12 +16,14 @@ https://top10webjs.com/2019/05/07/vue-js-cannot-display-images-in-vuejs/-->
       @sliding-end="onSlideEnd"
     >
 
-      <b-carousel-slide
-        v-for="item in carouselItems"
-        :key="item.id"
-        :img-alt="item.text"
-        :img-src="item.image"
-      ></b-carousel-slide>
+    <b-carousel-slide
+       v-for="item in card"
+       :key="item.id"
+       :img-alt="item.text"
+       :img-src="getImgUrl(item.images)"
+     ></b-carousel-slide>
+
+
 
     </b-carousel>
   </div>
@@ -29,41 +31,22 @@ https://top10webjs.com/2019/05/07/vue-js-cannot-display-images-in-vuejs/-->
 
 <script>
 export default {
+props: {
+card: {
+type: Array,
+required:true
+}
+},
   data() {
     return {
-    carouselItems:
-     [
-      {
-        id: 1,
-        image: require("@/assets/belize.png"),
-        text: "Picture of Belize"
-      },
-      {
-        id: 2,
-        image: require("@/assets/costarica.png"),
-        text: "Costa Rica - Manuel Antonio National Park"
-      },
-      {
-        id: 3,
-        image: require("@/assets/croatia.png"),
-        text: "Picture of Croatia"
-      },
-      {
-        id: 4,
-        image: require("@/assets/italy.png"),
-        text: "Picture of Italy"
-      },
-      {
-        id: 5,
-        image: require("@/assets/thaibeach.png"),
-        text: "Picture of beach in Thailand"
-      }
-    ],
       slide: 0,
       sliding: null
     };
   },
   methods: {
+  getImgUrl: function(pic){
+  return require('@/assets/'+pic)
+  },
     onSlideStart() {
       this.sliding = true;
     },
@@ -82,7 +65,7 @@ export default {
   }
   .carousel-item {
   object-fit: cover;
-  height: 19rem;
+  height: 18.75rem;
   width: 28rem;
   }
 </style>
