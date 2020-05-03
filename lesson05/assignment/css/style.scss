@@ -7,12 +7,12 @@
 //attaching my grid to the body tag
 .main-grid {
   display: grid;
-  min-width: 1040px   //laptop size and larger
-  margin: 0;
+  min-width: 1040px;   //laptop size and larger
   grid-template-columns:  1fr, 44%;
   grid-template-rows: 15%, 1fr, auto, 15%;
-    @include media query (max-width: 500px;) {     //mobile sized - won't do much arranging, because I want everything to stack.
-    grid-template-areas:
+  //mobile sized - won't do much arranging, because I want everything to stack.
+    @include media query: (max-width: 500px;) {
+    grid-template-areas: 
     'header'
     'mav'
     'main'
