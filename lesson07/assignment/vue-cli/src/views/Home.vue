@@ -9,6 +9,11 @@
 </template>
 
 <script>
+
+//tried moving decks variable to main.js and importing into .vue
+//import {decks} from 'main.js'
+//get unused vars error - how do I fix this to only have this variable in one place?
+
 var decks = [
 {'id': 'belize',
 'location': 'Belize',

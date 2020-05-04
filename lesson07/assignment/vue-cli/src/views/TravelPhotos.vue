@@ -7,11 +7,16 @@
 </template>
 
 
-
-
 <script>
 
 import Images from '@/components/Images.vue'
+
+//tried moving decks variable to main.js and importing into .vue
+//import {decks} from 'main.js'
+//get unused vars error - how do I fix this to only have this variable in one place?
+//would also like to add images array to decks object and populate more than one per place in travel photos page
+//- selecting first image for trips cards - might get it to work later
+
 var decks = [
 {'id': 'belize',
 'location': 'Belize',
@@ -40,7 +45,6 @@ text: "Picture of Italy"},
 text: "Picture of beach in Thailand"}
 ];
 
-  //import your components here
   export default {
     name: 'TravelPhotos',
 

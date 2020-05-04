@@ -1,7 +1,3 @@
-<!-- Images werent displaying - finally realized i needed png not jpg - these 2 articles were helpful though:
-https://stackoverflow.com/questions/56004640/cannot-display-images-in-vuejs
-https://top10webjs.com/2019/05/07/vue-js-cannot-display-images-in-vuejs/-->
-
 <template>
   <div>
     <b-carousel
@@ -13,17 +9,14 @@ https://top10webjs.com/2019/05/07/vue-js-cannot-display-images-in-vuejs/-->
       background="#ababab"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    >
+      @sliding-end="onSlideEnd">
 
     <b-carousel-slide
        v-for="item in card"
        :key="item.id"
        :img-alt="item.text"
-       :img-src="getImgUrl(item.images)"
-     ></b-carousel-slide>
-
-
+       :img-src="getImgUrl(item.images)">
+     </b-carousel-slide>
 
     </b-carousel>
   </div>
@@ -59,6 +52,8 @@ required:true
 
 
 <style scoped lang='scss'>
+@import './src/main.scss';
+
   .carousel {
   width: 28rem;
   overflow: hidden;

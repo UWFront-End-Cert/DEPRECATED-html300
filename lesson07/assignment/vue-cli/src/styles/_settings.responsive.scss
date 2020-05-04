@@ -38,6 +38,7 @@
 $breakpoints: (
     "xl"            "screen and (min-width: 1300px)",
     "desk"          "screen and (min-width: 1024px)",
+    "md"            "screen and (max-width: 991.98px)",
     "lg"            "screen and (min-width: 920px)",
     "tab"           "screen and (min-width: 768px)",
     "mobile"        "screen and (max-width: 767px)",

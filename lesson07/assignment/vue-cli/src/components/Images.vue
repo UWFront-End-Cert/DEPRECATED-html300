@@ -1,42 +1,32 @@
 <template>
-  <section class="images" :id="card.id">
-  <h2 > {{card.location}}</h2>
-<!--https://vuejs-examples.netlify.app/#!/v-for -->
-<!--https://forum.vuejs.org/t/simple-clarification-of-when-using-key-with-v-for-is-appropriate-and-why/28966/5 -->
-  <b-img
-
-      :alt="card.text"
-      :src="getImgUrl(card.images)"
-    fluid></b-img>
-
-
-
-  </section>
+   <section class="images" :id="card.id">
+      <h2 > {{card.location}}</h2>
+      <b-img
+         :alt="card.text"
+         :src="getImgUrl(card.images)"
+         fluid></b-img>
+   </section>
 </template>
 
 <script>
-export default {
-name: 'Images',
-props: {
-card: {
-type: Object,
-required:true
-}
-},
-methods:{
-getImgUrl: function(pic){
-return require('@/assets/'+pic)
-}},
-  data() {
-    return {
-
-    };
-  }
-};
+	export default {
+		name: 'Images',
+		props: {
+			card: {
+				type: Object,
+				required: true
+			}
+		},
+		methods: {
+			getImgUrl: function (pic) {
+				return require('@/assets/' + pic)
+			}
+		}
+	};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang='scss'>
+@import './src/main.scss';
 h3 {
   margin: 40px 0 0;
 }
