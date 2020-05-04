@@ -20,16 +20,13 @@
   grid-template-columns:  1fr 65%;
   grid-template-rows: 15% 10% 75% 15%;
   //mobile sized - won't do much arranging, because I want everything to stack.
-/*   @media (max-width: 500px) {
     grid-template-areas:
     'header'
     'mav'
     'main'
     'article'
     'footer'
-      }
-      */
-}
+  }
 
 //All the words styled right!
 
@@ -100,3 +97,15 @@ footer {
   grid-row: 4;
   //grid-area: footer;
 }
+
+@media only screen and (min-width: 500px)  {
+    .main-grid {
+
+        grid-template-columns: auto;
+        grid-template-areas:
+    "header header"
+        "nav nav"
+        "article main"
+        "footer   footer";
+    }
+    }
