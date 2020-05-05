@@ -1,7 +1,7 @@
 
 //style for flying birds page
 //did not change this code at all, just wanted to mess with it a little, but was a little.
-//see the code below this section - have commented out the native code and the changed code.
+//see the code below this section - have commented out and changed the code for the transforming circle and the dancing flower, but left the flying birds mostly alone..
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
 
 *,
@@ -12,7 +12,7 @@
 
 .flight {
 	font-family: 'Arima Madurai', cursive;
-	color: black;
+	color: black;  //changed the color of the text
 	font-size: 4rem;
 	letter-spacing: -3px;
 	//text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
@@ -36,12 +36,12 @@
 }
 
 .bird {
-	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);  //changed this background
 	background-size: auto 100%;
 	width: 88px;
 	height: 125px;
 	will-change: background-position;
-
+//played around with the animation a bit but found it too complicated to change - and there really wasn't anything that I wanted to add
 	animation-name: fly-cycle;
 	animation-timing-function: steps(10);
 	animation-iteration-count: infinite;
@@ -183,6 +183,7 @@
 
 
 //transforming circle section -- will turn it into photo menu
+//for this section I wanted to take the circle and turn it into a menu - I have not commented out any of the native code
 .circle {
   background: url(https://d13yacurqjgara.cloudfront.net/users/212457/screenshots/2212523/yo.jpg) #000;
   border-radius: 50%;
@@ -216,6 +217,11 @@
   flex-direction: row;
 }
 
+@mixin font-style {
+	color: #ffa64d;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 12px;
+}
 
 //this is the full menu
 .circular {
@@ -268,29 +274,34 @@
   color: #fff;
  }
     }
-
+//this is a fancy frame around the headers like a frame for a protrait
 .title {
   border: 20px solid #b88846;
   border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E")25;
 }
 
 p {
-  color: #ffa64d;
+  @include font-style;
 }
+
 
 //animated Sun menu for my Captain Kitty Site -- something fun and a little tacky
 //why not? It's a colorful comic book site. This is a submission button
+//the code below is the native code that I re-arranged which you'll see if you scroll down
+//I have not commented out the native code.
 
 #position{
 	position:fixed;
 	bottom:180px;
 	left:25px;
 }
+
 .sunflower{
   position:relative;
   height:30px;
   width:30px;
 }
+
 .head {
   animation: hmove 2s infinite linear;
   height: 50px;
@@ -301,6 +312,7 @@ p {
   transform-origin: 50% -7px;
   user-select: none;
 }
+
 .head .eye {
   background: #43699a;
   border-radius: 10px;
@@ -309,6 +321,7 @@ p {
   top: 30px;
   width: 5px;
 }
+
 .head .eye#eye-1 {
   left: 17px;
    animation: eye 4s linear infinite normal 0.5s;
@@ -317,6 +330,7 @@ p {
   right: 17px;
   animation: eye 4s linear infinite normal 0.5s;
 }
+
 .head .mouth {
   background: #ecf0f1;
   border-radius: 30px;
@@ -444,6 +458,23 @@ position:absolute;
   text-align:center;
 }
 //here's the code I made my own - using the below code for Captain Kitty
+//this is just the head of the flower and the styles are changed to make it self contained.
+//I also changed some of the class names to not confuse the page.
+
+@mixin link {
+	color: green;
+	font-size: 3px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+@mixin relatively {
+	position: relative;
+}
+
+@mixin absolutely {
+	postion: absolute;
+}
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -454,81 +485,85 @@ position:absolute;
 	bottom:100px;
 	left:300px;
 }
-.Sunflower{
-  position:relative;
+//this is the styling for the entire button
+.Sun{
+	@include relatively;
   height:100px;
   width:100px;
 }
-
+//this is the styling for the head - which is separate from the rays or petals around it
 .Head {
+	@include relatively;
   height: 50px;
   width: 62px;
-  position: relative;
   left:8px;
   top:39px;
   transform-origin: 50% -7px;
   user-select: none;
   }
+	//this is styling for the face and some of the head styling as well
 .Head .Eye {
+	@include absolutely;
   background: #43699a;
   border-radius: 10px;
   height: 7px;
-  position: absolute;
   top: 30px;
   left: 90px;
   width: 7px;
 }
+//this stuff is the specific styling for the eyes
 .Head .Eye#Eye-1 {
   left: 60px;
-   animation: eye 4s linear infinite normal 0.5s;
+   animation: Eye 4s linear infinite normal 0.5s;
 }
-.head .Eye#Eye-2 {
+.Head .Eye#Eye-2 {
   right: 50px;
-  animation: eye 4s linear infinite normal 0.5s;
+  animation: Eye 4s linear infinite normal 0.5s;
 }
+//this is the styling for the mouth
 .Head .Mouth {
+	@include relatively;
   background: #ecf0f1;
   border-radius: 30px;
   bottom: -5px;
   clip: rect(8px, 15px, 16px, 0);
   height: 16px;
   margin-left: -5.5px;
-  position: absolute;
   left: 120%;
   width: 15px;
 }
-
-.Petals {
+//this is the styling for the rays around the head
+.rays {
+	@include relatively;
   z-index:-1;
   border-radius:100%;
   display:inline-block;
   background-color:#faaa18; //here is the face color
   height:70px;
   width:70px;
-  position:absolute;
-  animation:petals 2s infinite linear;
+  animation:rays 2s infinite linear;
   box-shadow:15px 17px #ffe000,
     -15px 17px #ffe000,
     -22px -7px #ffe000,
     0px -22px #ffe000,
     22px -7px #ffe000;
  }
-
+//This will cause the sun to smile wider and for the words to come out of the mouth
 .Mouth:hover {
   transform: scale(3.5);
   transition: all .5s ease-in-out;
 }
-
+//this allows the user to click on the face and submit
 .clickz {
+	@include link;
   padding-top: 5px;
-  font-size: 3px;
   transition: all .3s ease-in-out;
 	 &:hover {
 		 transform: translate(0px, 35%);
 	 }
        }
-
-@keyframes Petals {
+//here is all of the animation - the sun rotates and pulses red
+@keyframes rays {
 	0% {transform: rotate(0);
        background: #faaa18;}
 
@@ -546,8 +581,12 @@ position:absolute;
 	to {height:0px;}
 }
 
-
+//here is some styling for postioning the text in the mouth
 #sun {
   background:#ffffff;
   text-align:center;
+}
+
+.xtra-words {
+	@include link;
 }
