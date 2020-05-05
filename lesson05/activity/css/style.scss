@@ -4,58 +4,16 @@
 @import 'settings.responsive';
 @import 'components.content';
 
-@mixin flex {
+.nav-bar {
+  background-color: #00A3AD;
   display: flex;
-  justify-content: center;
-  padding: 10%;
-}
-
-
-//attaching my grid to the body tag
-.main-grid {
-  display: grid;
-  max-width: 60%;
-  height: 90%;
-  margin: auto;
-  grid-template-columns:  1fr 65%;
-  grid-template-rows: 15% 10% 75% 15%;
-  //mobile sized - won't do much arranging, because I want everything to stack.
-    grid-template-areas:
-    'header'
-    'mav'
-    'main'
-    'article'
-    'footer'
-  }
-
-//All the words styled right!
-
-p, li {
+  flex-direction: row;
+  justify-content: space-around;
   color: white;
-  font-family: Helvetica Neue, sans-serif;
-  font-size: 25px;
-  padding: 10px;
-  }
+  padding: 1px;
+   }
 
-//the header which should span the entire top row, normal sized width
-header {
-  @include flex();
-  background-color: #F1352B;
-  grid-column: 1 / span 2;
-  grid-row: 1 / 2;
-  //grid-area: header;
-  }
-
-//the nav bar which could be several columns, but I think that it's just like the header in that it will stretch across all columns, but a thin row
-//I'm going to give a row, just a very thick row
-nav {
-  background-color: #7ACB00;
-  grid-column: 1 / span 2;
-  grid-row: 2;
-  //grid-area: nav;
-}
-
- .navigation {
+.navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -64,48 +22,16 @@ nav {
 
 a {
   color: white;
-  }
-
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+}
   a:hover {
     color: orange;
   }
-//the main box is one column, though it looks as though it should take up two columns - it looks like one big one or one fat right column and one skinny left column
-//I'm going to give it one row, just a very thick row
-main {
-  @include flex();
-  background-color: #FF6600;
-  grid-column: 2 / 3;
-  grid-row: 3;
-  //grid-area: main;
+
+button {
+  background-color: #00A3AD;
+  color: white;
+  font-size: 20px;
 }
-
-//the article box is the sidebar it is one skinny column
-article {
-  @include flex();
-  background-color: #6E27C5;
-  grid-column: 1 / 2;
-  grid-row: 3;
-  //grid-area: article;
-}
-
-//the footer should span the entire top row, normal sized width
-
-footer {
-  @include flex();
-  background-color: #150F96;
-  grid-column: 1 / span 2;
-  grid-row: 4;
-  //grid-area: footer;
-}
-
-@media only screen and (min-width: 500px)  {
-    .main-grid {
-
-        grid-template-columns: auto;
-        grid-template-areas:
-    "header header"
-        "nav nav"
-        "article main"
-        "footer   footer";
-    }
-    }
