@@ -11,3 +11,36 @@ html {
 .main {
     padding: 2rem;
 }
+
+.navbar {
+  background-color: #02a3ad;
+  // text-decoration: none;
+  // color: white;
+  height: 8rem;
+  width: 120rem;
+
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  text-align: justify;
+  align-items: center;
+
+}
+
+a {
+  color: white;
+}
+
+li {
+  margin-top: 3rem;
+}
+
+.login .company{
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 5rem 0 5rem;
+}

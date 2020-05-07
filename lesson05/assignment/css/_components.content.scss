@@ -8,6 +8,71 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+.main-container {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: white;
+    text-align: center; 
+}
+
+.header {
+    background-color: red;
+    height: 7rem;
+    h2 {
+        padding-top: 2rem;
+        font-size: 2.25rem;
+        font-weight: normal;
+    }
+}
+
+.nav {
+    background-color: rgb(141, 199, 61);
+    height: 6rem;
+    padding: 0 4rem 0 4rem;
+    &__list {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        list-style-type: none;
+        padding-top: 2rem;
+    }
+    &__link {
+        color: white;
+        text-decoration: none;
+        font-size: 2.25rem;
+    }
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 50rem;
+    h2 {
+        padding-top: 25rem;
+        font-size: 2.25rem;
+        font-weight: normal;
+    }
+}
+
+.sidebar {
+    background-color: rgb(100, 52, 189);
+}
+
+.main-content {
+    background-color: rgb(238, 111, 45);
+}
+
+.footer {
+    background-color:rgb(14, 25, 138);
+    height: 9rem;
+    h2 {
+        padding-top: 3rem;
+        margin: 0;
+        font-size: 2.25rem;
+        font-weight: normal;
+    }
 }
