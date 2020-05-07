@@ -1,7 +1,15 @@
+@import 'settings.variables';
+
+
+@mixin header {
+  h1:hover {
+    font-size: $fontsize;
+  }
+}
 .main {
   margin-top: 17%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: $fontsize;
   background-image: url(image.jpg);
   background-repeat: repeat-x;
   animation: animate 15s linear; }
@@ -15,15 +23,14 @@
 .main-2 {
   margin-top: 20%;
   margin-left: 40%;
-  font-size: 1.5rem;
+  font-size: $fontsize;
   width: 300px;
   height: 100px;
-  background-color: #F1352B;
+  background-color: $red;
   text-align: center;
-  animation: mysecondAnimate 15s infinite; }
+  animation: mysecondAnimate 15s infinite;}
 
-@keyframes mysecondAnimate {
-  from {
-    background-color: red; }
-  to {
-    background-color: yellow; } }
+  @keyframes mysecondAnimate {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
