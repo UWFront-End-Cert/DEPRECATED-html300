@@ -27,12 +27,14 @@ h2 {
     }
 }
 
+//bem//
 .nav {
     background-color: rgb(141, 199, 61);
     height: 6rem;
     padding: 0 4rem 0 4rem;
     &__list {
         margin: 0;
+//flex//
         display: flex;
         justify-content: space-between;
     }
@@ -47,6 +49,7 @@ h2 {
     }
 }
 
+//grid//
 .content-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -58,6 +61,7 @@ h2 {
     }
 }
 
+//not enough styling meat to get bemmy with it//
 .sidebar {
     background-color: rgb(100, 52, 189);
 }
