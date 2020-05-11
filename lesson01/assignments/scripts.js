@@ -1,5 +1,5 @@
 // jQuery Doc Ready
-$(function () {
+/* $(function () {
     // Set up some data and variables
     const data = [1, 2, 3, 4],
         input = $('.input'),
@@ -23,4 +23,33 @@ $(function () {
         }
     });
 });
+// Here are all the function that I am planning to use.
+/* myArray = [2, 4, 6, 8, 10]
 
+/* let results = myArray.every(value => value > 2 );
+    console.log(results); */
+
+ /* let results = myArray.find(value => value > 4);
+  console.log(results); */
+
+// or bellow
+
+/* let results = myArray.find(function(value) {
+    return value > 4;
+  });
+  console.log(results) */
+
+  /* let results = myArray.reduce(function(sum, value){
+      return sum + value;
+    });
+    console.log(results); */
+
+  /* let results = myArray.map(function(value) {
+     return value + 15;
+   });
+   console.log(results); */
+
+  /* let results = myArray.filter(function(value) {
+    return value > 2;
+  });
+  console.log(results) */

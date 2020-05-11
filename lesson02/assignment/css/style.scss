@@ -4,3 +4,38 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+
+// mixin
+@mixing Content {
+  width: 80%;
+  background-color: $gray;
+  ul{
+    list-style-type: none
+    margin-left: 2rem
+    padding: 2px
+    }
+    li::first-letter {
+      font-weight: bold
+    }
+}
+
+// stying the card
+.main {
+  display: flex
+  flex-direction: row
+  background-color: $white
+  width: 100%
+}
+
+// the content of the card is about the Steve Smith.
+.Content {
+  width: 80%
+  background-color: $gray
+}
+
+// created an id for the job title so I can make it italic
+#projectmanager {
+  font-style: italic
+}
+
+// styled the list of the content so that everything look like a professional card.
