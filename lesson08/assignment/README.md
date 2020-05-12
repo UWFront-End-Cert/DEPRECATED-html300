@@ -1,6 +1,6 @@
 # Assignment 08 - Expanded Vue Features
 
-In the last assignment in lesson07, you converted your site to use Vue CLI scaffolding and Vue features like routing and looping over data. Now you'll refactor some of those pages to utilize components and features like mixins and slots. 
+In the last assignment in lesson07, you converted your site to use Vue CLI scaffolding and Vue features like routing and looping over data. Now you'll refactor some of those pages to utilize components and features like mixins and slots.
 
 ### Vue References
 - [Vue Docs](https://vuejs.org/v2/guide/)
@@ -18,10 +18,10 @@ In the last assignment in lesson07, you converted your site to use Vue CLI scaff
 - 	Now, take the previous pages and modify/add to them accordingly:
 	- 	For the image page, convert the image markup into a separate component in its own file, be sure to import it into the corresponding 'page' component
 	- The image component should have props for at least the image src, alt, & title attributes. Also use prop validation.
-	- 	Create a mixin for the image component that should toggle on/off a border around the image on click, apply the mixin to the image component.
+	- Create a mixin for the image component that should toggle on/off a border around the image on click, apply the mixin to the image component.
 	-	Create a header component that uses a named slot, give a default value.
 	-	Create and use a filter that changes the a component's title/heading to uppercase.
-	- 	Don't forget to add comments to your code explaining Bootstrap 4 classes you added and your VUE code.		
+	- Don't forget to add comments to your code explaining Bootstrap 4 classes you added and your VUE code.		
 - 	**Bonus:**  Use other components for existing content.    
 - 	**Extra Bonus:**  Use custom directives or a modifier.   
 
@@ -30,3 +30,13 @@ In the last assignment in lesson07, you converted your site to use Vue CLI scaff
 - Create a pull request back to your forked master (not the original master), add brycebenson and ClovisI as reviewers -- create, but do not approve it!
 - Submit the pull request link in the assignment submission in Canvas
 
+
+### Other links and helpful resources
+- https://codepen.io/AndrewThian/pen/QdeOVa
+- https://stackoverflow.com/questions/45907887/vuejs-2-input-filter-groups
+- https://forum.vuejs.org/t/search-filter-with-computed-properties/29393
+- https://codepen.io/SitePoint/pen/maMJzo
+- https://www.sitepoint.com/the-difference-between-computed-properties-methods-and-watchers-in-vue/
+- https://www.vuemastery.com/courses/next-level-vue/mixins/
+- https://codepen.io/zkkmin/pen/BWONbm
+- https://stackoverflow.com/questions/58946182/vue-js-filter-for-title-case

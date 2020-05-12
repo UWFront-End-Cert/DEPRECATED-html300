@@ -1,17 +1,16 @@
 <template>
-
-<div>
-
-
-<h4> {{card.title}}</h4>
+   <div>
+      <h4>
+         <slot name="header">{{card.title  | titleize }}</slot>
+         <!-- not sure if card.title is considered 'default value' or if something else was being asked of me -->
+      </h4>
       <b-img
          :alt="card.text"
          :src="getImgUrl(card.images)"
          fluid
-          @click="border()"
-
-        v-bind:class="{ 'is-bordered' : bordered }" ></b-img>
-</div>
+         @click="border()"
+         v-bind:class="{ 'is-bordered' : bordered }" ></b-img>
+   </div>
 </template>
 
 <script>
@@ -22,6 +21,14 @@
     bordered: false
     }
     },
+    filters: {
+    titleize(value){
+        //first letter of each word capitalized
+        return value.replace(/(?:^|\s|-)\S/g, x => x.toUpperCase());
+        //all capitalized
+        //return value.replace(value, x => x.toUpperCase());
+    }
+},
 		props: {
 			card: {
 				type: Object,

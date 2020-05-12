@@ -4,7 +4,6 @@
       <h2 > Belize</h2>
       <div v-for="(item, idx) in decks" :key="idx">
          <div v-if='item.location == "Belize"'>
-
                <app-photos :card='item'></app-photos>
                </div>
             </div>
@@ -72,36 +71,7 @@ import Images from '@/components/Images.vue'
 //would also like to add images array to decks object and populate more than one per place in travel photos page
 //- selecting first image for trips cards - might get it to work later
 
-var decks = [
-{'location': 'Belize',
-'images':'belize.png',
-text: "Picture of Belize",
-'title': 'lamanai mayan ruins'},
-{'location': 'Belize',
-'images':'belize2.png',
-text: "Picture of Belize2",
-'title': 'cave tubing'},
-{'location': 'Costa Rica',
-'images':'costarica.png',
-text: "Costa Rica - Manuel Antonio National Park",
-'title': 'manuel antonio national park'},
-{'location': 'Croatia',
-'images':'croatia.png',
-text: "Picture of Croatia",
-'title': 'hvar boat dock'},
-{'location': 'Italy',
-'images':'italy.png',
-text: "Picture of Italy",
-'title': 'trevi fountain'},
-{'location': 'Thailand',
-'images':'thaibeach.png',
-text: "Picture of beach in Thailand",
-'title': 'phi phi island'},
-{'location': 'Thailand',
-'images':'thai.png',
-text: "Picture of elephant in Thailand",
-'title': 'chiang mai elephant sanctuary'}
-];
+import { decks } from '../util.js'
 
   export default {
     name: 'TravelPhotos',

@@ -7,7 +7,7 @@
       <b-col lg = '10' sm="12">
          <div class='card-multiple'>
             <b-row>
-               <b-col md = '6' lg ='4' sm="12" v-for="(card, idx) in decks" :key="idx" :id="card.id">
+               <b-col md = '6' lg ='4' sm="12" v-for="(card, idx) in flist" :key="idx" :id="card.id">
                   <card-single :card='card'> </card-single>
                </b-col>
             </b-row>
@@ -21,6 +21,10 @@
 
 import { decks } from '../util.js'
 
+var flist = decks.filter( function(litem) {
+return litem.area !=null;
+})
+
 import Card from '@/components/Card.vue'
 import Searchbar from '@/components/Searchbar.vue'
 
@@ -32,7 +36,7 @@ export default {
 	},
 	data() {
 		return {
-			decks: decks
+			flist: flist
 		}
 	}
 };
