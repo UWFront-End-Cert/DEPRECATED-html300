@@ -4,3 +4,34 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.nav-bar {
+  background-color: #00A3AD;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  padding: 1px;
+   }
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+
+a {
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+  a:hover {
+    color: orange;
+  }
+
+button {
+  background-color: #00A3AD;
+  color: white;
+  font-size: 20px;
+}

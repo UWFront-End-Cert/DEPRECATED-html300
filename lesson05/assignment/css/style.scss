@@ -4,3 +4,184 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+}
+
+//attaching my grid to the body tag
+.main-grid {
+  display: grid;
+  min-width: 1040px;   //laptop size and larger
+  grid-template-columns:  1fr 75%;
+  grid-template-rows: auto 15% 65% auto;
+  //grid-template-rows: 15%, 7%, auto, 15%;
+  grid-template-areas:   //mobile sized - won't do much arranging, because I want everything to stack. Went ahead and also made an iPad size
+  'header'
+  'mav'
+  'main'
+  'article'
+  'footer';
+          }
+
+//had to separate the nav bar from the other boxes, because the links wouldn't style correctly (they would clump together in the center of the box) when it was included with the others
+.navigation {
+  background-color: #7ACB00;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  grid-area: nav;
+}
+
+  ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      list-style: none;
+          }
+//styling the nav links to not be blue and turn purple when havered over
+a {
+  color: white;
+        }
+
+a:hover {
+   color: purple;
+          }
+
+//All the words styled right!
+
+p, li {
+  color: #FFFFFF;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 32px;
+            }
+
+          .box {
+            @include flex();
+            &--1 {
+            background-color: #F1352B;
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            grid-area: header;
+            }
+            &--2 {  //this was the nav bar
+            /*background-color: #7ACB00;
+            grid-column: 1 / span 2;
+            grid-row: 2;
+            grid-area: nav;*/
+               }
+             &--3 {
+            background-color: #FF6600;
+            grid-column: 2 / 3;
+            grid-row: 3;
+            grid-area: main;
+            }
+            &--4 {
+              background-color: #6E27C5;
+            grid-column: 1 / 2;
+            grid-row: 3;
+            grid-area: article;
+            }
+            &--5 {
+            background-color: #150F96;
+            grid-column: 1 / span 2;
+            grid-row: 4;
+            grid-area: footer;
+            }
+          }
+
+
+
+  //wrote this for iPad
+  @media only screen and (min-width: 700px)  {
+                .main-grid {
+                    grid-template-columns: auto;
+                    //grid-template-columns: auto;
+                    grid-template-areas:
+                    "header header"
+                    "nav nav"
+                    "article main"
+                    "footer footer";
+                     }
+                }
+
+  //wrote this for mobile and smaller - who wants smaller??
+  @media only screen and (max-width: 500px)  {
+                    .main-grid {
+                        grid-template-columns: auto;
+                        grid-template-areas:
+                        "header"
+                        "nav"
+                        "main"
+                        "article"
+                        "footer";
+                         }
+                    nav {
+                      padding: 1px;
+                    }
+                    }
+
+/*
+//the header which should span the entire top row, normal sized width
+header {
+  @include flex();
+  background-color: #F1352B;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  grid-area: header;
+}
+
+//the nav bar which could be several columns, but I think that it's just like the header in that it will stretch across all columns, but a thin row
+//I'm going to give a row, just a very thick row
+.navigation {
+  background-color: #7ACB00;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  grid-area: nav;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+a {
+  color: white;
+  }
+
+  a:hover {
+    color: orange;
+  }
+
+//the main box is one column, though it looks as though it should take up two columns - it looks like one big one or one fat right column and one skinny left column
+//I'm going to give it one row, just a very thick row
+main {
+  @include flex();
+  background-color: #FF6600;
+  grid-column: 2 / 3;
+  grid-row: 3;
+  grid-area: main;
+}
+
+//the article box is the sidebar it is one skinny column
+article {
+  @include flex();
+  background-color: #6E27C5;
+  grid-column: 1 / 2;
+  grid-row: 3;
+  grid-area: article;
+}
+
+//the footer should span the entire top row, normal sized width
+
+footer {
+  @include flex();
+  background-color: #150F96;
+  grid-column: 1 / span 2;
+  grid-row: 4;
+  grid-area: footer;
+}
+*/
+//extra nav stuff - this is here to get the nav bar to look nice
