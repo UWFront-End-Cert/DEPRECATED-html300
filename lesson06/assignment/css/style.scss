@@ -4,3 +4,76 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+//this guy is for the header
+#header-color {
+  background: linear-gradient(to right, #05fa46 0%, #05d1fa 100%);
+}
+
+//just trying to get my images to stay the same no matter what device
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+//the carousel jumps when changes pictures, so this is my fix for that
+#zoo-slides {
+  border: 2% solid white;
+  height: 450px;
+  overflow: hidden;
+}
+//possible background images for image page
+//https://images.unsplash.com/photo-1549249061-0433f0b4bdb0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60
+//'https://images.unsplash.com/photo-1553903200-cfc9cb67d661?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=335&q=80
+
+
+//images for image page
+//https://images.unsplash.com/photo-1533048324814-79b0a31982f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=404&q=80 - done
+//https://images.unsplash.com/photo-1576031450181-9fcab802bb5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=890&q=80 - done
+//https://images.unsplash.com/photo-1550103685-da83caf1f0c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80 - done
+//https://images.unsplash.com/photo-1547990338-943dc0c27796?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60 - done
+//https://images.unsplash.com/photo-1538860263234-d5e8282d1ef4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60 - done
+//https://images.unsplash.com/photo-1564293299687-d861e0144b97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80 - done
+//https://images.unsplash.com/photo-1552757158-788e68d046dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60 - done
+//https://images.unsplash.com/photo-1534198634523-ac9ebf960e33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60 - done
+//https://images.unsplash.com/photo-1531062499906-c6dc9747ce10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60 - done
+//https://images.unsplash.com/photo-1580448458187-c9d2c7971317?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60 - done
+
+
+//according to every site I've looked at Bootstrap has no built in way to adjust the sizes of text between devices
+//These media queries make up for that
+@media (max-width: 500px) {
+  p {
+    font-size: 10px;
+  }
+
+ h1 {
+   font-size: 10px;
+ }
+
+   #museum-font {
+   font-size: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  p, h1 {
+    font-size: 14px;
+
+    #museum-font {
+      font-size: 10px;
+    }
+    #zoo-font {
+      font-size: 5px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+
+ #museum-font {
+    font-size: 50px;
+  }
+  #zoo-font {
+    font-size: 30px;
+  }
+}
