@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--picture page for my Wold of Butterflies site page 2-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Assignment 06 - Bootstrap 4</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script language="JavaScript" type="text/javascript">
+ $(document).ready(function(){
+   $('.carousel').carousel( {
+     interval: 2000
+   })
+ } );
+
+</script>
+
+    </head>
+    <body style="background:url('https://images.unsplash.com/photo-1549249061-0433f0b4bdb0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')">
+          <div style="url('https://images.unsplash.com/photo-1549249061-0433f0b4bdb0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');" class="zoo-size zoo-cover">
+        <header class="jumbotron-fluid text-white text-center" id="header-color">
+          <div class="container">
+          <h1 class="display-4">Welcome to The World of Butterflies</h1>
+          <h1 class="lead">Your sources for all things buttery that fly</h1>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark mb-4" style="background-color: #eb34e5;">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="https://image.flaticon.com/icons/png/512/13/13148.png" width="30" class="d-inline-block align-top" alt="black butterfly icon">
+              Our Menu</a>
+          <button class="navbar-toggler" data-toggle="collapse"data-target="#butterfly-menu"><span class="navbar-toggler-icon"><i class="fas fa-bars fa-1x"></i></span></button>
+          <div id="butterfly-menu" class="collapse navbar-collapse">
+
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html"> Home </a></li>
+            <li class="nav-item"><a class="nav-link" href="butterfly-blog.html">Butterfly Blog </a></li>
+            <li class="nav-item"><a class="nav-link" href="butterfly-faq.html">Butterfly FAQs </a></li>
+          </ul>
+        </div>
+        </div>
+        </nav>
+        </header>
+
+        <main class="container-fluid">
+          <div class="card border-0 shadow my-5 text-center"> <!--card for content-->
+            <div class="card-body p-5">
+            <h1 class="font-weight-light text-center" id="museum-font">Butterfly Museum</h1>
+             <p class="text-primary lead text-center" id="zoo-font" >All Things Bright and Beautiful</p>
+             <p class="lead">Please come and explore and learn, discover or laze among the divine.</p>
+
+        <div id="zoo-slides" class="carousel slide" data-ride="carousel">
+
+          <!--carousel wrap-->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                  <img data-toggle="tooltip" data-placement="right" title="the Bombay Blue Beret" src="https://images.unsplash.com/photo-1576031450181-9fcab802bb5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=890&q=80" alt="blue butterfly on leaf" class="img-fluid  d-block w-100 h-100">
+            </div>
+            <div class="carousel-item">
+              <img data-toggle="tooltip" data-placement="right" title="the Tree Cleaver" src="https://images.unsplash.com/photo-1550103685-da83caf1f0c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="dark orange butterfly on pink flower" class="img-fluid d-block w-100 h-100">
+           </div>
+           <div class="carousel-item">
+             <img data-toggle="tooltip" data-placement="right" title="Big Bird" src="https://images.unsplash.com/photo-1547990338-943dc0c27796?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="yellow butterfly with blue tail" class="img-fluid d-block w-100 h-100">
+          </div>
+          <div class="carousel-item">
+             <img data-toggle="tooltip" data-placement="right" title="Tequila Sunrise" src="https://images.unsplash.com/photo-1538860263234-d5e8282d1ef4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="black butterfly with bright orange highlights in sunny tree" class="img-fluid d-block w-100 h-100">
+          </div>
+          <div class="carousel-item">
+             <img data-toggle="tooltip" data-placement="right" title="FruitterFlies" src="https://images.unsplash.com/photo-1564293299687-d861e0144b97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="brown and green butterflys walk on a table filled with sliced apples and oranges" class="img-fluid d-block w-100 h-100">
+          </div>
+          <div class="carousel-item">
+             <img data-toggle="tooltip" data-placement="right" title="Bettie Davis's Eyes" src="https://images.unsplash.com/photo-1552757158-788e68d046dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="red butterfly with blue highlights on a yellow flower" class="img-fluid d-block w-100 h-100">
+          </div>
+          <div class="carousel-item">
+             <img data-toggle="tooltip" data-placement="right" title="the Monarch" src="https://images.unsplash.com/photo-1534198634523-ac9ebf960e33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="orange monarch butterfly on a pink daisy" class="img-fluid d-block w-100 h-100">
+          </div>
+          <div class="carousel-item">
+             <img data-toggle="tooltip" data-placement="right" title="Flutterbies" src="https://images.unsplash.com/photo-1531062499906-c6dc9747ce10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="green butterflies walk around table of ornately carved oranges" class="img-fluid d-block w-100 h-100">
+          </div>
+          <div class="carousel-item">
+             <img data-toggle="tooltip" data-placement="right" title="the Desert Nymph" src="https://images.unsplash.com/photo-1580448458187-c9d2c7971317?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="black butterfly with red tale on brown rocks" class="img-fluid d-block w-100 h-100">
+           </div> <!--carousel-item-->
+         </div><!--carousel-inner-->
+            <a class="carousel-control-prev" href="#zoo-slides" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+           </a>
+           <a class="carousel-control-next" href="#zoo-slides" role="button" data-slide="next">
+             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+             <span class="sr-only">Next</span>
+           </a>
+            </div>  <!--carousel container-->
+            </div> <!--card body-->
+          </div>  <!--card border-->
+        </main>
+    </body>
+</html>
