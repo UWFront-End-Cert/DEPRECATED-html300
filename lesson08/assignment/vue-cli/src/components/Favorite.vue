@@ -31,10 +31,10 @@
 	opacity: .5;
 	animation: $a-heart;
 	&:hover {
-		transform: scale(1.7);
+		transform: scale(1.6);
 		animation: NULL;
 		cursor: pointer;
-		opacity: 1;
+		opacity: .8;
 	}
 }
 

@@ -25,6 +25,12 @@ Vue.use(VueRouter)
     name: 'TravelPhotos',
     component: () => import('../views/TravelPhotos.vue')
   }
+  /*,
+  {
+    path: '/test-map',
+    name: 'testmap',
+    component: () => import('../views/testmap.vue')
+  }*/
 ]
 
 const router = new VueRouter({

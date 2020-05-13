@@ -8,6 +8,8 @@
              <b-nav-item  to="/" >Home</b-nav-item>
              <b-nav-item  to="/about">About Us</b-nav-item>
              <b-nav-item  to="/trips">Trips</b-nav-item>
+             <!--<b-nav-item  to="/test-map">Test</b-nav-item>-->
+
              <b-nav-item  to="/travel-photos">Travel Photos</b-nav-item>
           </b-navbar-nav>
        </b-collapse>
