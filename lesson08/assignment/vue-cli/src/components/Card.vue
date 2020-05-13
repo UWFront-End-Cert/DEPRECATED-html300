@@ -1,66 +1,66 @@
 <template>
-   <!--https://codepen.io/RuudBurger/pen/bwjry-->
-   <div class='card-single'>
-      <app-favs></app-favs>
-      <div class="flipper" @click="flip()" >
-         <h2>{{card.location}}</h2>
-      </div>
-      <div class="card-flip" v-bind:class="{ 'is-flipped' : flipped }" >
-         <div class='card__face'>
+<!--https://codepen.io/RuudBurger/pen/bwjry-->
+<div class='card-single'>
+    <app-favs></app-favs>
+    <div class="flipper" @click="flip()" >
+        <h2>{{card.location}}</h2>
+    </div>
+    <div class="card-flip" v-bind:class="{ 'is-flipped' : flipped }" >
+        <div class='card__face'>
             <div class="card__face--front">
-               <div class="wrapper">
-                  <div class="zoom-effect-container">
-                     <div class="image-card">
-                        <b-img v-b-tooltip.hover title="Click name above to see more!" fluid
-                           :src="getImgUrl(card.images)"
-                           :alt="card.text"></b-img>
-                     </div>
-                  </div>
-               </div>
+                <div class="wrapper">
+                    <div class="zoom-effect-container">
+                        <div class="image-card">
+                            <b-img v-b-tooltip.hover title="Click name above to see more!" fluid
+                                :src="getImgUrl(card.images)"
+                                :alt="card.text"></b-img>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="card__face--back">
-               {{ card.details }}
-               <div class="card">
-                  <div class="card-block">
-                     <a href="#" class="card-link">Weather</a>
-                     <a href="#" class="card-link">Itenerary Ideas</a>
-                     <a :href="card.imagelink" target="_blank" class="card-link">Travel Photos</a>
-                     <a href="#" class="card-link">Recommended Transportation and Hotels</a>
-                  </div>
-               </div>
+                {{ card.details }}
+                <div class="card">
+                    <div class="card-block">
+                        <a href="#" class="card-link">Weather</a>
+                        <a href="#" class="card-link">Itenerary Ideas</a>
+                        <a :href="card.imagelink" target="_blank" class="card-link">Travel Photos</a>
+                        <a href="#" class="card-link">Recommended Transportation and Hotels</a>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
+        </div>
+    </div>
+</div>
 </template>
 
 <script>
 import Favorite from '@/components/Favorite.vue'
 export default {
-	name: 'card',
-	props: {
-		card: {
-			type: Object,
-			required: true
-		}
-	},
-	components: {
-		'app-favs': Favorite
-	},
-	data() {
-		return {
-			flipped: false
-		}
-	},
-	methods: {
-		flip: function () {
-			this.flipped = !this.flipped;
-			console.log(this.flipped)
-		},
-		getImgUrl: function (pic) {
-			return require('@/assets/' + pic)
-		}
-	}
+    name: 'card',
+    props: {
+        card: {
+            type: Object,
+            required: true
+        }
+    },
+    components: {
+        'app-favs': Favorite
+    },
+    data() {
+        return {
+            flipped: false
+        }
+    },
+    methods: {
+        flip: function () {
+            this.flipped = !this.flipped;
+            console.log(this.flipped)
+        },
+        getImgUrl: function (pic) {
+            return require('@/assets/' + pic)
+        }
+    }
 };
 </script>
 

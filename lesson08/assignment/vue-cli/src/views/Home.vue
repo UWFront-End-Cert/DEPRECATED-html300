@@ -1,30 +1,25 @@
 <template>
-  <div class='Home'>
+<div class='Home'>
     <app-jumbo></app-jumbo>
     <app-caro :card='decks'></app-caro>
-
-
-
-  </div>
+</div>
 </template>
 
 <script>
-
 import { decks } from '../util.js'
-
-  //import your components here
-  import Jumbo from '@/components/Jumbotron.vue'
-  import Caro from '@/components/Carousel.vue'
-  export default {
-  name: 'Home',
+//import your components here
+import Jumbo from '@/components/Jumbotron.vue'
+import Caro from '@/components/Carousel.vue'
+export default {
+    name: 'Home',
     components: {
-      'app-jumbo': Jumbo,
-      'app-caro' : Caro
+        'app-jumbo': Jumbo,
+        'app-caro': Caro
     },
-    data(){
+    data() {
         return {
-        decks: decks
-                }
+            decks: decks
+        }
     },
- }
+}
 </script>
