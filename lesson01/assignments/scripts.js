@@ -39,6 +39,29 @@ $(function() {
   submit.on('click', function() {
   resultFound.text(found);
   });
+
+  const dataFour = [12, 10, 14, 4];
+  const mapFour = dataFour.map(dataFour => dataFour * 10);
+  inputFour = $('.inputFour'),
+  resultForEach = $('.for-each');
+
+  submit.on('click', function() {
+  resultForEach.text(mapFour);
+  });
+
+  const produce = [
+    {name: "banana", group: "fruit"},
+    {name: "peas", group: "vegetable"},
+    {name: "mango", group: "fruit"},
+    {name: "cabbage", group: "vegetable"}
+  ];
+  inputFive = $('.inputFive'),
+  resultFilter = $('.produce');
+  let veggies = produce.filter(function(veg) {
+    submit.on('click', function() {
+    resultForEach.text(veg.group == "vegetable");
+  });
+});
 });
 
 
