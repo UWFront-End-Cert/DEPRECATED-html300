@@ -1,8 +1,8 @@
 // // jQuery Doc Ready
 $(function() {
+  let submit = $('.submit');
   const data = [1, 2, 3, 4],
     input = $('.input'),
-    submit = $('.submit'),
     resultSum = $('.sum');
   // Click event on the submit input
   submit.on('click', function() {
@@ -23,18 +23,25 @@ $(function() {
   });
 
 
-  let dataThree = $('.inputTwo');
+  const dataTwo = $('.inputTwo');
     inputTwo = $('.inputTwo'),
-    submitTwo = $('.submitTwo'),
     resultWord = $('.word');
 
-  submitTwo.on('click', function() {
-    resultWord.text(`What does the ${dataThree.val()} say?`);
+  submit.on('click', function() {
+    resultWord.text(`What does the ${dataTwo.val()} say?`);
+  });
+
+  const dataThree = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const found = dataThree.find(value => value === 9);
+  inputThree = $('.inputThree'),
+  resultFound = $('.found');
+
+  submit.on('click', function() {
+  resultFound.text(found);
   });
 });
 
-  // let dataThree = [9, 10, 11, 12];
-  // let found =
+
 //
 // The goal of this assignment is to use ES6+ with a  front-end framework, and you already know how to use one, jQuery.
 //
