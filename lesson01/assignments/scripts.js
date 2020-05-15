@@ -24,8 +24,8 @@ $(function() {
   });
 
 
-  const dataTwo = $('.inputTwo');
-    submitTwo = $('.submitTwo')
+  const dataTwo = $('.inputTwo'),
+    submitTwo = $('.submitTwo'),
     inputTwo = $('.inputTwo'),
     resultWord = $('.word');
 
@@ -34,39 +34,40 @@ $(function() {
   });
 
   const dataThree = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const found = dataThree.find(value => value === 9);
-  sumbitThree = $('.submitThree'),
+  const found = dataThree.find(value => value === 9),
+  x = $('.x'),
   inputThree = $('.inputThree'),
   resultFound = $('.found');
 
-  submitThree.on('click', function() {
-  resultFound.text(found).value;
+  x.on('click', function() {
+    let valThree = inputThree.val();
+    resultFound.text(found);
   });
 
-  const dataFour = [12, 10, 14, 4];
-  const mapFour = dataFour.map(dataFour => dataFour * 10);
-  submitFour = $('.submitFour'),
+  const dataFour = [12, 10, 14, 4],
   inputFour = $('.inputFour'),
-  resultForEach = $('.for-each');
+  submitFour = $('.submitFour'),
+  resultMap = $('.map');
 
   submitFour.on('click', function() {
-  resultForEach.text(mapFour);
+    mapFour = dataFour.map(dataFour => dataFour + parseInt(inputFour.val()));
+  resultMap.text(mapFour.join(", "));
   });
-
-  const produce = [
-    {name: "banana", group: "fruit"},
-    {name: "peas", group: "vegetable"},
-    {name: "mango", group: "fruit"},
-    {name: "cabbage", group: "vegetable"}
-  ];
-  submitFive = $('.submitFive'),
-  inputFive = $('.inputFive'),
-  resultFilter = $('.produce');
-  let veggies = produce.filter(function(veg) {
-    submitFive.on('click', function() {
-    resultForEach.text(veg.group == "vegetable");
-  });
-});
+//
+//   const produce = [
+//     {name: "banana", group: "fruit"},
+//     {name: "peas", group: "vegetable"},
+//     {name: "mango", group: "fruit"},
+//     {name: "cabbage", group: "vegetable"}
+//   ],
+//   submitFive = $('.submitFive'),
+//   inputFive = $('.inputFive'),
+//   resultFilter = $('.produce');
+//   let veggies = produce.filter(function(veg) {
+//     submitFive.on('click', function() {
+//     resultForEach.text(veg.group == "vegetable");
+//   });
+// });
 });
 
 
