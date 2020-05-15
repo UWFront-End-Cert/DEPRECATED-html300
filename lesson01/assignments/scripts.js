@@ -1,7 +1,8 @@
 // // jQuery Doc Ready
 $(function() {
-  let submit = $('.submit');
+
   const data = [1, 2, 3, 4],
+    submit = $('.submit'),
     input = $('.input'),
     resultSum = $('.sum');
   // Click event on the submit input
@@ -24,28 +25,31 @@ $(function() {
 
 
   const dataTwo = $('.inputTwo');
+    submitTwo = $('.submitTwo')
     inputTwo = $('.inputTwo'),
     resultWord = $('.word');
 
-  submit.on('click', function() {
+  submitTwo.on('click', function() {
     resultWord.text(`What does the ${dataTwo.val()} say?`);
   });
 
   const dataThree = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const found = dataThree.find(value => value === 9);
+  sumbitThree = $('.submitThree'),
   inputThree = $('.inputThree'),
   resultFound = $('.found');
 
-  submit.on('click', function() {
-  resultFound.text(found);
+  submitThree.on('click', function() {
+  resultFound.text(found).value;
   });
 
   const dataFour = [12, 10, 14, 4];
   const mapFour = dataFour.map(dataFour => dataFour * 10);
+  submitFour = $('.submitFour'),
   inputFour = $('.inputFour'),
   resultForEach = $('.for-each');
 
-  submit.on('click', function() {
+  submitFour.on('click', function() {
   resultForEach.text(mapFour);
   });
 
@@ -55,10 +59,11 @@ $(function() {
     {name: "mango", group: "fruit"},
     {name: "cabbage", group: "vegetable"}
   ];
+  submitFive = $('.submitFive'),
   inputFive = $('.inputFive'),
   resultFilter = $('.produce');
   let veggies = produce.filter(function(veg) {
-    submit.on('click', function() {
+    submitFive.on('click', function() {
     resultForEach.text(veg.group == "vegetable");
   });
 });
