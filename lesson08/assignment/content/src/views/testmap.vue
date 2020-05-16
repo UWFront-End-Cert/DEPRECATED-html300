@@ -3,7 +3,7 @@
    <p>Center: {{ center }} Zoom: {{ zoom }}</p>
    <p>Selected: {{selectedFeatures}}</p>
    <!-- want to make an itinerary array of list of things to do and put that here - making it the string isn't working -->
-   <vl-map ref="map" data-projection="EPSG:4326" style="height: 30rem; width: 30rem;">
+   <vl-map ref="map" data-projection="EPSG:4326" style="height: 31rem; width: 31rem;">
       <vl-view :zoom.sync="zoom" :center.sync="center"></vl-view>
       <vl-layer-tile>
          <vl-source-osm></vl-source-osm>
@@ -25,48 +25,13 @@
 </template>
 
 <script>
-let features = [{
-        "type": "Feature",
-        "id": 1,
-        "itinerary": "Verona",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                10.9916, 45.4384
-            ]
-        }
-    },
-    {
-        "type": "Feature",
-        "id": 2,
-        "itinerary": "Rome",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                12.4964, 41.9028
-            ]
-        }
-    },
-    {
-        "type": "Feature",
-        "id": 3,
-        "itinerary": "Milan",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                9.1900, 45.4642
-            ]
-        }
-    }
-]
-
+import { features } from '../util.js'
 
 export default {
     data() {
         return {
-            zoom: 5,
+            zoom: 5.75,
             center: [13.254634831534215, 41.790158738116816],
-
             features: features,
             selectedFeatures: []
         }

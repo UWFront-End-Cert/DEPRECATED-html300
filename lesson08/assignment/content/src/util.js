@@ -65,42 +65,32 @@ var decks = [
  }
  ]
 
-  export { accordionObject }
+export { accordionObject }
 
 
-
-  let features = [{
-          "type": "Feature",
-          "id": 1,
-          "itinerary": "Verona",
-          "geometry": {
-              "type": "Point",
-              "coordinates": [
-                  10.9916, 45.4384
-              ]
-          }
-      },
-      {
-          "type": "Feature",
-          "id": 2,
-          "itinerary": "Rome",
-          "geometry": {
-              "type": "Point",
-              "coordinates": [
-                  12.4964, 41.9028
-              ]
-          }
-      },
-      {
-          "type": "Feature",
-          "id": 3,
-          "itinerary": "Milan",
-          "geometry": {
-              "type": "Point",
-              "coordinates": [
-                  9.1900, 45.4642
-              ]
-          }
-      }
+  let features = [
+    { "type": "map",
+      "id": 1,
+      "country": "Italy",
+      "zoom": 5.75,
+      "center": [13.254634831534215, 41.790158738116816]},
+    { "type": "Feature",
+      "id": 1,
+      "country": "Italy",
+      "itinerary": "Verona",
+      "ideas": "Visit Juliet's House",
+      "geometry": {"type": "Point", "coordinates": [10.9916, 45.4384]}},
+    { "type": "Feature",
+      "id": 2,
+      "itinerary": "Rome",
+      "country": "Italy",
+      "ideas": ["Take a pasta making class", "Visit the Trevi Fountain"],
+      "geometry": {"type": "Point", "coordinates": [12.4964, 41.9028]}},
+    { "type": "Feature",
+      "id": 3,
+      "itinerary": "Milan",
+      "country": "Italy",
+      "ideas": "Visit the Duomo",
+      "geometry": {"type": "Point", "coordinates": [9.1900, 45.4642]}}
   ]
   export { features }
