@@ -1,120 +1,130 @@
 // jQuery Doc Ready
 $(function () {
-    // Set up some data and variables
-    const data = [1, 2, 3, 4],
-        input = $('.input'),
-        submit = $('.submit'),
-        resultSum = $('.sum');
-    // Click event on the submit input
-    // submit.on('click', function () {
-    //     // Grab the input value and parse it into a number
-    //     const val = input.val();
-    //     const num = parseInt(val);
-    //     // Verify the user gave us a real number
-    //     if (!isNaN(num)) {
-    //         // Add our new number to the data array
-    //         data.push(num);
-    //         // Use reduce to convert our array of numbers into a single value - the sum of all of the numbers
-    //         const sum = data.reduce((acc, curr) => acc + curr);
-    //         // Add our new total to the page
-    //         resultSum.text(sum);
-    //         // Reset the input value to an empty string
-    //         input.val('');
-    //     }
-    // });
-    let name = $('#name');
-    let subName = name.next();
-    let valName = subName.next();
-    let age = $('#age');
-    let subAge = age.next();
-    let valAge = subAge.next();
-    let hobbies = $('.hobby');
-    let subHobby = hobbies.next();
-    let valHobby = subHobby.next();
-    let workout = $('#workout');
-    let subWorkout = workout.next();
-    let valWorkout = subWorkout.next();
-
-    subName.on('click', function(){
-      const nameVal = name.val();
-      valName.text(`Your name is ${nameVal}, that's a nice name!`);
-    });
-
-    subAge.on('click', function(){
-      const ageVal = age.val();
-      const num = parseInt(ageVal);
-      let fifteen = num + 15;
-      let judgement = " ";
-      if (ageVal > 60) {
-        judgement = "have such a young spirit!";
-      } else {
-        judgement = "are an old soul!";
-      }
-      valAge.text(`You are ${ageVal} years old! But you ${judgement}! In 15 years you will be ${fifteen}.`);
-    });
-
-    let hobbyArray = [];
-
-    subHobby.on('click', function(){
-      let hobbyVal = hobbies.val();
-      hobbyArray.push(hobbyVal);
-      let evaluation = " ";
-      input.val('');
-
-      valHobby.append(`<li>${hobbyVal}</li>`);
-
-      if (hobbyArray.includes("code")){
-          evaluation = "I like to code too!";
-      } else if (hobbyArray.includes("coding")) {
-        evaluation = "Coding kicks butt!";
-      } else {
-        evaluation = "What, no code?!";
-      }
-      
-      console.log(hobbyArray.includes("code"));
-    });
-    // let array = [1, 2, 3, 4, 5, 10];
-      // forEach
-      array.forEach(function(value, key){
-        console.log("value is " + value);
-        console.log("key is " + key);
+  let initial = [3, 6, 9, 10, 11, 20, 37, 45, 56, 89];
+      array = $('.array');
+      input = $('.input'),
+      btn = input.next(),
+      result = btn.next(),
+      initial.forEach(function(value, key){
+        array.append(`# ${key} `);
+        array.append(`the value is ${value}<br>`);
       });
 
       // map
-      let array2 = array.map(value => value + 15);
+        // will clear the new array if user goes to enter a new number
+      $('.map .input').on('keyup', function(){
+        $('.map .markup').text(' ');
+      });
+        // takes user input and adds it to each # in the array,
+        // creates a new array
+      $('.map .submit').on('click', function(){
+        let val = $('.map .input').val();
+        let mapVal = parseInt(val);
+        let mapArray = initial.map(value => value + mapVal);
 
-      console.log(array2);
+        console.log(mapArray);
 
-      // filter
-      let array3 = array.filter(value => value > 20);
-
-      console.log(array3);
-
-      // reduce
-      let sum = array.reduce(function(sum, value){
-        return sum + value
+        mapArray.forEach(function(value, key){
+          $('.map .markup').append(`# ${key} `);
+          $('.map .markup').append(`the <strong>new</strong> value is ${value}<br>`);
+        });
+        input.val('');
       });
 
-      console.log(sum);
+      // filter
+        // will clear the new array if user goes to enter a new number
+      $('.filter .input').on('keyup', function(){
+        $('.filter .markup').text(' ');
+      });
+        // takes user input and filters the array to any number greater than user input,
+        // creates a new array
+      $('.filter .submit').on('click', function(){
+        let val = $('.filter .input').val();
+        let filterVal = parseInt(val);
+        let filterArray = initial.filter(value => value > filterVal);
 
-      // includes
-      let hello = "I love ES6, it makes writing code much better!";
+        console.log(filterArray);
 
-      console.log(hello.includes("wri"));
+        filterArray.forEach(function(value, key){
+          // $('.filter .markup').append(`# ${key} `);
+          $('.filter .markup').append(`The #${key + 1} value greater than ${filterVal} is ${value}<br>`);
+        });
+        input.val('');
+      });
 
-      // every
-      let over40 = array.every(value => value > 40);
+      // reduce
+      $('.reduce .submit').on('click', function(){
+        let val = $('.reduce .input').val();
+        let reduceVal = parseInt(val);
+        let arrayLength = initial.length;
+        initial.push(reduceVal);
+        let reduceSum = initial.reduce((sum, value) => sum + value);
 
-      console.log(`${over40} new value`); // should be false because not every value is greater than 40
+        // update the array list at top with the added value(s)
+        array.append(`# ${arrayLength} `);
+        array.append(`the value is ${reduceVal}<br>`);
 
-      // some
-      let over40some = array.some(value => value > 40);
+        $('.reduce .markup').text(`The sum of the array plus your addition of the number ${reduceVal} is ${reduceSum}.`);
 
-      console.log(over40some);
+        input.val('');
+      });
 
       // find
-      let over40first = array.find(value => value > 40);
+        // will clear the new array if user goes to enter a new number
+      $('.find .input').on('keyup', function(){
+        $('.find .markup').text(' ');
+      });
+        // takes user input and finds the next number in the array greater than user input
+      $('.find .submit').on('click', function(){
+        let val = $('.find .input').val();
+        let findVal = parseInt(val);
+        let found = initial.find(value => value > findVal);
 
-      console.log(over40first);
+        $('.find .markup').text(`I have found, for you, the number ${found}! This is the first number in the array that is over ${findVal}.`);
+
+        input.val('');
+      });
+
+      // some
+        // will clear the new array if user goes to enter a new number
+      $('.some .input').on('keyup', function(){
+        $('.some .markup').text(' ');
+      });
+        // takes user input and finds the next number in the array greater than user input
+      $('.some .submit').on('click', function(){
+        let val = $('.some .input').val();
+        let someVal = parseInt(val);
+        let someArray = initial.filter(value => value < someVal);
+
+        console.log(someArray);
+
+        someArray.forEach(function(value, key){
+          // $('.filter .markup').append(`# ${key} `);
+          $('.some .markup').append(`The #${key + 1} value less than ${someVal} is ${value}<br>`);
+        });
+        input.val('');
+      });
+
+      // every
+        // will clear the new array if user goes to enter a new number
+      $('.every .input').on('keyup', function(){
+        $('.every .markup').text(' ');
+      });
+        // takes user input and finds the next number in the array greater than user input
+      $('.every .submit').on('click', function(){
+        let val = $('.every .input').val();
+        let everyVal = parseInt(val);
+        let everyNum = initial.every(value => value < everyVal);
+
+        console.log(everyNum);
+
+        if(everyNum) {
+          $('.every .markup').text(`Congrats, ${everyVal} is greater than every other number in the array!`);
+        } else {
+          $('.every .markup').text(`Sorry, ${everyVal} is NOT greater than all numbers in the array!`);
+        }
+
+        input.val('');
+      });
 
 });

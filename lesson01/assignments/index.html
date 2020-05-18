@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignment 1 - Part 2 Example</title>
+    <title>Assignment 1 - Part 2 | HMalloy</title>
     <!-- jQuery CDN -->
     <script
         src="https://code.jquery.com/jquery-3.3.1.js"
@@ -12,14 +12,14 @@
         crossorigin="anonymous">
     </script>
     <!-- Local Files -->
-    <script src="scripts2.js"></script>
+    <script src="scripts.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main class="main">
         <h1>Using ES6+ Methods</h1>
-        <h2>Initial Array</h2>
+        <h2>FOREACH | Array</h2>
         <p class="array"></p>
         <section class="input-set map">
             <!-- Input -->
@@ -35,6 +35,48 @@
             <!-- Input -->
             <h3>FILTER | Enter a number to filter the array by.</h3>
             <p>This will create a new array with only numbers from the original array that are greater than (&gt;) the number you enter here.</p>
+            <input type="number" class="input">
+            <!-- Submit for Input -->
+            <input class="submit" type="submit"></input>
+            <!-- Result markup with hook for answer -->
+            <p class="markup"></p>
+        </section>
+
+        <section class="input-set reduce">
+            <!-- Input -->
+            <h3>REDUCE | Enter a number to add to the array and then see the sum.</h3>
+            <input type="number" class="input">
+            <!-- Submit for Input -->
+            <input class="submit" type="submit"></input>
+            <!-- Result markup with hook for answer -->
+            <p class="markup"></p>
+        </section>
+
+        <section class="input-set find">
+            <!-- Input -->
+            <h3>FIND | Enter a number to find the first number in the array that is greater.</h3>
+            <input type="number" class="input">
+            <!-- Submit for Input -->
+            <input class="submit" type="submit"></input>
+            <!-- Result markup with hook for answer -->
+            <p class="markup"></p>
+        </section>
+
+
+        <section class="input-set some">
+            <!-- Input -->
+            <h3>SOME | Enter a number to find all numbers in the array that are less than.</h3>
+            <input type="number" class="input">
+            <!-- Submit for Input -->
+            <input class="submit" type="submit"></input>
+            <!-- Result markup with hook for answer -->
+            <p class="markup"></p>
+        </section>
+
+
+        <section class="input-set every">
+            <!-- Input -->
+            <h3>Every | Enter a number and see if it is greater than all the numbers in the provided array.</h3>
             <input type="number" class="input">
             <!-- Submit for Input -->
             <input class="submit" type="submit"></input>
