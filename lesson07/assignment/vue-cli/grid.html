@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Stylsheets and Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- jQuery, Popper, and Bootstrap -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>vue-project-1</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div id="example">
+      <mdb-navbar color="warning">
+      <mdb-navbar-brand href="https://mdbootstrap.com/">
+        Navbar
+      </mdb-navbar-brand>
+      <mdb-navbar-toggler>
+        <mdb-navbar-nav>
+          <mdb-nav-item href="index.html" active>Home</mdb-nav-item>
+          <mdb-nav-item href="images.html">Images</mdb-nav-item>
+          <mdb-nav-item href="accordian.html">Accordian</mdb-nav-item>
+          <mdb-nav-item href="grid.html">Grid</mdb-nav-item>
+        </mdb-navbar-nav>
+        <form>
+          <mdb-input type="text" class="text-white" placeholder="Search" aria-label="Search" label navInput waves waves-fixed/>
+        </form>
+      </mdb-navbar-toggler>
+      </mdb-navbar>
+    </div>
+    <div class="container">
+      <div id="app">
+        <!--grid -->
+          <div class="row">
+            <div class="col-sm-8">
+              <div v-for="item in items">
+                <h1>{{item.title}}</h1>
+              </div>
+              <div v-for="image in images">
+                <img :src="image.src" :alt="image.alt" class="float-right" />
+              </div>
+              <div v-for:"item in items">
+                <p>{{item.paragraph}}</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div v-for="sidebar in sidebars">
+                <h2>{{sidebar.title}}</h2>
+                <p><small>{{sidebar.paragraph}}</small></p>
+              </div>
+              <div v-for="sideimage in sideimages">
+                <img :src="sideimage.src" :alt="sideimage.alt" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        <!--grid -->
+      </div>
+    </div>
+    <script src="./src/main.js"></script>
+    <script src="/dist/build.js"></script>
+    <script>
+    const image1 = require('../assets/pic-5.jpg');
+    const image2 = require('../assets/pic-6.jpg');
+    new Vue( {
+      el: '#app',
+      data () {
+        return {
+          images:[{
+          src:image1,
+          alt:'Healthy breakfast'
+          }],
+          sideimages:[{
+          src:image2,
+          alt:'Macroons'
+          }],
+          items:[{
+          title:"More breakfast ideas.."
+          },
+          {
+          paragraph:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quasi, voluptatibus quae veniam ab, quia, rerum, magnam consectetur nam placeat eum maiores. Rerum earum delectus doloribus qui ab accusantium accusamus."
+          },
+          {
+          paragraph:"Para 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quasi, voluptatibus quae veniam ab, quia, rerum, magnam consectetur nam placeat eum maiores. Rerum earum delectus doloribus qui ab accusantium accusamus."
+          },
+          {
+          paragraph: "Para 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quasi, voluptatibus quae veniam ab, quia, rerum, magnam consectetur nam placeat eum maiores. Rerum earum delectus doloribus qui ab accusantium accusamus."
+          },
+          {
+          paragraph: "Para 4. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quasi, voluptatibus quae veniam ab, quia, rerum, magnam consectetur nam placeat eum maiores. Rerum earum delectus doloribus qui ab accusantium accusamus."
+          },
+          ],
+          sidebars:[{
+            title:"Sidebar deserts"
+          },
+          {
+            paragraph:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quasi, voluptatibus quae veniam ab, quia, rerum, magnam consectetur nam placeat eum maiores. Rerum earum delectus doloribus qui ab accusantium accusamus."
+          },
+          {
+            paragraph:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quasi, voluptatibus quae veniam ab, quia, rerum, magnam consectetur nam placeat eum maiores. Rerum earum delectus doloribus qui ab accusantium accusamus."
+          },
+          ]
+        }
+      }
+    });
+    </script>
+    <style scoped>
+    #app {
+      font-family: 'Avenir', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      color: #2c3e50;
+      margin-top: 60px;
+    }
+    </style>
+  </body>
+</html>
