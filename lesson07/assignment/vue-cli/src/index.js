@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 import Images from '@/components/images.vue'
 import Grid from '@/components/grid.vue'
-import Accordion from '@/components/Accordion.vue'
+import Accordian from '@/components/Accordian.vue'
 
 Vue.use(Router)
 
@@ -17,17 +17,17 @@ export default new Router({
     {
       path: '/images',
       name: 'images',
-      component: images
+      component: Images
     },
     {
       path: '/grid',
       name: 'grid',
-      component: grid
+      component: Grid
     },
     {
-      path: '/accordion',
-      name: 'accordion',
-      component: accordion
+      path: '/Accordian',
+      name: 'Accordian',
+      component: Accordian
     }
   ]
 })
