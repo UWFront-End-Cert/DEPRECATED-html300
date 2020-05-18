@@ -53,22 +53,19 @@ $(function() {
     mapFour = dataFour.map(dataFour => dataFour + parseInt(inputFour.val()));
   resultMap.text(mapFour.join(", "));
   });
-//
-//   const produce = [
-//     {name: "banana", group: "fruit"},
-//     {name: "peas", group: "vegetable"},
-//     {name: "mango", group: "fruit"},
-//     {name: "cabbage", group: "vegetable"}
-//   ],
-//   submitFive = $('.submitFive'),
-//   inputFive = $('.inputFive'),
-//   resultFilter = $('.produce');
-//   let veggies = produce.filter(function(veg) {
-//     submitFive.on('click', function() {
-//     resultForEach.text(veg.group == "vegetable");
-//   });
-// });
+
+    const produce = ['banana', 'strawberry', 'mango', 'pea', 'cabbage', 'corn'],
+  submitFive = $('.submitFive'),
+  inputFive = $('.inputFive'),
+  resultFilter = $('.produce');
+
+  submitFive.on('click', function() {
+    others = produce.filter(others => others.fruit);
+    console.log(others);
+    // resultFilter.text(y);
+  });
 });
+
 
 
 //
@@ -82,6 +79,6 @@ $(function() {
 // Don't worry about validating data. Only number will be added in the input box.
 //
 // Optional Bonus: If you have completed the requirements above and are up for an extra challenge, you can take your project to the next level with following bonus activities.
-//
+// PERHAPS CALCULATE TAX BASED ON USER LOCATION
 // Use string template literals for the output and use arrow functions.
 // Integrate two more ES6+ functions.
