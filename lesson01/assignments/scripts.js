@@ -53,11 +53,27 @@ $(function () {
       valAge.text(`You are ${ageVal} years old! But you ${judgement}! In 15 years you will be ${fifteen}.`);
     });
 
+    let hobbyArray = [];
+
     subHobby.on('click', function(){
-      hobbyArray = hobbies.forEach(function(){
-        hobbyAge.text(`You are ${hobbyArray}.`)
-      });
+      let hobbyVal = hobbies.val();
+      hobbyArray.push(hobbyVal);
+      let evaluation = " ";
+      input.val('');
+
+      valHobby.append(`<li>${hobbyVal}</li>`);
+
+      if (hobbyArray.includes("code")){
+          evaluation = "I like to code too!";
+      } else if (hobbyArray.includes("coding")) {
+        evaluation = "Coding kicks butt!";
+      } else {
+        evaluation = "What, no code?!";
+      }
+      
+      console.log(hobbyArray.includes("code"));
     });
+    // let array = [1, 2, 3, 4, 5, 10];
       // forEach
       array.forEach(function(value, key){
         console.log("value is " + value);

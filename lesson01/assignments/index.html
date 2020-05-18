@@ -12,56 +12,30 @@
         crossorigin="anonymous">
     </script>
     <!-- Local Files -->
-    <script src="scripts.js"></script>
+    <script src="scripts2.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main class="main">
         <h1>Using ES6+ Methods</h1>
-        <h2>Given Example</h2>
-        <section class="input-set">
+        <h2>Initial Array</h2>
+        <p class="array"></p>
+        <section class="input-set map">
             <!-- Input -->
-            <input type="text" class="input">
-            <!-- Submit for Input -->
-            <input class="submit" type="submit"></input>
-            <!-- Result markup with hook for answer -->
-            <p class="markup">My total with reduce is now: <span class="sum"></span></p>
-        </section>
-        <h2>Mine</h2>
-        <section class="input-set">
-          <h3>What is your name?</h3>
-            <!-- Input -->
-            <input type="text" class="input" id="name">
+            <h3>MAP | Enter a number to add to each number in the array.</h3>
+            <input type="number" class="input">
             <!-- Submit for Input -->
             <input class="submit" type="submit"></input>
             <!-- Result markup with hook for answer -->
             <p class="markup"></p>
         </section>
-        <section class="input-set">
-          <h3>How old are you?</h3>
+
+        <section class="input-set filter">
             <!-- Input -->
-            <input type="number" class="input" id="age">
-            <!-- Submit for Input -->
-            <input class="submit" type="submit"></input>
-            <!-- Result markup with hook for answer -->
-            <p class="markup"></p>
-        </section>
-        <section class="input-set">
-          <h3>What are your top 3 hobbies?</h3>
-            <!-- Input -->
-            <input type="text" class="input hobby">
-            <input type="text" class="input hobby">
-            <input type="text" class="input hobby">
-            <!-- Submit for Input -->
-            <input class="submit" type="submit"></input>
-            <!-- Result markup with hook for answer -->
-            <p class="markup"></p>
-        </section>
-        <section class="input-set">
-          <h3>How many days do you workout a week?</h3>
-            <!-- Input -->
-            <input type="number" class="input" id="workout">
+            <h3>FILTER | Enter a number to filter the array by.</h3>
+            <p>This will create a new array with only numbers from the original array that are greater than (&gt;) the number you enter here.</p>
+            <input type="number" class="input">
             <!-- Submit for Input -->
             <input class="submit" type="submit"></input>
             <!-- Result markup with hook for answer -->
