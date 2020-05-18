@@ -62,7 +62,7 @@ $(function() {
   submitFive.on('click', function() {
     others = produce.filter(others => others.fruit);
     console.log(others);
-    // resultFilter.text(y);
+    // resultFilter.text(others);
   });
 });
 
