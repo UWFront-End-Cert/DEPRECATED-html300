@@ -1,4 +1,4 @@
-// // jQuery Doc Ready
+// jQuery Doc Ready
 $(function() {
 
   const data = [1, 2, 3, 4],
@@ -29,56 +29,74 @@ $(function() {
     inputTwo = $('.inputTwo'),
     resultWord = $('.word');
 
+  // Click event on the submit input
   submitTwo.on('click', function() {
     resultWord.text(`What does the ${dataTwo.val()} say?`);
+    //use string interpolation to take the text input the user provides and build it into a string to display
   });
 
   const dataThree = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  //use found to select the number that is true
   const found = dataThree.find(value => value === 9),
-  x = $('.x'),
-  inputThree = $('.inputThree'),
-  resultFound = $('.found');
+    submitThree = $('.submitThree'),
+    inputThree = $('.inputThree'),
+    resultFound = $('.found');
 
-  x.on('click', function() {
+  // Click event on the submit input
+  submitThree.on('click', function() {
+    //gather user input
     let valThree = inputThree.val();
     resultFound.text(found);
   });
 
-  const dataFour = [12, 10, 14, 4],
-  inputFour = $('.inputFour'),
-  submitFour = $('.submitFour'),
-  resultMap = $('.map');
+  const dataFour = [14, 12, 10, 4],
+    inputFour = $('.inputFour'),
+    submitFour = $('.submitFour'),
+    resultMap = $('.map');
 
+  // Click event on the submit input
   submitFour.on('click', function() {
+    //map replaces for loop to return new array after grabbing user input, then parses the string to return an interger
     mapFour = dataFour.map(dataFour => dataFour + parseInt(inputFour.val()));
-  resultMap.text(mapFour.join(", "));
+    //converts new array to string and shows it in an aesthetically pleasing way
+    resultMap.text(mapFour.join(", "));
   });
 
-    const produce = ['banana', 'strawberry', 'mango', 'pea', 'cabbage', 'corn'],
-  submitFive = $('.submitFive'),
-  inputFive = $('.inputFive'),
-  resultFilter = $('.produce');
+  const dataFive = [{
+      name: 'banana',
+      quantity: 3
+    },
+    {
+      name: 'pea',
+      quantity: 5
+    },
+    {
+      name: 'mango',
+      quantity: 2
+    },
+    {
+      name: 'cabbage',
+      quantity: 4
+    },
+    {
+      name: 'strawberry',
+      quantity: 7
+    },
+    {
+      name: 'corn',
+      quantity: 6
+    }
+  ];
 
+  submitFive = $('.submitFive'),
+    inputFive = $('.inputFive'),
+    resultFilter = $('.filter');
+
+  // Click event on the submit input
   submitFive.on('click', function() {
-    others = produce.filter(others => others.fruit);
-    console.log(others);
-    // resultFilter.text(others);
+    y = dataFive.filter(produce => produce.quantity > inputFive.val()) //filter data based on user input
+      .map(o => o.name) //grab name from object
+      .join(" , ") //convert array to string
+    resultFilter.text(y);
   });
 });
-
-
-
-//
-// The goal of this assignment is to use ES6+ with a  front-end framework, and you already know how to use one, jQuery.
-//
-// Create at least sets of 4 input boxes. Each box should have a button the user can press.
-// Use jQuery and ES6+ to manipulate the data from those input boxes and ouput the result withan explantation.
-// Use at least 4 ES6+ methods.
-//
-// Remember it's best practice to add comments to your code.
-// Don't worry about validating data. Only number will be added in the input box.
-//
-// Optional Bonus: If you have completed the requirements above and are up for an extra challenge, you can take your project to the next level with following bonus activities.
-// PERHAPS CALCULATE TAX BASED ON USER LOCATION
-// Use string template literals for the output and use arrow functions.
-// Integrate two more ES6+ functions.
