@@ -4,6 +4,7 @@
     "description": "Gulp workflow for local static HTML/CSS",
     "main": "gulpfile.js",
     "scripts": {
+        "preinstall": "npx npm-force-resolutions",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Bryce Benson",
@@ -17,5 +18,8 @@
         "gulp-sass": "^4.0.2",
         "gulp-util": "^3.0.8",
         "gulp-watch": "^5.0.0"
+    },
+    "resolutions": {
+        "graceful-fs": "4.2.3"
     }
 }
