@@ -1,23 +1,30 @@
 <template>
-<div class="favs">
-    <div v-if="fav">
-        <font-awesome-icon  class='fav' v-on:click="fav = !fav" icon="heart" />
-    </div>
-    <div v-else>
-        <!-- could not get fa-heart-o or far-heart to work so used opacity instead -->
-        <font-awesome-icon  class='notfav' v-on:click="fav = !fav" icon="heart" />
-    </div>
+<div :key=isFav>
+<div v-if="isFav">
+<!--<button class="favs" v-on:click="changeFav"><i class="fav fas fa-heart"></i></button>-->
+<button class="favs" v-on:click="isFav = !isFav"><i class="fav fas fa-heart"></i></button>
+</div>
+<div v-if='!isFav'>
+<!--<button class="favs" v-on:click="changeFav"><i class="notfav far fa-heart"></i></button>-->
+<button class="favs" v-on:click="isFav = !isFav"><i class="notfav far fa-heart"></i></button>
+</div>
 </div>
 </template>
 
 <script>
 export default {
-    name: 'favs',
-    data() {
-        return {
-            fav: false,
-        }
-    }
+name: 'favs',
+data() {
+return {
+fav: false,
+isFav: false
+}
+},
+methods: {
+changeFav() {
+this.isFav = !this.isFav;
+console.log(this.isFav);
+}}
 };
 </script>
 
@@ -26,10 +33,12 @@ export default {
 
 @import './src/main.scss';
 
-.notfav>path {
+
+.notfav {
 	color: $red;
-	opacity: .5;
+	//opacity: .5;
 	animation: $a-heart;
+  display: inline;
 	&:hover {
 		transform: scale(1.6);
 		animation: NULL;
@@ -37,13 +46,25 @@ export default {
 		opacity: .8;
 	}
 }
-
-.fav>path {
+.fav {
 	color: $red;
 	transform: scale(1.7);
 	animation: NULL;
 	color: $red;
 	cursor: pointer;
 	opacity: 1;
+  display: inline;
+  &:hover {
+		transform: scale(1.6);
+		animation: NULL;
+		cursor: pointer;
+		opacity: .8;
+	}
+}
+
+button{
+border: none;
+background: transparent;
+display: inline;
 }
 </style>

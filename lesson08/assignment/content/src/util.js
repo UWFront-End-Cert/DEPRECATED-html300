@@ -69,11 +69,11 @@ export { accordionObject }
 
 
   let features = [
-    { "type": "map",
-      "id": 1,
-      "country": "Italy",
-      "zoom": 5.75,
-      "center": [13.254634831534215, 41.790158738116816]},
+  //  { "type": "map",
+  //    "id": 1,
+  //    "country": "Italy",
+  //    "zoom": 5.75,
+  //    "center": [13.254634831534215, 41.790158738116816]},
     { "type": "Feature",
       "id": 1,
       "country": "Italy",
