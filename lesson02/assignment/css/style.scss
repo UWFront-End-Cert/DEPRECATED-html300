@@ -4,3 +4,11 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.card {
+  max-width:90vw;
+  background-color: $gray;
+  padding:3rem;
+  &.card-body {
+
+  }
+}
