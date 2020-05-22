@@ -3,12 +3,134 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
-
+/* set body text color and font-size */
+body {
+  color:$darkgray;
+  font-size: 1.25rem;
+}
+/* set card width, border, etc. */
 .card {
-  max-width:90vw;
-  background-color: $gray;
-  padding:3rem;
-  &.card-body {
+  display: block;
+  max-width:60rem;
+  border:2rem solid $gray;
+  background-color: $white;
+  padding: 2rem;
+  .card-body {
+    display: flex;
+    flex-direction: row;
+    background-color:$white;
+  }
+}
+/* set up card-copy divs */
+.card-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* first column needs margin to the right */
+  &:first-child {
+    margin-right: 2rem;
+  }
+  /* second column needs background color gray
+    and needs to grow to fill the space  */
+  &:last-child {
+    background-color: $gray;
+    flex-grow:1;
+  }
+  /* remove bullets, increase padding increase line-height */
+  .about {
+    list-style: none;
+    padding-left:2rem;
+    .item {
+      margin-bottom: 1rem;
+    }
+    /* align text with center of image and add padding */
+    .linkedin {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right:.5rem;
+      }
+    }
+  }
+  /* style card title, name and job */
+  .card-title {
+    .name {
+      margin-bottom:0;
+      font-size:1.625rem;
+    }
+    .job {
+      margin-top:0;
+      font-style: italic;
+    }
+  }
+  /* set up image div */
+  .card-img {
+    display: flex;
+    padding-top:6rem;
+    align-items: center;
+    justify-content: center;
+    max-width:100%;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 14rem;
+    height: 14rem;
+    overflow: hidden;
+    /* align image within div */
+    img {
+      max-width: 150%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
 
+/* // Medium devices (tablets, 768px and under) */
+@include media-query("mobile") {
+  .card {
+    /* display in column to save space */
+    .card-body {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .card-copy {
+  /* align items within first div center */
+    &:first-child {
+      align-items: center;
+    }
+    /* change the order of title and image for small screens */
+    .title {
+      order:0;
+    }
+    .name {
+      margin-top:0;
+    }
+    /* change the order of title and image for small screens */
+    .card-img {
+      order:1;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+/* // Small devices (phones, 576px and under) */
+@include media-query("phone") {
+  /* reign in padding */
+  .card {
+    border-width:1.5rem;
+    padding:1.5rem;
+  }
+  .card-copy {
+    .about {
+      /* display in column to save space */
+      .item {
+        display: flex;
+        flex-direction: column;
+      }
+      .linkedin {
+        align-items: start;
+        margin-right:0;
+      }
+    }
   }
 }
