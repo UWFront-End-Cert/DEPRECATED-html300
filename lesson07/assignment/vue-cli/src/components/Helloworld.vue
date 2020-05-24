@@ -1,5 +1,5 @@
 <template>
-  <div class="main" id="app">
+  <main class="main">
   <!-- App.vue -->
   <div v-for="feature in features" class="jumbotron jumbotron-fluid">
     <div class="container">
@@ -11,7 +11,7 @@
     </div>
   </div>
   <!-- App.vue -->
-  </div>
+  </main>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="main" id="app">
+  <div id="app">
   <!-- App.vue -->
   <!-- Main navigation -->
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
@@ -7,7 +7,7 @@
 <a class="navbar-brand mb-0 h1" href="index.html">My company</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+</button>
     <!-- Nav items and dropdowns aligning to right -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
@@ -89,8 +89,17 @@
 </template>
 
 <script>
+import Helloworld from '/components/Helloworld.vue';
+import Images from '/components/images.vue';
+import Grid from '/components/grid.vue';
+import Accordian from '/components/Accordian.vue';
 export default{
-name: 'App'
+name: 'App',
+data(){
+return{
+      msg:'Welcome to your vue.js app'
+    }
+  }
 }
 </script>
 

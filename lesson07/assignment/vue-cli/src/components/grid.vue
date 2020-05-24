@@ -1,5 +1,5 @@
 <template>
-  <div class="main" id="app">
+  <main class="main">
   <!--grid -->
     <div class="row">
       <div class="col-sm-8">
@@ -24,7 +24,7 @@
       </div>
     </div>
   <!--grid -->
-  </div>
+  </main>
 </template>
 
 <script>
@@ -73,7 +73,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

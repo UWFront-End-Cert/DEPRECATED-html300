@@ -1,5 +1,5 @@
 <template>
-  <main class="main" id="app">
+  <main>
   <!-- Carousel -->
     <h1>Beautiful Places</h1>
     <img src="../assets/pic-1.jpg" alt="..." class="float-right">
@@ -7,7 +7,7 @@
     aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <!-- Popover-->
     <p>
-      <b-button class="btn-success" v-b-popover.hover.top="This is a best place for vacation" title="Adventure">Did you know?</b-button>
+      <b-button class="btn-success" v-b-popover.hover.top="'This is a best place for vacation'" title="Adventure">Did you know?</b-button>
     </p>
     <!-- image cards -->
     <div class="card-columns">
@@ -28,31 +28,29 @@ const image1 = require('../assets/pic-1.jpg');
 const image2 = require('../assets/pic-2.jpg');
 const image3 = require('../assets/pic-3.jpg');
 export default {
-  el: 'app',
   data () {
     return {
-    cards: [
-    {
+    cards: [{
       id: 1,
       src: image1,
-      alt: scenery1,
+      alt: 'scenery1',
       title: 'one of my favourite places',
       caption: 'Epic!'
     },
     {
-      id: 2;
+      id: 2,
       src: image2,
-      alt: scenery2,
+      alt: 'scenery2',
       title: 'favourite place 2',
       caption: 'Awesome'
     },
     {
       id: 3;
       src: image3,
-      alt:scenery3,
+      alt: 'scenery3',
       title: '3rd favourite palce',
       caption : 'Amazing'
-    },
+    }
     ],
     }
   }

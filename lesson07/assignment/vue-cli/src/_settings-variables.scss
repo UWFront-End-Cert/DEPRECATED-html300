@@ -1,0 +1,10 @@
+//Colors
+$darkgray : #6c757d;
+$white : #fff;
+
+//Mixins
+@mixin narrow{
+  @media (max-width: 800px){
+    @content;
+  }
+}
