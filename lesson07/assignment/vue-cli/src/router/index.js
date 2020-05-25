@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'router'
-import Helloworld from './components/Helloworld'
+import Helloworld from './components/helloworld'
 import Images from './components/images'
 import Grid from './components/grid'
-import Accordian from './components/Accordian'
+import Accordian from './components/accordian'
 
 Vue.use(Router)
 

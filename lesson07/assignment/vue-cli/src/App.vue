@@ -89,10 +89,10 @@
 </template>
 
 <script>
-import Helloworld from '/components/Helloworld.vue';
+import Helloworld from '/components/helloworld.vue';
 import Images from '/components/images.vue';
 import Grid from '/components/grid.vue';
-import Accordian from '/components/Accordian.vue';
+import Accordian from '/components/accordian.vue';
 export default{
 name: 'App',
 data(){
@@ -102,49 +102,3 @@ return{
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
-.container {
-  width: 95%;
-  margin: 1rem;
-  padding: 1rem;
-  }
-.jumbotron {
-  padding: 1rem 0;
-  }
-html {
-    box-sizing: border-box;
-}
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
-}
-main {
-padding: 2rem;
-}
-.col-sm-2 {
-padding: 2rem 0rem 0rem 2rem;
-}
-.float-right {
-  margin: 0.5rem 0rem 1rem 1rem;
-}
-.img-fluid {
-  margin-bottom: 1rem;
-  width: 100%;
-}
-.mew-footer {
-  width: 100%;
-  height: auto;
-  background-color: #343a40;
-  color: #fff;
-  padding: 2rem 2rem 1rem;
-  margin-top: 1rem;
-  text-align: center;
-}
-</style>
