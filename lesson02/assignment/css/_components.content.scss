@@ -12,6 +12,31 @@ html {
     padding: 2rem;
 }
 
+.card-container {
+  border: solid 20px $border-gray;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+}
+
 h1 {
-    color: $red;  
+  color: $blue;
+  margin: 0 auto;
+}
+h2 {
+  margin: 0 auto;
+}
+
+.fab fa-linkedin {
+  color: $blue;
+}
+
+img {
+  margin: 1rem;
+  border-radius: 50%;
+}
+
+.profile {
+  background-color: $inset-gray;
+  margin: .5rem;
 }
