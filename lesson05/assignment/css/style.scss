@@ -4,3 +4,55 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+* {
+  box-sizing: border-box;
+}
+// using css grid template for easier alignment
+.main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto 100% auto;
+  grid-template-areas:
+    "header header header"
+    "navbar navbar navbar"
+    "sidebar main-content main-content"
+    "footer footer footer";
+}
+// styling the header and making sure it cover horizontally the top
+.header {
+  grid-area: header;
+  background-color: $red;
+  text-align: center;
+}
+// styling the nav and making use of grid area
+.navbar {
+  grid-area: navbar;
+  background-color: $green;
+  text-align: center;
+}
+// applying flexbox to style the navigation bar
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+}
+// styling the side bar
+.sidebar {
+  grid-area: sidebar;
+  background-color: $purple;
+  text-align: center;
+}
+// styling the main content
+.main-content {
+  grid-area: main-content;
+  background-color: $orange;
+  text-align: center;
+}
+// styling the footer 
+.footer {
+  grid-area: footer;
+  background-color: $blue;
+  text-align: center;
+}
