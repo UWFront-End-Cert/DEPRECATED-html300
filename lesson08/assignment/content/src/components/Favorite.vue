@@ -1,12 +1,10 @@
 <template>
-<div :key=isFav>
+<div :key=isFav class="favs">
 <div v-if="isFav">
-<!--<button class="favs" v-on:click="changeFav"><i class="fav fas fa-heart"></i></button>-->
-<button class="favs" v-on:click="isFav = !isFav"><i class="fav fas fa-heart"></i></button>
+<button v-on:click="isFav = !isFav"><i class="fav fas fa-heart"></i></button>
 </div>
 <div v-if='!isFav'>
-<!--<button class="favs" v-on:click="changeFav"><i class="notfav far fa-heart"></i></button>-->
-<button class="favs" v-on:click="isFav = !isFav"><i class="notfav far fa-heart"></i></button>
+<button v-on:click="isFav = !isFav"><i class="notfav far fa-heart"></i></button>
 </div>
 </div>
 </template>
@@ -16,15 +14,10 @@ export default {
 name: 'favs',
 data() {
 return {
-fav: false,
 isFav: false
 }
 },
-methods: {
-changeFav() {
-this.isFav = !this.isFav;
-console.log(this.isFav);
-}}
+
 };
 </script>
 
@@ -36,7 +29,6 @@ console.log(this.isFav);
 
 .notfav {
 	color: $red;
-	//opacity: .5;
 	animation: $a-heart;
   display: inline;
 	&:hover {
@@ -56,7 +48,6 @@ console.log(this.isFav);
   display: inline;
   &:hover {
 		transform: scale(1.6);
-		animation: NULL;
 		cursor: pointer;
 		opacity: .8;
 	}
@@ -65,6 +56,9 @@ console.log(this.isFav);
 button{
 border: none;
 background: transparent;
+}
+
+.favs{
 display: inline;
 }
 </style>

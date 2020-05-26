@@ -92,6 +92,7 @@ export default {
 <style scoped lang='scss'>
 @import './src/main.scss';
 
+
 .wrapper {
 	width: auto;
 	height: 100%;
