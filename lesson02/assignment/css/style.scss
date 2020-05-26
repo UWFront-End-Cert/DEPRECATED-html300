@@ -3,11 +3,8 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
-/* set body text color and font-size */
-body {
-  color:$darkgray;
-  font-size: 1.25rem;
-}
+@import 'body.set';
+
 /* set card width, border, etc. */
 .card {
   display: block;
