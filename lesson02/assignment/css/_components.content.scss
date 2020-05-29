@@ -7,7 +7,10 @@ html {
 *:before {
     box-sizing: inherit;
 }
-
+body {
+  font-family: $font-fam;
+  color: $gray-font;
+}
 .main {
     padding: 2rem;
 }
@@ -15,16 +18,20 @@ html {
 .card-container {
   border: solid 20px $border-gray;
   display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 h1 {
-  color: $blue;
-  margin: 0 auto;
+  color: $gray-font;
+  margin: 2rem;
+  // text-align: center;
 }
+
 h2 {
-  margin: 0 auto;
+  margin: 2rem;
+  text-align: center;
 }
 
 .fab fa-linkedin {
@@ -35,8 +42,13 @@ img {
   margin: 1rem;
   border-radius: 50%;
 }
+.img {
+  width: auto;
+  height: 66%;
+}
 
 .profile {
   background-color: $inset-gray;
   margin: .5rem;
+  height: 75%;
 }
