@@ -24,33 +24,40 @@ body {
   grid-gap: 1rem;
   grid-template-rows: auto;
   grid-template-columns: 1fr 2fr;
+
 }
 
 h1 {
   color: $gray;
   font-size: 2rem;
-  margin: .25rem .25rem .25rem 1rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 h2 {
-  margin: .25rem .25rem .25rem 1rem;
+  margin: 0 0 .25rem 0;
+  text-align: center;
   font-style: italic;
   font-weight: lighter;
 }
 
 p {
   margin: 1rem;
+  .bold {
+    font-weight: 800;
+  }
 }
 
 i {
-  margin: .5rem;
+  margin: 0;
   font-size: 1.5rem;
   color: $blue;
+    .linked-in {
+      margin: 0;
+  }
 }
 
-.linked-in {
-  margin: 0;
-}
+
 
 img {
   margin: 1rem;
@@ -59,12 +66,12 @@ img {
   height: auto;
 }
 
-.bold {
-  font-weight: 800;
-}
+
 
 .profile {
   background-color: $inset-gray;
-  margin: .5rem;
-  height: 75%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 1.5rem;
 }
