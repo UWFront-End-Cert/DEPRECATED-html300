@@ -1,8 +1,14 @@
-// Colors
+// Color variable
 $inset-gray: #f5f5f5;
 $border-gray: #f2f4f7;
 $gray: #717171;
 $blue: #007bb5;
 
-//Font
+//Font variable
 $font-fam: Helvetica, Arial, sans-serif;
+
+//Mixin for responsive font size
+@mixin fontSize($size) {
+  font-size: $size * 1px;
+  font-size: $size * 0.1rem;
+}

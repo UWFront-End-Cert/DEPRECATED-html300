@@ -1,5 +1,8 @@
+/*Body Element Styling*/
 html {
     box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px, allowing for easy font size calculation*/
 }
 
 *,
@@ -10,7 +13,7 @@ html {
 
 body {
   font-family: $font-fam;
-  font-size: 1rem;
+  @include fontSize(16);
   color: $gray;
 }
 
@@ -24,12 +27,10 @@ body {
   grid-gap: 1rem;
   grid-template-rows: auto;
   grid-template-columns: 1fr 2fr;
-
 }
 
 h1 {
   color: $gray;
-  font-size: 2rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -48,30 +49,29 @@ p {
   }
 }
 
+/*LinkedIn icon styling*/
 i {
   margin: 0;
-  font-size: 1.5rem;
   color: $blue;
-    .linked-in {
-      margin: 0;
+  /*color function to darken icon upon hover state*/
+  &:hover {
+    color: darken($blue, 25%);
   }
 }
 
-
-
 img {
-  margin: 1rem;
+  margin: 2rem 1rem 2rem 5rem;
   border-radius: 50%;
   width: 75%;
   height: auto;
 }
 
-
-
+/*User profile styling*/
 .profile {
   background-color: $inset-gray;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   height: auto;
   margin: 1.5rem;
 }
