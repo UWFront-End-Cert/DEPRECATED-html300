@@ -11,9 +11,9 @@
          <img src="https://image.flaticon.com/icons/png/512/13/13148.png" width="30" class="d-inline-block align-top" alt="black butterfly icon">
          Our Menu</a>
        <p>
-        <router-link :to="/butterfly-zoo">Butterfly Museum</router-link>
+      <!--  <router-link :to="/butterfly-zoo">Butterfly Museum</router-link>
         <router-link :to="/butterfly-blog">Butterfly Blog</router-link>
-        <router-link :to="/butterfly-faq">Butterfly FAQs</router-link>
+        <router-link :to="/butterfly-faq">Butterfly FAQs</router-link>-->
       </p>
      </div>
    </header>

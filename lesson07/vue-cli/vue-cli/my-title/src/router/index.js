@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import App from '@/components/App'
-import butterfly-zoo from '@/components/butterflyZoo'
-import butterfly-blog from '@/components/butterflyBlog'
-import butterfly-faq from '@/components/butterflyFaq'
+//import App from '/components/App'
+//import zoo from '/components/butterflyZoo'
+//import blog from '/components/butterflyBlog'
+//import faq from '/components/butterflyFaq'
 
 Vue.use(Router)
 
