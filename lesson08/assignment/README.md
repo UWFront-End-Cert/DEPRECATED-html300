@@ -40,3 +40,4 @@ In the last assignment in lesson07, you converted your site to use Vue CLI scaff
 - https://www.vuemastery.com/courses/next-level-vue/mixins/
 - https://codepen.io/zkkmin/pen/BWONbm
 - https://stackoverflow.com/questions/58946182/vue-js-filter-for-title-case
+- https://theme.co/archive/forums/topic/submenu-anchor-links-resolving-at-top-of-page-in-safari/

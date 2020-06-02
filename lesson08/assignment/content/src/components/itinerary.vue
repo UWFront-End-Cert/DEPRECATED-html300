@@ -1,6 +1,7 @@
 <template>
 <div id=card.id>
   <div id="itinerary-modal" class="modal fade">
+
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">

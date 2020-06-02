@@ -1,72 +1,95 @@
 <template>
 <div id="app">
- <div id="nav">
+  <div id="nav">
     <b-navbar toggleable="lg" type="light" variant="light">
-       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-       <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
-             <b-nav-item  to="/" >Home</b-nav-item>
-             <b-nav-item  to="/about">About Us</b-nav-item>
-             <b-nav-item  to="/trips">Trips</b-nav-item>
-             <b-nav-item  to="/test-map">Test</b-nav-item>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item to="/">Home</b-nav-item>
+          <b-nav-item to="/about">About Us</b-nav-item>
+          <b-nav-item to="/trips">Trips</b-nav-item>
+          <b-nav-item to="/test-map">Test</b-nav-item>
 
-             <b-nav-item  to="/travel-photos">Travel Photos</b-nav-item>
-          </b-navbar-nav>
-       </b-collapse>
+          <b-nav-item to="/travel-photos">Travel Photos</b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
     </b-navbar>
- </div>
- <div id="bod">
- <router-view/>
- </div>
+  </div>
+  <div id="bod">
+    <router-view />
+<!--
+  <div v-for="(card, idx) in decks" :key="idx" :id="card.id">
+     <div id="modal-container" :card='card'></div></div>
+-->
+
+
+
+  </div>
 </div>
-
 </template>
+<!--
+<script>
+import {
+  decks
+} from './util.js'
 
+export default {
+data() {
+  return {
+    decks: decks.filter(function(litem) {
+      return litem.area != null;
+    })
+  }
+}
+};
+</script>-->
 
 
 <style lang='scss'>
 @import './src/main.scss';
 #nav a {
-	color: $lighten-black;
-	display: block;
-	padding: .5em;
-	margin: .5em;
-	text-decoration: none;
-	text-align: center;
-	cursor: pointer;}
-#nav a:hover,#nav a:focus  {
-		text-decoration: underline;
+    color: $lighten-black;
+    display: block;
+    padding: 0.5em;
+    margin: 0.5em;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+#nav a:focus,
+#nav a:hover {
+    text-decoration: underline;
     color: $darken-blue;
-	}
+}
 #nav a.router-link-exact-active {
-  color: $black;
-  font-weight:bold;
+    color: $black;
+    font-weight: bold;
 }
 ul {
-	display: inline-block;
-	list-style-type: none;
-	vertical-align: text-top;
-	text-align: left;
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: text-top;
+    text-align: left;
 }
 ul[data-title]::before {
-	content: attr(data-title);
-	text-decoration: underline;
-	font-weight: bold;
+    content: attr(data-title);
+    text-decoration: underline;
+    font-weight: bold;
 }
 li {
-	text-align: left;
+    text-align: left;
 }
 #nav {
-  padding: 0px;
+    padding: 0;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
 }
-#bod{
-padding:1rem;
+#bod {
+    padding: 1rem;
 }
 </style>
