@@ -25,8 +25,13 @@
 
                         <a href="#"  @click="weatherClicked(card)" class="card-link">Weather</a>
                         <weather :card='card'></weather>
-                        <a href="#" @click="itineraryClicked(card)" class="card-link">Itenerary Ideas</a>
-                        <itnry :card='card'></itnry>
+                        <a href="#"  ref="btnShow"  @click="showModal(card.id)" class="card-link">Itenerary Ideas</a>
+                      <!--  <itnry :card='card'></itnry>-->
+                        <b-modal :id="card.id">
+  <div class="d-block">Hello From My Modal!</div>
+  <b-button @click="hideModal">Close Me</b-button>
+  <b-button @click="toggleModal">Toggle Me</b-button>
+</b-modal>
                         <a :href="card.imagelink" target="_blank" class="card-link">Travel Photos</a>
                         <a href="#" class="card-link">Recommended Transportation and Hotels</a>
                     </div>
@@ -43,7 +48,7 @@
 import $ from 'jquery'
 import Favorite from '@/components/Favorite.vue'
 import weather from '@/components/weather.vue'
-import itinerary from '@/components/itinerary.vue'
+//import itinerary from '@/components/itinerary.vue'
 
 
 
@@ -58,7 +63,7 @@ export default {
     components: {
         'app-favs': Favorite,
         'weather': weather,
-        'itnry': itinerary
+      //  'itnry': itinerary
     },
     data() {
         return {
@@ -81,7 +86,20 @@ export default {
             },
         itineraryClicked: function(card) {
             $('#itinerary-modal', '#'+card.id).modal('toggle').appendTo("body");
-            }
+          },
+
+
+    showModal(id) {
+      console.log(id)
+      this.$root.$emit('bv::show::modal', id, '#btnShow')
+    },
+    hideModal(id) {
+      this.$root.$emit('bv::hide::modal', id, '#btnShow')
+    },
+    toggleModal(id) {
+      this.$root.$emit('bv::toggle::modal', id, '#btnToggle')
+    }
+
     }
 };
 </script>

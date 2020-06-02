@@ -1,6 +1,5 @@
 <template>
-<div id=card.id>
-  <div id="itinerary-modal" class="modal fade">
+  <div id="modal-1" class="modal fade">
 
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -44,7 +43,7 @@
 
 
   <!-- codes ommited -->
-</div>
+
 </div>
 <!--https://jsfiddle.net/YariAndres/m6gk2wbv/9/ -->
 <!--https://jsfiddle.net/yb4os541/1/-->
