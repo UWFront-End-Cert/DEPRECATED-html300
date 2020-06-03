@@ -35,14 +35,17 @@ h1 {
   text-align: center;
 }
 
-/*replaced H2 from earlier iteration*/
-figcaption {
+h2 {
   .italic {
     margin: 0 0 .25rem 0;
     text-align: center;
     font-style: italic;
     font-weight: lighter;
   }
+}
+
+ul {
+  list-style-type: none;
 }
 
 p {
@@ -75,6 +78,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  list-style: none;
   height: auto;
   margin: 1.5rem;
 }
