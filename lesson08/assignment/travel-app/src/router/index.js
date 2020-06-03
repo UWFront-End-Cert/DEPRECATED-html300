@@ -20,30 +20,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "DestinationDetails" */ "../views/DestinationDetails.vue")
   },
-  {
-    path: "/brazil",
-    name: "brazil",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Brazil.vue")
-  },
-  {
-    path: "/hawaii",
-    name: "hawaii",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Hawaii.vue")
-  },
-  {
-    path: "/Jamaica",
-    name: "Jamaica",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Jamaica.vue")
-  },
-  {
-    path: "/panama",
-    name: "panama",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Panama.vue")
-  },
+
 ];
 
 const router = new VueRouter({
