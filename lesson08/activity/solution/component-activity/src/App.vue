@@ -1,3 +1,16 @@
+<template>
+  <div id="app">
+    <section v-if="posts">
+       <post
+        v-for="post in posts"
+        v-bind:post="post"
+        v-bind:key="post.id"
+      >
+      </post>
+    </section>
+  </div>
+</template>
+
 <script>
 import Post from './Post.vue';
 
@@ -18,16 +31,3 @@ export default {
   }
 }
 </script>
-
-<template>
-  <div id="app">
-    <section v-if="posts">
-       <post
-        v-for="post in posts"
-        v-bind:post="post"
-        v-bind:key="post.id"
-      >
-      </post>
-    </section>
-  </div>
-</template>

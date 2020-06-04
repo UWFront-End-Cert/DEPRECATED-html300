@@ -2,6 +2,9 @@
   <div id="app">
     <TheNavigation />
     <router-view :key="$route.path" />
+    <footer>
+      <TheNavigation />
+      </footer>
   </div>
 </template>
 

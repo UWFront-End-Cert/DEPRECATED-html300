@@ -7,9 +7,28 @@
       <router-link to="/hawaii">Hawaii</router-link>
       <router-link to="/jamaica">Jamaica</router-link>
     </div>
+    <TheNavigation />
     <router-view />
   </div>
 </template>
+
+<script>
+//import TheNavigation from "@/components/TheNavigation";
+
+//export default {
+//  components: {
+//    TheNavigation
+//  }
+//};
+
+//import TheFooter from "@/components/TheFooter";
+//export default {
+//  components: {
+//    TheFooter
+//  }
+//};
+
+</script>
 
 <style>
 #app {

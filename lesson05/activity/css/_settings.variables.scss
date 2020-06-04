@@ -2,3 +2,13 @@
 $teal: #00A3AD;
 $white: #ffffff;
 $font-fam: 'Helvetica Neue', helvetica, arial, sans-serif;
+
+@mixin firstbox {
+  height: 200px;
+  width: 200px;
+  border: 2px $white;
+}
+@mixin secondboxes {
+  height: 200px;
+  width: 100px;
+}

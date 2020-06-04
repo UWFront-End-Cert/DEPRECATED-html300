@@ -1,10 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Brazil from "../views/Brazil.vue";
-import Hawaii from "../views/Hawaii.vue";
-import Panama from "../views/Panama.vue";
-import Jamaica from "../views/Jamaica.vue";
 
 
 Vue.use(VueRouter);
@@ -16,33 +12,37 @@ const routes = [
     component: Home
   },
   {
-    path: "/about",
-    name: "About",
+    path: "/DestinationDetails",
+    name: "DestinationDetails",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+      import(/* webpackChunkName: "DestinationDetails" */ "../views/DestinationDetails.vue")
   },
   {
     path: "/brazil",
     name: "brazil",
-    component: Brazil
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Brazil.vue")
   },
   {
     path: "/hawaii",
     name: "hawaii",
-    component: Hawaii
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Hawaii.vue")
   },
   {
     path: "/Jamaica",
     name: "Jamaica",
-    component: Jamaica
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Jamaica.vue")
   },
   {
     path: "/panama",
     name: "panama",
-    component: Panama
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Panama.vue")
   },
 ];
 
