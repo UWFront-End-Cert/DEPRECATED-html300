@@ -1,3 +1,5 @@
+$(function() {
+
 const cards = [
   {
     "name": "Steve Smith",
@@ -53,7 +55,7 @@ const cards = [
   }
 ];
 
-cards.map(function(el) {
+const cardsHTML = cards.map(function(el) {
   let card = `
   <section class="card-container">
     <ul>
@@ -67,5 +69,7 @@ cards.map(function(el) {
     </ul>
   </section>
   `;
+    });
+$(".cards").append(cardsHTML);
 
 });
