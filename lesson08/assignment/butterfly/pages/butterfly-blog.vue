@@ -1,47 +1,46 @@
 <template>
-  <!--this is the blog page - page number 3-->
-  <div id="app">
-    <!--header stuff-->
-        <router-view/>
-    <header class="jumbotron-fluid text-white text-center">
-          <h1 class="display-4">Welcome to The World of Butterflies</h1>
-          <h1 class="lead">Your sources for all things buttery that fly</h1>
-      <!--and inside the header is the nav bar/router links-->
-       <div class="nav" style="background-color: #eb34e5;">
-         <a class="navbar-brand" href="#">
-           <img src="https://image.flaticon.com/icons/png/512/13/13148.png" width="30" class="d-inline-block align-top" alt="black butterfly icon">
-           Our Menu</a>
-         <p>
-           <router-link :to="/App">Butterfly Home</router-link>
-           <router-link :to="/butterfly-zoo">Butterfly Museum</router-link>
-          <router-link :to="/butterfly-faq">Butterfly FAQs</router-link>
-        </p>
-       </div>
-    </header>
-    <!--this is the blog template for whatever needs to go into each blog box-->
-       <h2 class="text-center">Buttery Blog</h2>
-         <div id="bBlog">
-           <span class="blog-box" v-for="entry in blogs" :key="entry.title">
-             <div v-tooltip="'Butterfly of the month'">
-               <img src="https://images.unsplash.com/photo-1550103685-da83caf1f0c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="brown butterfly orange flower">
-             </div>
-           <div>
-             <h3> {{entry.title}} </h3>
-             <p>{{entry.text}} </p>
+    <section class="container">
+      <!--this is the blog page - page number 3-->
+            <!--header stuff this slot will insert the Butterfly Header component text-->
+        <div class="header">
+          <slot name="butterfly-header"></slot>
+        </div>
+          <!--and inside the header is the nav bar/router links-->
+           <div class="nav" style="background-color: #eb34e5;">
+             <img src="https://image.flaticon.com/icons/png/512/13/13148.png" class="butter-logo" alt="black butterfly icon">
+               Our Menu
+              <nuxt-link to="/" class="butterlinks">Home</nuxt-link>
+              <nuxt-link to="/butterfly-zoo" class="butterlinks">Butterfly Museum</nuxt-link>
+              <nuxt-link to="/butterfly-faq"class="butterlinks">Butterfly FAQ</nuxt-link>
            </div>
-       </span>
-      </div>
+
+        <!--this is the blog template for whatever needs to go into each blog box-->
+      <h2>Buttery Blog</h2>
+
+      <div id="bBlog">
+        <span class="blog-box" v-for="entry in blogs" :key="entry.title">
+          <div v-tooltip="'Butterfly of the month'">
+            <img src="https://images.unsplash.com/photo-1550103685-da83caf1f0c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="brown butterfly orange flower">
+          </div>
+          <div>
+            <h3> {{entry.title}} </h3>
+            <p>{{entry.text}} </p>
+          </div>
+    </span>
     </div>
-  </div>
+
+
+      </section>
 </template>
 
 <script>
+
 export default {
-  name: 'app',
+
   data () {
     return {
-new Vue({
-  el: '#bBlog',
+ new Vue({
+ el: '#bBlog',
   data: {
 
 //this is the array of blog titles and paragraphs of text.
@@ -81,14 +80,44 @@ new Vue({
    }
   }
 }
+*/
 //This is to make the tooltip work
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+
+
+
 </script>
 
-<style lang="scss">
-#app {
+<style>
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+//styled the background of the page to be light blue, but the blog boxes to be white and readalbe
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #b8d4fc;
+}
+
+.nav {
+  background-color: #eb34e5;
+  width: 100%;
+  padding: 2%;
+  color: white;
+  }
+
+
+body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -97,21 +126,21 @@ $(function () {
   margin-top: 60px;
 }
 
-//styled the background of the page to be light blue, but the blog boxes to be white and readalbe
-
-body {
-  background-color: #b8d4fc;
-}
 header {
   background-color: #08fc3d;
   color: white;
   padding-top: 50px;
 }
-.menu {
-  background-color: #ce1dde;
-  margin: 2px;
-  display: flex;
-  justify-content: space-around;
+
+.butter-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.butterlinks {
+  color: white;
+  text-decoration: none;
+  padding: 2%;
 }
 
 #bBlog div {
