@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "node server.js",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server.js"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}

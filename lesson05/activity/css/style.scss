@@ -4,3 +4,17 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.main-Container {
+  background-color: $teal;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+
+  div {
+    width: 200px;
+    height: 100px;
+    margin-top: 15px;
+    border: 2px $white;
+  }
+}

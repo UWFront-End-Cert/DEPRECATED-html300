@@ -1,8 +1,10 @@
 <template>
   <div class="wrapper">
     <h1 class="heading">Countries of Europe</h1>
+    <nuxt-link to="/">Home Page</nuxt-link>
+    <nuxt-link to="/about">About Page</nuxt-link>
+    <nuxt-link to="/about/user">User Page</nuxt-link>
 
-   
   </div>
 </template>
 
@@ -11,7 +13,7 @@
 
 export default {
   components: {
-    
+
   },
   data() {
     return {
@@ -21,9 +23,9 @@ export default {
     }
   },
   mounted () {
-  
+
   }
-  
+
 }
 </script>
 
@@ -71,4 +73,3 @@ img {
   padding-top: 15px;
 }
 </style>
-

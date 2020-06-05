@@ -1,6 +1,6 @@
 # Activity 07 - Vue Forms
 
-We will converting the previous jQuery form to a Vue one using Vue CLI. 
+We will converting the previous jQuery form to a Vue one using Vue CLI.
 
 ### Bootstrap/Vue References
 - [Adding Bootstrap to Vue CLI](https://travishorn.com/adding-bootstrap-to-a-vue-cli-project-98c2a30e0ed0)
@@ -21,7 +21,7 @@ We will converting the previous jQuery form to a Vue one using Vue CLI.
 -	Start with the completed activity code from lesson06
 - 	Install the Vue CLI if you haven't already with `npm install -g @vue/cli`
 	- 	If installed correctly, running `vue --version` should return a number
--	To create your project using Vue CLI v2, 
+-	To create your project using Vue CLI v2,
 	-	run `vue init webpack my-title`
 	-	Follow the prompts:
 		-	Choose 1st option for Vue build (Runtime + Compiler)
@@ -34,7 +34,7 @@ We will converting the previous jQuery form to a Vue one using Vue CLI.
 		-	yarn command: run `yarn add sass-loader sass`
 	-	Installing Bootstrap (in your project directory)
 		-	npm command: run `npm install bootstrap-vue bootstrap jquery popper.js`
-		-	yarn command: run `yarn add bootstrap-vue bootstrap jquery popper.js`	
+		-	yarn command: run `yarn add bootstrap-vue bootstrap jquery popper.js`
 	-	Adding bootstrap/scss to the project
 		-	In your `src` folder, create a `main.scss` file
 		-	In that new file, add the following:
@@ -54,7 +54,7 @@ We will converting the previous jQuery form to a Vue one using Vue CLI.
 		-	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app router
 	-	To run the project, `cd` into your project and run `npm run dev` or `yarn dev` to launch the server
 
--	To create your project using Vue CLI v3, 
+-	To create your project using Vue CLI v3,
 	-	run `vue create my-title`
 	-	Choose 1st option (default)
 	-	Once done, `cd` into your project
@@ -63,7 +63,7 @@ We will converting the previous jQuery form to a Vue one using Vue CLI.
 		-	yarn command: run `yarn add sass-loader sass`
 	-	Installing Bootstrap (in your project directory)
 		-	npm command: run `npm install bootstrap-vue bootstrap jquery popper.js`
-		-	yarn command: run `yarn add bootstrap-vue bootstrap jquery popper.js`	
+		-	yarn command: run `yarn add bootstrap-vue bootstrap jquery popper.js`
 	-	Adding bootstrap/scss to the project
 		-	In your `src` folder, create a `main.scss` file
 		-	In that new file, add the following:
