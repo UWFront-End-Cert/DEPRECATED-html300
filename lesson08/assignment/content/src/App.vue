@@ -17,33 +17,9 @@
   </div>
   <div id="bod">
     <router-view />
-<!--
-  <div v-for="(card, idx) in decks" :key="idx" :id="card.id">
-     <div id="modal-container" :card='card'></div></div>
--->
-
-
-
   </div>
 </div>
 </template>
-<!--
-<script>
-import {
-  decks
-} from './util.js'
-
-export default {
-data() {
-  return {
-    decks: decks.filter(function(litem) {
-      return litem.area != null;
-    })
-  }
-}
-};
-</script>-->
-
 
 <style lang='scss'>
 @import './src/main.scss';
