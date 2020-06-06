@@ -36,9 +36,9 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   .italic {
-    margin: 0 0 .25rem 0;
-    text-align: center;
+    margin: 0 auto;
     font-style: italic;
     font-weight: lighter;
   }

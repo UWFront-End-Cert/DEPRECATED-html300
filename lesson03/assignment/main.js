@@ -1,24 +1,13 @@
 //jQuery doc ready
-
 $(function() {
 
-//Constructor function used because there are 3+ objects. NEED TO SWITCH TO ES6+
-  // function Card(company, experience, school, major, email, linkedInUrl, codeLanguages) {
-  //   this.company = company;
-  //   this.experience = experience;
-  //   this. school = school;
-  //   this.major = major;
-  //   this.email = email;
-  //   this.linkedInUrl = linkedInUrl;
-  //   this.codeLanguages = codeLanguages;
-  // }
-
-
-
+//objects containing key-value pairs to generate information for additional employee cards
 const cards = [
+  //Steve Smith's first employee card is hard coded in index.html
   {
+    "img": "./img/unsplash-headshot.jpg",
     "name": "Steve Smith",
-    "jobTitle": "Project Manage",
+    "jobTitle": "Project Manager",
     "company": "Front End Dev Co",
     "experience": "3 years",
     "school": "UW",
@@ -30,6 +19,7 @@ const cards = [
     ]
   },
   {
+    "img": './cheyenne.jpg',
     "name": "Aaron Katz",
     "jobTitle": "Full Stack Developer",
     "company": "Web Sites and More",
@@ -43,6 +33,7 @@ const cards = [
     ]
   },
   {
+    "img": './cheyenne.jpg',
     "name": "Kyle Hendricks",
     "jobTitle": "Starting Pitcher",
     "company": "Chicago Cubs",
@@ -56,61 +47,61 @@ const cards = [
     ]
   },
   {
+    "img": './cheyenne.jpg',
     "name": "Michael Jordan",
     "jobTitle": "Point Guard",
-    "company": "Chicago Buls",
+    "company": "Chicago Bulls",
     "experience": "20 years",
     "school": "UNC",
     "major": "Trash Talking",
     "email": "mJordan@bulls.com",
-    "linkedInUrl": "mJordas.linkedinprofile.com",
+    "linkedInUrl": "mJordan.linkedinprofile.com",
     "codeLanguages": [
        "HTML", "CSS", "JavaScript", "Java", "Spring"
     ]
   }
 ];
 
-//i want to append this whole SECTION to appear after the first card i hard coded. It is no longer throwing errors, but it is also not showing any events. WHY. Do i need to use create element? Am I  missing $?
-//i want to loop over the objects with a method, use map() to apply a template string, would i use JSON.stringify? do i need a for loop or do i need to use for...in since it is specific for objects? The example on slide 19 is not showing an array of objects, just one object.
+//
+//Loop over the objects using .map() to create a new array of key-value pairs for each iteration
 let cardsHTML = cards.map(function(el) {
-  return `<section class="card-container">
+  //Return to create HTML elements populated with local JSON data
+  return `<section>
+    <figure class="img">
+      <img src=${el.img} alt="Headshot">
+      <h1 class="name">${el.name}</h1>
+      <figcaption>
+        <h2 class="card_jobTitle"><span class="italic">${el.jobTitle}</span></h2>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="profile">
     <ul>
-      <li class="card_company">${el.company}</li>
-      <li class="card_experience">${el.experience}</li>
-      <li class="card_school">${el.school}</li>
-      <li class="card_major">${el.major}</li>
-      <li class="card_email">${el.email}</li>
-      <li class="card_linkedInUrl">${el.linkedInUrl}</li>
-      <li class="card_codeLanguages">${el.codeLanguages}</li>
+      <li class="card_company">
+        <p><span class="bold">Company:</span> ${el.company}</p>
+      </li>
+      <li class="card_experience">
+        <p><span class="bold">Experience:</span> 3 years</p>
+      </li>
+      <li class="card_school">
+        <p><span class="bold">School:</span> UW</p>
+      </li>
+      <li class="card_major">
+        <p><span class="bold">Major:</span> Marketing</p>
+      </li>
+      <li class="card_email">
+        <p><span class="bold">Email:</span> steve@fedc.com</p>
+      </li>
+      <li class="card_linkedInUrl"><i class="fab fa-linkedin"></i> <span class="linked-in">steve.linkedinprofile.com</span></li>
+      <li class="card_codeLanguages">
+        <p><span class="bold">Code Languages:</span> HTML, CSS, JavaScript, .NET, C#</p>
+      </li>
     </ul>
   </section>
   `;
+});
 
-//REPLACE ABOVE CODE WITH THIS CODE
-  //<section class="profile">
-  //   <ul>
-  //     <li class="card_company">
-  //       <p><span class="bold">Company:</span> Front End Dev Co</p>
-  //     </li>
-  //     <li class="card_experience">
-  //       <p><span class="bold">Experience:</span> 3 years</p>
-  //     </li>
-  //     <li class="card_school">
-  //       <p><span class="bold">School:</span> UW</p>
-  //     </li>
-  //     <li class="card_major">
-  //       <p><span class="bold">Major:</span> Marketing</p>
-  //     </li>
-  //     <li class="card_email">
-  //       <p><span class="bold">Email:</span> steve@fedc.com</p>
-  //     </li>
-  //     <li class="card_linkedInUrl"><i class="fab fa-linkedin"></i> <span class="linked-in">steve.linkedinprofile.com</span></li>
-  //     <li class="card_codeLanguages">
-  //       <p><span class="bold">Code Languages:</span> HTML, CSS, JavaScript, .NET, C#</p>
-  //     </li>
-  //   </ul>
-  // </section>
-    });
 card = document.createElement('card');
 $(".card-container").append(cardsHTML);
 
