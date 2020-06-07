@@ -61,6 +61,21 @@ fjs.parentNode.insertBefore(js, fjs);
           class="button--grey">GitHub</a>
       </div>
 
+      <!--  <div class="wrapper">
+              <h1 class="heading">Names of Species</h1>
+              <section class="container" v-if="insects">
+                <card v-for="insect of insects"
+                :key="insect.id"
+                :insect="insect"/>-->
+
+               <!--name of species on biodiversity site
+               https://api.gbif.org/v1/species?datasetKey=ca515b82-e301-43ff-9f69-2c0116e1c95b&sourceId=6B773CF4C72F0995A4228111BFAA28B8.taxon-->
+
+           <!--butterfly atlas api
+           https://species-ws.nbnatlas.org/species/NHMSYS0000841034.json
+           catagories: "nameString" and "status"-->
+              <!--</section>
+            </div>-->
 
   </section>
 </template>
