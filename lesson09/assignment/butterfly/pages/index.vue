@@ -86,8 +86,26 @@ export default {
   components: {
     AppLogo
     //'butterfly-header': butterflyHeader
+
+    /*   data() {
+         loading: true,
+         insects: null,
+         errored: false
+       },
+       mounted() {
+         axios.get(https://species-ws.nbnatlas.org/species/NHMSYS0000841034.json)
+          .then(response =>(this.insect = response.data))
+           .catch( error => {
+             this.errored = true
+           })
+           .finally(() => this.loading = false)
+       }
+      },
+    */
       }
 }
+
+
 
 /*
  let disclaimers = new Vue({
