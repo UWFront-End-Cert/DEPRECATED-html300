@@ -18,9 +18,30 @@
        <nuxt-link to="/butterfly-faq" class="butterlinks">Butterfly FAQ</nuxt-link>-->
     </div>
 
+    <div>
+      <carousel />
+    </div>
+    <div>
+      <nuxt-link to="/fanArt">Click here to see Butterfly Fan Art!</nuxt-link>
+      <div>
+
   </section>
 
   </template>
+
+  <script>
+  import butterfly-header from "@/components/butterflyHeader";
+  //import navBar from '@/components/navBar'
+  import carousel from "./components/carousel.vue";
+
+  export default {
+    components: {
+      'butterfly-header': butterflyHeader,
+      //  navBar
+    },
+  }
+  </script>
+
   <style>
     .container {
       min-height: 100vh;
