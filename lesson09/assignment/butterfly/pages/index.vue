@@ -50,7 +50,7 @@ fjs.parentNode.insertBefore(js, fjs);
 <!-- Your share button code -->
 <div class="fb-share-button" data-href="https://www.si.edu/spotlight/buginfo/butterfly" data-layout="button_count">
 </div>
-
+   <div>
         <a
           href="https://nuxtjs.org/"
           target="_blank"
@@ -82,6 +82,8 @@ fjs.parentNode.insertBefore(js, fjs);
 
 <script>
 //import butterfly-header from "@/components/butterflyHeader";
+//import axios from 'axios'
+
 export default {
   components: {
     AppLogo

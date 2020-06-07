@@ -17,5 +17,40 @@
       <nuxt-link to="/butterfly-blog" class="butterlinks">Buttery Blog</nuxt-link>
        <nuxt-link to="/butterfly-faq" class="butterlinks">Butterfly FAQ</nuxt-link>-->
     </div>
-
+    </section>
   </template>
+  <style>
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background-color: #b8d4fc;
+    }
+
+    .header {
+      display: block;
+      width: 100%;
+      padding: 3%;
+      background-color: 08fc3d;
+      color: white;
+    }
+
+    .nav {
+      background-color: #eb34e5;
+      width: 100%;
+      padding: 2%;
+      color: white;
+      }
+
+    .butterlinks {
+      color: white;
+      text-decoration: none;
+      padding: 2%;
+    }
+
+    .links {
+      padding-top: 15px;
+    }
+
+    </style>
