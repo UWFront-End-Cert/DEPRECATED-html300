@@ -27,9 +27,8 @@
 </div>
 
 <h2 style="font-size: 300%;">Let decadence be your guide. - Oscar Wilde</h2>
-   <div id="disclaimers">
-    <span v-bind:title="disclaimer">*</span>
-  </div>
+  <button v-on:click="disclaimer">disclaimer</button>
+
 
 
   <img src="https://images.unsplash.com/photo-1465505041184-f383907cc134?ixlib=rb-1.2.1&auto=format&fit=crop&w=778&q=80" width="300px" alt="a white butterfly sits on a purple flower">
@@ -107,18 +106,19 @@ export default {
       }
 }
 
+new Vue({
+  el: '#app',
+  data: {
+    name: 'Vue.js'
+  },
+    methods: {
+    disclaimer: function (event) {
+      alert('Something he would have said.')
 
-
-/*
- let disclaimers = new Vue({
-    el: '#disclaimers',
-    data: {
-      disclaimer: 'Something he would have said.'
     }
-  })
+  }
+})
 
-}
-*/
 
 </script>
 
