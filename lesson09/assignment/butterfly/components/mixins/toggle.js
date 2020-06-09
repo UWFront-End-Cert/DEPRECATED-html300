@@ -1,8 +1,7 @@
-<template>
-</template>
 
-<script>
-import Index from '@/index'
+
+
+
 
 export const toggle = {
   data() {
@@ -16,5 +15,3 @@ export const toggle = {
     }
   }
 }
-
-</script>

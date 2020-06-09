@@ -37,12 +37,12 @@ export default {
     appIndex: Index
   }
 }
-
+/*
 const bbutton = new Vue({
   el: '#bbutton',
   components: {
     appModal: Modal,
       }
 });
-
+*/
 </script>

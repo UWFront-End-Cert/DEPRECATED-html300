@@ -1,15 +1,12 @@
 <template>
   <!--Index or Main Page for the World of Butterflies - page 1-->
   <section class="container">
-    <head>
+
       <meta property="og:url" content="https://www.si.edu/spotlight/buginfo/butterfly" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Smithsonian Butterflies" />
-<meta property="og:description" content="A Site to learn about butterflies"
-/>
+<meta property="og:description" content="A Site to learn about butterflies"/>
 <meta property="og:image" content="https://www.si.edu/spotlight/buginfo/butterfly">
-
-</head>
 
 <!--header stuff this slot will insert the Butterfly Header component text-->
   <div class="header">
@@ -53,44 +50,49 @@ fjs.parentNode.insertBefore(js, fjs);
               <section class="container" v-if="insects">
                 <card v-for="insect of insects"
                 :key="insect.id"
-                :insect="insect"/>-->
-
+                :insect="insect"/>
+        </div>
                <!--name of species on biodiversity site
                https://api.gbif.org/v1/species?datasetKey=ca515b82-e301-43ff-9f69-2c0116e1c95b&sourceId=6B773CF4C72F0995A4228111BFAA28B8.taxon-->
 
            <!--butterfly atlas api
            https://species-ws.nbnatlas.org/species/NHMSYS0000841034.json
            catagories: "nameString" and "status"-->
-              <!--</section>
-            </div>-->
+
+            
 
   </section>
 </template>
 
 <script>
-import butterfly-header from "@/components/butterflyHeader";
+import butterflyHeader from "@/components/butterflyHeader"
+import modal from '@/components/modal'
 import axios from 'axios'
 
 export default {
   components: {
-    'butterfly-header': butterflyHeader
+    'butterflyHeader': butterflyHeader
     'modal': modal,
     mixins: [toggle]
+  },
+
       data() {
          loading: true,
          insects: null,
          errored: false
-       },
+       }
+
+
        mounted() {
-         axios.get(https://species-ws.nbnatlas.org/species/NHMSYS0000841034.json)
+         axios.get(https://api.gbif.org/v1/species?datasetKey=ca515b82-e301-43ff-9f69-2c0116e1c95b&sourceId=6B773CF4C72F0995A4228111BFAA28B8.taxon)
           .then(response =>(this.insect = response.data))
            .catch( error => {
              this.errored = true
            })
            .finally(() => this.loading = false)
-       }
-      },
-          }
+
+      }
+
 }
 
 </script>

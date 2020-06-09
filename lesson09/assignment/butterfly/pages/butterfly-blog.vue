@@ -39,8 +39,7 @@
   <script>
 
   export default {
-     name: 'bBlog'
-    data () {
+        data () {
       return {
 
   //this is the array of blog titles and paragraphs of text.

@@ -30,7 +30,7 @@
   </template>
 
   <script>
-  import butterfly-header from "@/components/butterflyHeader";
+  import butterflyHeader from "@/components/butterflyHeader";
   import carousel from "./components/carousel.vue";
 
   export default {
