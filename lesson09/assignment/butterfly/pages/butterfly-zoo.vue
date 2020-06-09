@@ -4,9 +4,9 @@
 
 
 <!--header stuff this slot will insert the Butterfly Header component text-->
-<!--<div class="header">
+<div class="header">
  <slot name="butterfly-header"></slot>
-</div>-->
+</div>
 
 
  <!--nav bar-->
@@ -31,14 +31,15 @@
 
   <script>
   import butterfly-header from "@/components/butterflyHeader";
-  //import navBar from '@/components/navBar'
   import carousel from "./components/carousel.vue";
 
   export default {
+    name: 'butterfly-header',
+    name: 'carousel'
     components: {
       'butterfly-header': butterflyHeader,
-      //  navBar
-    },
+      'carousel': carousel
+          },
   }
   </script>
 

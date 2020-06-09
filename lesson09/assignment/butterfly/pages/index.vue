@@ -12,24 +12,22 @@
 </head>
 
 <!--header stuff this slot will insert the Butterfly Header component text-->
-  <!--<div class="header">
+  <div class="header">
      <slot name="butterfly-header"></slot>
-  </div>-->
+  </div>
 
 
 <!--nav bar-->
 <div class="nav" style="background-color: #eb34e5;">
 <img src="https://image.flaticon.com/icons/png/512/13/13148.png" class="butter-logo" alt="black butterfly icon">
 <h3>Our Menu</h3>
-  <!--<nuxt-link to="/butterfly-zoo" class="butterlinks">Butterfly Museum</nuxt-link>
+  <nuxt-link to="/butterfly-zoo" class="butterlinks">Butterfly Museum</nuxt-link>
   <nuxt-link to="/butterfly-blog" class="butterlinks">Buttery Blog</nuxt-link>
-   <nuxt-link to="/butterfly-faq" class="butterlinks">Butterfly FAQ</nuxt-link>-->
+   <nuxt-link to="/butterfly-faq" class="butterlinks">Butterfly FAQ</nuxt-link>
 </div>
 
-<h2 style="font-size: 300%;">Let decadence be your guide. - Oscar Wilde</h2>
-  <button v-on:click="disclaimer">disclaimer</button>
-
-
+  <!--fun expression and picture of a butterfly-->
+      </modal>
 
   <img src="https://images.unsplash.com/photo-1465505041184-f383907cc134?ixlib=rb-1.2.1&auto=format&fit=crop&w=778&q=80" width="300px" alt="a white butterfly sits on a purple flower">
 
@@ -49,18 +47,8 @@ fjs.parentNode.insertBefore(js, fjs);
 <!-- Your share button code -->
 <div class="fb-share-button" data-href="https://www.si.edu/spotlight/buginfo/butterfly" data-layout="button_count">
 </div>
-   <div>
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
 
-      <!--  <div class="wrapper">
+      <div class="wrapper">
               <h1 class="heading">Names of Species</h1>
               <section class="container" v-if="insects">
                 <card v-for="insect of insects"
@@ -80,15 +68,15 @@ fjs.parentNode.insertBefore(js, fjs);
 </template>
 
 <script>
-//import butterfly-header from "@/components/butterflyHeader";
-//import axios from 'axios'
+import butterfly-header from "@/components/butterflyHeader";
+import axios from 'axios'
 
 export default {
   components: {
-    AppLogo
-    //'butterfly-header': butterflyHeader
-
-    /*   data() {
+    'butterfly-header': butterflyHeader
+    'modal': modal,
+    mixins: [toggle]
+      data() {
          loading: true,
          insects: null,
          errored: false
@@ -102,23 +90,8 @@ export default {
            .finally(() => this.loading = false)
        }
       },
-    */
-      }
+          }
 }
-
-new Vue({
-  el: '#app',
-  data: {
-    name: 'Vue.js'
-  },
-    methods: {
-    disclaimer: function (event) {
-      alert('Something he would have said.')
-
-    }
-  }
-})
-
 
 </script>
 

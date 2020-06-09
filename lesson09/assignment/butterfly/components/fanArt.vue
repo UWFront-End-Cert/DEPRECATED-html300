@@ -11,6 +11,13 @@
 </template>
 
 <script>
+import Index from '@/pages/index'
+
+export default {
+  components: {
+    fanArt
+  }
+}
 Vue.component('vue-gallery', {
   props: ['photos'],
   data: function () {

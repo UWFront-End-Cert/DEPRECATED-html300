@@ -4,18 +4,18 @@
 
 
 <!--header stuff this slot will insert the Butterfly Header component text-->
-<!--<div class="header">
+<div class="header">
  <slot name="butterfly-header"></slot>
-</div>-->
+</div>
 
 
  <!--nav bar-->
   <div class="nav" style="background-color: #eb34e5;">
     <img src="https://image.flaticon.com/icons/png/512/13/13148.png" class="butter-logo" alt="black butterfly icon">
     <h3>Our Menu</h3>
-      <!--<nuxt-link to="/butterfly-zoo" class="butterlinks">Butterfly Museum</nuxt-link>
+      <nuxt-link to="/butterfly-zoo" class="butterlinks">Butterfly Museum</nuxt-link>
       <nuxt-link to="/butterfly-blog" class="butterlinks">Buttery Blog</nuxt-link>
-       <nuxt-link to="/butterfly-faq" class="butterlinks">Butterfly FAQ</nuxt-link>-->
+       <nuxt-link to="/butterfly-faq" class="butterlinks">Butterfly FAQ</nuxt-link>
     </div>
 
     <!--this is the blog template for whatever needs to go into each blog box-->
@@ -39,12 +39,9 @@
   <script>
 
   export default {
-
+     name: 'bBlog'
     data () {
       return {
-   new Vue({
-   el: '#bBlog',
-    data: {
 
   //this is the array of blog titles and paragraphs of text.
       blogs: [
@@ -77,13 +74,11 @@
        text: 'Butterflies are insects in the macrolepidopteran clade Rhopalocera from the order Lepidoptera, which also includes moths. Adult butterflies have large, often brightly coloured wings, and conspicuous, fluttering flight. The group comprises the large superfamily Papilionoidea, which contains at least one former group, the skippers (formerly the superfamily "Hesperioidea"), and the most recent analyses suggest it also contains the moth-butterflies (formerly
        the superfamily "Hedyloidea"). Butterfly fossils date to the Paleocene, about 56 million years ago.'
          }
-      ]
-     }
-  });
+        ]
+      };
      }
     }
-  }
-  */
+
   //This is to make the tooltip work
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
