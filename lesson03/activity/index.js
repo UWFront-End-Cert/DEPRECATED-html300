@@ -27,3 +27,11 @@ marty.pat();
 marty.pat();
 marty.pat();
 marty.pat();
+
+//Create Cheyenne
+const cheyenne = new Dog('Cheyenne', 11, 'ACD', 'Blue merle');
+
+//Pat her 3 times
+cheyenne.pat();
+cheyenne.pat();
+cheyenne.pat();
