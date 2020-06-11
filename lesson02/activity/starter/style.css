@@ -1,29 +1,30 @@
-.static-block__title {
+.static-block
+  &__title {
   margin: 4rem 0 0;
   font-size: 1.5rem;
-  font-family: arial, helvetica, sans-serif;
+  font-family: $font-fam;
   font-weight: 400;
-  color: #6e27c5;
+  color: $purple;
 }
-.static-block__copy {
+__copy {
   margin-bottom: 1rem;
   font-size: 1rem;
-  font-family: arial, helvetica, sans-serif;
-  color: #150f96;
+  font-family: $font-fam;
+  color: $blue;
 }
-.static-block__img {
+__img {
   display: block;
   max-width: 100%;
   margin: auto;
-  border-bottom: 1px solid #000000;;
+  border-bottom: 1px solid $black;
 }
-.static-block__content {
-  border-bottom: 1px solid #f6f5f6;
+__content {
+  border-bottom: 1px solid $white;
   margin: 2rem auto;
 }
 
 .static-block:only-of-type .static-block__content {
-	border: none;  
+	border: none;
 }
 .static-block:last-of-type .static-block__content {
 	border: none;
