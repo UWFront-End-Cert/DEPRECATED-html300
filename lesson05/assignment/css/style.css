@@ -371,8 +371,8 @@ html {
  */
 body {
   color: #FFFFFF;
-  font-family: Helvetica, sans-serif;
-  font-size: 1.5rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
   display: grid;
   grid-template-columns: 3fr 7fr;
   grid-template-rows: auto;
@@ -382,35 +382,35 @@ body {
  * This is the style specific to the header (red part).
  */
 header {
-  background-color: #FF0000;
+  background-color: #F1352B;
   grid-area: header; }
 
 /*
  * This is the style specific to the nav (green part).
  */
 nav {
-  background-color: #00FF00;
+  background-color: #7ACB00;
   grid-area: nav; }
 
 /*
  * This is the style specific to the aside (purple part).
  */
 aside {
-  background-color: #FF00FF;
+  background-color: #6E27C5;
   grid-area: aside; }
 
 /*
  * This is the style specific to the main (orange part).
  */
 main {
-  background-color: #FFA500;
+  background-color: #FF6600;
   grid-area: main; }
 
 /*
  * This is the style specific to the footer (blue part).
  */
 footer {
-  background-color: #0000FF;
+  background-color: #150F96;
   grid-area: footer; }
 
 /*
