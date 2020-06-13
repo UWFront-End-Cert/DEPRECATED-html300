@@ -1,0 +1,113 @@
+/*
+ * This defines the grid that's used to display that parts of the webpage.
+ * It also defines some information about the font that's constant for all
+ * parts of the site.
+ */
+
+body {
+    color: $white;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        'header header'
+        'nav nav'
+        'aside main'
+        'footer footer';
+}
+
+
+/*
+ * This is the style specific to the header (red part).
+ */
+
+header {
+    background-color: $red;
+    grid-area: header;
+}
+
+
+/*
+ * This is the style specific to the nav (green part).
+ */
+
+nav {
+    background-color: $green;
+    grid-area: nav;
+}
+
+/*
+ * This is the style specific to the aside (purple part).
+ */
+
+aside {
+    background-color: $purple;
+    grid-area: aside;
+}
+
+
+/*
+ * This is the style specific to the main (orange part).
+ */
+
+main {
+    background-color: $orange;
+    grid-area: main;
+}
+
+
+/*
+ * This is the style specific to the footer (blue part).
+ */
+
+footer {
+    background-color: $blue;
+    grid-area: footer;
+}
+
+
+/*
+ * Defines the flexbox and behavior in order to have the list element look
+ * the way that a navigation bar should.
+ */
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+
+/*
+ * Removes effects from link elements.
+ */
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+
+/*
+ * This defines flexbox, allowing us to center the text of each part of the
+ * document.
+ */
+
+.standard-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+ * Pads out the main content so that it looks more important. ;)
+ */
+
+.increase-size {
+    padding: 16rem 0;
+}
