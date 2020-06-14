@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css"/>
+        <!-- The four following lines of code are the Bootstrap 4 CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <title>Assignment 06 - Bootstrap 4</title>
+    </head>
+    <body>
+        <!-- This navbar collapeses into a hamburger icon on small screens. It adds a website title to the navbar. -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <h4 class="m-0 text-left pr-md-5 text-primary">Welcome to Assignment 6</h1>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarNav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Landing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./images.html">Images</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./grid.html">Grid</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="./accordion.html">Accordian</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="main mt-5">
+            <!-- Accordion with two main drop-downs, one in English, the other in German. Also contains tooltips specifing the langauage. -->
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header text-center" data-toggle="tooltip" data-placement="top" tabindex="0" title="English">
+                        <h5><a href="#one" data-parent="#accordion" data-toggle="collapse">One</a></h5>
+                    </div>
+                    <div id="one" class="collapse hide">
+                        <div class="card-body">
+                            Hello One
+                        </div>
+                        <div class="card-body">
+                            Hello Two
+                        </div>
+                    </div>
+                </div>
+                <!-- Second drop-down begins here. -->
+                <div class="card">
+                    <div class="card-header text-center" data-toggle="tooltip" data-placement="bottom" tabindex="0" title="German">
+                        <h5><a href="#two" data-parent="#accordion" data-toggle="collapse">Zwei</a></h5>
+                    </div>
+                    <div id="two" class="collapse hide">
+                        <div class="card-body">
+                            Hallo Einz
+                        </div>
+                        <div class="card-body">
+                            Hallo Zwei
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

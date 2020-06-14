@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css"/>
         <!-- The four following lines of code are the Bootstrap 4 CDN -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -30,12 +30,21 @@
                 </div>
             </div>
         </nav>
-        <main class="main">
-            <!-- Uses a Bootstrap jumbotron to display a welcome message. -->
-            <div class="container mt-5">
-                <div class="jumbotron">
-                  <h1>Welcome to the landing page!</h1>      
-                  <p>This is a jumbotron. It's pretty fancy.</p>
+        <main class="main mt-5">
+            <!-- Bootstrap grid with 4 elements. Uses three sizes: All in a row for large screens, two per row for
+                 small screens, and only one per row from any smaller screen sizes. -->
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 col-12 bg-danger p-5" >
+                    <p class="lead">I come first!</p>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12 bg-success p-5">
+                    <p class="lead">I come second!</p>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12 bg-primary p-5">
+                    <p class="lead">I come third!</p>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12 bg-warning p-5">
+                    <p class="lead">I come fourth!</p>
                 </div>
             </div>
         </main>
