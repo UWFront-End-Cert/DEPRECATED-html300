@@ -7,8 +7,8 @@ h1 {
 a {
   text-decoration: none; }
 
-.header {
-  background-image: url("https://unsplash.com/photos/F2Wm6AMp2JE"); }
+header {
+  background-image: url("./images/background.jpg"); }
 
 .neon {
   color: #fff;

@@ -1,5 +1,40 @@
+//Font Variables (color, family, sizing)
+$beige: #E3DFD2;
+//Base color and color functions
+$base-color: #176171;
+$darken-color: darken($base-color, 20%);
+$lighten-color: lighten($base-color, 20%);
+$saturate-color: saturate($base-color, 50%);
+$desaturate-color: desaturate($base-color, 20%);
+$hue-color: adjust-hue($base-color, 50%);
+$opacity-color: rgba($base-color, .5);
+$tint-color: tint($base-color, 50%);
+$shade-color: shade($base-color, 50%);
+
+$font-fam: 'Raleway', sans-serif;
+
+//Mixin for responsive font size
+@mixin fontSize($size) {
+  font-size: $size * 1px;
+  font-size: $size * 0.1rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px, allowing for easy font size calculation*/
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-fam;
+  color: $base-color;
+  @include fontSize(16);
 }
 
 h1 {
@@ -9,8 +44,8 @@ font-family: 'Staatliches', cursive;
 a {
   text-decoration: none;
 }
-.header {
-  background-image: url("https://unsplash.com/photos/F2Wm6AMp2JE");
+header {
+  background-image: url('./images/background.jpg');
 }
 
 .neon {
@@ -26,14 +61,16 @@ a {
     0 0 150px #0ff;
 }
 
-
-ul {
+nav {
+  background: #ffffff;
+  color:
   list-style: none;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
-// /* general styling */
+
+// /* general styling for SVG transform*/
 // :root {
 //   font-size: calc(1vw + 1vh + 1.5vmin);
 // }
@@ -74,25 +111,23 @@ ul {
 //   text-transform: uppercase;
 // }
 
-
-// body,html{height:100%;margin:0;padding:0;background:#E3DFD2}
-// svg{
-//   background:url('https://farm9.staticflickr.com/8760/17195790401_ceeeafcddb_o.jpg');
-//   background-size:cover;
-//   width:40vmin; height:auto;
-//   display:block;
-//   margin:30vmin auto;
-// }
-// text{
-//   font-size:10px;
-//   transition:font-size .4s ease-out;
-//   font-weight:900;
-//   font-family:arial;
-// }
-// svg:hover text{
-//   transition:font-size .4s ease-in;
-//   font-size: 300px;
-// }
+svg{
+  background:url('');
+  background-size:cover;
+  width:40vmin; height:auto;
+  display:block;
+  margin:30vmin auto;
+}
+text{
+  font-size:10px;
+  transition:font-size .4s ease-out;
+  font-weight:900;
+  font-family:arial;
+}
+svg:hover text{
+  transition:font-size .4s ease-in;
+  font-size: 300px;
+}
 //
 // body{
 //   width: 100%;
