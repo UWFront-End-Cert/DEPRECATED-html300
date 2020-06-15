@@ -1,0 +1,21 @@
+body {
+  font-family: 'Raleway', sans-serif; }
+
+h1 {
+  font-family: 'Staatliches', cursive; }
+
+a {
+  text-decoration: none; }
+
+.header {
+  background-image: url("https://unsplash.com/photos/F2Wm6AMp2JE"); }
+
+.neon {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff; }
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
