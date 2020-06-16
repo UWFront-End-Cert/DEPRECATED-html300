@@ -15,28 +15,45 @@ body {
   font-size: 1.6rem; }
 
 h1 {
-  font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
   font-size: 24px;
-  font-size: 2.4rem; }
+  font-size: 2.4rem;
+  margin: auto; }
+
+h2 {
+  font-family: "Staatliches", cursive;
+  margin: auto; }
 
 a {
   text-decoration: none; }
 
+a:visited {
+  color: #06181c; }
+
 header {
+  height: 20rem;
+  width: 100%;
   background: linear-gradient(to left, tint(#176171, 50%), rgba(23, 97, 113, 0.5), shade(#176171, 50%));
   background-image: url("../images/header.jpg");
-  background-size: auto;
-  height: 50%;
-  width: auto;
+  background-size: 100% 175%;
   background-position: top center;
   margin: 0; }
 
-#nav nav {
+nav ul {
   background: tint(#176171, 50%);
+  /*one of the color functions not working*/
   list-style: none;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between; }
+  justify-content: space-around; }
+
+.go-to {
+  border-radius: 50%;
+  height: 50%;
+  background: #28aac6;
+  transition: all 2s ease-in; }
+  .menu:hover .go-to {
+    transform: scale(2); }
 
 .neon {
   color: #fff;
