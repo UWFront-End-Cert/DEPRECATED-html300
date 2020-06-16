@@ -1,21 +1,74 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /*1rem = 10px, allowing for easy font size calculation*/ }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
 body {
-  font-family: 'Raleway', sans-serif; }
+  font-family: "Raleway", sans-serif;
+  color: #176171;
+  font-size: 16px;
+  font-size: 1.6rem; }
 
 h1 {
-  font-family: 'Staatliches', cursive; }
+  font-family: 'Staatliches', cursive;
+  font-size: 24px;
+  font-size: 2.4rem; }
 
 a {
   text-decoration: none; }
 
 header {
-  background-image: url("./images/background.jpg"); }
+  background: linear-gradient(to left, tint(#176171, 50%), rgba(23, 97, 113, 0.5), shade(#176171, 50%));
+  background-image: url("../images/header.jpg");
+  background-size: auto;
+  height: 50%;
+  width: auto;
+  background-position: top center;
+  margin: 0; }
 
-.neon {
-  color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff; }
-
-ul {
+#nav nav {
+  background: tint(#176171, 50%);
   list-style: none;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between; }
+
+.neon {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+  font-size: 24px;
+  font-size: 2.4rem; }
+
+.grid-1 {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr); }
+
+.column {
+  padding: 0;
+  margin: 0; }
+
+svg {
+  background: url("../images/cheyenne.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40vmin;
+  height: auto;
+  display: block;
+  margin: 30vmin auto; }
+
+text {
+  font-size: 10px;
+  transition: font-size .4s ease-out;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif; }
+
+svg:hover text {
+  transition: font-size .4s ease-in;
+  font-size: 300px; }

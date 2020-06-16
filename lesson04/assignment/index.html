@@ -1,54 +1,43 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Assignment 1 - Part 2</title>
+  <title>Course Project</title>
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
   </script>
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap" rel="stylesheet">
   <!-- Local Files -->
   <script src="scripts.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
   <main class="main">
-    <header class="header">
+    <header id="header">
       <h1 class="neon">Merissa O'Reilly</h1>
+      <nav id="nav">
+        <ul class="menu">
+          <li class="go-to"><a href="#">Home</a></li>
+          <li class="go-to"><a href="#">About Me</a></li>
+          <li class="go-to"><a href="#">Skills</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <ul class="menu">
-        <li class="go-to"><a href="#">Home</a></li>
-        <li class="go-to"><a href="#">About Me</a></li>
-        <li class="go-to"><a href="#">Skills</a></li>
-      </ul>
-    </nav>
 
-  <article>
+  <section class="grid-1">
+    <div class="column">
     <h2>Vision Statement</h2>
-    <p>To acheive success as a front-end web developer, working well in a team, inspiring others, and contributing to my own community is important. I will do this by drawing on past experiences in executing a week-long fully fucntioning guest schedule for a Masters Week(R) guest house to be used by five team members; spearheading the inaugural Sustainable Hospitality Development Symposium on an accelerated timeline [link](https://csumb.edu/hospitality/sustainable-hospitality-development-symposium); and inspiring my community as a board member for the Augusta Handmade Fair and SFRG Treasurer.
+    <p>To acheive success as a front-end web developer, working well in a team, inspiring others, and contributing to my own community is important. I will do this by drawing on past experiences in executing a week-long fully fucntioning guest schedule for a Masters Week(R) guest house to be used by five team members; spearheading the inaugural on an accelerated timeline <a href="https://csumb.edu/hospitality/sustainable-hospitality-development-symposium">Sustainable Hospitality Development Symposium</a>; and inspiring my community as a board member for the Augusta Handmade Fair and SFRG Treasurer.
     Accordingly, I will focus on continous professional learning and growth.</p>
-  </article>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <section>
-    <svg viewbox="0 0 50 50" width="50" height="50">
+    <div class="column">
+    <svg viewbox="0 0 50 50" width="50" height="75">
       <defs>
         <mask id="mask" x="0" y="0" width="100" height="49">
           <rect x="0.5" y="0.5" width="49" height="49" fill="#fff" />
@@ -59,10 +48,11 @@
       </defs>
       <rect x="0.5" y="0.5" width="49" height="49" mask="url(#mask)" fill-opacity="1" fill="#E3DFD2" />
     </svg>
-  </section>
+  </div>
+</section>
 
 
-  <section>
+  <!-- <section>
     <link href='https://fonts.googleapis.com/css?family=Lato|Roboto:400,900' rel='stylesheet' type='text/css'>
     <div class="container">
       <a href="http://marcel-pirnay.be/" class="btn">
@@ -76,52 +66,38 @@
           <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
         </svg>
         <!--<span>Voir mes réalisations</span>-->
-        <span>Welcome in my world</span>
+        <!-- <span>Welcome in my world</span>
       </a>
     </div>
-  </section>
+  </section> -->
 
+<!--vertical circles
+  <div class="container">
+    <div class="circle0"></div>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+    <div class="circle5"></div>
+  </div>-->
 
-    <h1>Using ES6+ Methods</h1>
-    <section class="input-set">
-      <!-- Input -->
-      <input type="text" class="input">
-      <!-- Submit for Input -->
-      <input class="submit" type="submit"></input>
-      <!-- Result markup with hook for answer -->
-      <p class="markup">My total with reduce is now: <span class="sum"></span></p>
-    </section>
 
     <section class="input-includes">
+      <h2>ES6+ Samples</h2>
+      <p class="markupTwo">Enter the quick brown animal, submit, and see a follow-up question. <br>The quick brown ___ jumps over the lazy dog. <span class="word"></span></p>
       <!-- Input -->
       <input class="inputTwo" type="text">
       <!-- Submit for Input -->
       <input class="submitTwo" type="submit">
-      <p class="markupTwo">Enter the quick brown animal, submit, and see a follow-up question. <br>The quick brown ___ jumps over the lazy dog. <span class="word"></span></p>
     </section>
 
-    <section class="input-includes">
-      <!-- Input -->
-      <input class="inputThree" type="text">
-      <!-- Submit for Input -->
-      <input class="submitThree" type="submit">
-      <p class="markupThree">Enter a number between 1 and 10. I will show you the number I am thinking of. <span class="found"></span></p>
-    </section>
 
     <section class="input-includes">
-      <!-- Input -->
-      <input class="inputFour" type="text">
-      <!-- Submit for Input -->
-      <input class="submitFour" type="submit">
-      <p class="markupFour">Enter a number to see shipping quotes for four regions. <span class="map"></span></p>
-    </section>
-
-    <section class="input-includes">
+      <p class="markupFive">Enter a quantity between 2 and 7 to determine what produce is available at the market.<span class="filter"></span></p>
       <!-- Input -->
       <input class="inputFive" type="text">
       <!-- Submit for Input -->
       <input class="submitFive" type="submit">
-      <p class="markupFive">Enter a quantity between 2 and 7 to determine what produce is available at the market.<span class="filter"></span></p>
     </section>
 
   </main>
