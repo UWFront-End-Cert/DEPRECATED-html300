@@ -46,7 +46,18 @@ h1 {
 
 h2 {
   font-family: $header-fam;
-  margin: auto;
+  margin: 1rem;
+}
+
+/*BEM but drop cap isn't working as expected*/
+.para {
+  background-color: red;
+  // &__p {
+  //   p:first-child::first-letter: 2;
+  // }
+  &--border {
+    border: 2px dashed black;
+  }
 }
 
 a {
@@ -89,6 +100,10 @@ nav ul {
   }
 }
 
+.go-to1 {
+  background: $opacity-color;
+}
+
 .neon {
   color: #fff;
   text-shadow:
@@ -127,6 +142,8 @@ svg {
 }
 text {
   font-size: 10px;
+  padding: 0.25em;
+  margin: 0.25em;
   transition:font-size .4s ease-out;
   font-weight: 900;
   font-family: $font-fam;
@@ -223,54 +240,54 @@ svg:hover text{
 // }
 
 
-//vertical bubbles
-// .container {
-//   margin: 100px;
-// }
-//
-// .circle {
-//   border-radius: 50%;
-//   height: 30px;
-//   width: 30px;
-//   margin: 10px;
-//
-//   .container:hover & {
-//     transform: translateX(200px);
-//   }
-// }
-//
-// .circle0 {
-//   @extend .circle;
-//   background: PaleTurquoise;
-//   transition: all 1.5s linear;
-// }
-//
-// .circle1 {
-//   @extend .circle;
-//   background: salmon;
-//   transition: all 1.5s ease;
-// }
-//
-// .circle2 {
-//    @extend .circle;
-//   background: lightskyblue;
-//   transition: all 1.5s ease-in;
-// }
-//
-// .circle3 {
-//   @extend .circle;
-//   background: khaki;
-//   transition: all 1.5s ease-out;
-// }
-//
-// .circle4 {
-//   @extend .circle;
-//   background: mediumturquoise;
-//   transition: all 1.5s ease-in-out;
-// }
-//
-// .circle5 {
-//   @extend .circle;
-//   background: thistle;
-//   transition: all 1.5s cubic-bezier(0,1,.98,0);
-// }
+vertical circles
+.container {
+  margin: 100px;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+
+  .container:hover & {
+    transform: translateX(200px);
+  }
+}
+
+.circle0 {
+  @extend .circle;
+  background: PaleTurquoise;
+  transition: all 1.5s linear;
+}
+
+.circle1 {
+  @extend .circle;
+  background: salmon;
+  transition: all 1.5s ease;
+}
+
+.circle2 {
+   @extend .circle;
+  background: lightskyblue;
+  transition: all 1.5s ease-in;
+}
+
+.circle3 {
+  @extend .circle;
+  background: khaki;
+  transition: all 1.5s ease-out;
+}
+
+.circle4 {
+  @extend .circle;
+  background: mediumturquoise;
+  transition: all 1.5s ease-in-out;
+}
+
+.circle5 {
+  @extend .circle;
+  background: thistle;
+  transition: all 1.5s cubic-bezier(0,1,.98,0);
+}

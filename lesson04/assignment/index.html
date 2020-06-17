@@ -24,17 +24,20 @@
     </header>
     <nav id="nav">
       <ul class="menu">
-        <li class="go-to"><a href="#">Home</a></li>
-        <li class="go-to"><a href="#">About Me</a></li>
-        <li class="go-to"><a href="#">Skills</a></li>
+        <!--adjust classes so each transforms separately-->
+        <li class="got-to1 go-to"><a href="#">Home</a></li>
+        <li class="go-to2 go-to"><a href="#">About Me</a></li>
+        <li class="go-to3 go-to"><a href="#">Skills</a></li>
       </ul>
     </nav>
 
   <section class="grid-1">
     <div class="column">
     <h2>Vision Statement</h2>
-    <p>To acheive success as a front-end web developer, working well in a team, inspiring others, and contributing to my own community is important. I will do this by drawing on past experiences in executing a week-long fully fucntioning guest schedule for a Masters Week(R) guest house to be used by five team members; spearheading the inaugural on an accelerated timeline <a href="https://csumb.edu/hospitality/sustainable-hospitality-development-symposium">Sustainable Hospitality Development Symposium</a>; and inspiring my community as a board member for the Augusta Handmade Fair and SFRG Treasurer.
+      <div class="para">
+      <p>To acheive success as a front-end web developer, working well in a team, inspiring others, and contributing to my own community is important. I will do this by drawing on past experiences in executing a week-long fully fucntioning guest schedule for a Masters Week(R) guest house to be used by five team members; spearheading the inaugural on an accelerated timeline <a href="https://csumb.edu/hospitality/sustainable-hospitality-development-symposium">Sustainable Hospitality Development Symposium</a>; and inspiring my community as a board member for the Augusta Handmade Fair and SFRG Treasurer.
     Accordingly, I will focus on continous professional learning and growth.</p>
+      </div>
     </div>
 
     <div class="column">
@@ -42,9 +45,9 @@
       <defs>
         <mask id="mask" x="0" y="0" width="100" height="49">
           <rect x="0.5" y="0.5" width="49" height="49" fill="#fff" />
-          <text x="20" text-anchor="middle" y="50" dy="0">M</text>
-          <text x="25" id="ltrV" text-anchor="middle" y="50" dy="0">L</text>
-          <text x="30" text-anchor="middle" y="50" dy="0">O</text>
+          <text x="20" text-anchor="middle" y="50" dy="0">Y</text>
+          <text x="25" id="ltrV" text-anchor="middle" y="50" dy="0">E</text>
+          <text x="30" text-anchor="middle" y="50" dy="0">S</text>
         </mask>
       </defs>
       <rect x="0.5" y="0.5" width="49" height="49" mask="url(#mask)" fill-opacity="1" fill="#E3DFD2" />
@@ -66,13 +69,12 @@
           </defs>
           <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
         </svg>
-        <!--<span>Voir mes réalisations</span>-->
         <!-- <span>Welcome in my world</span>
       </a>
     </div>
   </section> -->
 
-<!--vertical circles
+vertical circles
   <div class="container">
     <div class="circle0"></div>
     <div class="circle1"></div>
@@ -80,7 +82,7 @@
     <div class="circle3"></div>
     <div class="circle4"></div>
     <div class="circle5"></div>
-  </div>-->
+  </div>
 
 
     <section class="input-includes">
@@ -89,7 +91,16 @@
       <!-- Input -->
       <input class="inputTwo" type="text">
       <!-- Submit for Input -->
-      <input class="submitTwo" type="submit">
+      <input class="submitTwo" type="button" value="Submit">
+      <!-- <svg width="277" height="62">
+        <defs>
+            <linearGradient id="grad1">
+                <stop offset="0%" stop-color="#FF8282"/>
+                <stop offset="100%" stop-color="#E178ED" />
+            </linearGradient>
+        </defs>
+         <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+      </svg> -->
     </section>
 
     <!-- Gradient button
@@ -109,16 +120,12 @@
     </div> -->
 
 
-
-
-
-
     <section class="input-includes">
       <p class="markupFive">Enter a quantity between 2 and 7 to determine what produce is available at the market.<span class="filter"></span></p>
       <!-- Input -->
       <input class="inputFive" type="text">
       <!-- Submit for Input -->
-      <input class="submitFive" type="submit">
+      <input class="submitFive" type="button" value="Submit">
     </section>
 
   </main>

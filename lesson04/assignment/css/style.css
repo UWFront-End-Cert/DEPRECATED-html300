@@ -22,7 +22,13 @@ h1 {
 
 h2 {
   font-family: "Staatliches", cursive;
-  margin: auto; }
+  margin: 1rem; }
+
+/*BEM but drop cap isn't working as expected*/
+.para {
+  background-color: red; }
+  .para--border {
+    border: 2px dashed black; }
 
 a {
   text-decoration: none; }
@@ -55,6 +61,9 @@ nav ul {
   .menu:hover .go-to {
     transform: scale(2); }
 
+.go-to1 {
+  background: rgba(23, 97, 113, 0.5); }
+
 .neon {
   color: #fff;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
@@ -82,6 +91,8 @@ svg {
 
 text {
   font-size: 10px;
+  padding: 0.25em;
+  margin: 0.25em;
   transition: font-size .4s ease-out;
   font-weight: 900;
   font-family: "Raleway", sans-serif; }
@@ -89,3 +100,38 @@ text {
 svg:hover text {
   transition: font-size .4s ease-in;
   font-size: 300px; }
+
+vertical circles .container {
+  margin: 100px; }
+
+.circle, .circle0, .circle1, .circle2, .circle3, .circle4, .circle5 {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin: 10px; }
+  .container:hover .circle, .container:hover .circle0, .container:hover .circle1, .container:hover .circle2, .container:hover .circle3, .container:hover .circle4, .container:hover .circle5 {
+    transform: translateX(200px); }
+
+.circle0 {
+  background: PaleTurquoise;
+  transition: all 1.5s linear; }
+
+.circle1 {
+  background: salmon;
+  transition: all 1.5s ease; }
+
+.circle2 {
+  background: lightskyblue;
+  transition: all 1.5s ease-in; }
+
+.circle3 {
+  background: khaki;
+  transition: all 1.5s ease-out; }
+
+.circle4 {
+  background: mediumturquoise;
+  transition: all 1.5s ease-in-out; }
+
+.circle5 {
+  background: thistle;
+  transition: all 1.5s cubic-bezier(0, 1, 0.98, 0); }
