@@ -1,5 +1,3 @@
-/*sidestep with mix()*/
-/* */
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -27,12 +25,11 @@ h2 {
   font-family: "Staatliches", cursive;
   margin: 1rem; }
 
-/*drop cap isn't working as expected*/
-.para .para:first-child::first-letter {
-  initial-letter: 2; }
-
 a {
   text-decoration: none; }
+
+a:hover {
+  color: #ffffff; }
 
 a:visited {
   color: #06181c; }
@@ -40,15 +37,15 @@ a:visited {
 header {
   height: 20rem;
   width: 100%;
-  background: linear-gradient(to left, tint(#176171, 50%), rgba(23, 97, 113, 0.5), shade(#176171, 50%));
+  background: linear-gradient(to left, #8bb0b8, rgba(23, 97, 113, 0.5), #0c3139);
+  opacity: 0.75;
   background-image: url("../images/header.jpg");
   background-size: 100% 175%;
   background-position: top center;
   margin: 0; }
 
 nav ul {
-  background: tint(#176171, 50%);
-  /*one of the color functions not working*/
+  background: #8bb0b8;
   list-style: none;
   display: flex;
   flex-flow: row wrap;
@@ -56,9 +53,9 @@ nav ul {
 
 .go-to {
   border-radius: 50%;
-  height: 50%;
+  height: auto;
   background: #28aac6;
-  transition: all 2s linear; }
+  transition: rotate(45deg) 2s linear; }
   .menu:hover .go-to {
     transform: scale(2); }
 
@@ -68,72 +65,20 @@ nav ul {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr); }
 
-.column {
-  padding: 0;
-  margin: 0; }
-
-svg {
-  background: url("../images/cheyenne.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 40vmin;
+/*using millisections for transitions for better JS compatibility*/
+.container {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: auto;
-  display: block;
-  margin: 30vmin auto; }
+  width: 92%;
+  transition: background 500ms ease-in-out; }
 
-text {
-  font-size: 10px;
-  padding: 0.25em;
-  margin: 0.25em;
-  transition: font-size .4s ease-out;
-  font-weight: 900;
-  font-family: "Raleway", sans-serif; }
-
-svg:hover text {
-  transition: font-size .4s ease-in;
-  font-size: 300px; }
-
-vertical circles .container {
-  margin: 100px;
-  background-image: url("../images/cheyenne.jpg");
-  background-repeat: no-repeat; }
-
-.dog {
-  width: 50%;
-  height: auto; }
-
-.dog:hover {
-  transition: all 1.5s linear;
+.container:hover {
   background: #176171; }
 
-.circle, .circle0, .circle1, .circle2, .circle3, .circle4, .circle5 {
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  margin: 10px; }
-  .container:hover .circle, .container:hover .circle0, .container:hover .circle1, .container:hover .circle2, .container:hover .circle3, .container:hover .circle4, .container:hover .circle5 {
-    transform: translateX(200px); }
-
-.circle0 {
-  background: PaleTurquoise;
-  transition: all 1.5s linear; }
-
-.circle1 {
-  background: salmon;
-  transition: all 1.5s ease; }
-
-.circle2 {
-  background: lightskyblue;
-  transition: all 1.5s ease-in; }
-
-.circle3 {
-  background: khaki;
-  transition: all 1.5s ease-out; }
-
-.circle4 {
-  background: mediumturquoise;
-  transition: all 1.5s ease-in-out; }
-
-.circle5 {
-  background: thistle;
-  transition: all 1.5s cubic-bezier(0, 1, 0.98, 0); }
+.dog {
+  height: auto;
+  width: 92%;
+  margin: 1.25rem; }

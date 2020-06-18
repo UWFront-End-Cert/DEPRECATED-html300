@@ -1,6 +1,5 @@
 //Font Variables (color, family, sizing)
-$beige: #E3DFD2;
-//Base color and color functions COLOR FUNCTIONS NOT WORKING ON SOME ELEMENTS
+//Base color and color functions
 $base-color: #176171;
 $darken-color: darken($base-color, 20%);
 $lighten-color: lighten($base-color, 20%);
@@ -8,13 +7,13 @@ $saturate-color: saturate($base-color, 50%);
 $desaturate-color: desaturate($base-color, 20%);
 $hue-color: adjust-hue($base-color, 50%);
 $opacity-color: rgba($base-color, .5);
-$tint-color: tint($base-color, 50%);/*sidestep with mix()*/
-$shade-color: shade($base-color, 50%);/* */
+$tint-color: mix(white, $base-color, 50%);
+$shade-color: mix(black, $base-color, 50%);
 
 $font-fam: 'Raleway', sans-serif;
 $header-fam: 'Staatliches', cursive;
 
-//Mixin for responsive font size MIXINS NOT WORKING ON SOME ELEMENTS
+//Mixin for responsive font size
 @mixin fontSize($size) {
   font-size: $size * 0.1rem;
 }
@@ -59,17 +58,13 @@ h2 {
   margin: 1rem;
 }
 
-/*drop cap isn't working as expected*/
-.para {
-  .para:first-child::first-letter {
-    initial-letter: 2;
-  }
-}
-
 a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #ffffff;
+}
 a:visited {
   color: $darken-color;
 }
@@ -78,6 +73,7 @@ header {
   height: 20rem;
   width: 100%;
   background: linear-gradient(to left, $tint-color, $opacity-color, $shade-color);
+  opacity: 0.75;
   background-image: url('../images/header.jpg');
   background-size: 100% 175%;
   background-position: top center;
@@ -86,7 +82,7 @@ header {
 
 
 nav ul {
-  background: $tint-color;/*one of the color functions not working*/
+  background: $tint-color;
   list-style: none;
   display: flex;
   flex-flow: row wrap;
@@ -95,16 +91,14 @@ nav ul {
 
 .go-to {
   border-radius: 50%;
-  height: 50%;
+  height: auto;
   background: $lighten-color;
-  transition: all 2s linear;
+  transition: rotate(45deg) 2s linear;
 
   .menu:hover & {
     transform: scale(2);
   }
 }
-
-
 
 .grid-1 {
   display: grid;
@@ -113,175 +107,76 @@ nav ul {
   grid-template-rows: repeat(1, 1fr);
 }
 
-.column {
-  padding: 0;
-  margin: 0;
-}
-
-// body,html{height:100%;margin:0;padding:0;background:#E3DFD2}
-svg {
-  background: url('../images/cheyenne.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 40vmin;
-  height:auto;
-  display: block;
-  margin: 30vmin auto;
-}
-text {
-  font-size: 10px;
-  padding: 0.25em;
-  margin: 0.25em;
-  transition:font-size .4s ease-out;
-  font-weight: 900;
-  font-family: $font-fam;
-}
-svg:hover text{
-  transition:font-size .4s ease-in;
-  font-size: 300px;
-}
-
-
-//Gradient Button
-// body{
-//   width: 100%;
-//   height:100%;
-//   position:relative;
-//   overflow:hidden;
-//   background:
-//     linear-gradient(
-//       rgba(0, 0, 0, 0.7),
-//       rgba(0, 0, 0, 0.7)
-//     ),
-//     black url('https://images.unsplash.com/photo-1439723680580-bfd9d28ef9b6?crop=entropy&fit=crop&fm=jpg&h=950&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925') 50% 50% no-repeat;
-//    //background:
-//      linear-gradient(
-//       rgba(0, 0, 0, 0.7),
-//       rgba(0, 0, 0, 0.7)
-//     ),
-//      rgba(220, 220, 220, 1) url('https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?crop=entropy&fit=crop&fm=jpg&h=950&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925') 50% 50% no-repeat;
-//   //background-blend-mode: exclusion;
-//   background-blend-mode: luminosity;
-//
-//
-// }
-// .container{
-//
-//
-//
-//   height:100%;
-//  position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-// }
-// .btn {
-//     margin-top: calc(50% + 25px);
-//     position: relative;
-//     display: inline-block;
-//     width: 277px;
-//     height: 50px;
-//     font-size: 1em;
-//     font-weight: bold;
-//     line-height: 60px;
-//     text-align: center;
-//     text-transform: uppercase;
-//     background-color: transparent;
-//     cursor: pointer;
-//     text-decoration:none;
-//     font-family: 'Roboto', sans-serif;
-//     font-weight:900;
-//     font-size:17px;
-//     letter-spacing: 0.045em;
-// }
-//
-// .btn svg {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-// }
-//
-// .btn svg rect {
-//     //stroke: #EC0033;
-//     stroke-width: 4;
-//     stroke-dasharray: 353, 0;
-//     stroke-dashoffset: 0;
-//     -webkit-transition: all 600ms ease;
-//     transition: all 600ms ease;
-// }
-//
-// .btn span{
-//   background: rgb(255,130,130);
-//   background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
-//   background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
-//   background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
-//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', endColorstr='#e178ed',GradientType=1 );
-//
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-// }
-//
-// .btn:hover svg rect {
-//     stroke-width: 4;
-//     stroke-dasharray: 196, 543;
-//     stroke-dashoffset: 437;
-// }
-
-input[type=button] {
-  background-color: red;
-  // transition: ease-in 0.5s;
-}
-.btn:hover {
-
-}
-
-vertical circles
+/*using millisections for transitions for better JS compatibility*/
 .container {
-  margin: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 92%;
+  transition: background 500ms ease-in-out;
 
-.circle {
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  margin: 10px;
+}
 
-  .container:hover & {
-    transform: translateX(200px);
+.container:hover {
+  background: $base-color;
+
+}
+
+.dog {
+  height: auto;
+  width: 92%;
+  margin: 1.25rem;
   }
-}
 
-.circle0 {
-  @extend .circle;
-  background: PaleTurquoise;
-  transition: all 1.5s linear;
-}
-
-.circle1 {
-  @extend .circle;
-  background: salmon;
-  transition: all 1.5s ease;
-}
-
-.circle2 {
-   @extend .circle;
-  background: lightskyblue;
-  transition: all 1.5s ease-in;
-}
-
-.circle3 {
-  @extend .circle;
-  background: khaki;
-  transition: all 1.5s ease-out;
-}
-
-.circle4 {
-  @extend .circle;
-  background: mediumturquoise;
-  transition: all 1.5s ease-in-out;
-}
-
-.circle5 {
-  @extend .circle;
-  background: thistle;
-  transition: all 1.5s cubic-bezier(0,1,.98,0);
-}
+// vertical circles
+// .container {
+//   margin: 100px;
+//
+// .circle {
+//   border-radius: 50%;
+//   height: 30px;
+//   width: 30px;
+//   margin: 10px;
+//
+//   .container:hover & {
+//     transform: translateX(200px);
+//   }
+// }
+//
+// .circle0 {
+//   @extend .circle;
+//   background: PaleTurquoise;
+//   transition: all 1.5s linear;
+// }
+//
+// .circle1 {
+//   @extend .circle;
+//   background: salmon;
+//   transition: all 1.5s ease;
+// }
+//
+// .circle2 {
+//    @extend .circle;
+//   background: lightskyblue;
+//   transition: all 1.5s ease-in;
+// }
+//
+// .circle3 {
+//   @extend .circle;
+//   background: khaki;
+//   transition: all 1.5s ease-out;
+// }
+//
+// .circle4 {
+//   @extend .circle;
+//   background: mediumturquoise;
+//   transition: all 1.5s ease-in-out;
+// }
+//
+// .circle5 {
+//   @extend .circle;
+//   background: thistle;
+//   transition: all 1.5s cubic-bezier(0,1,.98,0);
+// }
