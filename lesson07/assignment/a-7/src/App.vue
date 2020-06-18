@@ -1,4 +1,5 @@
 <!-- Copyright 2020 Markus Schiffer -->
+<!-- The following code is for a Bootstrap nav bar, used on all pages. -->
 
 <template>
   <div>

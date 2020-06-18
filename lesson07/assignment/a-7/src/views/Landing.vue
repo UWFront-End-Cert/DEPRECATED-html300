@@ -1,4 +1,5 @@
 <!-- Copyright 2020 Markus Schiffer -->
+<!-- This code is for page 1 (landing) -->
 
 <template>
     <Jumbotron/>
