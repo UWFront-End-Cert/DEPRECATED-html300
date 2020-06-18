@@ -1,3 +1,5 @@
+/*sidestep with mix()*/
+/* */
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -11,24 +13,23 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   color: #176171;
-  font-size: 16px;
   font-size: 1.6rem; }
 
-h1 {
+.neon {
   font-family: "Staatliches", cursive;
-  font-size: 24px;
-  font-size: 2.4rem;
-  margin: auto; }
+  font-size: 5rem;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff; }
 
 h2 {
   font-family: "Staatliches", cursive;
   margin: 1rem; }
 
-/*BEM but drop cap isn't working as expected*/
-.para {
-  background-color: red; }
-  .para--border {
-    border: 2px dashed black; }
+/*drop cap isn't working as expected*/
+.para .para:first-child::first-letter {
+  initial-letter: 2; }
 
 a {
   text-decoration: none; }
@@ -57,18 +58,9 @@ nav ul {
   border-radius: 50%;
   height: 50%;
   background: #28aac6;
-  transition: all 2s ease-in; }
+  transition: all 2s linear; }
   .menu:hover .go-to {
     transform: scale(2); }
-
-.go-to1 {
-  background: rgba(23, 97, 113, 0.5); }
-
-.neon {
-  color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
-  font-size: 24px;
-  font-size: 2.4rem; }
 
 .grid-1 {
   display: grid;
@@ -102,7 +94,17 @@ svg:hover text {
   font-size: 300px; }
 
 vertical circles .container {
-  margin: 100px; }
+  margin: 100px;
+  background-image: url("../images/cheyenne.jpg");
+  background-repeat: no-repeat; }
+
+.dog {
+  width: 50%;
+  height: auto; }
+
+.dog:hover {
+  transition: all 1.5s linear;
+  background: #176171; }
 
 .circle, .circle0, .circle1, .circle2, .circle3, .circle4, .circle5 {
   border-radius: 50%;

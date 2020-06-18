@@ -8,15 +8,14 @@ $saturate-color: saturate($base-color, 50%);
 $desaturate-color: desaturate($base-color, 20%);
 $hue-color: adjust-hue($base-color, 50%);
 $opacity-color: rgba($base-color, .5);
-$tint-color: tint($base-color, 50%);
-$shade-color: shade($base-color, 50%);
+$tint-color: tint($base-color, 50%);/*sidestep with mix()*/
+$shade-color: shade($base-color, 50%);/* */
 
 $font-fam: 'Raleway', sans-serif;
 $header-fam: 'Staatliches', cursive;
 
 //Mixin for responsive font size MIXINS NOT WORKING ON SOME ELEMENTS
 @mixin fontSize($size) {
-  font-size: $size * 1px;
   font-size: $size * 0.1rem;
 }
 
@@ -38,10 +37,21 @@ body {
   @include fontSize(16);
 }
 
-h1 {
-  font-family: $header-fam ;
-  @include fontSize(24);
+.neon {
+  font-family: $header-fam;
+  @include fontSize(50);
   margin: auto;
+  text-align: center;
+    color: #fff;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px #0ff,
+      0 0 80px #0ff,
+      0 0 90px #0ff,
+      0 0 100px #0ff,
+      0 0 150px #0ff;
 }
 
 h2 {
@@ -49,14 +59,10 @@ h2 {
   margin: 1rem;
 }
 
-/*BEM but drop cap isn't working as expected*/
+/*drop cap isn't working as expected*/
 .para {
-  background-color: red;
-  // &__p {
-  //   p:first-child::first-letter: 2;
-  // }
-  &--border {
-    border: 2px dashed black;
+  .para:first-child::first-letter {
+    initial-letter: 2;
   }
 }
 
@@ -90,33 +96,15 @@ nav ul {
 .go-to {
   border-radius: 50%;
   height: 50%;
-  // width: 33%;
-  // margin: auto;
   background: $lighten-color;
-  transition: all 2s ease-in;
+  transition: all 2s linear;
 
   .menu:hover & {
     transform: scale(2);
   }
 }
 
-.go-to1 {
-  background: $opacity-color;
-}
 
-.neon {
-  color: #fff;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #0ff,
-    0 0 80px #0ff,
-    0 0 90px #0ff,
-    0 0 100px #0ff,
-    0 0 150px #0ff;
-    @include fontSize(24);
-}
 
 .grid-1 {
   display: grid;
@@ -239,11 +227,17 @@ svg:hover text{
 //     stroke-dashoffset: 437;
 // }
 
+input[type=button] {
+  background-color: red;
+  // transition: ease-in 0.5s;
+}
+.btn:hover {
+
+}
 
 vertical circles
 .container {
   margin: 100px;
-}
 
 .circle {
   border-radius: 50%;
