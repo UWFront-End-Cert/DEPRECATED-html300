@@ -56,7 +56,7 @@
 <script>
 
 import Images from '@/components/Images.vue'
-import { decks } from '../util.js'
+import { decks } from '../data/util.js'
 export default {
     name: 'TravelPhotos',
     components: {

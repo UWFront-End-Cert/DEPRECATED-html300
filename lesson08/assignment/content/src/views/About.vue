@@ -32,7 +32,7 @@ a:focus {
 </style>
 
 <script>
-import { accordionObject } from '../util.js'
+import { accordionObject } from '../data/util.js'
 
 export default {
     name: 'About',

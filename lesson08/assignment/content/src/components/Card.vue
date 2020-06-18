@@ -23,12 +23,12 @@
 
             <a href="#" @click="weatherClicked(card)" class="card-link">Weather</a>
             <weather :card='card'></weather>
-            <a href="#" ref="btnShow" @click="showModal(card.id)" class="card-link">Itenerary Ideas</a>
+            <a href="#" ref="btnShow" @click="showModal(card.id); getFile(card);" class="card-link">Itenerary Ideas</a>
 
             <b-modal :id="card.id" class="itnry" title='Itinerary' size="xl" >
                 <h5 class="modal-title">{{card.location}}</h5>
               <div class="d-block">
-                <itnry :card='card' :id="card.id"></itnry>
+                <itnry :card='card'></itnry>
               </div>
             </b-modal>
 
@@ -46,6 +46,7 @@
 
 <script>
 import $ from 'jquery'
+
 import Favorite from '@/components/Favorite.vue'
 import weather from '@/components/weather.vue'
 import itinerary from '@/components/itinerary.vue'
@@ -82,6 +83,12 @@ export default {
       $('#weather-modal', '#' + card.id).modal('toggle').appendTo("body");
       //$('#weather-modal', '#'+card.id).appendTo("body");
     },
+
+    getFile: function(card) {
+      //import {features} from card.it
+      console.log(card.it);
+    },
+
 
     showModal(id) {
       console.log(id)

@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { features } from '../util.js'
+import { features } from '../data/util.js'
 
 export default {
     data() {

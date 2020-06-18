@@ -5,7 +5,8 @@ var decks = [{
     'imagelink': '/travel-photos/#belize',
     'title': 'lamanai mayan ruins',
     'area': 'Central America',
-    'text': "Picture of Belize"
+    'text': "Picture of Belize",
+    'it': '../data/bel.js'
   },
   {
     'location': 'Belize',
@@ -21,7 +22,8 @@ var decks = [{
     'imagelink': '/travel-photos/#costarica',
     'area': 'Central America',
     'title': 'manuel antonio national park',
-    'text': "Costa Rica - Manuel Antonio National Park"
+    'text': "Costa Rica - Manuel Antonio National Park",
+    'it': '../data/cos.js'
   },
 
   {
@@ -31,18 +33,20 @@ var decks = [{
     'area': 'Europe',
     'title': 'hvar boat dock',
     'imagelink': '/travel-photos/#croatia',
-    'text': "Picture of Croatia"
+    'text': "Picture of Croatia",
+    'it': '../data/cro.js'
   },
 
   {
-    'id': 'italy',
-    'location': 'Italy',
-    'images': 'italy.png',
-    'area': 'Europe',
-    'title': 'trevi fountain',
-    'imagelink': '/travel-photos/#italy',
-    'text': "Picture of Italy"
-  },
+     'id': 'italy',
+     'location': 'Italy',
+     'images': 'italy.png',
+     'area': 'Europe',
+     'title': 'trevi fountain',
+     'imagelink': '/travel-photos/#italy',
+     'text': "Picture of Italy",
+     'it': '../data/itl.js'
+   },
 
   {
     'id': 'thailand',
@@ -51,15 +55,19 @@ var decks = [{
     'area': 'Asia',
     'title': 'phi phi island',
     'imagelink': '/travel-photos/#thailand',
-    'text': "Picture of beach in Thailand"
+    'text': "Picture of beach in Thailand",
+    'it': '../data/thai.js'
   },
   {
     'location': 'Thailand',
     'images': 'thai.png',
     'text': "Picture of elephant in Thailand",
-    'title': 'chiang mai elephant sanctuary'
+    'title': 'chiang mai elephant sanctuary',
   }
 ];
+
+
+
 
 export {
   decks
@@ -82,6 +90,8 @@ var accordionObject = [{
 export {
   accordionObject
 }
+
+
 
 
 let features = {

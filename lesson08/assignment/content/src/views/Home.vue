@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { decks } from '../util.js'
+import { decks } from '../data/util.js'
 //import your components here
 import Jumbo from '@/components/Jumbotron.vue'
 import Caro from '@/components/Carousel.vue'

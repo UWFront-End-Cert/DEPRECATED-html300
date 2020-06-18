@@ -74,7 +74,7 @@
 <script>
 import {
   decks
-} from '../util.js'
+} from '../data/util.js'
 
 import Card from '@/components/Card.vue'
 
