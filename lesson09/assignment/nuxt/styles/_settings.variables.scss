@@ -1,0 +1,64 @@
+$pink: #FF1493;
+$gray: #f6f5f6;
+
+$white: #ffffff;
+$red: #F1352B;
+
+$black: #000000;
+$lighten-black:    lighten( $black, 30% );
+
+$blue: #150f96;
+$darken-blue:     darken( $blue, 5% );
+$lighten-blue:    lighten( $blue, 40% );
+
+$a-heart: 2s pulsate infinite alternate ease-in-out;
+@keyframes pulsate {
+  0% { transform: scale(1.2);}
+  50% { transform: scale(1.6);}
+  100% { transform: scale(1.2);}
+}
+
+$a-under: all 1s ease-in-out;
+
+$i: 0;
+//pictures load with browser sync - gulp, but not on just opening html file- try removing leading /
+$picturessmall: ('../assets/belize.png',
+'../assets/costarica.png',
+'../assets/croatia.png',
+'../assets/italy.png',
+'../assets/thai.png',
+ '../assets/thaibeach.png');
+
+
+$pictures: (
+  belize: (
+    image: require("@/assets/belize.png"),
+    text: "Picture of Belize",
+    id: 1
+  ),
+  costarica: (
+    image: require("@/assets/costarica.png"),
+    text: "Picture of Costa Rica shoreline at Manuel Antonio National Park",
+    id: 2
+  ),
+  croatia: (
+    image: require("@/assets/croatia.png"),
+    text: "Picture of Croatia",
+    id: 3
+  ),
+  italy: (
+    image: require("@/assets/italy.png"),
+    text: "Picture of italy",
+    id: 4
+  ),
+  thai: (
+    image: require("@/assets/thai.png"),
+    text: "Picture of thai",
+    id: 5
+  ),
+  thaibeach: (
+    image: require("@/assets/thaibeach.png"),
+    text: "Picture of thaibeach",
+    id: 6
+  )
+);
