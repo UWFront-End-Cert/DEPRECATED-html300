@@ -1,6 +1,5 @@
 <template>
  <article class="chart">
-
 	 <p class="chart__copy">{{ country}}</p>
  </article>
 </template>

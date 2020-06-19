@@ -1,10 +1,9 @@
 <template>
   <div class="wrapper">
     <section class="container" v-if="countries">
-      <card
-        :country="countries.meta"
-      />
-        <card
+<p> Average weather from {{countries.meta.start}} to {{countries.meta.end}} </p>
+    
+        <chart
           :country="countries.data"
         />
     </section>
@@ -12,12 +11,12 @@
 </template>
 
 <script>
-import Card from '~/components/chart.vue'
+import chart from '~/components/chart.vue'
 import axios from 'axios'
 
 export default {
   components: {
-    Card
+    chart
   },
   data() {
     return {
