@@ -55,7 +55,8 @@
 import $ from 'jquery'
 
 import Favorite from '@/components/Favorite.vue'
-import weather from '@/components/weather.vue'
+import weather from '@/components/chart.vue'
+//import Card from '~/components/chart.vue'
 import itinerary from '@/components/itinerary.vue'
 
 

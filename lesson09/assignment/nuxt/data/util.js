@@ -12,7 +12,9 @@ var decks = [{
     'title': 'lamanai mayan ruins',
     'area': 'Central America',
     'text': "Picture of Belize",
-    'it': bel
+    'it': bel,//map data
+    'lat': '17.1833',//weather data
+    'lon': '-87.5000'
   },
   {
     'location': 'Belize',
@@ -29,7 +31,9 @@ var decks = [{
     'area': 'Central America',
     'title': 'manuel antonio national park',
     'text': "Costa Rica - Manuel Antonio National Park",
-    'it': cos
+    'it': cos,
+    'lat': '9.9667',
+    'lon': '-84.8333'
   },
 
   {
@@ -40,7 +44,9 @@ var decks = [{
     'title': 'hvar boat dock',
     'imagelink': '/travel-photos/#croatia',
     'text': "Picture of Croatia",
-    'it': cro
+    'it': cro,
+    'lat': '43.5167',
+    'lon': '16.4333'
   },
 
   {
@@ -51,7 +57,9 @@ var decks = [{
      'title': 'trevi fountain',
      'imagelink': '/travel-photos/#italy',
      'text': "Picture of Italy",
-     'it': itl
+     'it': itl,
+     'lat': '41.9000',
+     'lon': '12.4833'
    },
 
   {
@@ -62,7 +70,9 @@ var decks = [{
     'title': 'phi phi island',
     'imagelink': '/travel-photos/#thailand',
     'text': "Picture of beach in Thailand",
-    'it': thai
+    'it': thai,
+    'lat': '13.7000',
+    'lon': '100.5667'
   },
   {
     'location': 'Thailand',
