@@ -7,9 +7,9 @@ let itl ={
   },
   1: {
     type: "Feature",
-    country: "Italy",
-    itinerary: "Verona",
-    ideas: "Visit Juliet's House",
+    id: "Verona",
+    properties: {itinerary: "italy",
+    ideas: ["Visit Juliet's House"]},
     geometry: {
       "type": "Point",
       "coordinates": [10.9916, 45.4384]
@@ -17,9 +17,9 @@ let itl ={
   },
   2: {
     type: "Feature",
-    itinerary: "Rome",
-    country: "Italy",
-    ideas: ["Take a pasta making class", "Visit the Trevi Fountain"],
+    id: "Rome",
+    properties: {itinerary: "italy",
+    ideas: ["Take a pasta making class", "Visit the Trevi Fountain"]},
     geometry: {
       "type": "Point",
       "coordinates": [12.4964, 41.9028]
@@ -27,9 +27,9 @@ let itl ={
   },
   3: {
     type: "Feature",
-    itinerary: "Milan",
-    country: "Italy",
-    ideas: "Visit the Duomo",
+    id: "Milan",
+    properties: {itinerary: "italy",
+    ideas: ["Visit the Duomo"]},
     geometry: {
       "type": "Point",
       "coordinates": [9.1900, 45.4642]

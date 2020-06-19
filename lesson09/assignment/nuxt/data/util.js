@@ -1,4 +1,8 @@
 import {itl} from './itl.js'
+import {bel} from './bel.js'
+import {cos} from './cos.js'
+import {cro} from './cro.js'
+import {thai} from './thai.js'
 
 var decks = [{
     'id': 'belize',
@@ -8,7 +12,7 @@ var decks = [{
     'title': 'lamanai mayan ruins',
     'area': 'Central America',
     'text': "Picture of Belize",
-    'it': '../data/bel.js'
+    'it': bel
   },
   {
     'location': 'Belize',
@@ -25,7 +29,7 @@ var decks = [{
     'area': 'Central America',
     'title': 'manuel antonio national park',
     'text': "Costa Rica - Manuel Antonio National Park",
-    'it': '../data/cos.js'
+    'it': cos
   },
 
   {
@@ -36,7 +40,7 @@ var decks = [{
     'title': 'hvar boat dock',
     'imagelink': '/travel-photos/#croatia',
     'text': "Picture of Croatia",
-    'it': '../data/cro.js'
+    'it': cro
   },
 
   {
@@ -58,7 +62,7 @@ var decks = [{
     'title': 'phi phi island',
     'imagelink': '/travel-photos/#thailand',
     'text': "Picture of beach in Thailand",
-    'it': '../data/thai.js'
+    'it': thai
   },
   {
     'location': 'Thailand',
