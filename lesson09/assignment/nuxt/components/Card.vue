@@ -21,11 +21,18 @@
         <div class="card">
           <div class="card-block">
 
-            <a href="#" @click="weatherClicked(card)" class="card-link">Weather</a>
-            <weather :card='card'></weather>
-            <a href="#" ref="btnShow" @click="showModal(card.id); getFile(card);" class="card-link">Itenerary Ideas</a>
+            <a href="#" ref="btnShow" @click="showModal(card.id+'weather'); getFile(card);" class="card-link">Weather</a>
 
-            <b-modal :id="card.id" class="itnry" title='Itinerary' size="xl" >
+            <b-modal :id="card.id+'weather'" class="weather" title='Weather' size="xl" >
+                <h5 class="modal-title">{{card.location}}</h5>
+              <div class="d-block">
+                <weather :card='card'></weather>
+              </div>
+            </b-modal>
+
+            <a href="#" ref="btnShow" @click="showModal(card.id+'itinerary'); getFile(card);" class="card-link">Itenerary Ideas</a>
+
+            <b-modal :id="card.id+'itinerary'" class="itnry" title='Itinerary' size="xl" >
                 <h5 class="modal-title">{{card.location}}</h5>
               <div class="d-block">
                 <itnry :card='card'></itnry>

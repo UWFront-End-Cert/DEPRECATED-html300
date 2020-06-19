@@ -5,7 +5,7 @@
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
-              <nuxt-link class="nav-item" to="/home">Home</nuxt-link>
+              <nuxt-link class="nav-item" to="/">Home</nuxt-link>
               <nuxt-link class="nav-item" to="/about">About Us</nuxt-link>
               <nuxt-link class="nav-item" to="/trips">Trips</nuxt-link>
               <nuxt-link class="nav-item" to="/travelphotos">Travel Photos</nuxt-link>
