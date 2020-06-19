@@ -1,6 +1,4 @@
-
-
-let itl = {
+let itl ={
   0: {
     type: "map",
     country: "Italy",
@@ -39,6 +37,4 @@ let itl = {
   }
 }
 
-export {
-  itl
-}
+module.exports= {itl}

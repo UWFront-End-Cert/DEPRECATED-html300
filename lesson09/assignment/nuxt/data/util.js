@@ -1,3 +1,5 @@
+import {itl} from './itl.js'
+
 var decks = [{
     'id': 'belize',
     'location': 'Belize',
@@ -45,7 +47,7 @@ var decks = [{
      'title': 'trevi fountain',
      'imagelink': '/travel-photos/#italy',
      'text': "Picture of Italy",
-     'it': '../data/itl.js'
+     'it': itl
    },
 
   {
