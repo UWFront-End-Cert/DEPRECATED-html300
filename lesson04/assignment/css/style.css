@@ -71,14 +71,41 @@ nav ul {
   bottom: 0;
   left: 0;
   right: 0;
-  height: auto;
-  width: 92%;
-  transition: background 500ms ease-in-out; }
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/cheyenne.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto; }
 
-.container:hover {
-  background: #176171; }
+.circle, .circle0, .circle1, .circle2, .circle3, .circle4, .circle5 {
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+  margin: .5em; }
+  .container:hover .circle, .container:hover .circle0, .container:hover .circle1, .container:hover .circle2, .container:hover .circle3, .container:hover .circle4, .container:hover .circle5 {
+    transform: translateX(25em); }
 
-.dog {
-  height: auto;
-  width: 92%;
-  margin: 1.25rem; }
+.circle0 {
+  background: PaleTurquoise;
+  transition: all 1.5s linear; }
+
+.circle1 {
+  background: salmon;
+  transition: all 1.5s ease; }
+
+.circle2 {
+  background: lightskyblue;
+  transition: all 1.5s ease-in; }
+
+.circle3 {
+  background: khaki;
+  transition: all 1.5s ease-out; }
+
+.circle4 {
+  background: mediumturquoise;
+  transition: all 1.5s ease-in-out; }
+
+.circle5 {
+  background: thistle;
+  transition: all 1.5s cubic-bezier(0, 1, 0.98, 0); }
