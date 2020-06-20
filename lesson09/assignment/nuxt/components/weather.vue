@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper">
     <section class="container" v-if="countries">
-<p> Average weather from {{countries.meta.start}} to {{countries.meta.end}} </p>
+<p> Weather data collected from {{countries.meta.start}} to {{countries.meta.end}} </p>
+
   <!--  <p>{{countries.data}}</p> -->
         <chart :country="countries.data"/>
     </section>
@@ -9,15 +10,22 @@
 </template>
 
 <script>
-import chart from '~/components/chart.vue'
+import chart from './chart.vue'
 import axios from 'axios'
 
 export default {
   components: {
     chart
   },
+  props: {
+    card: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {
+      url_base: 'https://api.meteostat.net/v2/point/',
       loading: true,
       countries: null,
       errored: false
@@ -26,6 +34,7 @@ export default {
   mounted () {
   axios
     .get('https://api.meteostat.net/v2/point/climate?lat=9.9667&lon=-84.8333')
+    //.get(`${this.api_base}climate?lat=${this.card.lat}&lon=${this.card.lon}`)
     .then(response => (this.countries = response.data))
     .catch(error => {
       console.log(error)

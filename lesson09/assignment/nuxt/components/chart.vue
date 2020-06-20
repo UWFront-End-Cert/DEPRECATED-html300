@@ -38,7 +38,10 @@ export default {
         });
 
         this.chartOptions.series[0]['data'] = prcpListN
+        this.chartOptions.series[0]['name'] = 'Average Percipitation (in)'
         this.chartOptions.series[1]['data'] = tavgListN
+        this.chartOptions.series[1]['name'] = 'Average Temperature (°F)'
+
 
       } else if (e == false) {
         console.log('change-f')
@@ -46,7 +49,10 @@ export default {
         let prcpListN = this.prcpList
         let tavgListN = this.tavgList
         this.chartOptions.series[0]['data'] = prcpListN
+        this.chartOptions.series[0]['name'] = 'Average Percipitation (mm)'
         this.chartOptions.series[1]['data'] = tavgListN
+        this.chartOptions.series[1]['name'] = 'Average Temperature (°C)'
+
       }
     }
 
@@ -85,13 +91,16 @@ export default {
         title: {
           text: ''
         },
+        subtitle:{
+          text: 'Source:  https://meteostat.net/en'
+        },
         series: [{
           type: 'column',
-          name: 'Percipitation',
+          name: 'Average Percipitation (mm)',
           data: prcpList
         }, {
           type: 'line',
-          name: 'Temperature',
+          name: 'Average Temperature (°C)',
           data: tavgList
         }],
         xAxis: {

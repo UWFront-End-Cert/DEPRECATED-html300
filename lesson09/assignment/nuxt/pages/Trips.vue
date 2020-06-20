@@ -6,7 +6,7 @@
         <label>
           <h2>Search</h2>
         </label>
-        <input  class='search' type="text" v-model="search" placeholder="Search location..." />
+        <input  class='search' type="text" v-model="search" placeholder="Search Places" />
         <div class='side'>
 
           <ul class="side__list" data-title="Central America">
@@ -158,7 +158,29 @@ export default {
 }
 
 .search{
+  display: block;
   width: 95%;
+  padding: 1em;
+
+  color: rgb(49, 49, 49);
+  font-size: 1em;
+
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+
+
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, .25);
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 0px 16px 0px 16px;
+  transition: .4s;
+}
+
+.search:focus{
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, .25);
+  background-color: rgba(255,255,255,.75);
+  border-radius: 16px 0px 16px 0px;
 }
 
 ul {
