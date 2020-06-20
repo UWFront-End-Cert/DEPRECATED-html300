@@ -2,10 +2,8 @@
   <div class="wrapper">
     <section class="container" v-if="countries">
 <p> Average weather from {{countries.meta.start}} to {{countries.meta.end}} </p>
-    
-        <chart
-          :country="countries.data"
-        />
+  <!--  <p>{{countries.data}}</p> -->
+        <chart :country="countries.data"/>
     </section>
   </div>
 </template>

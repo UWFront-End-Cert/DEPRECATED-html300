@@ -29,7 +29,8 @@ export default {
   */
 
 
-  plugins: [  {src: '~plugins/vuelayers.js', ssr: false}],
+  plugins: [  {src: '~plugins/vuelayers.js', ssr: false},
+   { src: '~plugins/vue-highcharts.js', ssr: false }],
 
   /*
   ** Nuxt.js dev-modules
