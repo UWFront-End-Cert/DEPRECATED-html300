@@ -21,25 +21,36 @@
         <div class="card">
           <div class="card-block">
 
-            <a href="#" ref="btnShow" @click="showModal(card.id+'weather'); getFile(card);" class="card-link">Weather</a>
+            <a href="#" ref="btnShow" @click="showModal(card.id+'weather')" class="card-link">Weather</a>
 
-            <b-modal :id="card.id+'weather'" class="weather" title='Weather' size="xl" >
-                <h5 class="modal-title">{{card.location}}</h5>
+            <b-modal :id="card.id+'weather'" class="weather" title='Weather' size="xl">
               <div class="d-block">
+                <b-dropdown id="searchW" :text='card.location' class="modal-title" v-on:change="">
+                  <b-dropdown-item v-for="d in decks" :key="d.id" :value="d.id" @click="d.id==card.id ? NULL :  hideModal(card.id+'weather'); showModal(d.id+'weather');">
+                    {{d.location}}
+                  </b-dropdown-item>
+                </b-dropdown>
+
                 <weather :card='card'></weather>
               </div>
             </b-modal>
 
-            <a href="#" ref="btnShow" @click="showModal(card.id+'itinerary'); getFile(card);" class="card-link">Itenerary Ideas</a>
+            <a href="#" ref="btnShow" @click="showModal(card.id+'itinerary')" class="card-link">Itenerary Ideas</a>
 
-            <b-modal :id="card.id+'itinerary'" class="itnry" title='Itinerary' size="xl" >
-                <h5 class="modal-title">{{card.location}}</h5>
+            <b-modal :id="card.id+'itinerary'" class="itnry" title='Itinerary' size="xl">
               <div class="d-block">
+                <b-dropdown id="searchI" :text='card.location' class="modal-title" v-on:change="">
+                  <b-dropdown-item v-for="d in decks" :key="d.id" :value="d.id" @click="d.id==card.id ? NULL :  hideModal(card.id+'itinerary'); showModal(d.id+'itinerary');">
+                    {{d.location}}
+                  </b-dropdown-item>
+                </b-dropdown>
+
                 <itnry :card='card'></itnry>
               </div>
             </b-modal>
+            <nuxt-link target="_blank" class="card-link" :to="card.imagelink">Travel Photos</nuxt-link>
 
-            <a :href="card.imagelink" target="_blank" class="card-link">Travel Photos</a>
+            <!--<a :href="card.imagelink" target="_blank" class="card-link">Travel Photos</a>-->
 
           </div>
         </div>
@@ -52,6 +63,11 @@
 </template>
 
 <script>
+import {
+  decks
+} from '../data/util.js'
+
+
 import $ from 'jquery'
 
 import Favorite from '@/components/Favorite.vue'
@@ -76,7 +92,10 @@ export default {
   },
   data() {
     return {
-      flipped: false
+      flipped: false,
+      decks: decks.filter(function(litem) {
+        return litem.area != null;
+      })
     }
   },
   methods: {
@@ -87,17 +106,6 @@ export default {
     getImgUrl: function(pic) {
       return require('@/assets/' + pic)
     },
-    weatherClicked: function(card) {
-      $('#weather-modal', '#' + card.id).modal('toggle').appendTo("body");
-      //$('#weather-modal', '#'+card.id).appendTo("body");
-    },
-
-    getFile: function(card) {
-      //import {features} from card.it
-      console.log(card.it);
-    },
-
-
     showModal(id) {
       console.log(id)
       this.$root.$emit('bv::show::modal', id, '#btnShow')
@@ -116,11 +124,15 @@ export default {
 
 <style scoped lang='scss'>
 @import './main.scss';
-
-.modal-title{
-  text-align: center;
-  padding-bottom: 1em;
-  margin: auto;
+/*.modal-dialog {
+  max-height: 100%;
+  display: inline-block;
+  width: auto;
+}*/
+.modal-title {
+    text-align: center;
+    padding-bottom: 1em;
+    margin: auto;
 }
 
 .wrapper {

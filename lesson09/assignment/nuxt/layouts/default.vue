@@ -9,7 +9,6 @@
               <nuxt-link class="nav-item" to="/about">About Us</nuxt-link>
               <nuxt-link class="nav-item" to="/trips">Trips</nuxt-link>
               <nuxt-link class="nav-item" to="/travelphotos">Travel Photos</nuxt-link>
-              <nuxt-link class="nav-item" to="/testweather">Test</nuxt-link>
             </b-navbar-nav>
           </b-collapse>
         </b-navbar>

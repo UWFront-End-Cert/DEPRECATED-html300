@@ -1,9 +1,10 @@
 <template>
   <div class="wrapper">
     <section class="container" v-if="countries">
-<p> Weather data collected from {{countries.meta.start}} to {{countries.meta.end}} </p>
-
-  <!--  <p>{{countries.data}}</p> -->
+<p> Average Weather Data Collected from {{countries.meta.start}} to {{countries.meta.end}} </p>
+<!--</p> <br>  <p>-->
+    <!--<p>{{countries.meta}}</p>
+    <p>{{countries.data}}</p> -->
         <chart :country="countries.data"/>
     </section>
   </div>
@@ -33,8 +34,7 @@ export default {
   },
   mounted () {
   axios
-    .get('https://api.meteostat.net/v2/point/climate?lat=9.9667&lon=-84.8333')
-    //.get(`${this.api_base}climate?lat=${this.card.lat}&lon=${this.card.lon}`)
+    .get(`${this.url_base}climate?lat=${this.card.lat}&lon=${this.card.lon}`)
     .then(response => (this.countries = response.data))
     .catch(error => {
       console.log(error)
@@ -48,6 +48,7 @@ export default {
 
 <style>
 .container {
+
   min-height: 100vh;
   max-width: 1200px;
   margin: auto;
@@ -57,37 +58,10 @@ export default {
   text-align: center;
   flex-wrap: wrap;
 }
-
-.heading {
-  text-align: center;
-  font-size: 2rem;
-  color: #555;
-  margin: 2rem auto;
-}
-
-img {
-  max-width: 150px;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+p{
+  padding:0;
+  margin:0;
+  display:block;
 }
 </style>
 
