@@ -5,7 +5,9 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <h4 class="m-0 text-left pr-md-5 text-primary">Welcome to Assignment 8</h4>
+            <mytitle>
+                <span slot="aNum">8</span>
+            </mytitle>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -20,5 +22,15 @@
         </div>
     </nav>
     <router-view/>
+    <myheader/>
   </div>
 </template>
+
+<script>
+import mytitle from '@/components/Title.vue'
+export default {
+    components: {
+        mytitle
+    }
+}
+</script>
