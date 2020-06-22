@@ -14,7 +14,7 @@ We'll spend our final couple weeks working on the final project, so this will ac
 
 ### To get migrated:
 -	Watch the video on Nuxt to learn more about the framework
--	Verify `yarn` is installed by running `yarn -v` in your terminal to see if a version comes back 
+-	Verify `yarn` is installed by running `yarn -v` in your terminal to see if a version comes back
 -	We are now using the course project repo we created in lesson01
 	-	In that repo, run `yarn create nuxt-app my-project-title`
 	-	You may adjust the name, description, and package manager

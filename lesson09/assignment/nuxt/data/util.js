@@ -14,7 +14,8 @@ var decks = [{
     'text': "Picture of Belize",
     'it': bel,//map data
     'lat': '17.1833',//weather data
-    'lon': '-87.5000'
+    'lon': '-87.5000',
+    'cur': 'BZD'
   },
   {
     'location': 'Belize',
@@ -33,7 +34,8 @@ var decks = [{
     'text': "Costa Rica - Manuel Antonio National Park",
     'it': cos,
     'lat': '9.9667',
-    'lon': '-84.8333'
+    'lon': '-84.8333',
+    'cur': 'CRC'
   },
 
   {
@@ -46,7 +48,8 @@ var decks = [{
     'text': "Picture of Croatia",
     'it': cro,
     'lat': '43.5167',
-    'lon': '16.4333'
+    'lon': '16.4333',
+    'cur': 'HRK'
   },
 
   {
@@ -59,7 +62,8 @@ var decks = [{
      'text': "Picture of Italy",
      'it': itl,
      'lat': '41.9000',
-     'lon': '12.4833'
+     'lon': '12.4833',
+     'cur': 'EUR'
    },
 
   {
@@ -72,7 +76,8 @@ var decks = [{
     'text': "Picture of beach in Thailand",
     'it': thai,
     'lat': '13.7000',
-    'lon': '100.5667'
+    'lon': '100.5667',
+    'cur':'THB'
   },
   {
     'location': 'Thailand',

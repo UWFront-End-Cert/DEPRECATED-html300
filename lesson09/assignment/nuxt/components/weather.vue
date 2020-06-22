@@ -46,9 +46,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang='scss'>
 .container {
-
   min-height: 100vh;
   max-width: 1200px;
   margin: auto;

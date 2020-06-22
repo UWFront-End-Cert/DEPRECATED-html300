@@ -44,11 +44,16 @@
                     {{d.location}}
                   </b-dropdown-item>
                 </b-dropdown>
-
+<p>Click on flags to see suggestions!</p>
                 <itnry :card='card'></itnry>
               </div>
             </b-modal>
+
+
+
             <nuxt-link target="_blank" class="card-link" :to="card.imagelink">Travel Photos</nuxt-link>
+            <currency :card='card' v-if="card.cur != 'USD'"></currency>
+            <p v-if="card.cur == 'USD'">Currency: USD</p>
 
             <!--<a :href="card.imagelink" target="_blank" class="card-link">Travel Photos</a>-->
 
@@ -72,6 +77,8 @@ import $ from 'jquery'
 
 import Favorite from '@/components/Favorite.vue'
 import weather from '@/components/weather.vue'
+import currency from '@/components/currency.vue'
+
 //import Card from '~/components/chart.vue'
 import itinerary from '@/components/itinerary.vue'
 
@@ -88,7 +95,8 @@ export default {
   components: {
     'app-favs': Favorite,
     'weather': weather,
-    'itnry': itinerary
+    'itnry': itinerary,
+    'currency':currency,
   },
   data() {
     return {
@@ -204,7 +212,7 @@ export default {
     transform: rotateY(0deg);
 }
 
-a {
+a,p {
     display: block;
     padding: 5%;
     &:hover {
@@ -225,7 +233,8 @@ a {
 .card-block {
     height: 15rem;
     width: auto;
-    overflow: hidden;
+    //overflow: hidden;
+    overflow-y: scroll;
 }
 
 .flipper {

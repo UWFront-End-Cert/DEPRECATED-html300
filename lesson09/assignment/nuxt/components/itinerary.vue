@@ -25,9 +25,13 @@
     <b-col lg='6' sm="12">
 <div v-for="feature in selectedFeatures" :key="feature.id">
 <h1>{{ feature.id}}</h1>
+<p>Recommendations:</p>
       <ul>
            <li v-for="ideas in feature.properties.ideas">
-             {{ideas}}
+
+            <component :is="ideas.b?'a':'span'" :href="ideas.b || ''" target="_blank">{{ideas.a}}
+            </component>
+
            </li>
          </ul>
        </div>

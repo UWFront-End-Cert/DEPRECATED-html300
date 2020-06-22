@@ -43,7 +43,8 @@
               </div>
             </div>
           </ul>
-          <!-- Other should not be shown but is there incase new continent needs to be added -->
+          <!-- Other should not be shown but is there incase
+          new continent needs to be added-->
           <div v-for="(card, idx) in decks" v-bind:key="idx">
             <div v-if='!["Europe", "Asia", "Central America"].includes(card.area)'>
               <ul class="side__list" data-title="Other">
