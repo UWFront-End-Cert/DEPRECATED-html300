@@ -109,3 +109,4 @@ var accordionObject = [{
 export {
   accordionObject
 }
+//Rancho Baiguate hotel

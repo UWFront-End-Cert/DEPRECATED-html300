@@ -52,8 +52,10 @@
 
 
             <nuxt-link target="_blank" class="card-link" :to="card.imagelink">Travel Photos</nuxt-link>
+<br>
             <currency :card='card' v-if="card.cur != 'USD'"></currency>
             <p v-if="card.cur == 'USD'">Currency: USD</p>
+            <br>
 
             <!--<a :href="card.imagelink" target="_blank" class="card-link">Travel Photos</a>-->
 
@@ -214,7 +216,7 @@ export default {
 
 a,p {
     display: block;
-    padding: 5%;
+    padding: 3%;
     &:hover {
         font-weight: bold;
     }

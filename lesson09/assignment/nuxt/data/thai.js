@@ -70,7 +70,7 @@ let thai = {
           b: "https://letsrelaxspa.com/cities/phuket/"
         },
         {
-          a: "Visit the islands: Koh Rang Yai, Koh Phi Phi, and Koh Hong (by Starlight)",
+          a: "Take a day tour and visit the islands: Koh Rang Yai, Koh Phi Phi, and Koh Hong (by Starlight)",
           b: 'https://www.viator.com/Phuket/d349-ttd'
         },
         {

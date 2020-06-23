@@ -1,10 +1,9 @@
 <template>
 <article class="mconv">
   <label for="usmoney">USD:</label>
-  <input @click='reset()' @change="updateValue" ref="usmoney" type="number" step="0.01" id="usmoney" name="usmoney"><br>
-  <label for="othermoney">{{this.otherList[0]}}:</label>
-  <input @click='reset()' @change="updateValue" ref="othermoney" type="number" step="0.01" id="othermoney" name="othermoney">
-  <p>{{money}}</p>
+  <input v-on:click='reset()' v-on:change='updateValue()' ref="usmoney" type="number"  min="0" step="0.01" id="usmoney" name="usmoney"><br>
+  <label for="othermoney"> {{this.otherList[0]}}: </label>
+  <input v-on:click='reset()' v-on:change='updateValue()' ref="othermoney" type="number" min="0" step="0.01" id="othermoney" name="othermoney">
   <br>
 </article>
 </template>
@@ -21,14 +20,15 @@ export default {
       this.$refs['usmoney'].value = '';
     },
     updateValue() {
+      let o = this.c[this.otherList[0]]
+      let u = this.c.USD
+      let e = this.c.EUR
       if (this.$refs['usmoney'].value != '') {
-        this.$refs['othermoney'].value = this.$refs['usmoney'].value;
-        console.log(this.c)
-        console.log('c exists?')
+        let preround = (e/u) * o * this.$refs['usmoney'].value
+        this.$refs['othermoney'].value = +(preround.toFixed(2))
       } else if (this.$refs['othermoney'].value != '') {
-        this.$refs['usmoney'].value = this.$refs['othermoney'].value;
-        console.log(this.c)
-        console.log('c exists 2?')
+        let preround = (u/o) * this.$refs['othermoney'].value
+        this.$refs['usmoney'].value = +(preround.toFixed(2))
       }
     }
   },
