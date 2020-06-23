@@ -216,7 +216,7 @@ export default {
 
 a,p {
     display: block;
-    padding: 3%;
+    padding: 1.5%;
     &:hover {
         font-weight: bold;
     }
