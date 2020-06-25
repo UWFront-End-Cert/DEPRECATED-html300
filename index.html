@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="container"></div>
+  <div class="container"></div>
+  <div class="container2"></div>
+  <div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, modi aliquam neque. Illum ducimus explicabo dicta itaque ratione blanditiis quaerat architecto veniam vitae adipisci, mollitia aliquam quos doloremque eveniet vel quas voluptatem cum placeat veritatis, iure dolore. Asperiores magnam animi consequatur quia voluptas sed amet placeat, optio, nemo recusandae minima?</h1>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </div>
+
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, a.
+
+  <input type="text" id="getText">
+  <button id="clicked">Click Here</button>
+
+  <script>
+    $(document).ready(function() {
+      $('#clicked').click(function(event) {
+        console.log($('#getText'));
+        alert($('#getText').val());
+      });
+    });
+  </script>
+</body>
+
+</html>
