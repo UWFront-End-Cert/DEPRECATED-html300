@@ -6,7 +6,7 @@
 ### To get started:
 -   Navigate to the root folder of this assignment within terminal `lesson04/activity/`
 -   Run `npm install`
--   Run `gulp`
+-   Run `npx gulp`
 - 	A local node server will launch at `localhost:3000`
 
 ### To follow along:
