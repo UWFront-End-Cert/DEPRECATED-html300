@@ -8,6 +8,41 @@ html {
     box-sizing: inherit;
 }
 
+body {
+  font-family: $font-fam;
+  color: $white;
+}
+
 .main {
     padding: 2rem;
+    display: grid;
+    grid-gap: 1rem;
+    background-color: $orange;
+
+}
+
+.header {
+  background-color: $red;
+
+}
+
+.nav__menu {
+  background-color: $green;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  & .menu__item {
+    list-style: none;
+  }
+}
+
+.aside {
+  background-color: $purple;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: $blue;
 }
