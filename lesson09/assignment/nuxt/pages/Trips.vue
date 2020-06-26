@@ -113,35 +113,38 @@ export default {
       )
       .catch(
         response => {
-          console.log('response2');
-          console.log(response);
+          console.log('The API has errored - Works correctly not on netlify - Netlify only processes data SSL Encryption did not pay for that version of the api therefore uses defined values below for default');
+          //console.log(response);
           (this.money = {
             "success": true,
             "timestamp": 1519296206,
             "base": "EUR",
             "date": "2020-06-26",
             "rates": {
-              'BZD': 1,//2.261253
-              'CRC': 1,//649.528053
+              'BZD': 2.261253, //1
+              'CRC': 649.528053, //1
               'EUR': 1,
-              'HRK': 1,//7.55712
-              'THB': 1,//34.687085
+              'HRK': 7.55712, //1
+              'THB': 34.687085, //1
               'USD': 1.122183
-            }});
+            }
+          });
         },
         error => {
-          console.log('response3');
-          console.log(error);
-          this.errored = true;})
+          console.log('ERROR');
+          //console.log(error);
+          this.errored = true;
+        })
 
-        .finally(() => this.loading = false)
-      },
+      .finally(() => this.loading = false)
+  },
   data() {
 
     var currencies = [];
     decks.forEach(function(obj) {
-      if (obj['cur'] && obj['cur']!= 'EUR' && obj['cur']!= 'USD') {
-      currencies.push(obj['cur']);}
+      if (obj['cur'] && obj['cur'] != 'EUR' && obj['cur'] != 'USD') {
+        currencies.push(obj['cur']);
+      }
     })
     var currencies_all = currencies.join(',')
 
