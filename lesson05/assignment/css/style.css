@@ -365,16 +365,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: white; }
 
-.main {
-  padding: 2rem;
+.grid-wrapper {
+  margin: auto;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: .25rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'header' 'nav' 'main' 'aside' 'footer';
   background-color: orange; }
+
+.main {
+  grid-area: main; }
 
 .header {
   background-color: red; }
 
 .nav__menu {
+  padding: .5rem;
   background-color: green;
   display: flex;
   flex-flow: row wrap;
@@ -386,7 +393,13 @@ body {
 .aside {
   background-color: purple;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
 
 .footer {
-  background-color: blue; }
+  background-color: blue;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center; }
