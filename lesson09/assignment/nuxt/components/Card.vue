@@ -53,7 +53,7 @@
 
             <nuxt-link target="_blank" class="card-link" :to="card.imagelink">Travel Photos</nuxt-link>
 <br>
-            <currency :card='card' v-if="card.cur != 'USD'"></currency>
+            <currency :card='card' :money='money' v-if="card.cur != 'USD'"></currency>
             <p v-if="card.cur == 'USD'">Currency: USD</p>
             <br>
 
@@ -89,6 +89,9 @@ import itinerary from '@/components/itinerary.vue'
 export default {
   name: 'card',
   props: {
+    money: {Object,
+      required: true
+    },
     card: {
       type: Object,
       required: true

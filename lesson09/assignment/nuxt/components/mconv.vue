@@ -1,5 +1,6 @@
 <template>
 <article class="mconv">
+  <!--{{this.money}}-->
   <label for="usmoney">USD:</label>
   <input v-on:click='reset()' v-on:change='updateValue()' ref="usmoney" type="number"  min="0" step="0.01" id="usmoney" name="usmoney"><br>
   <label for="othermoney"> {{this.otherList[0]}}: </label>
@@ -12,7 +13,7 @@
 export default {
   props: {
     money: Object,
-    area: String
+    cur: String
   },
   methods: {
     reset() {
@@ -34,19 +35,11 @@ export default {
   },
   data() {
     let c = this.money
-    console.log(this.area.toLowerCase())
-    console.log('area')
     let ky = Object.keys(c)
     let usdList = ['USD']
     let eurList = ['EUR']
-    let otherList = ky.filter(a => !['USD', 'EUR'].includes(a));
-    if (otherList.length == 0 && this.area.toLowerCase() == 'europe') {
-      otherList = ['EUR']
-    } else if (otherList.length == 0 && this.area.toLowerCase() != 'europe') {
-      otherList = ['USD'] //should never run - would be caught by v-if on Card component
-    }
+    let otherList = [this.cur.toUpperCase()]
     console.log(otherList)
-    console.log(this.area.toLowerCase())
     console.log('otherList')
 
     return {

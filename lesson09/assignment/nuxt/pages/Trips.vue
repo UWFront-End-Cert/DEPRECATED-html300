@@ -6,12 +6,11 @@
         <label>
           <h2>Search</h2>
         </label>
-        <input  class='search' type="text" v-model="search" placeholder="Search Places" />
+        <input class='search' type="text" v-model="search" placeholder="Search Places" />
         <div class='side'>
 
           <ul class="side__list" data-title="Central America">
-            <input checked type="checkbox" v-on:click="checkCA = !checkCA"
-            @click="areaFilter(getSelectedOptions(checkCA, checkA, checkE))"/>
+            <input checked type="checkbox" v-on:click="checkCA = !checkCA" @click="areaFilter(getSelectedOptions(checkCA, checkA, checkE))" />
 
             <div v-for="(card, idx) in decks" v-bind:key="idx">
               <div v-if='card.area == "Central America"'>
@@ -22,8 +21,7 @@
             </div>
           </ul>
           <ul class="side__list" data-title="Asia">
-            <input checked type="checkbox" v-on:click="checkA = !checkA"
-            @click="areaFilter(getSelectedOptions(checkCA, checkA, checkE))"/>
+            <input checked type="checkbox" v-on:click="checkA = !checkA" @click="areaFilter(getSelectedOptions(checkCA, checkA, checkE))" />
             <div v-for="(card, idx) in decks" v-bind:key="idx">
               <div v-if='card.area == "Asia"'>
                 <li class="side__item">
@@ -33,8 +31,7 @@
             </div>
           </ul>
           <ul class="side__list" data-title="Europe">
-            <input checked type="checkbox" v-on:click="checkE = !checkE"
-            @click="areaFilter(getSelectedOptions(checkCA, checkA, checkE))"/>
+            <input checked type="checkbox" v-on:click="checkE = !checkE" @click="areaFilter(getSelectedOptions(checkCA, checkA, checkE))" />
             <div v-for="(card, idx) in decks" v-bind:key="idx">
               <div v-if='card.area == "Europe"'>
                 <li class="side__item">
@@ -61,7 +58,7 @@
       <div class='card-multiple'>
         <b-row>
           <b-col md='6' lg='4' sm="12" v-for="(card, idx) in flist" :key="idx" :id="card.id">
-            <card-single :card='card'> </card-single>
+            <card-single :card='card' :money="money"> </card-single>
           </b-col>
         </b-row>
       </div>
@@ -78,6 +75,7 @@ import {
 } from '../data/util.js'
 
 import Card from '@/components/Card.vue'
+import axios from 'axios'
 
 export default {
   name: 'Trips',
@@ -102,8 +100,63 @@ export default {
       }, this)
     }
   },
+  mounted() {
+    axios
+      .get(`${this.url_base}${this.api_key}${this.query}${this.allcur},${this.us},${this.eu}`)
+      //.then(response => (this.money = response.data))
+      .then(
+        response => {
+          console.log('response1');
+          (this.money = response.data);
+          console.log(this.money);
+        }
+      )
+      .catch(
+        response => {
+          console.log('response2');
+          console.log(response);
+          (this.money = {
+            "success": true,
+            "timestamp": 1519296206,
+            "base": "EUR",
+            "date": "2020-06-26",
+            "rates": {
+              'BZD': 1,//2.261253
+              'CRC': 1,//649.528053
+              'EUR': 1,
+              'HRK': 1,//7.55712
+              'THB': 1,//34.687085
+              'USD': 1.122183
+            }});
+        },
+        error => {
+          console.log('response3');
+          console.log(error);
+          this.errored = true;})
+
+        .finally(() => this.loading = false)
+      },
   data() {
+
+    var currencies = [];
+    decks.forEach(function(obj) {
+      if (obj['cur'] && obj['cur']!= 'EUR' && obj['cur']!= 'USD') {
+      currencies.push(obj['cur']);}
+    })
+    var currencies_all = currencies.join(',')
+
+
     return {
+
+      url_base: 'http://data.fixer.io/api/latest?access_key=',
+      api_key: 'fc2215a03ad52fb8e46911740d64f97a',
+      query: '&symbols=',
+      us: 'USD',
+      eu: 'EUR',
+      allcur: currencies_all,
+      loading: true,
+      money: null,
+      errored: false,
       search: '',
       area: '',
       checkCA: true,
@@ -132,10 +185,14 @@ export default {
         this.area = area
       },
 
+      currencies: currencies,
 
       decks: decks.filter(function(litem) {
         return litem.area != null;
       })
+
+
+
     }
   }
 };
@@ -158,30 +215,29 @@ export default {
     }
 }
 
-.search{
-  display: block;
-  width: 95%;
-  padding: 1em;
+.search {
+    display: block;
+    width: 95%;
+    padding: 1em;
 
-  color: rgb(49, 49, 49);
-  font-size: 1em;
+    color: rgb(49, 49, 49);
+    font-size: 1em;
 
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
 
-
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, .25);
-  background-color: rgba(255, 255, 255, .5);
-  border-radius: 0px 16px 0px 16px;
-  transition: .4s;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .25);
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 0 16px 0 16px;
+    transition: 0.4s;
 }
 
-.search:focus{
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, .25);
-  background-color: rgba(255,255,255,.75);
-  border-radius: 16px 0px 16px 0px;
+.search:focus {
+    box-shadow: 0 0 16px rgba(0, 0, 0, .25);
+    background-color: rgba(255,255,255,.75);
+    border-radius: 16px 0 16px 0;
 }
 
 ul {
