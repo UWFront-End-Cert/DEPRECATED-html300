@@ -17,14 +17,14 @@ body {
   margin: auto;
   display: grid;
   grid-gap: .25rem;
-  grid-template-columns: 1fr ;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
-    'header'
-    'nav'
-    'main'
+    'header header header header'
+    'nav nav nav nav'
     'aside'
-    'footer';
+    'main main main'
+    'footer footer footer footer';
   background-color: $orange;
 }
 
