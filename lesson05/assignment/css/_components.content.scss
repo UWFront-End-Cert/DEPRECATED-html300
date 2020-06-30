@@ -13,28 +13,26 @@ body {
   color: $white;
 }
 
-.grid-wrapper {
+.wrapper {
   margin: auto;
-  display: grid;
-  grid-gap: .25rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    'header header header header'
-    'nav nav nav nav'
-    'aside'
-    'main main main'
-    'footer footer footer footer';
   background-color: $orange;
 }
 
-.main {
-  grid-area: main;
+.grid-wrapper {
+  display: grid;
+  grid-gap: .25rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    'header'
+    'nav'
+    'aside'
+    'main'
+    'footer';
 }
 
 .header {
   background-color: $red;
-
 }
 
 .nav__menu {
@@ -56,6 +54,10 @@ body {
   justify-content: space-between;
   align-items: center;
 
+}
+
+.content {
+  grid-area: main;
 }
 
 .footer {
