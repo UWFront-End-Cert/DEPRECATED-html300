@@ -29,6 +29,7 @@ body {
 .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(auto-fill, minmax(320px, 5fr));
   justify-items: stretch;
   align-items: stretch;
 
@@ -49,6 +50,8 @@ body {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  /* media query for responsive nav*/
+  @include media-query(tab) {}
   & .menu__item {
     list-style: none;
   }
@@ -56,13 +59,16 @@ body {
 
 .sidebar {
   background-color: $purple;
-  grid-row: 1 / 3;
-}
-
-.content > p {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
+}
+
+.content {
+  justify-self: center;
+  align-self: center;
 }
 
 .footer {

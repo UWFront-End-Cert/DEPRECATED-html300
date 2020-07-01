@@ -379,6 +379,7 @@ body {
 .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(auto-fill, minmax(320px, 5fr));
   justify-items: stretch;
   align-items: stretch; }
 
@@ -395,17 +396,21 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  /* media query for responsive nav*/ }
   .nav__menu .menu__item {
     list-style: none; }
 
 .sidebar {
   background-color: purple;
-  grid-row: 1 / 3; }
-
-.content > p {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
+
+.content {
+  justify-self: center;
+  align-self: center; }
 
 .footer {
   background-color: blue;
