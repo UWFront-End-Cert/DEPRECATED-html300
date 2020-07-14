@@ -21,21 +21,30 @@
       <div>
         <h1 class="display-1 text-center">Images</h1>
       </div>
+        <h2 class="display-4 bg-secondary text-center">Food</h2>
 
-      <div>
-        <img src="./images/bread.jpg" class="img-fluid">
-      </div>
+      <div class="container container-fl">
+        <div class="row">
+          <div class="col-sm">
+            <img src="./images/bread.jpg" class="img-fluid rounded m-2" alt="Sliced loaf of bread">
+          </div>
+          <div class="col-sm">
+            <img src="./images/pierogi.jpg" class="img-fluid rounded m-2 visible-md" alt="Pierogies and brussel sprouts">
+          </div>
+        </div>
 
-      <div>
-        <img src="./images/pierogi.jpg" class="img-fluid">
-      </div>
-
-      <div>
-        <img src="./images/sandwich.jpg" class="img-fluid">
-      </div>
-
-      <div>
-        <img src=".images/cookie.jpg" class="img-fluid">
+        <div class="row">
+          <div class="col-sm">
+            <img src="./images/sandwich.jpg" class="img-fluid rounded m-2 visible-sm" alt="Sandwich at a picnic">
+          </div>
+          <div class="col-sm">
+            <img src="./images/cookie.jpg" class="img-fluid rounded m-2 visible-xs" alt="Christmas cookie and mug of hot cocoa">
+          </div>
+        </div>
+        <div>
+          <script>$(function () {$('[data-toggle="popover"]').popover()})</script>
+          <button type="button" class="btn btn-info" data-toggle="popover" title="Yum" data-content="Are you hungry yet?">Click Me</button>
+        </div>
       </div>
 
     </main>
