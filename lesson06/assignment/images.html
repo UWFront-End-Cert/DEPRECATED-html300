@@ -21,12 +21,21 @@
       <div>
         <h1 class="display-1 text-center">Images</h1>
       </div>
-        <h2 class="display-4 bg-secondary text-center">Food</h2>
+<!--inline nav bar-->
+    <nav class="navbar navbar-expand-lg bg-dark m-3">
+      <ul class="list-inline">
+        <li class="list-inline-item"><a class="nav-item text-success" href="./index.html">Home</a></li>
+        <li class="list-inline-item"><a class="nav-item text-danger" href="./images.html">Images</a></li>
+        <li class="list-inline-item"><a class="nav-item text-info" href="./accordion.html">Accordion</a></li>
+        <li class="list-inline-item"><a class="nav-item text-warning" href="./grid.html">Grid</a></li>
+      </ul>
+    </nav>
+    <h2 class="display-4 bg-secondary text-center">Food</h2>
 
-      <div class="container container-fl">
+      <div class="container container-fl"><!--fluid container spans the entire viewport-->
         <div class="row">
           <div class="col-sm">
-            <img src="./images/bread.jpg" class="img-fluid rounded m-2" alt="Sliced loaf of bread">
+            <img src="./images/bread.jpg" class="img-fluid rounded m-2" alt="Sliced loaf of bread"><!-- images are classed with img-fluid for responsivity when screen changes sizes, and rounded for more visual interest-->
           </div>
           <div class="col-sm">
             <img src="./images/pierogi.jpg" class="img-fluid rounded m-2 visible-md" alt="Pierogies and brussel sprouts">
@@ -41,6 +50,7 @@
             <img src="./images/cookie.jpg" class="img-fluid rounded m-2 visible-xs" alt="Christmas cookie and mug of hot cocoa">
           </div>
         </div>
+<!--popover function added with popper.js, a function to tell the button what to do when clicked, and info provided in a small bubble once the button is clicked-->
         <div>
           <script>$(function () {$('[data-toggle="popover"]').popover()})</script>
           <button type="button" class="btn btn-info" data-toggle="popover" title="Yum" data-content="Are you hungry yet?">Click Me</button>
