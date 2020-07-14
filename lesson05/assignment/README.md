@@ -1,6 +1,6 @@
 # Assignment 05 - CSS Grid & Flexbox
 
-We will continue working on components and pages that we will eventually port over and use in the course project. This layout will/can be used as a page layout for one of your course project pages (if you'd like to expand upon or modify this layout for your project, feel free).
+This layout will/can be used as a page layout for one of your final course project pages (to be copied over later). If you'd like to expand upon or modify this layout for your project, feel free. Create using the content (text, images) that you want in the final site.
 
 ### Required setup if not already installed (it should be)
 - Install [node](https://nodejs.org/en/)
@@ -8,11 +8,10 @@ We will continue working on components and pages that we will eventually port ov
 - [Design Spec Link](https://xd.adobe.com/spec/8117a5c5-ebde-471d-7eb0-c67b3578aeba-f726/) (Doesn't require download/install of XD)
 
 ### To get started:
-- 	Fetch from the upstream master and merge with your local master as we start each lesson
--	In your forked repo, create a new branch called `lesson-05` or something like that for the week
+-	In your forked repo, create a new branch off of master called `lesson-05` or similar
 -   Navigate to the root folder of this assignment within terminal in your fork, `lesson05/assignment`
 -   Run `npm install`
--   Run `gulp`
+-   Run `npx gulp`
 -   Start working with the files, browsersync will watch your scss/HTML files and reload on changes
 - 	Find the XD/PNG of the mockup component in the `ref` folder.
 - 	Please keep using SCSS and BEM when building components/layouts
@@ -24,7 +23,6 @@ We will continue working on components and pages that we will eventually port ov
 - 	**Extra Bonus:**  Use grid templating and try out the repeat and autofill techniques
 
 ### To Submit:
-- Create a pull request for your assignment branch back to YOUR forked master branch, not the original UW repo
-- Add Patrick & I as reviewers
-- Submit the pull request link in the assignment submission in Canvas
-
+- Create a Pull Request for your assignment branch to your forked master
+- Submit the link to your pull request in your assignment submission box
+- Once assignment is graded, merge the Pull Request

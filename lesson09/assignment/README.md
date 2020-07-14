@@ -2,7 +2,7 @@
 
 We'll spend our final couple weeks working on the final project, so this will act as the final project rubric. We'll be using Nuxt, so please watch the video on Nuxt for a walkthrough of starting up a new project. Nuxt is very similar to Vue CLI, and we'll be able to deploy the course projects for free on Netlify automatically.
 
-### Vue References
+### References
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/)
 - [Nuxt](https://nuxtjs.org/guide/installation)
 - [Axios](https://github.com/axios/axios)
@@ -11,11 +11,12 @@ We'll spend our final couple weeks working on the final project, so this will ac
 - [Vue DevTools - Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
 - [Vue DevTools - Firefox](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
 - [Bootstrap Vue](https://bootstrap-vue.js.org/docs/)
+- [Netlify](https://www.netlify.com/)
 
 ### To get migrated:
 -	Watch the video on Nuxt to learn more about the framework
--	Verify `yarn` is installed by running `yarn -v` in your terminal to see if a version comes back 
--	We are now using the course project repo we created in lesson01
+-	Verify `yarn` is installed by running `yarn -v` in your terminal to see if a version comes back
+-	**Create a new repository for this assignment.** Do not build it here.
 	-	In that repo, run `yarn create nuxt-app my-project-title`
 	-	You may adjust the name, description, and package manager
 	-	You can add Bootstrap Vue here or any other CSS framework you'd want to use when prompted
@@ -33,22 +34,32 @@ We'll spend our final couple weeks working on the final project, so this will ac
 -	For internal links, now use `<nuxt-link>` components.
 -	Migrate any views/page components to the `pages` directory. You can create folder structures, or have an `index.vue` file within a folder that will generate the route to the folder's name (i.e. `about/index.vue` shows up in the browser at `/about`).
 -	Routes are generated based on the pages file structure, don't worry about a router file.
--	Migrate any components or additional assets
+-	Migrate any components or additional assets from previous assignments
 -	Add any additional packages you are using
 
 ### Additional items:
--	Add in your API data, you may use this on various components or pages, but at least:
-	-	1 instance of pulling API data
+-	Incorporate data from an API. (See below for API suggestions)
+	-	1 instance of retrieving data from an API
 	-	With that returned data, build a corresponding component and use v-for to loop over the data
 	-	That component should have props validation as well as use at least 4 data points in the template itself (heading, description, image, statistics, etc)
 	-	The component should have some sort of method that causes a UI interaction on that instance of the component (show/hide, change the CSS, animation, etc)
 -	Your site should have at least 4 pages (including the home) with `<nuxt-link>` used to navigate between them in your nav
--	Feel free to reuse as much as you've been building/working on or expand and modify it as you'd like
-- 	Deploy to Netlify (watch for upcoming screencast with step-by-step process)		
-- 	**Bonus:**  Create UI interactions to modify/interact with your API data   
+-	Feel free to reuse as much content as you'd like from what you created in previous assignments.
+- 	Deploy to Netlify. Remember that this will not work if the final assignment code is in this directory. It must be in a new repository.
+- 	**Bonus:**  Create UI interactions to interact with your API data   
 - 	**Extra Bonus:**  Create dynamic routing with your data through components with single pages 
 -	**Super Extra Bonus:** Point a custom domain to your site
 
+### API Notes
+These are some options for fun, free, publicly available APIs. Most require registration, but no payment.
+1. Movies: https://www.omdbapi.com/
+2. Football (soccer): https://apifootball.com/
+3. Almost anything- library: https://pro.dp.la/developers
+4. Weather: https://openweathermap.org/api
+5. Meetup: https://www.meetup.com/meetup_api/
+6. And a list of hundreds more: https://apilist.fun/
+
+Many APIs require you to use a key, or unique identifier, to access them. This key is a *secret*, and professional best practice is not to commit them to version control. However, secret management is outside the scope of this course, and so we are going to recommend you just use the key in your code and commit to Github. If for any reason you're using an API that isn't free, or has restrictions, don't do this! Bots crawl Github looking for keys and passwords, and will probably get yours and use it. As long as the API you're using is free and unrestricted though, it shouldn't impact you.
+
 ### To Submit:
-- 	Review the requirements in the rubric on Canvas
-- 	Submit the link to your course project repo as well as the live site's Netlify link in Canvas
+- 	Submit the link to your course project repo as well as the live site's Netlify link

@@ -9,10 +9,10 @@ We will be building out a flexbox header component with navigation and logo/CTA 
 
 ### To get started:
 - 	Fetch from the upstream master and merge with your local master as we start each lesson
--	In your forked repo, create a new branch called `lesson-05` or something like that for the week
+-	In your forked repo, create a new branch off of master called `lesson-05` or similar 
 -   Navigate to the root folder of this assignment within terminal in your fork, `lesson05/activity`
 -   Run `npm install`
--   Run `gulp`
+-   Run `npx gulp`
 -   Start working with the files, browsersync will watch your scss/HTML files and reload on changes
 - 	Find the XD/PNG of the mockup component in the `ref` folder, see the design specs link above.
 - 	Please keep using SCSS and BEM when building components/layouts

@@ -7,7 +7,7 @@
 ### To get started:
 -   Navigate to the root folder of this assignment within terminal `lesson02/activity/`
 -   Run `npm install`
--   Run `gulp`
+-   Run `npx gulp`
 -   If gulp is giving issues, you may need to run `npm install -g gulp@3.9.1` 
 -	If you have permissions issues running gulp, checkout this [link](https://stackoverflow.com/questions/50258901/cannot-find-module-gulp-sass)
 -   Start working with the files, browsersync will watch your scss/HTML files and reload on changes
