@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png
+    <img src="./assets/logo.png">
+    <router-link to="home">Home</router-link>
     <router-link to="images">Images</router-link>
     <router-link to="grid">Grid</router-link>
     <router-link to="accordion">Accordion</router-link>
