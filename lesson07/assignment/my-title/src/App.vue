@@ -7,11 +7,17 @@
     <router-link to="accordion">Accordion</router-link>
     <router-view/>
   </div>
+
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      msg: 'Hello'
+    }
+  }
 }
 </script>
 
