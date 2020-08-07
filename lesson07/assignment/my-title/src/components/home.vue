@@ -1,11 +1,30 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <div>
+    <h1>{{ header }}</h1>
+      <div class="jumbotron" v-if="showJumbotron">
+        <h2 class="display-2 text-center bg-secondary">Content</h2>
+        <p class="font-weight-bold">{{ soon }}</p>
+      <button v-on:click="showJumbotron = !showJumbotron">Show</button>
+    </div>
+    <div>
+      <h2 class="display-2">{{ subhead }}</h2>
+      <!-- each p tag shows a different text style -->
+      <p class="lead">{{ content }}</p>
+    </div>
+  </div>
 </template>
 
 <script>
-  data :
-  return {
-    msg: 'Home'
+export default {
+  data () {
+    return {
+      header: 'Home',
+      showJumbotron: true,
+      soon: 'Jumbotron Coming Soon!',
+      subhead: 'Some Content',
+      content: 'Dolcelatte cow cheese strings. Mozzarella babybel bocconcini goat cheese on toast blue castello cheese slices edam. Jarlsberg red leicester st. agur blue cheese boursin cream cheese cheese strings who moved my cheese chalk and cheese. Paneer say cheese halloumi pecorino chalk and cheese squirty cheese cheesecake queso. Boursin airedale cheeseburger squirty cheese cheesecake cream cheese pecorino cheeseburger. The big cheese cheese slices mozzarella croque monsieur the big cheese hard cheese cheesy feet paneer. Caerphilly lancashire camembert de normandie dolcelatte red leicester cottage cheese cheese strings taleggio. Red leicester cheesecake fromage lancashire cut the cheese caerphilly melted cheese chalk and cheese. Cheese on toast.'
+
+    }
   }
 }
 </script>

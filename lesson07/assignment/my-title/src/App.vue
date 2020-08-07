@@ -1,11 +1,13 @@
 <template>
   <div id="app">
+    <!--add nav bar here-->
     <img src="./assets/logo.png">
     <router-link to="home">Home</router-link>
     <router-link to="images">Images</router-link>
     <router-link to="grid">Grid</router-link>
     <router-link to="accordion">Accordion</router-link>
     <router-view/>
+    <!--footer here to appear on every page-->
   </div>
 
 </template>
