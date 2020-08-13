@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1 class="display-1">{{ header }}</h1>
-    <img v-for="image in images" class="img" />
-      {{ img.src }}
+    <img v-for="image in images" class="img" src="{{ imageOne.src }}" title="{{ imageOne.caption}}" alt="{{ imageOne.alt }}"/>
+
   </div>
 </template>
 
@@ -14,25 +14,25 @@ export default {
 
         images: [
           {
-          img: 'Cross Stitch',
+          imageOne: 'Cross Stitch',
           src: './src/images/xstitch.jpg',
           caption: 'Cross Stitch Flat Lay',
           alt: 'Flat lay image of cross stitch, Kindle ereader, cup of tea'
         },
         {
-          img: 'Lions',
+          imageTwo: 'Lions',
           src: './src/images/lions.jpg',
           caption: 'Crocheted Lions',
           alt: 'Two small crocheted lions'
         },
         {
-          img: 'Rainbow',
+          imageThree: 'Rainbow',
           src: './src/images/rainbow.jpg',
           caption: 'Crocheted Rainbow',
           alt: 'Crocheted rainbow'
         },
         {
-          img: 'Close Up Knit',
+          imageFour: 'Close Up Knit',
           src: './src/images/knit.jpg',
           caption: 'Moss Stitch Close Up',
           alt: 'Close up view of changing yarn colors in knit'
