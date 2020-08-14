@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1 class="display-1">{{ header }}</h1>
-    <img v-for="imageOne in images" class="img" :src="imageOne.src" :title="imageOne.caption" :alt="imageOne.alt"/>
+    <div class="col-lg-2">
+      <img v-for="imageOne in images" :src="getPic(images)" :title="imageOne.caption" :alt="imageOne.alt"/>
+    </div>
 
   </div>
 </template>
@@ -11,7 +13,7 @@ export default {
   data () {
     return {
       header: 'Images',
-
+// will need a function to return the source
         images: [
           {
           img: 'Cross Stitch',
@@ -37,7 +39,13 @@ export default {
           caption: 'Moss Stitch Close Up',
           alt: 'Close up view of changing yarn colors in knit'
         }
-      ]
+      ],
+      methods: {
+        // ERROR not defined on the instance -- where would this need to be defined? Here in methods?
+        getPic(images) {
+          return './../images/' + this.img[images] + '.jpg';
+        }
+      }
    // use a "v-for" loop to iterate through an array of images.
     }
   }
