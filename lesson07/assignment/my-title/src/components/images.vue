@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1 class="display-1">{{ header }}</h1>
-    <div class="col-lg-2">
-      <img v-for="imageOne in images" :src="getPic(images)" :title="imageOne.caption" :alt="imageOne.alt"/>
+    <div class="col-lg-2" v-for="imageOne in images">
+      <img v-for="imageOne in images" class="img" :src="getImage()" :title="imageOne.caption" :alt="imageOne.alt"/>
     </div>
 
   </div>
@@ -39,15 +39,15 @@ export default {
           caption: 'Moss Stitch Close Up',
           alt: 'Close up view of changing yarn colors in knit'
         }
-      ],
-      methods: {
-        // ERROR not defined on the instance -- where would this need to be defined? Here in methods?
-        getPic(images) {
-          return './../images/' + this.img[images] + '.jpg';
-        }
-      }
+      ]
    // use a "v-for" loop to iterate through an array of images.
+    },
+  //https://medium.com/@renatello/how-to-bind-img-src-in-vue-js-5690ac89c1bb
+  methods: {
+    getImage() {
+      this. = src;
     }
+  }
   }
 }
 </script>
