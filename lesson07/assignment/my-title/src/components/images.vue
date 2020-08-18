@@ -2,7 +2,7 @@
   <div>
     <h1 class="display-1">{{ header }}</h1>
     <div class="col-lg-2" v-for="imageOne in images">
-      <img v-for="imageOne in images" class="img" :src="getImage()" :title="imageOne.caption" :alt="imageOne.alt"/>
+      <img v-for="imageOne in images" class="img" :src="getPic" :title="imageOne.caption" :alt="imageOne.alt"/>
     </div>
 
   </div>
@@ -40,14 +40,15 @@ export default {
           alt: 'Close up view of changing yarn colors in knit'
         }
       ]
-   // use a "v-for" loop to iterate through an array of images.
     },
-  //https://medium.com/@renatello/how-to-bind-img-src-in-vue-js-5690ac89c1bb
   methods: {
-    getImage() {
-      this. = src;
+    getPic() {
+      return './../images/' + this.src;
+      }
+    }
+  //https://medium.com/@renatello/how-to-bind-img-src-in-vue-js-5690ac89c1bb
+
     }
   }
-  }
-}
+
 </script>
