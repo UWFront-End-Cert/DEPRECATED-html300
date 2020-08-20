@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1 class="display-1">{{ header }}</h1>
-    <div class="col-md-2">
-      <img v-for="imageOne in images" class="img" :src="getPic(imageOne.src)" :title="imageOne.caption" :alt="imageOne.alt"/>
+    <div class="col-lg-2">
+      <img v-for="imageOne in images" class="img-fluid rounded m-2" :src="getPic(imageOne.src)" :title="imageOne.caption" :alt="imageOne.alt"/>
     </div>
 
   </div>
@@ -47,15 +47,13 @@ export default {
       return require(`@/images/${pic}`)
       }
     }
-  //https://medium.com/@renatello/how-to-bind-img-src-in-vue-js-5690ac89c1bb
-
   }
 
 </script>
 
 <style>
   img {
-    height: auto;
-    width: 33%;
+    /* height: auto;
+    width: 33%; */
   }
 </style>
