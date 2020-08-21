@@ -4,11 +4,11 @@
       <div class="jumbotron" v-if="showJumbotron">
         <h2 class="display-2 text-center bg-secondary">Content</h2>
         <p class="font-weight-bold">{{ soon }}</p>
+        <!-- v-on:click enables button to hide content if clicked, otherwise content is shown due to != making it false-->
       <button v-on:click="showJumbotron = !showJumbotron">Show</button>
     </div>
     <div>
       <h2 class="display-2">{{ subhead }}</h2>
-      <!-- each p tag shows a different text style -->
       <p class="lead">{{ content }}</p>
     </div>
   </div>
@@ -18,6 +18,7 @@
 export default {
   data () {
     return {
+      //these are the variables that are places in the HTML sections that change based on conditional statements
       header: 'Home',
       showJumbotron: true,
       soon: 'Jumbotron Coming Soon!',

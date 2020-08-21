@@ -2,6 +2,7 @@
   <div>
     <h1 class="display-1">{{ header }}</h1>
     <div class="col-lg-2">
+      <!--v-for directive renders a list of items in array, imageOne in images loops through that array//:src function refers to method created to pull images from source directory//dot notation calls on key values in objects-->
       <img v-for="imageOne in images" class="img-fluid rounded m-2" :src="getPic(imageOne.src)" :title="imageOne.caption" :alt="imageOne.alt"/>
     </div>
 
@@ -13,7 +14,6 @@ export default {
   data () {
     return {
       header: 'Images',
-// will need a function to return the source
         images: [
           {
           img: 'Cross Stitch',

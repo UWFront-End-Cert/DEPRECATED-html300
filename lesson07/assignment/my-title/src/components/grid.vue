@@ -1,13 +1,13 @@
 <template>
   <div >
     <h1 class="display-1">{{ header }}</h1>
-    <!-- want to iterate through wach object in gridData to populate grid -->
+    <!-- want to iterate through wach object in columns to populate grid -->
     <div id="grid-container">
       <div class="grid-item">
         <h2>{{ subhead }}</h2>
         <p>Changing Content</p>
         <!--will use button to change content of grid with v-if-else-->
-        <button></button>
+        <button v-if="columnOne in columns"></button>
       </div>
     </div>
   </div>
@@ -20,7 +20,7 @@ export default {
       header: 'Grid'
       // "v-if v-else" statement to change content or UI.
     }
-    gridData: [
+    columns: [
       {
         subhead: 'Blurb One',
         p: 'Roquefort say cheese when the cheese comes out everybodys happy.'
