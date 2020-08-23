@@ -8,7 +8,6 @@
       <ul class="list-inline">
         <li class="list-inline-item"><router-link to="home" class="nav-item text-success">Home</router-link></li>
         <li class="list-inline-item"><router-link to="images" class="nav-item text-danger">Images</router-link></li>
-        <li class="list-inline-item"><router-link to="grid" class="nav-item text-info">Grid</router-link></li>
         <li class="list-inline-item"><router-link to="accordion" class="nav-item text-warning">Accordion</router-link></li>
       </ul>
     </nav>
