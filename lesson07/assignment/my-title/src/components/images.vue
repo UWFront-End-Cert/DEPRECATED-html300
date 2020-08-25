@@ -13,6 +13,7 @@
 export default {
   data () {
     return {
+  //these are the variables that are places in the HTML sections that change based on conditional statements
       header: 'Images',
         images: [
           {
