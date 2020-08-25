@@ -28,17 +28,17 @@
     </div>
   </div>
 <!--dynamic cards that will loop through data in array-->
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h3><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">{{ contents.title }}</button>
+<!--used bootstrap-vue elements-->
+  <b-card v-for="content in contents" v-bind:key="content.id" >
+    <b-card-header id="headingTwo">
+      <h3><b-button type="button" v-b-toggle="'content-' + content.id" aria-expanded="false" aria-controls="collapseTwo">{{ content.title }}</b-button>
       </h3>
-    </div>
-  </div>
+    </b-card-header>
+    <b-collapse :id="'content-' + content.id" accordion="accordionOne" aria-labelledby="headingTwo">
+      <b-card-body>{{ content.description }}</b-card-body>
+    </b-collapse>
+  </b-card>
 
-  <div id="collapseTwo" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion">
-    <div class="card-body">{{ contents.description }}</div>
-  </div>
-  <!-- <button @click="collapse"></button> -->
 </div>
 </template>
 
@@ -52,21 +52,21 @@ export default {
       subhead: 'More Content',
       contents: [
         {
+        id: 1,
         title: 'Back to the Future II',
         description: 'No. Our only chance to repair the present is in the past, at the point where the timeline skewed into this tangent. In order to put the universe back as we remember it and get back to our reality, we have to find out the exact date and specific circumstances of how, when, and where young Biff got his hands on that sports almanac.'
         },
         {
+          id: 2,
           title: 'Back to the Future III',
           description: 'It means your future hasnt been written yet. No ones has. Your future is whatever you make it, so make it a good one. Both of you.'
-        }
+        },
+
       ],
-      // collapse: true,
+
   // use a "v-for" to iterate through an object to fill out the content in an accordion.
   }
-    // methods: {
-    //   toggleAccordion: function() {
-    //     this.collapse = !this.collapse;
-    //   },
+
     }
   }
 

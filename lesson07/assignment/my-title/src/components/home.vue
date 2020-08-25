@@ -7,6 +7,12 @@
         <!-- v-on:click enables button to hide content if clicked, otherwise content is shown due to != making it false-->
       <button v-on:click="showJumbotron = !showJumbotron">Show</button>
     </div>
+    <div class="jumbotron" v-else="showJumbotron">
+      <h2 class="display-2 text-center bg-danger">Different Content</h2>
+      <p class="font-weight-bold">{{ soon }}</p>
+      <!-- v-on:click enables button to hide content if clicked, otherwise content is shown due to != making it false-->
+    <button v-on:click="showJumbotron = !showJumbotron">Show</button>
+  </div>
     <div>
       <h2 class="display-2">{{ subhead }}</h2>
       <p class="lead">{{ content }}</p>
