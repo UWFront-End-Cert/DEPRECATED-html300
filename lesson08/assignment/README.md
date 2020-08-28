@@ -13,8 +13,8 @@ These pages can be copied over to your final project later, so create them using
 
 ### To get started:
 - Fetch from the upstream master and merge with your local master as we start each lesson
--	In your forked repo, create a new branch off of master called `lesson-08` or similar
--	Since we're starting with last assignment's code, go ahead and copy the contents of your lesson07/assignment to lesson08/assignment
+- In your forked repo, create a new branch off of master called `lesson-08` or similar
+- Since this assignment builds off of last assignment's code, either continue working in lesson07/assignment, or copy the contents of your lesson07/assignment to this directory.
 -  Navigate to the root folder of the copied assignment within terminal in your fork, `lesson08/assignment`
 -	Run `npm install` to install the dependencies in this new folder
 - 	Now, take the previous pages and modify/add to them accordingly:
