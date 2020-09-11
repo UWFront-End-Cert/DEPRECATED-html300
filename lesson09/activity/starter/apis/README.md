@@ -14,13 +14,12 @@ We will be using Nuxt and Axios to pull from an API and populate a page with Car
 ### To get started:
 -	 Watch the video on Nuxt to learn more about the framework, but for this activity you'll only need to work in two files.
 -	 Verify `yarn` is installed by running `yarn -v` in your terminal to see if a version comes back
--	 Run `yarn` to install, verify packages installed successfully
--	 Run `yarn dev` to launch the local server
+-	 Install all required packages with `yarn install`
+-	 Launch the local server with `yarn run dev`
 -	 Use Axios to fetch data from the [restcountries.eu](https://restcountries.eu/#api-endpoints-region) endpoint
 -	 Americas was used in the video, try Europe `https://restcountries.eu/rest/v2/region/europe`
--	 Create a Card component that includes the country's flag with alt/src, a heading with the country's name, and a p with the subregion.
+-	 Create a Card component that includes the country's flag as an image with alt and src attributes, a heading with the country's name, and a p with the subregion.
 -	 Import the Card into your `pages/index.vue` file and create a v-for loop to print each country  
-
 
 > Nuxt.js project
 
