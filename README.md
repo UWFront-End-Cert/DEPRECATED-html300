@@ -1,3 +1,9 @@
+# THIS REPOSITORY IS DEPRECATED
+
+Please do not clone, fork, or use this repository. Instead, use this one: https://github.com/UWFront-End-Cert/html300-v2 
+
+------------------------------------------------------------------------------------------------------------
+
 # UW Front End Certificate - HTML300
 This repository contains the activities and assignments required to complete the final course of the Front End Certificate program. All assignment submissions and quizzes/discussions will be done through [Canvas](https://canvas.uw.edu/).
 
