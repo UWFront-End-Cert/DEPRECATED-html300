@@ -1,5 +1,8 @@
+/*Body Element Styling*/
 html {
     box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px, allowing for easy font size calculation*/
 }
 
 *,
@@ -8,10 +11,67 @@ html {
     box-sizing: inherit;
 }
 
+body {
+  font-family: $font-fam;
+  @include fontSize(16);
+  color: $gray;
+}
+
 .main {
     padding: 2rem;
 }
 
+.card-container {
+  border: solid 50px $border-gray;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 2fr;
+}
+
 h1 {
-    color: $red;  
+  color: $gray;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  margin: 0 0 .25rem 0;
+  text-align: center;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+p {
+  margin: 1rem;
+  .bold {
+    font-weight: 800;
+  }
+}
+
+/*LinkedIn icon styling*/
+i {
+  margin: 0;
+  color: $blue;
+  /*color function to darken icon upon hover state*/
+  &:hover {
+    color: darken($blue, 25%);
+  }
+}
+
+img {
+  margin: 2rem 1rem 2rem 5rem;
+  border-radius: 50%;
+  width: 75%;
+  height: auto;
+}
+
+/*User profile styling*/
+.profile {
+  background-color: $inset-gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
+  margin: 1.5rem;
 }

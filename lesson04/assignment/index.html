@@ -1,15 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <title>Course Project</title>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+  </script>
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap" rel="stylesheet">
+  <!-- Local Files -->
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
   <main class="main">
+    <!--header contains H1, background image applied in CSS-->
+    <header id="header">
+      <h1 class="neon">Merissa O'Reilly</h1>
+    </header>
+    <nav id="nav">
+      <ul class="menu">
+        <li class="go-to1 go-to"><a href="#">Home</a></li>
+        <li class="go-to2 go-to"><a href="#">About Me</a></li>
+        <li class="go-to3 go-to"><a href="#">Skills</a></li>
+      </ul>
+    </nav>
+
+  <section class="grid-1">
+    <div class="column">
+    <h2>Vision Statement</h2>
+      <div>
+      <p class="para">To acheive success as a front-end web developer, working well in a team, inspiring others, and contributing to my own community is important. I will do this by drawing on past experiences in executing a week-long fully fucntioning guest schedule for a Masters Week(R) guest house to be used by five team members; spearheading the inaugural on an accelerated timeline <a href="https://csumb.edu/hospitality/sustainable-hospitality-development-symposium">Sustainable Hospitality Development Symposium</a>; and inspiring my community as a board member for the Augusta Handmade Fair and SFRG Treasurer.
+    Accordingly, I will focus on continous professional learning and growth.</p>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="container">
+            <div class="circle0"></div>
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+            <div class="circle5"></div>
+        </div>
+  </div>
+</section>
+
+    <section class="input-includes">
+      <h2>ES6+ Samples</h2>
+      <p class="markupTwo">Enter the quick brown animal, submit, and see a follow-up question. <br>The quick brown ___ jumps over the lazy dog. <span class="word"></span></p>
+      <!-- Input -->
+      <input class="inputTwo" type="text">
+      <!-- Submit for Input -->
+      <div class="btn">
+        <input class="submitTwo" type="button" value="Submit">
+      </div>
+
+    <section class="input-includes">
+      <p class="markupFive">Enter a quantity between 2 and 7 to determine what produce is available at the market.<span class="filter"></span></p>
+      <!-- Input -->
+      <input class="inputFive" type="text">
+      <!-- Submit for Input -->
+      <div class="btn">
+        <input class="submitFive" type="button" value="Submit">
+      </div>
+    </section>
 
   </main>
 </body>
+
 </html>

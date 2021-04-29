@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+<!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <title>Assignment 06 - Bootstrap 4</title>
+</head>
+
+  <body>
+    <main class="main">
+      <div>
+        <h1 class="display-1 text-center">Grid</h1>
+      </div>
+<!--inline nav bar-->
+      <nav class="navbar navbar-expand-lg bg-dark">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="nav-item text-success" href="./index.html">Home</a></li>
+          <li class="list-inline-item"><a class="nav-item text-danger" href="./images.html">Images</a></li>
+          <li class="list-inline-item"><a class="nav-item text-info" href="./accordion.html">Accordion</a></li>
+          <li class="list-inline-item"><a class="nav-item text-warning" href="./grid.html">Grid</a></li>
+        </ul>
+      </nav>
+
+<!-- .container-fluid for 100% width on all viewpoers and device sizes, when changed to sm screen, about 768px, it stacks all columns on top of each other -->
+<div class="container container-fl">
+  <div class="row m-2">
+    <div class="col-lg-3 m-1"> <!-- displays across 3 columns on lg screen -->
+      <h3 class="text-center bg-light">SubOne</h3>
+        <p>Cow cheesy grin hard cheese. Cream cheese smelly cheese red leicester macaroni cheese smelly cheese cheddar cheddar roquefort. Mascarpone roquefort gouda edam stilton blue castello goat goat. Mozzarella cheese slices cheese triangles cheesy feet mascarpone fromage frais pepper jack pepper jack. Mascarpone taleggio cheese and biscuits.</p>
+    </div>
+    <div class="col-lg-8 m-1"> <!-- displays across 8 columns on lg screen -->
+      <h3 class="text-center bg-dark m-1">SubTwo</h3>
+      <p>Cow cheesy grin hard cheese. Cream cheese smelly cheese red leicester macaroni cheese smelly cheese cheddar cheddar roquefort. Mascarpone roquefort gouda edam stilton blue castello goat goat. Mozzarella cheese slices cheese triangles cheesy feet mascarpone fromage frais pepper jack pepper jack. Mascarpone taleggio cheese and biscuits.</p>
+    </div>
+  </div>
+
+  <div class="row m-2">
+    <div class="col-xl-12 m-1"> <!-- displays across all columns on xl screen -->
+      <h3 class="text-center bg-info m-1">SubThree</h3>
+      <p>Cow cheesy grin hard cheese. Cream cheese smelly cheese red leicester macaroni cheese smelly cheese cheddar cheddar roquefort. Mascarpone roquefort gouda edam stilton blue castello goat goat. Mozzarella cheese slices cheese triangles cheesy feet mascarpone fromage frais pepper jack pepper jack. Mascarpone taleggio cheese and biscuits.</p>
+    </div>
+  </div>
+
+  <div class="row m-2">
+    <div class="col-lg-4"> <!-- displays across 4 columns on lg screen -->
+      <h3 class="text-center bg-warning m-1">SubFour</h3>
+      <p>Blue castello queso melted cheese. Cheddar cheese strings gouda cow halloumi ricotta monterey jack cauliflower cheese. Cheese and wine macaroni cheese cheese and biscuits parmesan cow mozzarella manchego blue castello. Caerphilly cheesy feet queso.</p>
+    </div>
+
+    <div class="col-lg-4"> <!-- displays across 4 columns on lg screen -->
+      <h3 class="text-center bg-success m-1">SubFive</h3>
+      <p>Blue castello queso melted cheese. Cheddar cheese strings gouda cow halloumi ricotta monterey jack cauliflower cheese. Cheese and wine macaroni cheese cheese and biscuits parmesan cow mozzarella manchego blue castello. Caerphilly cheesy feet queso.</p>
+    </div>
+
+    <div class="col-lg-4"> <!-- displays across 4 columns on lg screen -->
+      <h3 class="text-center bg-danger m-1">SubSix</h3>
+      <p>Blue castello queso melted cheese. Cheddar cheese strings gouda cow halloumi ricotta monterey jack cauliflower cheese. Cheese and wine macaroni cheese cheese and biscuits parmesan cow mozzarella manchego blue castello. Caerphilly cheesy feet queso.</p>
+    </div>
+  </div>
+</div>
+
+
+      </main>
+  </body>
+</html>

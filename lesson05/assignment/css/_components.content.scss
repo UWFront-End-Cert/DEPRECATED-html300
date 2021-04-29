@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    margin: 0;
 }
 
 *,
@@ -8,6 +9,70 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+body {
+  font-family: $font-fam;
+  color: $white;
+  background-color: $orange;
+  margin: 0;
+}
+
+/*grid on body of site*/
+.wrapper {
+  // margin: auto;
+  display: grid;
+  grid-gap: .25rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+/*nested grid within main grid*/
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(auto-fill, minmax(320px, 5fr));/*used auto-fill in conjuction with minmax for sizing rows of aside and main content*/
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.header {
+  padding: .5rem;
+  margin: 0;
+  background-color: $red;
+  text-align: center;
+}
+
+.nav__menu {
+  padding: .5rem;
+  margin: 0;
+  background-color: $green;
+  display: flex; /*use flexbox for more accurate styling*/
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  & .menu__item {
+    list-style: none;
+  }
+}
+
+.sidebar {
+  background-color: $purple;
+  display: flex; /*use flexbox to control content placement*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.content {
+  /*used -self items for child content alignment*/
+  justify-self: center;
+  align-self: center;
+}
+
+.footer {
+  background-color: $blue;
+  display: flex;/*use flexbox for more accurate styling*/
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
 }

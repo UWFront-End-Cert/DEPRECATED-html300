@@ -1,0 +1,171 @@
+//Font Variables (color, family, sizing)
+//Base color and color functions
+$base-color: #176171;
+$darken-color: darken($base-color, 20%);
+$lighten-color: lighten($base-color, 20%);
+$saturate-color: saturate($base-color, 50%);
+$desaturate-color: desaturate($base-color, 20%);
+$hue-color: adjust-hue($base-color, 50%);
+$opacity-color: rgba($base-color, .5);
+$tint-color: mix(white, $base-color, 50%);
+$shade-color: mix(black, $base-color, 50%);
+
+$font-fam: 'Raleway', sans-serif;
+$header-fam: 'Staatliches', cursive;
+
+//Mixin for responsive font size
+@mixin fontSize($size) {
+  font-size: $size * 0.1rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px, allowing for easy font size calculation*/
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+  font-family: $font-fam;
+  color: $base-color;
+  @include fontSize(16);
+}
+
+.neon {
+  font-family: $header-fam;
+  @include fontSize(50);
+  margin: auto;
+  text-align: center;
+    color: #fff;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px #0ff,
+      0 0 80px #0ff,
+      0 0 90px #0ff,
+      0 0 100px #0ff,
+      0 0 150px #0ff;
+}
+
+h2 {
+  font-family: $header-fam;
+  margin: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+}
+a:visited {
+  color: $darken-color;
+}
+
+header {
+  height: 20rem;
+  width: 100%;
+  background: linear-gradient(to left, $tint-color, $opacity-color, $shade-color);
+  opacity: 0.75;
+  background-image: url('../images/header.jpg');
+  background-size: 100% 175%;
+  background-position: top center;
+  margin: 0;
+}
+
+
+nav ul {
+  background: $tint-color;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.go-to {
+  border-radius: 50%;
+  height: auto;
+  background: $lighten-color;
+
+  .menu:hover & {
+    transform: rotate(45deg);
+  }
+}
+
+.grid-1 {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+// vertical circles
+
+.container {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('../images/cheyenne.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+  padding: 1em;
+  margin: 1em .5em .5em .5em;
+  .container:hover & { /*hover actived when mousing over parent*/
+    /*using relative units instead of absolute units*/
+    transform: translate(25em, 25em);
+  }
+}
+/*using millisections for transitions for better JS compatibility*/
+/*each circle shows different transition*/
+.circle0 {
+  @extend .circle;
+  background: PaleTurquoise;
+  transition: all 1500ms linear;
+}
+
+.circle1 {
+  @extend .circle;
+  background: salmon;
+  transition: all 1500ms ease;
+}
+
+.circle2 {
+  @extend .circle;
+  background: lightskyblue;
+  transition: all 1500ms ease-in;
+}
+
+.circle3 {
+  @extend .circle;
+  background: khaki;
+  transition: all 1500ms ease-out;
+}
+
+.circle4 {
+  @extend .circle;
+  background: mediumturquoise;
+  transition: all 1500ms ease-in-out;
+}
+
+.circle5 {
+  @extend .circle;
+  background: thistle;
+  transition: all 1500ms cubic-bezier(0,1,.98,0);
+}

@@ -1,0 +1,114 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /*1rem = 10px, allowing for easy font size calculation*/ }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: #176171;
+  font-size: 1.6rem; }
+
+.neon {
+  font-family: "Staatliches", cursive;
+  font-size: 5rem;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff; }
+
+h2 {
+  font-family: "Staatliches", cursive;
+  margin: 1rem; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  color: #ffffff; }
+
+a:visited {
+  color: #06181c; }
+
+header {
+  height: 20rem;
+  width: 100%;
+  background: linear-gradient(to left, #8bb0b8, rgba(23, 97, 113, 0.5), #0c3139);
+  opacity: 0.75;
+  background-image: url("../images/header.jpg");
+  background-size: 100% 175%;
+  background-position: top center;
+  margin: 0; }
+
+nav ul {
+  background: #8bb0b8;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+.go-to {
+  border-radius: 50%;
+  height: auto;
+  background: #28aac6; }
+  .menu:hover .go-to {
+    transform: rotate(45deg); }
+
+.grid-1 {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr); }
+
+.container {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/cheyenne.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto; }
+
+.circle, .circle0, .circle1, .circle2, .circle3, .circle4, .circle5 {
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+  padding: 1em;
+  margin: 1em .5em .5em .5em; }
+  .container:hover .circle, .container:hover .circle0, .container:hover .circle1, .container:hover .circle2, .container:hover .circle3, .container:hover .circle4, .container:hover .circle5 {
+    /*hover actived when mousing over parent*/
+    /*using relative units instead of absolute units*/
+    transform: translate(25em, 25em); }
+
+/*using millisections for transitions for better JS compatibility*/
+/*each circle shows different transition*/
+.circle0 {
+  background: PaleTurquoise;
+  transition: all 1500ms linear; }
+
+.circle1 {
+  background: salmon;
+  transition: all 1500ms ease; }
+
+.circle2 {
+  background: lightskyblue;
+  transition: all 1500ms ease-in; }
+
+.circle3 {
+  background: khaki;
+  transition: all 1500ms ease-out; }
+
+.circle4 {
+  background: mediumturquoise;
+  transition: all 1500ms ease-in-out; }
+
+.circle5 {
+  background: thistle;
+  transition: all 1500ms cubic-bezier(0, 1, 0.98, 0); }

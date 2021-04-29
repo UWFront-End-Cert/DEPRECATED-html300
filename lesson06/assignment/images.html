@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+
+<!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <title>Assignment 06 - Bootstrap 4</title>
+  </head>
+
+  <body>
+    <main class="main">
+      <div>
+        <h1 class="display-1 text-center">Images</h1>
+      </div>
+<!--inline nav bar-->
+    <nav class="navbar navbar-expand-lg bg-dark m-3">
+      <ul class="list-inline">
+        <li class="list-inline-item"><a class="nav-item text-success" href="./index.html">Home</a></li>
+        <li class="list-inline-item"><a class="nav-item text-danger" href="./images.html">Images</a></li>
+        <li class="list-inline-item"><a class="nav-item text-info" href="./accordion.html">Accordion</a></li>
+        <li class="list-inline-item"><a class="nav-item text-warning" href="./grid.html">Grid</a></li>
+      </ul>
+    </nav>
+    <h2 class="display-4 bg-secondary text-center">Food</h2>
+
+      <div class="container container-fl"><!--fluid container spans the entire viewport-->
+        <div class="row">
+          <div class="col-sm">
+            <img src="./images/bread.jpg" class="img-fluid rounded m-2" alt="Sliced loaf of bread"><!-- images are classed with img-fluid for responsivity when screen changes sizes, and rounded for more visual interest-->
+          </div>
+          <div class="col-sm">
+            <img src="./images/pierogi.jpg" class="img-fluid rounded m-2 visible-md" alt="Pierogies and brussel sprouts">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm">
+            <img src="./images/sandwich.jpg" class="img-fluid rounded m-2 visible-sm" alt="Sandwich at a picnic">
+          </div>
+          <div class="col-sm">
+            <img src="./images/cookie.jpg" class="img-fluid rounded m-2 visible-xs" alt="Christmas cookie and mug of hot cocoa">
+          </div>
+        </div>
+<!--popover function added with popper.js, a function to tell the button what to do when clicked, and info provided in a small bubble once the button is clicked-->
+        <div>
+          <script>$(function () {$('[data-toggle="popover"]').popover()})</script>
+          <button type="button" class="btn btn-info" data-toggle="popover" title="Yum" data-content="Are you hungry yet?">Click Me</button>
+        </div>
+      </div>
+
+    </main>
+  </body>
+</html>
